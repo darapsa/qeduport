@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Rectangle {
-	property alias image: image
-	property alias title: title
+	property alias cardImage: image
+	property alias cardTitle: title
 
 	width: 300
 	height: 480
