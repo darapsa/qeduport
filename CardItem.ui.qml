@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 Rectangle {
 	property alias cardImage: image
 	property alias cardTitle: title
+	property alias textTruncate: textTruncate
 
 	width: 300
 	height: 480
@@ -71,7 +72,7 @@ Rectangle {
 		}
 
 		Label {
-			id: comment
+			id: textTruncate
 			text: qsTr("Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms")
 			wrapMode: Text.Wrap
 			anchors {
