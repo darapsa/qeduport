@@ -36,7 +36,7 @@ Rectangle {
 
 			Label {
 				text: qsTr("Beginner")
-				font.pixelSize:12
+				font.pointSize:12
 				anchors {
 					verticalCenter: parent.verticalCenter
 					left: parent.left
@@ -68,8 +68,8 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
-			font.weight: Font.Bold
-			font.pixelSize: 24
+			font.weight: Font.Medium
+			font.pointSize: 20
 		}
 
 		Label {
@@ -86,7 +86,7 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
-			font.pixelSize: 14
+			font.pointSize: 14
 		}
 	}
 }
