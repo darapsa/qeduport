@@ -13,7 +13,7 @@ Rectangle {
 		id: image
 		source: "darapsa.svg"
 		sourceSize.width: parent.width
-		sourceSize.height: 224
+		sourceSize.height: 225
 	}
 
 	Item {
@@ -36,6 +36,7 @@ Rectangle {
 
 			Label {
 				text: qsTr("Beginner")
+				font.pixelSize:12
 				anchors {
 					verticalCenter: parent.verticalCenter
 					left: parent.left
@@ -68,7 +69,7 @@ Rectangle {
 				rightMargin: 16
 			}
 			font.weight: Font.Bold
-			font.pointSize: 16
+			font.pixelSize: 24
 		}
 
 		Label {
@@ -85,6 +86,7 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
+			font.pixelSize: 14
 		}
 	}
 }
