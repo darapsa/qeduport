@@ -86,7 +86,10 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
-			font.pointSize: 14
+			font {
+				weight: Font.Light
+				pointSize: 14
+			}
 		}
 	}
 }
