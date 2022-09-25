@@ -2,7 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Rectangle {
-	id: rectangle
+	property alias image: image
+	property alias title: title
+
 	width: 300
 	height: 480
 
