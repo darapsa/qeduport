@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
@@ -8,6 +9,8 @@ Item {
 	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
 	Rectangle {
+		id: rectangle
+		radius: 10
 		anchors {
 			top: parent.top
 			topMargin: 51.2
@@ -109,6 +112,12 @@ Item {
 				}
 			}
 		}
+	}
+
+	DropShadow {
+		source: rectangle
+		color: Qt.rgba(.113, .227, .325, .15)
+		anchors.fill: rectangle
 	}
 
 	width: 300
