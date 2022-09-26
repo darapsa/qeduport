@@ -29,6 +29,14 @@ Item {
 				height: parent.width * 3 / 4
 			}
 			anchors.top: parent.top
+			layer.enabled: true
+			layer.effect: OpacityMask {
+				maskSource: Rectangle {
+					width: image.width
+					height: image.height
+					radius: 10
+				}
+			}
 		}
 
 		Item {
