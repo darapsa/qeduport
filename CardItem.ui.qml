@@ -12,15 +12,19 @@ Rectangle {
 	Image {
 		id: image
 		source: "darapsa.svg"
-		sourceSize.width: parent.width
-		sourceSize.height: 225
+		sourceSize {
+			width: parent.width
+			height: 225
+		}
 	}
 
 	Item {
 		id: body
 		width: parent.width
-		anchors.top: image.bottom
-		anchors.bottom: parent.bottom
+		anchors {
+			top: image.bottom
+			bottom: parent.bottom
+		}
 
 		Item {
 			id: badgeAndFavorite
@@ -47,8 +51,10 @@ Rectangle {
 			Image {
 				id: favorite
 				source: "Font-Awesome/svgs/solid/heart.svg"
-				sourceSize.width: 16
-				sourceSize.height: 16
+				sourceSize {
+					width: 16
+					height: 16
+				}
 				anchors {
 					right: parent.right
 					rightMargin: 8
@@ -68,8 +74,10 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
-			font.weight: Font.Medium
-			font.pointSize: 20
+			font {
+				weight: Font.Medium
+				pointSize: 20
+			}
 		}
 
 		Label {
