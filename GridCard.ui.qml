@@ -8,6 +8,12 @@ Item {
 	property string titleText: "Sketch from A to Z: for app designer"
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
+	DropShadow {
+		source: rectangle
+		color: Qt.rgba(.113, .227, .325, .15)
+		anchors.fill: rectangle
+	}
+
 	Rectangle {
 		id: rectangle
 		radius: 10
@@ -133,15 +139,6 @@ Item {
 			height: (parent.height - image.sourceSize.height) / 3
 			anchors.bottom: parent.bottom
 		}
-	}
-
-	DropShadow {
-		verticalOffset: 2
-		radius: 2
-		samples: 4
-		source: rectangle
-		color: Qt.rgba(.113, .227, .325, .15)
-		anchors.fill: rectangle
 	}
 
 	width: 323.9
