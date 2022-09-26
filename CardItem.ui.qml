@@ -29,7 +29,6 @@ Rectangle {
 		Item {
 			id: badgeAndFavorite
 			height: favorite.height
-
 			anchors {
 				top: parent.top
 				left: parent.left
@@ -66,6 +65,10 @@ Rectangle {
 			id: title
 			text: qsTr("Sketch from A to Z: for app designer")
 			wrapMode: Text.Wrap
+			font {
+				weight: Font.Medium
+				pointSize: 20
+			}
 			anchors {
 				top: badgeAndFavorite.bottom
 				topMargin: 16
@@ -74,16 +77,16 @@ Rectangle {
 				right: parent.right
 				rightMargin: 16
 			}
-			font {
-				weight: Font.Medium
-				pointSize: 20
-			}
 		}
 
 		Label {
 			id: textTruncate
 			text: qsTr("Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms")
 			wrapMode: Text.Wrap
+			font {
+				weight: Font.Light
+				pointSize: 14
+			}
 			anchors {
 				top: title.bottom
 				topMargin: 16
@@ -93,10 +96,6 @@ Rectangle {
 				leftMargin: 16
 				right: parent.right
 				rightMargin: 16
-			}
-			font {
-				weight: Font.Light
-				pointSize: 14
 			}
 		}
 	}
