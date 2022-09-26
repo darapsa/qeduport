@@ -28,7 +28,7 @@ Rectangle {
 
 		Item {
 			id: badgeAndFavorite
-			height: favorite.height
+			height: favorite.sourceSize.height
 			anchors {
 				top: parent.top
 				left: parent.left
