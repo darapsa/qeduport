@@ -115,6 +115,9 @@ Item {
 	}
 
 	DropShadow {
+		verticalOffset: 2
+		radius: 2
+		sample: 4
 		source: rectangle
 		color: Qt.rgba(.113, .227, .325, .15)
 		anchors.fill: rectangle
