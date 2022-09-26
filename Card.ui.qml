@@ -2,9 +2,10 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-	property alias cardImage: image
-	property alias cardTitle: title
-	property alias textTruncate: textTruncate
+	property string imageSource: "darapsa.svg"
+	property string badgeText: "Beginner"
+	property string titleText: "Sketch from A to Z: for app designer"
+	property string textTruncateText: "Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms"
 
 	width: 300
 	height: 480
@@ -22,7 +23,7 @@ Item {
 
 		Image {
 			id: image
-			source: "darapsa.svg"
+			source: imageSource
 			sourceSize {
 				width: parent.width
 				height: parent.width * 3 / 4
@@ -49,7 +50,8 @@ Item {
 				}
 
 				Label {
-					text: qsTr("Beginner")
+					id: badge
+					text: badgeText
 					font.pointSize:12
 					anchors {
 						verticalCenter: parent.verticalCenter
@@ -74,7 +76,7 @@ Item {
 
 			Label {
 				id: title
-				text: qsTr("Sketch from A to Z: for app designer")
+				text: titleText
 				wrapMode: Text.Wrap
 				font {
 					weight: Font.Medium
@@ -92,7 +94,7 @@ Item {
 
 			Label {
 				id: textTruncate
-				text: qsTr("Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms")
+				text: textTruncateText
 				wrapMode: Text.Wrap
 				font {
 					weight: Font.Light
