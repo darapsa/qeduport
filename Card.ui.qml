@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
@@ -124,7 +123,7 @@ Item {
 	DropShadow {
 		verticalOffset: 2
 		radius: 2
-		sample: 4
+		samples: 4
 		source: rectangle
 		color: Qt.rgba(.113, .227, .325, .15)
 		anchors.fill: rectangle
