@@ -6,18 +6,18 @@ Item {
 	property string imageSource: "Darapsa.svg"
 	property string badgeText: "Beginner"
 	property string titleText: "Sketch from A to Z: for app designer"
-	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
+//	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
 	Rectangle {
 		id: rectangle
 		radius: 10
 		anchors {
 			top: parent.top
-			topMargin: 51.2
+			topMargin: 25.6
 			left: parent.left
-			leftMargin: 25.6
+			leftMargin: 12.8
 			right: parent.right
-			rightMargin: 25.6
+			rightMargin: 12.8
 			bottom: parent.bottom
 		}
 
@@ -28,6 +28,7 @@ Item {
 				width: parent.width
 				height: parent.width * 3 / 4
 			}
+			anchors.top: parent.top
 		}
 
 		Item {
@@ -40,13 +41,14 @@ Item {
 
 			Item {
 				id: badgeAndFavorite
-				height: favorite.sourceSize.height
+				height: body.height / 6
 				anchors {
 					top: parent.top
+					topMargin: 16
 					left: parent.left
-					leftMargin: 16
+					leftMargin: 20
 					right: parent.right
-					rightMargin: 16
+					rightMargin: 20
 				}
 
 				Label {
@@ -54,9 +56,12 @@ Item {
 					text: badgeText
 					font.pointSize:12
 					anchors {
-						verticalCenter: parent.verticalCenter
+						top: parent.top
+						topMargin: 5.6
 						left: parent.left
-						leftMargin: 8
+						leftMargin: 10.4
+						bottom: parent.bottom
+						leftMargin: 5.6
 					}
 				}
 
@@ -64,18 +69,20 @@ Item {
 					id: favorite
 					source: "Font-Awesome/svgs/solid/heart.svg"
 					sourceSize {
-						width: 16
-						height: 16
+						width: height
+						height: parent.height / 1.5
 					}
 					anchors {
 						right: parent.right
-						rightMargin: 8
+						verticalCenter: parent.verticalCenter
 					}
 				}
+
 			}
 
 			Label {
 				id: title
+				width: parent.width
 				text: titleText
 				wrapMode: Text.Wrap
 				font {
@@ -84,14 +91,14 @@ Item {
 				}
 				anchors {
 					top: badgeAndFavorite.bottom
-					topMargin: 16
+					topMargin: 8
 					left: parent.left
-					leftMargin: 16
+					leftMargin: 20
 					right: parent.right
-					rightMargin: 16
+					rightMargin: 20
 				}
 			}
-
+/*
 			Label {
 				id: textTruncate
 				text: textTruncateText
@@ -100,15 +107,18 @@ Item {
 					weight: Font.Light
 					pointSize: 14
 				}
+			}
+*/
+			Item {
+				id: listInline
+				height: badgeAndFavorite.height
 				anchors {
 					top: title.bottom
-					topMargin: 16
-					bottom: parent.bottom
-					bottomMargin: 16
+					topMargin: 8
 					left: parent.left
-					leftMargin: 16
+					leftMargin: 20
 					right: parent.right
-					rightMargin: 16
+					rightMargin: 20
 				}
 			}
 		}
@@ -116,7 +126,7 @@ Item {
 		Item {
 			id: footer
 			width: parent.width
-			height: image.sourceSize.height / 4
+			height: (parent.height - image.sourceSize.height) / 3
 			anchors.bottom: parent.bottom
 		}
 	}
@@ -130,6 +140,6 @@ Item {
 		anchors.fill: rectangle
 	}
 
-	width: 300
-	height: 480
+	width: 323.9
+	height: 446.583
 }
