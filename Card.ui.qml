@@ -35,7 +35,7 @@ Item {
 			width: parent.width
 			anchors {
 				top: image.bottom
-				bottom: parent.bottom
+				bottom: footer.top
 			}
 
 			Item {
@@ -111,6 +111,13 @@ Item {
 					rightMargin: 16
 				}
 			}
+		}
+
+		Item {
+			id: footer
+			width: parent.width
+			height: image.sourceSize.height / 4
+			anchors.bottom: parent.bottom
 		}
 	}
 
