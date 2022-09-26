@@ -5,7 +5,7 @@ Item {
 	property string imageSource: "Darapsa.svg"
 	property string badgeText: "Beginner"
 	property string titleText: "Sketch from A to Z: for app designer"
-	property string textTruncateText: "Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms"
+	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
 	Rectangle {
 		anchors {
