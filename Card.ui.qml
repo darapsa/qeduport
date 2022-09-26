@@ -7,9 +7,6 @@ Item {
 	property string titleText: "Sketch from A to Z: for app designer"
 	property string textTruncateText: "Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms"
 
-	width: 300
-	height: 480
-
 	Rectangle {
 		anchors {
 			top: parent.top
@@ -113,4 +110,7 @@ Item {
 			}
 		}
 	}
+
+	width: 300
+	height: 480
 }
