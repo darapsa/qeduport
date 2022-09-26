@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Item {
-	property string imageSource: "darapsa.svg"
+	property string imageSource: "Darapsa.svg"
 	property string badgeText: "Beginner"
 	property string titleText: "Sketch from A to Z: for app designer"
 	property string textTruncateText: "Rooms oh fully taken by worse do Points afraid but may end Rooms Points afraid but may end Rooms"
