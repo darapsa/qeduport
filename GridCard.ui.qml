@@ -56,12 +56,8 @@ Item {
 					text: badgeText
 					font.pointSize:12
 					anchors {
-						top: parent.top
-						topMargin: 5.6
 						left: parent.left
-						leftMargin: 10.4
-						bottom: parent.bottom
-						leftMargin: 5.6
+						verticalCenter: parent.verticalCenter
 					}
 				}
 
