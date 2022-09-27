@@ -92,7 +92,7 @@ Item {
 
 			FontLoader {
 				id: heebo
-				name: "Heebo Bold"
+				name: "Heebo"
 				source: "Heebo-Bold.ttf"
 			}
 
