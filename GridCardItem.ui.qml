@@ -76,8 +76,8 @@ Item {
 				Rectangle {
 					id: badge
 					color: badgeBackgroundColor
-					implicitWidth: badgeLabel.width + 8
-					implicitHeight: badgeLabel.height + 4
+					implicitWidth: badgeLabel.width + 18
+					implicitHeight: badgeLabel.height + 6
 					radius: 6
 					anchors {
 						left: parent.left
