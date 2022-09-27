@@ -4,15 +4,15 @@ import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
-	readonly property color allLevels: "#6f42c1ff"
-	readonly property color beginner: "#0cbc87ff"
-	readonly property color intermediate: "#17a2b8ff"
-	readonly property color allLevelsBackground: "#6f42c11a"
-	readonly property color beginnerBackground: "#0cbc871a"
-	readonly property color intermediateBackground: "#17a2b81a"
+	readonly property color allLevels: "#ff6f42c1"
+	readonly property color beginner: "#ff0cbc87"
+	readonly property color intermediate: "#ff17a2b8"
+	readonly property color allLevelsBackground: "#1a6f42c1"
+	readonly property color beginnerBackground: "#1a0cbc87"
+	readonly property color intermediateBackground: "#1a17a2b8"
 	property string badgeText: "Beginner"
-	property color badgeColor: "#0cbc87ff"
-	property color badgeBackgroundColor: "#0cbc871a"
+	property color badgeColor: "#ff0cbc87"
+	property color badgeBackgroundColor: "#1a0cbc87"
 	property string titleText: "Sketch from A to Z: for app designer"
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
