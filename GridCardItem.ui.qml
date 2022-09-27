@@ -4,12 +4,12 @@ import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
-	readonly property color allLevels: "#ff6f42c1"
-	readonly property color beginner: "#ff0cbc87"
-	readonly property color intermediate: "#ff17a2b8"
-	readonly property color allLevelsBackground: "#1a6f42c1"
-	readonly property color beginnerBackground: "#1a0cbc87"
-	readonly property color intermediateBackground: "#1a17a2b8"
+	readonly property color allLevelsColor: "#ff6f42c1"
+	readonly property color beginnerColor: "#ff0cbc87"
+	readonly property color intermediateColor: "#ff17a2b8"
+	readonly property color allLevelsBackgroundColor: "#1a6f42c1"
+	readonly property color beginnerBackgroundColor: "#1a0cbc87"
+	readonly property color intermediateBackgroundColor: "#1a17a2b8"
 	property string badgeText: "Beginner"
 	property color badgeColor: "#ff0cbc87"
 	property color badgeBackgroundColor: "#1a0cbc87"
