@@ -4,7 +4,15 @@ import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
+	readonly property color allLevels: "#6f42c1ff"
+	readonly property color beginner: "#0cbc87ff"
+	readonly property color intermediate: "#17a2b8ff"
+	readonly property color allLevelsBackground: "#6f42c11a"
+	readonly property color beginnerBackground: "#0cbc871a"
+	readonly property color intermediateBackground: "#17a2b81a"
 	property string badgeText: "Beginner"
+	property color badgeColor: "#0cbc87ff"
+	property color badgeBackgroundColor: "#0cbc871a"
 	property string titleText: "Sketch from A to Z: for app designer"
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
@@ -65,13 +73,22 @@ Item {
 					rightMargin: 20
 				}
 
-				Label {
+				Rectangle {
 					id: badge
-					text: badgeText
-					font.pointSize:12
+					color: badgeBackgroundColor
+					implicitWidth: badgeLabel.width + 8
+					implicitHeight: badgeLabel.height + 4
+					radius: 6
 					anchors {
 						left: parent.left
 						verticalCenter: parent.verticalCenter
+					}
+					Label {
+						id: badgeLabel
+						text: badgeText
+						color: badgeColor
+						font.pixelSize: 13
+						anchors.centerIn: parent
 					}
 				}
 
