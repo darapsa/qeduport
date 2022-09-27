@@ -87,7 +87,7 @@ Item {
 					FontLoader {
 						id: roboto
 						name: "Roboto"
-						source: "Roboto-Regular.ttf"
+						source: "Roboto/Roboto-Regular.ttf"
 					}
 
 					Label {
@@ -120,7 +120,7 @@ Item {
 			FontLoader {
 				id: heebo
 				name: "Heebo"
-				source: "Heebo-Bold.ttf"
+				source: "Heebo/Heebo-Bold.ttf"
 			}
 
 			Label {

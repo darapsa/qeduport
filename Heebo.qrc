@@ -1,5 +1,5 @@
 <RCC>
 	<qresource prefix="qeduport">
-		<file>Heebo-Bold.ttf</file>
+		<file>Heebo/Heebo-Bold.ttf</file>
 	</qresource>
 </RCC>
