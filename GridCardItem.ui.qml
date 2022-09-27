@@ -83,11 +83,21 @@ Item {
 						left: parent.left
 						verticalCenter: parent.verticalCenter
 					}
+
+					FontLoader {
+						id: roboto
+						name: "Roboto"
+						source: "Roboto-Regular.ttf"
+					}
+
 					Label {
 						id: badgeLabel
 						text: badgeText
 						color: badgeColor
-						font.pixelSize: 13
+						font {
+							family: roboto.name
+							pixelSize: 13
+						}
 						anchors.centerIn: parent
 					}
 				}
