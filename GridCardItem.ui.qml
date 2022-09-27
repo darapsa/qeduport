@@ -104,7 +104,6 @@ Item {
 				font {
 					family: heebo.name
 					pixelSize: 21
-					bold: true
 				}
 				anchors {
 					top: badgeAndFavorite.bottom
