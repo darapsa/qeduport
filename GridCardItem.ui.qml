@@ -90,14 +90,20 @@ Item {
 
 			}
 
+			FontLoader {
+				id: heebo
+				name: "Heebo Bold"
+				source: "Heebo-Bold.ttf"
+			}
+
 			Label {
 				id: title
 				width: parent.width
 				text: titleText
 				wrapMode: Text.Wrap
 				font {
-					weight: Font.Medium
-					pointSize: 20
+					family: heebo.name
+					pixelSize: 21
 				}
 				anchors {
 					top: badgeAndFavorite.bottom
