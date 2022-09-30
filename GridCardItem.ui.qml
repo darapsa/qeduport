@@ -14,6 +14,8 @@ Item {
 	property color badgeColor: "#ff0cbc87"
 	property color badgeBackgroundColor: "#1a0cbc87"
 	property string titleText: "Sketch from A to Z: for app designer"
+	property alias imageArea: imageArea
+	property alias titleArea: titleArea
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
 
 	DropShadow {
@@ -50,6 +52,11 @@ Item {
 					height: image.height
 					radius: 10
 				}
+			}
+
+			MouseArea {
+				id: imageArea
+				anchors.fill: parent
 			}
 		}
 
@@ -139,6 +146,11 @@ Item {
 					leftMargin: 20
 					right: parent.right
 					rightMargin: 20
+				}
+
+				MouseArea {
+					id: titleArea
+					anchors.fill: parent
 				}
 			}
 /*
