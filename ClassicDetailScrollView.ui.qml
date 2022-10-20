@@ -5,7 +5,11 @@ ScrollView {
 	property string cardImageSource
 
 	DetailCardItem {
-		anchors.fill: parent
 		imageSource: cardImageSource
+		anchors {
+			top: parent.top
+			left: parent.left
+			right: parent.right
+		}
 	}
 }
