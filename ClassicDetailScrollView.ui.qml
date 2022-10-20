@@ -4,7 +4,7 @@ import QtQuick.Controls 2.15
 ScrollView {
 	property string cardImageSource
 
-	GridCardItem {
+	DetailCardItem {
 		anchors.fill: parent
 		imageSource: cardImageSource
 	}
