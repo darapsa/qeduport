@@ -50,12 +50,76 @@ Item {
 
 		Item {
 			id: body
-			width: parent.width
+			width: parent.width - 16
 			anchors {
 				top: image.bottom
+				horizontalCenter: parent.horizontalCenter
 				bottom: parent.bottom
+				bottomMargin: 8
 			}
 
+			Item {
+				id: info
+				width: parent.width - 32
+				anchors {
+					top: parent.top
+					topMargin: 16
+					horizontalCenter: parent.horizontalCenter
+					bottom: buttons.top
+					bottomMargin: 16
+				}
+			}
+
+			Item {
+				id: buttons
+				width: parent.width - 32
+				height: 40.5
+				anchors {
+					horizontalCenter: parent.horizontalCenter
+					bottom: parent.bottom
+					bottomMargin: 16
+				}
+
+				Button {
+					id: trial
+					text: qsTr("Free trial")
+					contentItem: Text {
+						text: trial.text
+						font.pixelSize: 15
+						color: trial.down ? "#ffffff"
+						: "#066ac9"
+					}
+					background: Rectangle {
+						color: trial.down ? "#066ac9"
+						: "#ffffff"
+						border.color: "#066ac9"
+						radius: 8
+					}
+					height: parent.height
+					anchors.left: parent.left
+				}
+
+				Button {
+					id: buy
+					text: qsTr("Buy course")
+					contentItem: Text {
+						text: buy.text
+						font.pixelSize: 15
+						color: "#ffffff"
+					}
+					background: Rectangle {
+						color: buy.down ? "#0aa073"
+						: "#0cbc87"
+						border.color: buy.down
+						? "#0a966c" : "#0cbc87"
+						radius: 8
+					}
+					height: parent.height
+					anchors.right: parent.right
+				}
+			}
 		}
 	}
+
+	height: width * 1.2
 }
