@@ -8,6 +8,7 @@ StackView {
 	initialItem: Item {
 
 		GridView {
+			id: counters
 			model: ListModel {
 				ListElement {
 					count: "10K"
@@ -27,23 +28,35 @@ StackView {
 				}
 			}
 
-			delegate: Rectangle {
-				color: bgColor
-				implicitWidth: label.width
-				implicitHeight: label.height
+			delegate: Item {
+				width: counters.cellWidth
+				height: 125.6
+				Rectangle {
+					color: bgColor
+					radius: 8
+					anchors {
+						top: parent.top
+						topMargin: 25.6
+						left: parent.left
+						leftMargin: 12.8
+						right: parent.right
+						rightMargin: 12.8
+						bottom: parent.bottom
+					}
 
-				FontLoader {
-					id: heebo
-					name: "Heebo"
-					source: "Heebo/Heebo-Bold.ttf"
-				}
+					FontLoader {
+						id: heebo
+						name: "Heebo"
+						source: "Heebo/Heebo-Bold.ttf"
+					}
 
-				Label {
-					id: label
-					text: count
-					font {
-						family: heebo.name
-						pixelSize: 21
+					Label {
+						id: label
+						text: count
+						font {
+							family: heebo.name
+							pixelSize: 21
+						}
 					}
 				}
 			}
