@@ -4,7 +4,6 @@ import QtQuick.Controls 2.15
 StackView {
 	property alias grid: grid
 
-	id: stack
 	initialItem: Item {
 
 		GridView {
@@ -61,9 +60,8 @@ StackView {
 				}
 			}
 
-			cellWidth: width < 576 ? stack.width : width < 768
-			? stack.width / 2 : width < 992 ? stack.width / 3
-			: stack.width / 4
+			cellWidth: width < 576 ? width : width < 768 ? width / 2
+			: width < 992 ? width / 3 : width / 4
 			cellHeight: cellWidth * 1.3
 			anchors {
 				top: parent.top
@@ -75,9 +73,8 @@ StackView {
 
 		GridView {
 			id: grid
-			cellWidth: width < 576 ? stack.width : width < 768
-			? stack.width / 2 : width < 992 ? stack.width / 3
-			: stack.width / 4
+			cellWidth: width < 576 ? width : width < 768 ? width / 2
+			: width < 992 ? width / 3 : width / 4
 			cellHeight: cellWidth * 1.3
 			anchors {
 				left: parent.left
