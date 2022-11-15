@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 StackView {
-	property alias grid: grid
+	property alias popularCourseTabsContent: popularCourseTabsContent
 
 	initialItem: Item {
 
@@ -72,7 +72,7 @@ StackView {
 		}
 
 		GridView {
-			id: grid
+			id: popularCourseTabsContent
 			cellWidth: width < 576 ? width : width < 768 ? width / 2
 			: width < 992 ? width / 3 : width / 4
 			cellHeight: cellWidth * 1.3
