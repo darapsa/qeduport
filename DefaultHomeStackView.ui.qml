@@ -7,7 +7,7 @@ StackView {
 	initialItem: Item {
 
 		GridView {
-			id: counters
+			id: counter
 			model: ListModel {
 				ListElement {
 					count: "10K"
@@ -28,7 +28,7 @@ StackView {
 			}
 
 			delegate: Item {
-				width: counters.cellWidth
+				width: counter.cellWidth
 				height: 125.6
 				Rectangle {
 					color: bgColor
