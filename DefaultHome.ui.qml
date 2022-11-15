@@ -6,6 +6,8 @@ Item {
 
 	GridView {
 		id: counter
+		interactive: false
+
 		model: ListModel {
 			ListElement {
 				count: "10K"
@@ -71,9 +73,12 @@ Item {
 
 	GridView {
 		id: popularCourseTabsContent
+		interactive: false
+
 		cellWidth: width < 576 ? width : width < 768 ? width / 2
 		: width < 992 ? width / 3 : width / 4
 		cellHeight: cellWidth * 1.3
+
 		anchors {
 			left: parent.left
 			right: parent.right
