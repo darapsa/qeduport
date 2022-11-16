@@ -2,9 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-ScrollView {
+Flickable {
 	property alias popularCourseTabsContent: popularCourseTabsContent
-	contentWidth: counter.width
 	contentHeight: counter.height + popularCourseTabsContent.height
 
 	GridView {
@@ -128,9 +127,9 @@ ScrollView {
 		height: width < 576 ? cellHeight : width < 768 ? cellHeight * 2
 		: width < 992 ? cellHeight * 3 : cellHeight * 4
 		anchors {
+			top: counter.bottom
 			left: parent.left
 			right: parent.right
-			bottom: parent.bottom
 		}
 	}
 }
