@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
 
 ScrollView {
 	property alias popularCourseTabsContent: popularCourseTabsContent
@@ -12,19 +13,27 @@ ScrollView {
 
 		model: ListModel {
 			ListElement {
+				icon: "Font-Awesome/svgs/solid/tv.svg"
 				count: "10K"
+				title: qsTr("Online Courses")
 				bgColor: "#26f7c32e"
 			}
 			ListElement {
+				icon: "Font-Awesome/svgs/solid/user-tie.svg"
 				count: "200+"
+				title: qsTr("Expert Tutors")
 				bgColor: "#1a1d3b53"
 			}
 			ListElement {
+				icon: "Font-Awesome/svgs/solid/user-graduate.svg"
 				count: "60K+"
+				title: qsTr("Online Students")
 				bgColor: "#1a6f42c1"
 			}
 			ListElement {
+				icon: "Bootstrap/icons/patch-check-fill.svg"
 				count: "6K+"
+				title: qsTr("Certified Courses")
 				bgColor: "#1a17a2b8"
 			}
 		}
@@ -45,18 +54,51 @@ ScrollView {
 					bottom: parent.bottom
 				}
 
-				FontLoader {
-					id: heebo
-					name: "Heebo"
-					source: "Heebo/Heebo-Bold.ttf"
-				}
+				RowLayout {
+					anchors {
+						top: parent.top
+						topMargin: 25.6
+						left: parent.left
+						leftMargin: 25.6
+						right: parent.right
+						rightMargin: 25.6
+						bottom: parent.bottom
+						bottomMargin: 25.6
+					}
 
-				Label {
-					id: label
-					text: count
-					font {
-						family: heebo.name
-						pixelSize: 21
+					Image {
+						source: icon
+						sourceSize.height: parent.height
+					}
+
+					ColumnLayout {
+						FontLoader {
+							id: bold
+							name: "Heebo"
+							source: "Heebo/Heebo-Bold.ttf"
+						}
+
+						Label {
+							text: count
+							font {
+								family: bold.name
+								pixelSize: 21
+							}
+						}
+
+						FontLoader {
+							id: medium
+							name: "Heebo"
+							source: "Heebo/Heebo-Bold.ttf"
+						}
+
+						Label {
+							text: title
+							font {
+								family: medium.name
+								pixelSize: 15
+							}
+						}
 					}
 				}
 			}
