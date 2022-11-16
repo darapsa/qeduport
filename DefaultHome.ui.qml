@@ -30,8 +30,8 @@ ScrollView {
 		}
 
 		delegate: Item {
-			width: counter.cellWidth
-			height: 125.6
+			implicitWidth: counter.cellWidth
+			implicitHeight: counter.cellHeight
 			Rectangle {
 				color: bgColor
 				radius: 8
@@ -64,9 +64,10 @@ ScrollView {
 
 		cellWidth: width < 576 ? width : width < 768 ? width / 2
 		: width < 992 ? width / 3 : width / 4
-		cellHeight: cellWidth * 1.3
+		cellHeight: 125.6
 
-		height: 100
+		height: width < 576 ? cellHeight : width < 768 ? cellHeight * 2
+		: width < 992 ? cellHeight * 3 : cellHeight * 4
 		anchors {
 			top: parent.top
 			left: parent.left
