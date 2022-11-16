@@ -1,8 +1,10 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 
-Item {
+ScrollView {
 	property alias popularCourseTabsContent: popularCourseTabsContent
+	contentWidth: counter.width
+	contentHeight: counter.height + popularCourseTabsContent.height
 
 	GridView {
 		id: counter
@@ -63,12 +65,13 @@ Item {
 		cellWidth: width < 576 ? width : width < 768 ? width / 2
 		: width < 992 ? width / 3 : width / 4
 		cellHeight: cellWidth * 1.3
+
+		height: 100
 		anchors {
 			top: parent.top
 			left: parent.left
 			right: parent.right
 		}
-		height: 100
 	}
 
 	GridView {
@@ -79,11 +82,12 @@ Item {
 		: width < 992 ? width / 3 : width / 4
 		cellHeight: cellWidth * 1.3
 
+		height: width < 576 ? cellHeight : width < 768 ? cellHeight * 2
+		: width < 992 ? cellHeight * 3 : cellHeight * 4
 		anchors {
 			left: parent.left
 			right: parent.right
 			bottom: parent.bottom
 		}
-		height: parent.height - 100
 	}
 }
