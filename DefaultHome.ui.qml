@@ -107,8 +107,9 @@ Flickable {
 		: width < 992 ? width / 3 : width / 4
 		cellHeight: 125.6
 
-		height: width < 576 ? cellHeight : width < 768 ? cellHeight * 2
-		: width < 992 ? cellHeight * 3 : cellHeight * 4
+		height: width < 576 ? cellHeight * 4
+		: width < 768 ? cellHeight * 3
+		: width < 992 ? cellHeight * 2 : cellHeight
 		anchors {
 			top: parent.top
 			left: parent.left
@@ -124,8 +125,9 @@ Flickable {
 		: width < 992 ? width / 3 : width / 4
 		cellHeight: cellWidth * 1.3
 
-		height: width < 576 ? cellHeight : width < 768 ? cellHeight * 2
-		: width < 992 ? cellHeight * 3 : cellHeight * 4
+		height: width < 576 ? cellHeight * 4
+		: width < 768 ? cellHeight * 3
+		: width < 992 ? cellHeight * 2 : cellHeight
 		anchors {
 			top: counter.bottom
 			left: parent.left
