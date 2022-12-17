@@ -4,6 +4,7 @@ import QtGraphicalEffects 1.15
 
 Item {
 	property string imageSource: "Darapsa.svg"
+	property alias buy: buy
 
 	DropShadow {
 		source: rectangle
