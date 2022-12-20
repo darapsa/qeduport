@@ -55,13 +55,16 @@ Flickable {
 		id: popularCourseTabsContent
 		interactive: false
 
-		cellWidth: width < 576 ? width : width < 768 ? width / 2
-		: width < 992 ? width / 3 : width / 4
+		cellWidth: width < 576 ? width
+		: width < 768 ? width / 2
+		: width < 992 ? width / 3
+		: width / 4
 		cellHeight: cellWidth * 1.3
 
-		height: width < 576 ? cellHeight * 4
-		: width < 768 ? cellHeight * 3
-		: width < 992 ? cellHeight * 2 : cellHeight
+		height: width < 576 ? cellHeight * count
+		: width < 768 ? cellHeight * count / 2
+		: width < 992 ? cellHeight * count / 3
+		: cellHeight * count / 4
 		anchors {
 			top: counter.bottom
 			left: parent.left
