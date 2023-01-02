@@ -1,0 +1,27 @@
+import QmlProject 1.1
+
+Project {
+	mainFile: "DefaultHome.ui.qml"
+
+	QmlFiles {
+		directory: "."
+	}
+
+	ImageFiles {
+		directory: "Font-Awesome"
+	}
+
+	ImageFiles {
+		directory: "Bootstrap"
+	}
+
+	Files {
+		filter: "*.ttf"
+	}
+
+	qdsVersion: "3.9"
+	quickVersion: "2.15"
+	multilanguageSupport: true
+	supportedLanguages: ["en", "id"]
+	primaryLanguage: "en"
+}
