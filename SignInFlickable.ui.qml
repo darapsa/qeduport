@@ -2,39 +2,42 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-Flickable {
-	contentHeight: form.height
+GridLayout {
 
-	ListView {
-		id: form
-		interactive: false
-		anchors {
-			top: parent.top
-			left: parent.left
-			right: parent.right
-		}
+	ColumnLayout {
 
-		model: ListModel {
-			ListElement {
-				label: qsTr("Email address *")
-				icon: "Bootstrap/icons/envelope-fill.svg"
-				placeholder: qsTr("E-mail")
-			}
-			ListElement {
-				label: qsTr("Password *")
-				icon: "Font-Awesome/svgs/solid/lock.svg"
-				placeholder: qsTr("password")
-			}
-		}
-
-		delegate: ColumnLayout {
-			width: form.width
+		ColumnLayout {
 			Label {
-				text: label
+				text: qsTr("Email address *")
 			}
-			TextField {
-				placeholderText: placeholder
-				Layout.fillWidth: true
+			RowLayout {
+				Image {
+					id: envelope
+					source: "Bootstrap/icons/envelope-fill.svg"
+				}
+				TextField {
+					placeholderText: qsTr("E-mail")
+					Layout.fillWidth: true
+				}
+			}
+		}
+
+		ColumnLayout {
+			Label {
+				text: qsTr("Password *")
+			}
+			RowLayout {
+				Image {
+					source: "Font-Awesome/svgs/solid/lock.svg"
+					sourceSize {
+						width: envelope.height
+						height: envelope.height
+					}
+				}
+				TextField {
+					placeholderText: qsTr("password")
+					Layout.fillWidth: true
+				}
 			}
 		}
 	}
