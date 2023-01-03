@@ -3,10 +3,10 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 GridLayout {
-	property alias email: email
-	property alias password: password
-	property alias button: button
-	property alias signUp: signUp
+	property alias signInEmail: email
+	property alias signInPassword: password
+	property alias signInButton: button
+	property alias signInSignUp: signUp
 
 	ColumnLayout {
 		Layout.margins: 15
