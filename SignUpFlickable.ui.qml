@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.15
 GridLayout {
 	property alias signUpEmail: email
 	property alias signUpPassword: password
-	property alias signUpConfigmPassword: confirmPassword
+	property alias signUpConfirmPassword: confirmPassword
 	property alias signUpButton: button
 	property alias signUpSignIn: signIn
 
