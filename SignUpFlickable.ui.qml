@@ -3,10 +3,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 GridLayout {
-	property alias email: email
-	property alias password: password
-	property alias button: button
-	property alias signUp: signUp
 
 	ColumnLayout {
 		Layout.margins: 15
@@ -23,7 +19,6 @@ GridLayout {
 						source: "Bootstrap/icons/envelope-fill.svg"
 					}
 					TextField {
-						id: email
 						placeholderText: qsTr("E-mail")
 						Layout.fillWidth: true
 					}
@@ -43,6 +38,25 @@ GridLayout {
 						}
 					}
 					TextField {
+						placeholderText: qsTr("password")
+						Layout.fillWidth: true
+					}
+				}
+			}
+
+			ColumnLayout {
+				Label {
+					text: qsTr("Confirm Password *")
+				}
+				RowLayout {
+					Image {
+						source: "Font-Awesome/svgs/solid/lock.svg"
+						sourceSize {
+							width: envelope.height
+							height: envelope.height
+						}
+					}
+					TextField {
 						id: password
 						placeholderText: qsTr("password")
 						Layout.fillWidth: true
@@ -51,8 +65,7 @@ GridLayout {
 			}
 
 			Button {
-				id: button
-				text: qsTr("Login")
+				text: qsTr("Sign Up")
 				Layout.fillWidth: true
 			}
 		}
@@ -60,11 +73,10 @@ GridLayout {
 		RowLayout {
 			Layout.alignment: Qt.AlignHCenter
 			Label {
-				text: qsTr("Don't have an account?")
+				text: qsTr("Already have an account?")
 			}
 			Text {
-				id: signUp
-				text: "<a href=\"sign-up.html\">Signup here</a>"
+				text: "<a href=\"sign-in.html\">Sign in here</a>"
 				linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 				font.underline: false
 			}
