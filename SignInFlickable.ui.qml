@@ -3,6 +3,9 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 GridLayout {
+	property alias email: email
+	property alias password: password
+	property alias button: button
 
 	ColumnLayout {
 		Layout.margins: 15
@@ -19,6 +22,7 @@ GridLayout {
 						source: "Bootstrap/icons/envelope-fill.svg"
 					}
 					TextField {
+						id: email
 						placeholderText: qsTr("E-mail")
 						Layout.fillWidth: true
 					}
@@ -38,6 +42,7 @@ GridLayout {
 						}
 					}
 					TextField {
+						id: password
 						placeholderText: qsTr("password")
 						Layout.fillWidth: true
 					}
@@ -45,6 +50,7 @@ GridLayout {
 			}
 
 			Button {
+				id: button
 				text: qsTr("Login")
 				Layout.fillWidth: true
 			}
