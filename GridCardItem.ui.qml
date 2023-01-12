@@ -113,7 +113,6 @@ Item {
 					id: favorite
 					source: "Font-Awesome/svgs/solid/heart.svg"
 					sourceSize {
-						width: height
 						height: parent.height / 1.5
 					}
 					anchors {
