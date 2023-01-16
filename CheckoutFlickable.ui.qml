@@ -8,7 +8,7 @@ Flickable {
 	property alias checkoutEmail: email
 	property alias checkoutMobile: mobile
 	property alias checkoutCountry: country
-	property alias checkoutState: state
+	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
 	contentHeight: personal.height
@@ -107,7 +107,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
-						id: state
+						id: province
 						placeholderText: qsTr("Select state")
 						Layout.fillWidth: true
 					}
