@@ -4,6 +4,13 @@ import QtQuick.Layouts 1.15
 
 Flickable {
 	property alias checkoutLogin: login
+	property alias checkoutName: name
+	property alias checkoutEmail: email
+	property alias checkoutMobile: mobile
+	property alias checkoutCountry: country
+	property alias checkoutState: state
+	property alias checkoutPostal: postal
+	property alias checkoutAddress: address
 	contentHeight: personal.height
 
 	Item {
@@ -36,6 +43,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: name
 						placeholderText: qsTr("Name")
 						Layout.fillWidth: true
 					}
@@ -51,6 +59,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: email
 						placeholderText: qsTr("Email")
 						Layout.fillWidth: true
 					}
@@ -66,6 +75,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: mobile
 						placeholderText: qsTr("Mobile number")
 						Layout.fillWidth: true
 					}
@@ -81,6 +91,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: country
 						placeholderText: qsTr("Select country")
 						Layout.fillWidth: true
 					}
@@ -96,6 +107,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: state
 						placeholderText: qsTr("Select state")
 						Layout.fillWidth: true
 					}
@@ -111,6 +123,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: postal
 						placeholderText: qsTr("PIN code")
 						Layout.fillWidth: true
 					}
@@ -126,6 +139,7 @@ Flickable {
 						Layout.fillWidth: true
 					}
 					TextField {
+						id: address
 						placeholderText: qsTr("Address")
 						Layout.fillWidth: true
 					}
