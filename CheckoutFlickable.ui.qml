@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
+	property alias checkoutAlert: alert
 	property alias checkoutLogin: login
 	property alias checkoutName: name
 	property alias checkoutEmail: email
@@ -24,6 +25,7 @@ Flickable {
 		ColumnLayout {
 
 			RowLayout {
+				id: alert
 				Layout.alignment: Qt.AlignHCenter
 				Label {
 					text: qsTr("Already have an account?")
