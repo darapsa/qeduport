@@ -148,7 +148,6 @@ Flickable {
 				Layout.rightMargin: 8
 			}
 
-			width: parent.width
 			columns: width < 786 ? 1 : 2
 			rows: width < 786 ? 4 : 7
 			columnSpacing: 0
