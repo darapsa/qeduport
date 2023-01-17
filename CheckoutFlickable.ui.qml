@@ -12,10 +12,10 @@ Flickable {
 	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
-	contentHeight: personal.height
+	contentHeight: main.height
 
 	ColumnLayout {
-		id: personal
+		id: main
 		anchors {
 			top: parent.top
 			left: parent.left
