@@ -154,5 +154,59 @@ Flickable {
 			columnSpacing: 0
 			rowSpacing: 0
 		}
+
+		ColumnLayout {
+			Label {
+				text: qsTr("Payment method")
+				Layout.fillWidth: true
+			}
+			ColumnLayout {
+				Frame {
+					Layout.fillWidth: true
+					ColumnLayout {
+						anchors.fill: parent
+							Label {
+								text: qsTr("Credit or Debit Card")
+								Layout.fillWidth: true
+							}
+					}
+				}
+				Frame {
+					Layout.fillWidth: true
+					ColumnLayout {
+						anchors.fill: parent
+						Label {
+							text: qsTr("Pay with Net Banking")
+							Layout.fillWidth: true
+						}
+						ColumnLayout {
+							Label {
+								text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers. ")
+								Layout.fillWidth: true
+								wrapMode: Text.Wrap
+							}
+							Label {
+								text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
+								Layout.fillWidth: true
+								wrapMode: Text.Wrap
+							}
+							ComboBox {
+								model: ListModel {
+									ListElement {
+										text: "Bank of America"
+									}
+									ListElement {
+										text: "Bank of India"
+									}
+									ListElement {
+										text: "Bank of London"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
