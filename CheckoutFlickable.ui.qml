@@ -418,18 +418,21 @@ Flickable {
 
 					Label {
 						text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
-						Layout.fillWidth: true
+						font.pixelSize: 21
 						wrapMode: Text.Wrap
+						Layout.fillWidth: true
 					}
 
 					Label {
 						text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
-						Layout.fillWidth: true
+						font.pixelSize: 15
 						wrapMode: Text.Wrap
+						Layout.fillWidth: true
 					}
 
 					Button {
 						text: qsTr("Purchase Premium")
+						font.pixelSize: 13
 						Layout.fillWidth: true
 					}
 				}
