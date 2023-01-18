@@ -12,6 +12,7 @@ Flickable {
 	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
+	property alias checkoutPremium: premium
 	contentHeight: container.height
 
 	GridLayout {
@@ -410,6 +411,7 @@ Flickable {
 			}
 
 			Frame {
+				id: premium
 				Layout.fillWidth: true
 				Layout.alignment: Qt.AlignTop
 
