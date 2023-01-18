@@ -248,6 +248,7 @@ Flickable {
 									}
 
 									ComboBox {
+										font.pixelSize: 15
 										model: ListModel {
 											ListElement {
 												text: "Please choose one"
@@ -260,6 +261,12 @@ Flickable {
 											}
 											ListElement {
 												text: "Bank of London"
+											}
+										}
+										delegate: ItemDelegate {
+											contentItem: Text {
+												text: modelData
+												font.pixelSize: 14
 											}
 										}
 									}
