@@ -249,6 +249,9 @@ Flickable {
 									ComboBox {
 										model: ListModel {
 											ListElement {
+												text: "Please choose one"
+											}
+											ListElement {
 												text: "Bank of America"
 											}
 											ListElement {
@@ -282,6 +285,7 @@ Flickable {
 
 					Label {
 						text: qsTr("Order Summary")
+						font.pixelSize: 21
 						Layout.fillWidth: true
 					}
 
@@ -295,12 +299,14 @@ Flickable {
 							Label {
 								id: codeLabel
 								text: qsTr("Transaction code")
+								font.pixelSize: 15
 								anchors.verticalCenter: parent.verticalCenter
 							}
 
 							Label {
 								id: codeValue
 								text: "AB12365E"
+								font.pixelSize: 15
 								anchors {
 									right: parent.right
 									verticalCenter: parent.verticalCenter
@@ -312,11 +318,13 @@ Flickable {
 
 							TextField {
 								placeholderText: qsTr("COUPON CODE")
+								font.pixelSize: 15
 								Layout.fillWidth: true
 							}
 
 							Button {
 								text: qsTr("Apply")
+								font.pixelSize: 15
 							}
 						}
 					}
@@ -331,12 +339,14 @@ Flickable {
 							Label {
 								id: priceLabel
 								text: qsTr("Original Price")
+								font.pixelSize: 15
 								anchors.verticalCenter: parent.verticalCenter
 							}
 
 							Label {
 								id: priceValue
 								text: "$500"
+								font.pixelSize: 15
 								anchors {
 									right: parent.right
 									verticalCenter: parent.verticalCenter
@@ -352,12 +362,14 @@ Flickable {
 							Label {
 								id: discountLabel
 								text: qsTr("Coupon Discount")
+								font.pixelSize: 15
 								anchors.verticalCenter: parent.verticalCenter
 							}
 
 							Label {
 								id: discountValue
 								text: "-" + "$20"
+								font.pixelSize: 15
 								anchors {
 									right: parent.right
 									verticalCenter: parent.verticalCenter
@@ -373,12 +385,14 @@ Flickable {
 							Label {
 								id: totalLabel
 								text: qsTr("Total")
+								font.pixelSize: 21
 								anchors.verticalCenter: parent.verticalCenter
 							}
 
 							Label {
 								id: totalValue
 								text: "$480"
+								font.pixelSize: 21
 								anchors {
 									right: parent.right
 									verticalCenter: parent.verticalCenter
@@ -389,6 +403,7 @@ Flickable {
 
 					Button {
 						text: qsTr("Place Order")
+						font.pixelSize: 15
 						Layout.fillWidth: true
 					}
 				}
