@@ -34,198 +34,229 @@ Flickable {
 
 				Label {
 					text: qsTr("Already have an account?")
+					font.pixelSize: 15
 				}
 
 				Text {
 					id: login
-					text: "<a href=\"sign-in.html\">Log in</a>"
+					text: "<a href=\"sign-in.html\">"
+						+ qsTr("Log in") + "</a>"
+					font.pixelSize: 15
 					font.underline: false
-				}
-			}
-
-			GridLayout {
-				columns: width < 768 ? 1 : 2
-				rows: width < 768 ? 4 : 7
-				columnSpacing: 0
-				rowSpacing: 0
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Your name *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: name
-						placeholderText: qsTr("Name")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Email address *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: email
-						placeholderText: qsTr("Email")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Mobile number *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: mobile
-						placeholderText: qsTr("Mobile number")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Select country *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: country
-						placeholderText: qsTr("Select country")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Select state *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: province
-						placeholderText: qsTr("Select state")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Postal code *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: postal
-						placeholderText: qsTr("PIN code")
-						Layout.fillWidth: true
-					}
-				}
-
-				ColumnLayout {
-					Layout.topMargin: 16
-					Layout.leftMargin: 8
-					Layout.rightMargin: 8
-
-					Label {
-						text: qsTr("Address *")
-						Layout.fillWidth: true
-					}
-
-					TextField {
-						id: address
-						placeholderText: qsTr("Address")
-						Layout.fillWidth: true
-					}
 				}
 			}
 
 			ColumnLayout {
 
 				Label {
-					text: qsTr("Payment method")
+					text: qsTr("Personal Details")
+					font.pixelSize: 21
 					Layout.fillWidth: true
+				}
+
+				GridLayout {
+					columns: width < 768 ? 1 : 2
+					rows: width < 768 ? 4 : 7
+					columnSpacing: 0
+					rowSpacing: 0
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Your name *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: name
+							placeholderText: qsTr("Name")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Email address *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: email
+							placeholderText: qsTr("Email")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Mobile number *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: mobile
+							placeholderText: qsTr("Mobile number")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Select country *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: country
+							placeholderText: qsTr("Select country")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Select state *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: province
+							placeholderText: qsTr("Select state")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Postal code *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: postal
+							placeholderText: qsTr("PIN code")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
+
+					ColumnLayout {
+						Layout.topMargin: 16
+						Layout.leftMargin: 8
+						Layout.rightMargin: 8
+
+						Label {
+							text: qsTr("Address *")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+
+						TextField {
+							id: address
+							placeholderText: qsTr("Address")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+						}
+					}
 				}
 
 				ColumnLayout {
 
-					Frame {
+					Label {
+						text: qsTr("Payment method")
+						font.pixelSize: 21
 						Layout.fillWidth: true
-
-						ColumnLayout {
-							anchors.fill: parent
-
-							Label {
-								text: qsTr("Credit or Debit Card")
-								Layout.fillWidth: true
-							}
-						}
 					}
 
-					Frame {
-						Layout.fillWidth: true
+					ColumnLayout {
 
-						ColumnLayout {
-							anchors.fill: parent
-
-							Label {
-								text: qsTr("Pay with Net Banking")
-								Layout.fillWidth: true
-							}
+						Frame {
+							Layout.fillWidth: true
 
 							ColumnLayout {
+								anchors.fill: parent
 
 								Label {
-									text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
+									text: qsTr("Credit or Debit Card")
+									font.pixelSize: 15
 									Layout.fillWidth: true
-									wrapMode: Text.Wrap
 								}
+							}
+						}
+
+						Frame {
+							Layout.fillWidth: true
+
+							ColumnLayout {
+								anchors.fill: parent
 
 								Label {
-									text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
+									text: qsTr("Pay with Net Banking")
+									font.pixelSize: 15
 									Layout.fillWidth: true
-									wrapMode: Text.Wrap
 								}
 
-								ComboBox {
-									model: ListModel {
-										ListElement {
-											text: "Bank of America"
-										}
-										ListElement {
-											text: "Bank of India"
-										}
-										ListElement {
-											text: "Bank of London"
+								ColumnLayout {
+
+									Label {
+										text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
+										font.pixelSize: 15
+										wrapMode: Text.Wrap
+										Layout.fillWidth: true
+									}
+
+									Label {
+										text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
+										font.pixelSize: 15
+										wrapMode: Text.Wrap
+										Layout.fillWidth: true
+									}
+
+									ComboBox {
+										model: ListModel {
+											ListElement {
+												text: "Bank of America"
+											}
+											ListElement {
+												text: "Bank of India"
+											}
+											ListElement {
+												text: "Bank of London"
+											}
 										}
 									}
 								}
