@@ -16,6 +16,7 @@ GridLayout {
 			ColumnLayout {
 				Label {
 					text: qsTr("Email address *")
+					font.pixelSize: 15
 				}
 				RowLayout {
 					Image {
@@ -25,6 +26,7 @@ GridLayout {
 					TextField {
 						id: email
 						placeholderText: qsTr("E-mail")
+						font.pixelSize: 15
 						Layout.fillWidth: true
 					}
 				}
@@ -33,6 +35,7 @@ GridLayout {
 			ColumnLayout {
 				Label {
 					text: qsTr("Password *")
+					font.pixelSize: 15
 				}
 				RowLayout {
 					Image {
@@ -45,6 +48,7 @@ GridLayout {
 					TextField {
 						id: password
 						placeholderText: qsTr("password")
+						font.pixelSize: 15
 						Layout.fillWidth: true
 					}
 				}
@@ -53,6 +57,7 @@ GridLayout {
 			Button {
 				id: button
 				text: qsTr("Login")
+				font.pixelSize: 15
 				Layout.fillWidth: true
 			}
 		}
@@ -61,12 +66,14 @@ GridLayout {
 			Layout.alignment: Qt.AlignHCenter
 			Label {
 				text: qsTr("Don't have an account?")
+				font.pixelSize: 15
 			}
 			Text {
 				id: signUp
 				text: "<a href=\"sign-up.html\">Signup here</a>"
-				linkColor: Qt.rgba(.0235, .416, .788, 1.0)
+				font.pixelSize: 15
 				font.underline: false
+				linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 			}
 		}
 	}
