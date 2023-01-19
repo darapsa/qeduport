@@ -3,8 +3,8 @@ import QtQuick.Controls 2.15
 
 Flickable {
 	property alias counter: counter
-	property alias popularCourseTabsContent: popularCourseTabsContent
-	contentHeight: counter.height + popularCourseTabsContent.height
+	property alias popular: popular
+	contentHeight: counter.height + popular.height
 
 	GridView {
 		id: counter
@@ -52,7 +52,7 @@ Flickable {
 	}
 
 	GridView {
-		id: popularCourseTabsContent
+		id: popular
 		interactive: false
 
 		cellWidth: width < 576 ? width
