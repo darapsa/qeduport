@@ -15,34 +15,8 @@ Flickable {
 			right: parent.right
 		}
 
-		ToolBar {
+		HeaderToolBar {
 			Layout.fillWidth: true
-			RowLayout {
-				anchors.fill: parent
-				layoutDirection: Qt.RightToLeft
-				ToolButton {
-					onClicked: optionsMenu.open()
-					Menu {
-						id: optionsMenu
-						y: parent.height
-						Action {
-							text: qsTr("Edit Profile")
-						}
-						Action {
-							text: qsTr("Account Settings")
-						}
-						Action {
-							text: qsTr("Help")
-						}
-						Action {
-							text: qsTr("Sign Out")
-						}
-						Action {
-							text: qsTr("Dark Mode")
-						}
-					}
-				}
-			}
 		}
 
 		Item {
