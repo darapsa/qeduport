@@ -6,6 +6,11 @@ import QtGraphicalEffects 1.15
 Flickable {
 	id: flickable
 	property alias detailImage: image
+	property alias detailPrice: price
+	property alias detailOriginalPrice: originalPrice
+	property alias detailDiscount: discount
+	property alias detailTime: time
+	property alias detailTrial: trial
 	property alias detailBuy: buy
 	contentHeight: body.height
 
@@ -85,26 +90,31 @@ Flickable {
 							RowLayout {
 
 								Label {
+									id: price
 									text: "$150"
 									font.pixelSize: 21
 								}
 
 								Label {
+									id: originalPrice
 									text: "$350"
 									font.pixelSize: 15
 									font.strikeout: true
 								}
 
 								Label {
+									id: discount
 									text: qsTr("60% off")
 									font.pixelSize: 14
 								}
 							}
 
 							RowLayout {
+								id: time
 
 								Label {
 									text: qsTr("5 days left at this price")
+									font.pixelSize: 15
 								}
 							}
 						}
