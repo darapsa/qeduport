@@ -28,6 +28,7 @@ Flickable {
 
 		Item {
 			Layout.fillWidth: true
+			implicitHeight: width * 1.2
 
 			DropShadow {
 				source: rectangle
