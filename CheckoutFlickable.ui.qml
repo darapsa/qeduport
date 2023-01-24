@@ -12,6 +12,7 @@ Flickable {
 	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
+	property alias checkoutPlaceOrder: placeOrder
 	property alias checkoutPremium: premium
 	contentHeight: body.height
 
@@ -417,6 +418,7 @@ Flickable {
 						}
 
 						Button {
+							id: placeOrder
 							text: qsTr("Place Order")
 							font.pixelSize: 15
 							Layout.fillWidth: true
