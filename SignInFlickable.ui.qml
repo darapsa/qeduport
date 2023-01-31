@@ -91,6 +91,21 @@ GridLayout {
 				text: qsTr("Login")
 				font.pixelSize: 15
 				Layout.fillWidth: true
+
+				contentItem: Text {
+					color: "#ffffff"
+					text: "Login"
+					horizontalAlignment: Text.AlignHCenter
+					verticalAlignment: Text.AlignVCenter
+					font.weight: Font.Medium
+					font.family: "Roboto"
+					font.pointSize: 14
+				}
+
+				background: Rectangle {
+					color: button.down ? "#055aab" : "#066ac9"
+					radius: 8
+				}
 			}
 		}
 
