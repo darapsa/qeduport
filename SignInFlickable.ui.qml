@@ -11,9 +11,9 @@ GridLayout {
 	ColumnLayout {
 		Layout.rightMargin: 16
 		Layout.leftMargin: 16
-		spacing: 16
 
 		ColumnLayout {
+			spacing: 16
 
 			ColumnLayout {
 				Label {
@@ -90,7 +90,12 @@ GridLayout {
 					}
 				}
 			}
-
+			Label {
+				id: passwordHelper
+				text: "Your password must atleast 8 characters long"
+				font.pixelSize: 12
+				color: "#6c757d"
+			}
 			Button {
 				id: button
 				text: qsTr("Login")
