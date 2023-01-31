@@ -96,6 +96,31 @@ GridLayout {
 				font.pixelSize: 12
 				color: "#6c757d"
 			}
+			RowLayout {
+				Layout.fillWidth: true
+				CheckBox {
+					id: rememberCheckBox
+					text: qsTr("Remember me")
+					font.pointSize: 14
+					font.family: "Roboto"
+					Layout.fillWidth: true
+					contentItem: Text {
+						color: "#6c757d"
+						text: rememberCheckBox.text
+						verticalAlignment: Text.AlignVCenter
+						leftPadding: rememberCheckBox.indicator.width + rememberCheckBox.spacing
+					}
+				}
+				Text {
+					id: forgotPassword
+					text: "<a href=\"#\">Forgot password?</a>"
+					font.family: "Roboto"
+					font.pointSize: 14
+					horizontalAlignment: Text.AlignRight
+					Layout.fillWidth: true
+					linkColor: Qt.rgba(.0235, .416, .788, 1.0)
+				}
+			}
 			Button {
 				id: button
 				text: qsTr("Login")
