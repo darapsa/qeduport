@@ -32,6 +32,7 @@ GridLayout {
 						Image {
 							id: envelope
 							source: "Bootstrap/icons/envelope-fill.svg"
+							Layout.margins: 16
 						}
 						TextField {
 							id: email
@@ -39,6 +40,9 @@ GridLayout {
 							font.pixelSize: 15
 							Layout.fillWidth: true
 							Layout.fillHeight: true
+							background: Rectangle {
+								color: "transparent"
+							}
 						}
 					}
 				}
