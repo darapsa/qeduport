@@ -24,7 +24,6 @@ GridLayout {
 					color: "#f5f7f9"
 					radius: 8
 					border.width: 0
-					layer.textureSize.height: 1
 					Layout.fillWidth: true
 					
 					RowLayout {
@@ -32,6 +31,10 @@ GridLayout {
 						Image {
 							id: envelope
 							source: "Bootstrap/icons/envelope-fill.svg"
+							sourceSize {
+								width: 24
+								height: 24
+							}
 							Layout.margins: 16
 						}
 						TextField {
@@ -53,19 +56,32 @@ GridLayout {
 					text: qsTr("Password *")
 					font.pixelSize: 15
 				}
-				RowLayout {
-					Image {
-						source: "Font-Awesome/svgs/solid/lock.svg"
-						sourceSize {
-							width: envelope.height
-							height: envelope.height
+
+				Rectangle {
+					height: 50
+					color: "#f5f7f9"
+					radius: 8
+					border.width: 0
+					Layout.fillWidth: true
+
+					RowLayout {
+						anchors.fill: parent
+						Image {
+							source: "Font-Awesome/svgs/solid/lock.svg"
+							Layout.maximumHeight: 24
+							Layout.maximumWidth: 24
+							Layout.margins: 16
 						}
-					}
-					TextField {
-						id: password
-						placeholderText: qsTr("password")
-						font.pixelSize: 15
-						Layout.fillWidth: true
+						TextField {
+							id: password
+							placeholderText: qsTr("Password")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+							Layout.fillHeight: true
+							background: Rectangle {
+								color: "transparent"
+							}
+						}
 					}
 				}
 			}
