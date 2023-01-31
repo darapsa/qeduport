@@ -28,6 +28,7 @@ GridLayout {
 					Layout.fillWidth: true
 					
 					RowLayout {
+						anchors.fill: parent
 						Image {
 							id: envelope
 							source: "Bootstrap/icons/envelope-fill.svg"
