@@ -14,7 +14,26 @@ GridLayout {
 
 		ColumnLayout {
 			spacing: 16
-
+			ColumnLayout {
+				id: columnLayout
+				Layout.fillWidth: true
+				
+				Label {
+					id: signInTitle
+					text: qsTr("Sign In Title")
+					font.family: "Roboto"
+					font.weight: Font.Medium
+					font.pointSize: 40
+				}
+				
+				Label {
+					id: signInSubtitle
+					color: "#6c757d"
+					text: qsTr("Sign In Subtitle")
+					font.weight: Font.Normal
+					font.pointSize: 22
+				}
+			}
 			ColumnLayout {
 				Label {
 					text: qsTr("Email address *")
