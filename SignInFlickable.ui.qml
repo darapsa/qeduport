@@ -18,16 +18,27 @@ GridLayout {
 					text: qsTr("Email address *")
 					font.pixelSize: 15
 				}
-				RowLayout {
-					Image {
-						id: envelope
-						source: "Bootstrap/icons/envelope-fill.svg"
-					}
-					TextField {
-						id: email
-						placeholderText: qsTr("E-mail")
-						font.pixelSize: 15
-						Layout.fillWidth: true
+
+				Rectangle {
+					height: 50
+					color: "#f5f7f9"
+					radius: 8
+					border.width: 0
+					layer.textureSize.height: 1
+					Layout.fillWidth: true
+					
+					RowLayout {
+						Image {
+							id: envelope
+							source: "Bootstrap/icons/envelope-fill.svg"
+						}
+						TextField {
+							id: email
+							placeholderText: qsTr("E-mail")
+							font.pixelSize: 15
+							Layout.fillWidth: true
+							Layout.fillHeight: true
+						}
 					}
 				}
 			}
