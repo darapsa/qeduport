@@ -7,6 +7,8 @@ ToolBar {
 		anchors.fill: parent
 		layoutDirection: Qt.RightToLeft
 		ToolButton {
+			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
+			icon.color: "transparent"
 			onClicked: optionsMenu.open()
 			Menu {
 				id: optionsMenu
