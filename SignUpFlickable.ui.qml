@@ -10,10 +10,30 @@ GridLayout {
 	property alias signUpSignIn: signIn
 
 	ColumnLayout {
-		Layout.margins: 15
+		Layout.margins: 16
 
 		ColumnLayout {
-
+			spacing: 16
+			ColumnLayout {
+				id: columnLayout
+				Layout.fillWidth: true
+				
+				Label {
+					id: signUpTitle
+					text: qsTr("Sign Up Title")
+					font.family: "Roboto"
+					font.weight: Font.Medium
+					font.pointSize: 40
+				}
+				
+				Label {
+					id: signUpSubtitle
+					color: "#6c757d"
+					text: qsTr("Sign Up Subtitle")
+					font.weight: Font.Normal
+					font.pointSize: 22
+				}
+			}
 			ColumnLayout {
 				Label {
 					text: qsTr("Email address *")
