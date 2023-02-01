@@ -4,12 +4,14 @@ import QtQuick.Layouts 1.15
 
 ColumnLayout {
 	Rectangle {
+		color: "#ffffff"
 		Layout.fillWidth: true
 		Layout.fillHeight: true
 		radius: 16
 		ColumnLayout {
 			anchors.fill: parent
 			ColumnLayout {
+                Layout.alignment: Qt.AlignTop
 				spacing: 24
 				Layout.fillWidth: true
 				Layout.margins: 24
