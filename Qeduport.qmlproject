@@ -24,4 +24,6 @@ Project {
 	multilanguageSupport: true
 	supportedLanguages: ["en", "id"]
 	primaryLanguage: "en"
+
+    mainUiFile: "OrderSummary.ui.qml"
 }
