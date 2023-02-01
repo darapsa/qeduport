@@ -149,9 +149,9 @@ GridLayout {
 					Layout.fillWidth: true
 					contentItem: Text {
 						color: "#6c757d"
-						text: rememberCheckBox.text
+						text: agreementCheckBox.text
 						verticalAlignment: Text.AlignVCenter
-						leftPadding: rememberCheckBox.indicator.width + rememberCheckBox.spacing
+						leftPadding: agreementCheckBox.indicator.width + agreementCheckBox.spacing
 					}
 				}
 			}
