@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtGraphicalEffects 1.15
 
 Item {
-	property string imageSource: "Darapsa.svg"
+	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
 	property alias buy: buy
 
 	DropShadow {

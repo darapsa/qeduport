@@ -51,7 +51,7 @@ Flickable {
 
 				Image {
 					id: image
-					source: "Darapsa.svg"
+					source: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
 					sourceSize {
 						width: parent.width - 16
 						height: parent.width * 3 / 4
