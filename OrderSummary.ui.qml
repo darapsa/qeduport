@@ -3,12 +3,16 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 ColumnLayout {
-
+	Rectangle {
+		Layout.fillWidth: true
+		Layout.fillHeight: true
+		radius: 16
 		ColumnLayout {
-			Layout.alignment: Qt.AlignTop
+			anchors.fill: parent
 			ColumnLayout {
 				spacing: 24
 				Layout.fillWidth: true
+				Layout.margins: 24
 				Label {
 					id: oderSummaryTitle
 					text: qsTr("Order Summary")
@@ -85,4 +89,5 @@ ColumnLayout {
 				}
 			}
 		}
+	}
 }
