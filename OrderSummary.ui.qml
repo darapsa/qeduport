@@ -41,9 +41,10 @@ ColumnLayout {
 				}
 				RowLayout {
 					Rectangle {
-						color: "#f5f7f9"
+						color: "transparent"
 						radius: 8
-						border.width: 0
+						border.width: 1
+						border.color: "#f5f7f9"
 						Layout.fillWidth: true
 						implicitHeight: 40
 						RowLayout {
@@ -51,6 +52,7 @@ ColumnLayout {
 							TextField {
 								id: couponCode
 								placeholderText: qsTr("Coupon code")
+								
 								Layout.fillWidth: true
 								font.pixelSize: 16
 								font.family: "roboto"
