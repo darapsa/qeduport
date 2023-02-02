@@ -4,15 +4,11 @@ import QtQuick.Layouts 1.15
 
 Rectangle {
 	color: "#ffffff"
-	Layout.fillWidth: true
-	Layout.fillHeight: true
 	radius: 16
 
 	ColumnLayout {
 		anchors.fill: parent
 		anchors.margins: 24
-		Layout.margins: 24
-
 		Label {
 			id: oderSummaryTitle
 			text: qsTr("Order Summary")
@@ -50,7 +46,7 @@ Rectangle {
 			color: "transparent"
 			radius: 8
 			border.width: 1
-			border.color: "#f5f7f9"
+			border.color: "#4d000000"
 			Layout.fillWidth: true
 			implicitHeight: 40
 			RowLayout {
@@ -62,6 +58,7 @@ Rectangle {
 					placeholderText: qsTr("Coupon code")
 					font.pixelSize: 16
 					font.family: "roboto"
+					placeholderTextColor: "#99000000"
 					background: Rectangle {
 						color: "transparent"
 					}
@@ -76,8 +73,8 @@ Rectangle {
 						font.weight: Font.Medium
 						font.family: "Roboto"
 						font.pointSize: 14
-                        rightPadding: 12
-                        leftPadding: 12
+						rightPadding: 12
+						leftPadding: 12
 					}
 					Layout.fillHeight: true
 					background: Rectangle {
