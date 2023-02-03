@@ -89,7 +89,7 @@ Flickable {
 						ColumnLayout {
 
 							RowLayout {
-
+								implicitWidth: price.width + originalPrice.width + discountLabel.width
 								Label {
 									id: price
 									text: "$150"
@@ -103,10 +103,20 @@ Flickable {
 									font.strikeout: true
 								}
 
-								Label {
-									id: discount
-									text: qsTr("60% off")
-									font.pixelSize: 14
+								Rectangle {
+									id: discountLabel
+									implicitWidth: discount.width
+									implicitHeight: discount.height
+									radius: 8
+									color: "#6c757d"
+									Label {
+										id: discount
+										text: qsTr("60% off")
+										font.pixelSize: 14
+										horizontalAlignment: Text.AlignHCenter
+										verticalAlignment: Text.AlignVCenter
+										padding: 4
+									}
 								}
 							}
 
