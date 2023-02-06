@@ -259,12 +259,20 @@ Flickable {
 										ComboBox {
 											id: banks
 											font.pixelSize: 15
-											model: [
-												qsTr("Please choose one"),
-												qsTr("Bank of America"),
-												qsTr("Bank of India"),
-												qsTr("Bank of London")
-											]
+											model: ListModel {
+												ListElement {
+													text: "Please choose one"
+												}
+												ListElement {
+													text: "Bank of America"
+												}
+												ListElement {
+													text: "Bank of India"
+												}
+												ListElement {
+													text: "Bank of London"
+												}
+											}
 											delegate: ItemDelegate {
 												contentItem: Text {
 													text: modelData
