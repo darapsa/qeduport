@@ -261,21 +261,21 @@ Flickable {
 											font.pixelSize: 15
 											model: ListModel {
 												ListElement {
-													text: "Please choose one"
+													label: "Please choose one"
 												}
 												ListElement {
-													text: "Bank of America"
+													label: "Bank of America"
 												}
 												ListElement {
-													text: "Bank of India"
+													label: "Bank of India"
 												}
 												ListElement {
-													text: "Bank of London"
+													label: "Bank of London"
 												}
 											}
 											delegate: ItemDelegate {
 												contentItem: Text {
-													text: modelData
+													text: label
 													font.pixelSize: 14
 												}
 											}
