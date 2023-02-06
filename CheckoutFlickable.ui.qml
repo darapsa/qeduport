@@ -12,6 +12,7 @@ Flickable {
 	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
+	property alias checkoutBanks: banks
 	property alias checkoutPlaceOrder: placeOrder
 	property alias checkoutPremium: premium
 	contentHeight: body.height
@@ -256,6 +257,7 @@ Flickable {
 										}
 
 										ComboBox {
+											id: banks
 											font.pixelSize: 15
 											model: [
 												qsTr("Please choose one"),
