@@ -604,9 +604,25 @@ Flickable {
 
 						Button {
 							id: placeOrder
-							text: qsTr("Place Order")
-							font.pointSize: 15
+							Layout.margins: 16
 							Layout.fillWidth: true
+							text: qsTr("Place Order")
+							font.pointSize: 14
+							font.family: "roboto"
+							implicitHeight: 36
+							contentItem: Text {
+								color: "#ffffff"
+								text: "Place order"
+								horizontalAlignment: Text.AlignHCenter
+								verticalAlignment: Text.AlignVCenter
+								font.weight: Font.Medium
+								font.family: "Roboto"
+								font.pointSize: 14
+							}
+							background: Rectangle {
+								color: "#0cbc87"
+								radius: 8
+							}
 						}
 					}
 				}
