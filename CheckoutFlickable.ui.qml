@@ -49,8 +49,8 @@ Flickable {
 
 					Text {
 						id: login
-						text: "<a href=\"sign-in.html\">"
-						+ qsTr("Log in") + "</a>"
+						text: "<a href=\"sign-in.html\">" + qsTr(
+								  "Log in") + "</a>"
 						font.pointSize: 15
 						font.underline: false
 					}
@@ -67,7 +67,6 @@ Flickable {
 							left: parent.left
 							right: parent.right
 						}
-
 
 						Label {
 							text: qsTr("Personal Details")
@@ -232,7 +231,8 @@ Flickable {
 										anchors.fill: parent
 										TextField {
 											id: province
-											placeholderText: qsTr("Select state")
+											placeholderText: qsTr(
+																 "Select state")
 											font.pointSize: 16
 											font.family: "roboto"
 											Layout.fillWidth: true
@@ -324,7 +324,7 @@ Flickable {
 
 								Rectangle {
 									implicitHeight: paymentCard.height
-									Layout.margins:16
+									Layout.margins: 16
 									Layout.fillWidth: true
 									border.width: 1
 									radius: 8
@@ -434,7 +434,7 @@ Flickable {
 
 				Rectangle {
 					Layout.fillWidth: true
-					implicitHeight: personal.height
+					implicitHeight: orderSummary.height
 					Layout.margins: 16
 					radius: 8
 
@@ -456,12 +456,11 @@ Flickable {
 
 						ColumnLayout {
 							Layout.margins: 16
-							spacing:16
+							spacing: 16
 
 							Item {
 								Layout.fillWidth: true
-								implicitHeight: codeLabel.implicitHeight
-								+ codeValue.implicitHeight
+								implicitHeight: codeLabel.implicitHeight + codeValue.implicitHeight
 
 								Label {
 									id: codeLabel
@@ -535,7 +534,7 @@ Flickable {
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: priceLabel.implicitHeight
-								+ priceValue.implicitHeight
+												+ priceValue.implicitHeight
 
 								Label {
 									id: priceLabel
@@ -558,7 +557,7 @@ Flickable {
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: discountLabel.implicitHeight
-								+ discountValue.implicitHeight
+												+ discountValue.implicitHeight
 
 								Label {
 									id: discountLabel
@@ -581,7 +580,7 @@ Flickable {
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: totalLabel.implicitHeight
-								+ totalValue.implicitHeight
+												+ totalValue.implicitHeight
 
 								Label {
 									id: totalLabel
@@ -627,32 +626,63 @@ Flickable {
 					}
 				}
 
-				Frame {
+				Rectangle {
 					id: premium
 					Layout.fillWidth: true
-					Layout.alignment: Qt.AlignTop
+					implicitHeight: premiumAdCard.height
+					radius: 8
+					color: "#1d3b53"
+					Layout.margins: 16
 
 					ColumnLayout {
-						anchors.fill: parent
+						id: premiumAdCard
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
+						Layout.margins: 16
 
 						Label {
 							text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
-							font.pointSize: 21
 							wrapMode: Text.Wrap
+							font.pointSize: 22
+							font.family: "roboto"
+							color: "#ffffff"
 							Layout.fillWidth: true
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						Label {
 							text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
-							font.pointSize: 15
+							font.pointSize: 16
+							font.family: "roboto"
+							color: "#ffffff"
 							wrapMode: Text.Wrap
 							Layout.fillWidth: true
+							Layout.margins: 16
 						}
 
 						Button {
 							text: qsTr("Purchase Premium")
-							font.pointSize: 13
-							Layout.fillWidth: true
+							font.pointSize: 14
+							Layout.margins: 16
+							font.family: "roboto"
+							implicitHeight: 36
+							contentItem: Text {
+								color: "#000000"
+								text: "Purchase premium"
+								horizontalAlignment: Text.AlignHCenter
+								verticalAlignment: Text.AlignVCenter
+								font.weight: Font.Medium
+								font.family: "Roboto"
+								font.pointSize: 14
+							}
+							background: Rectangle {
+								color: "#f7c32e"
+								radius: 8
+							}
 						}
 					}
 				}
