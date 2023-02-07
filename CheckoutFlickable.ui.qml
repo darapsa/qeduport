@@ -59,7 +59,8 @@ Flickable {
 				Rectangle {
 					Layout.fillWidth: true
 					implicitHeight: personal.height
-
+					Layout.margins: 16
+					radius: 8
 					ColumnLayout {
 						id: personal
 						anchors {
@@ -67,23 +68,25 @@ Flickable {
 							right: parent.right
 						}
 
+
 						Label {
 							text: qsTr("Personal Details")
 							font.pointSize: 22
 							font.family: "roboto"
 							Layout.fillWidth: true
+                            Layout.rightMargin: 16
+                            Layout.leftMargin: 16
+                            Layout.topMargin: 16
 						}
 
 						GridLayout {
+							Layout.margins: 16
 							columns: width < 768 ? 1 : 2
 							rows: width < 768 ? 4 : 7
 							columnSpacing: 0
-							rowSpacing: 0
+							rowSpacing: 16
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Your name *")
@@ -116,9 +119,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Email address *")
@@ -151,9 +151,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Mobile number *")
@@ -186,9 +183,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Select country *")
@@ -220,9 +214,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Select state *")
@@ -255,9 +246,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Postal code *")
@@ -290,9 +278,6 @@ Flickable {
 							}
 
 							ColumnLayout {
-								Layout.topMargin: 16
-								Layout.leftMargin: 8
-								Layout.rightMargin: 8
 
 								Label {
 									text: qsTr("Address *")
@@ -332,6 +317,7 @@ Flickable {
 								font.pointSize: 22
 								font.family: "roboto"
 								Layout.fillWidth: true
+								Layout.margins: 16
 							}
 
 							ColumnLayout {
