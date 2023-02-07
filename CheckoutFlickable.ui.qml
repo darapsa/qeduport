@@ -12,7 +12,6 @@ Flickable {
 	property alias checkoutState: province
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
-	property alias checkoutBanks: banks
 	property alias checkoutPlaceOrder: placeOrder
 	property alias checkoutPremium: premium
 	contentHeight: body.height
@@ -77,15 +76,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Your name *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: name
-								placeholderText: qsTr("Name")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: name
+										placeholderText: qsTr("Name")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -96,15 +111,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Email address *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: email
-								placeholderText: qsTr("Email")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: email
+										placeholderText: qsTr("Email")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -115,15 +146,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Mobile number *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: mobile
-								placeholderText: qsTr("Mobile number")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: mobile
+										placeholderText: qsTr("Mobile number")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -134,15 +181,30 @@ Flickable {
 
 							Label {
 								text: qsTr("Select country *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
-
-							TextField {
-								id: country
-								placeholderText: qsTr("Select country")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: country
+										placeholderText: qsTr("Select country")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -153,15 +215,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Select state *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: province
-								placeholderText: qsTr("Select state")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: province
+										placeholderText: qsTr("Select state")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -172,15 +250,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Postal code *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: postal
-								placeholderText: qsTr("PIN code")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: postal
+										placeholderText: qsTr("PIN code")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 
@@ -191,15 +285,31 @@ Flickable {
 
 							Label {
 								text: qsTr("Address *")
-								font.pixelSize: 15
+								font.pixelSize: 12
+								font.family: "roboto"
 								Layout.fillWidth: true
 							}
 
-							TextField {
-								id: address
-								placeholderText: qsTr("Address")
-								font.pixelSize: 15
+							Rectangle {
+								implicitHeight: 56
+								color: "#f5f7f9"
+								radius: 8
+								border.width: 0
 								Layout.fillWidth: true
+								RowLayout {
+									anchors.fill: parent
+									TextField {
+										id: address
+										placeholderText: qsTr("Address")
+										font.pixelSize: 16
+										font.family: "roboto"
+										Layout.fillWidth: true
+										Layout.fillHeight: true
+										background: Rectangle {
+											color: "transparent"
+										}
+									}
+								}
 							}
 						}
 					}
@@ -257,25 +367,24 @@ Flickable {
 										}
 
 										ComboBox {
-											id: banks
 											font.pixelSize: 15
 											model: ListModel {
 												ListElement {
-													label: "Please choose one"
+													text: "Please choose one"
 												}
 												ListElement {
-													label: "Bank of America"
+													text: "Bank of America"
 												}
 												ListElement {
-													label: "Bank of India"
+													text: "Bank of India"
 												}
 												ListElement {
-													label: "Bank of London"
+													text: "Bank of London"
 												}
 											}
 											delegate: ItemDelegate {
 												contentItem: Text {
-													text: label
+													text: modelData
 													font.pixelSize: 14
 												}
 											}
