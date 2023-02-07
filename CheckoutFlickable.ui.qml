@@ -383,7 +383,7 @@ Flickable {
 
 											Label {
 												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-												font.pointSize: 16
+												font.pointSize: 14
 												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
@@ -432,19 +432,31 @@ Flickable {
 				rowSpacing: 0
 				Layout.alignment: Qt.AlignTop
 
-				Frame {
+				Rectangle {
 					Layout.fillWidth: true
+					implicitHeight: personal.height
+					Layout.margins: 16
+					radius: 8
 
 					ColumnLayout {
-						anchors.fill: parent
-
+						id: orderSummary
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
 						Label {
 							text: qsTr("Order Summary")
-							font.pointSize: 21
+							font.pointSize: 22
+							font.family: "roboto"
 							Layout.fillWidth: true
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						ColumnLayout {
+							Layout.margins: 16
+							spacing:16
 
 							Item {
 								Layout.fillWidth: true
@@ -454,14 +466,16 @@ Flickable {
 								Label {
 									id: codeLabel
 									text: qsTr("Transaction code")
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: codeValue
 									text: "AB12365E"
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -471,21 +485,53 @@ Flickable {
 
 							RowLayout {
 
-								TextField {
-									placeholderText: qsTr("COUPON CODE")
-									font.pointSize: 15
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
 									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											placeholderText: qsTr("COUPON CODE")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
 								}
 
 								Button {
 									text: qsTr("Apply")
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
+									implicitHeight: 56
+									contentItem: Text {
+										color: "#ffffff"
+										text: "Apply"
+										padding: 12
+										horizontalAlignment: Text.AlignHCenter
+										verticalAlignment: Text.AlignVCenter
+										font.weight: Font.Medium
+										font.family: "Roboto"
+										font.pointSize: 14
+									}
+
+									background: Rectangle {
+										color: "#066ac9"
+										radius: 8
+									}
 								}
 							}
 						}
 
 						ColumnLayout {
-
+							Layout.margins: 16
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: priceLabel.implicitHeight
