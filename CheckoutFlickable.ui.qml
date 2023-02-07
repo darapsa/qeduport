@@ -13,6 +13,7 @@ Flickable {
 	property alias checkoutPostal: postal
 	property alias checkoutAddress: address
 	property alias checkoutBanks: banks
+	property alias checkoutTotalValue: totalValue
 	property alias checkoutPlaceOrder: placeOrder
 	property alias checkoutPremium: premium
 	contentHeight: body.height
