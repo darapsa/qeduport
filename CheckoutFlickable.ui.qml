@@ -44,14 +44,14 @@ Flickable {
 
 					Label {
 						text: qsTr("Already have an account?")
-						font.pixelSize: 15
+						font.pointSize: 15
 					}
 
 					Text {
 						id: login
 						text: "<a href=\"sign-in.html\">"
 						+ qsTr("Log in") + "</a>"
-						font.pixelSize: 15
+						font.pointSize: 15
 						font.underline: false
 					}
 				}
@@ -60,7 +60,7 @@ Flickable {
 
 					Label {
 						text: qsTr("Personal Details")
-						font.pixelSize: 22
+						font.pointSize: 22
 						font.family: "roboto"
 						Layout.fillWidth: true
 					}
@@ -78,7 +78,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Your name *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -94,7 +94,7 @@ Flickable {
 									TextField {
 										id: name
 										placeholderText: qsTr("Name")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -113,7 +113,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Email address *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -129,7 +129,7 @@ Flickable {
 									TextField {
 										id: email
 										placeholderText: qsTr("Email")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -148,7 +148,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Mobile number *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -164,7 +164,7 @@ Flickable {
 									TextField {
 										id: mobile
 										placeholderText: qsTr("Mobile number")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -183,7 +183,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Select country *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -198,7 +198,7 @@ Flickable {
 									TextField {
 										id: country
 										placeholderText: qsTr("Select country")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -217,7 +217,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Select state *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -233,7 +233,7 @@ Flickable {
 									TextField {
 										id: province
 										placeholderText: qsTr("Select state")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -252,7 +252,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Postal code *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -268,7 +268,7 @@ Flickable {
 									TextField {
 										id: postal
 										placeholderText: qsTr("PIN code")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -287,7 +287,7 @@ Flickable {
 
 							Label {
 								text: qsTr("Address *")
-								font.pixelSize: 12
+								font.pointSize: 12
 								font.family: "roboto"
 								Layout.fillWidth: true
 							}
@@ -303,7 +303,7 @@ Flickable {
 									TextField {
 										id: address
 										placeholderText: qsTr("Address")
-										font.pixelSize: 16
+										font.pointSize: 16
 										font.family: "roboto"
 										Layout.fillWidth: true
 										Layout.fillHeight: true
@@ -320,7 +320,8 @@ Flickable {
 
 						Label {
 							text: qsTr("Payment method")
-							font.pixelSize: 21
+							font.pointSize: 22
+							font.family: "roboto"
 							Layout.fillWidth: true
 						}
 
@@ -334,7 +335,8 @@ Flickable {
 
 									Label {
 										text: qsTr("Credit or Debit Card")
-										font.pixelSize: 15
+										font.pointSize: 16
+										font.family: "roboto"
 										Layout.fillWidth: true
 									}
 								}
@@ -348,7 +350,7 @@ Flickable {
 
 									Label {
 										text: qsTr("Pay with Net Banking")
-										font.pixelSize: 15
+										font.pointSize: 15
 										Layout.fillWidth: true
 									}
 
@@ -356,21 +358,21 @@ Flickable {
 
 										Label {
 											text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-											font.pixelSize: 15
+											font.pointSize: 15
 											wrapMode: Text.Wrap
 											Layout.fillWidth: true
 										}
 
 										Label {
 											text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-											font.pixelSize: 15
+											font.pointSize: 15
 											wrapMode: Text.Wrap
 											Layout.fillWidth: true
 										}
 
 										ComboBox {
 											id: banks
-											font.pixelSize: 15
+											font.pointSize: 15
 											model: ListModel {
 												ListElement {
 													label: "Please choose one"
@@ -388,7 +390,7 @@ Flickable {
 											delegate: ItemDelegate {
 												contentItem: Text {
 													text: label
-													font.pixelSize: 14
+													font.pointSize: 14
 												}
 											}
 										}
@@ -415,7 +417,7 @@ Flickable {
 
 						Label {
 							text: qsTr("Order Summary")
-							font.pixelSize: 21
+							font.pointSize: 21
 							Layout.fillWidth: true
 						}
 
@@ -429,14 +431,14 @@ Flickable {
 								Label {
 									id: codeLabel
 									text: qsTr("Transaction code")
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: codeValue
 									text: "AB12365E"
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -448,13 +450,13 @@ Flickable {
 
 								TextField {
 									placeholderText: qsTr("COUPON CODE")
-									font.pixelSize: 15
+									font.pointSize: 15
 									Layout.fillWidth: true
 								}
 
 								Button {
 									text: qsTr("Apply")
-									font.pixelSize: 15
+									font.pointSize: 15
 								}
 							}
 						}
@@ -469,14 +471,14 @@ Flickable {
 								Label {
 									id: priceLabel
 									text: qsTr("Original Price")
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: priceValue
 									text: "$500"
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -492,14 +494,14 @@ Flickable {
 								Label {
 									id: discountLabel
 									text: qsTr("Coupon Discount")
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: discountValue
 									text: "-" + "$20"
-									font.pixelSize: 15
+									font.pointSize: 15
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -515,14 +517,14 @@ Flickable {
 								Label {
 									id: totalLabel
 									text: qsTr("Total")
-									font.pixelSize: 21
+									font.pointSize: 21
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: totalValue
 									text: "$480"
-									font.pixelSize: 21
+									font.pointSize: 21
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -534,7 +536,7 @@ Flickable {
 						Button {
 							id: placeOrder
 							text: qsTr("Place Order")
-							font.pixelSize: 15
+							font.pointSize: 15
 							Layout.fillWidth: true
 						}
 					}
@@ -550,21 +552,21 @@ Flickable {
 
 						Label {
 							text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
-							font.pixelSize: 21
+							font.pointSize: 21
 							wrapMode: Text.Wrap
 							Layout.fillWidth: true
 						}
 
 						Label {
 							text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
-							font.pixelSize: 15
+							font.pointSize: 15
 							wrapMode: Text.Wrap
 							Layout.fillWidth: true
 						}
 
 						Button {
 							text: qsTr("Purchase Premium")
-							font.pixelSize: 13
+							font.pointSize: 13
 							Layout.fillWidth: true
 						}
 					}
