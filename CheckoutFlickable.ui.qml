@@ -50,8 +50,8 @@ Flickable {
 
 					Text {
 						id: login
-						text: "<a href=\"sign-in.html\">"
-						+ qsTr("Log in") + "</a>"
+						text: "<a href=\"sign-in.html\">" + qsTr(
+								  "Log in") + "</a>"
 						font.pointSize: 15
 						font.underline: false
 					}
@@ -69,15 +69,14 @@ Flickable {
 							right: parent.right
 						}
 
-
 						Label {
 							text: qsTr("Personal Details")
 							font.pointSize: 22
 							font.family: "roboto"
 							Layout.fillWidth: true
-                            Layout.rightMargin: 16
-                            Layout.leftMargin: 16
-                            Layout.topMargin: 16
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						GridLayout {
@@ -233,7 +232,8 @@ Flickable {
 										anchors.fill: parent
 										TextField {
 											id: province
-											placeholderText: qsTr("Select state")
+											placeholderText: qsTr(
+																 "Select state")
 											font.pointSize: 16
 											font.family: "roboto"
 											Layout.fillWidth: true
@@ -325,7 +325,7 @@ Flickable {
 
 								Rectangle {
 									implicitHeight: paymentCard.height
-									Layout.margins:16
+									Layout.margins: 16
 									Layout.fillWidth: true
 									border.width: 1
 									radius: 8
@@ -342,41 +342,59 @@ Flickable {
 											font.pointSize: 16
 											font.family: "roboto"
 											Layout.fillWidth: true
+											padding: 16
 										}
 									}
 								}
 
-								Frame {
+								Rectangle {
+									implicitHeight: paymentNetBanking.height
+									Layout.margins: 16
 									Layout.fillWidth: true
+									border.width: 1
+									radius: 8
+									border.color: "#4d000000"
 
 									ColumnLayout {
-										anchors.fill: parent
+										id: paymentNetBanking
+										anchors {
+											left: parent.left
+											right: parent.right
+										}
 
 										Label {
 											text: qsTr("Pay with Net Banking")
-											font.pointSize: 15
+											font.pointSize: 16
+											font.family: "roboto"
 											Layout.fillWidth: true
+											Layout.rightMargin: 16
+											Layout.leftMargin: 16
+											Layout.topMargin: 16
 										}
 
 										ColumnLayout {
-
+											Layout.margins: 16
 											Label {
 												text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-												font.pointSize: 15
+												font.pointSize: 14
+												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
 											Label {
 												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-												font.pointSize: 15
+												font.pointSize: 14
+												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
 											ComboBox {
 												id: banks
-												font.pointSize: 15
+												font.pointSize: 14
+												font.family: "roboto"
+												Layout.topMargin: 24
 												model: ListModel {
 													ListElement {
 														label: "Please choose one"
@@ -394,7 +412,8 @@ Flickable {
 												delegate: ItemDelegate {
 													contentItem: Text {
 														text: label
-														font.pointSize: 14
+														font.pointSize: 16
+														font.family: "roboto"
 													}
 												}
 											}
@@ -414,36 +433,49 @@ Flickable {
 				rowSpacing: 0
 				Layout.alignment: Qt.AlignTop
 
-				Frame {
+				Rectangle {
 					Layout.fillWidth: true
+					implicitHeight: orderSummary.height
+					Layout.margins: 16
+					radius: 8
 
 					ColumnLayout {
-						anchors.fill: parent
-
+						id: orderSummary
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
 						Label {
 							text: qsTr("Order Summary")
-							font.pointSize: 21
+							font.pointSize: 22
+							font.family: "roboto"
 							Layout.fillWidth: true
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						ColumnLayout {
+							Layout.margins: 16
+							spacing: 16
 
 							Item {
 								Layout.fillWidth: true
-								implicitHeight: codeLabel.implicitHeight
-								+ codeValue.implicitHeight
+								implicitHeight: codeLabel.implicitHeight + codeValue.implicitHeight
 
 								Label {
 									id: codeLabel
 									text: qsTr("Transaction code")
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
 								Label {
 									id: codeValue
 									text: "AB12365E"
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -453,25 +485,57 @@ Flickable {
 
 							RowLayout {
 
-								TextField {
-									placeholderText: qsTr("COUPON CODE")
-									font.pointSize: 15
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
 									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											placeholderText: qsTr("COUPON CODE")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
 								}
 
 								Button {
 									text: qsTr("Apply")
-									font.pointSize: 15
+									font.pointSize: 14
+									font.family: "roboto"
+									implicitHeight: 56
+									contentItem: Text {
+										color: "#ffffff"
+										text: "Apply"
+										padding: 12
+										horizontalAlignment: Text.AlignHCenter
+										verticalAlignment: Text.AlignVCenter
+										font.weight: Font.Medium
+										font.family: "Roboto"
+										font.pointSize: 14
+									}
+
+									background: Rectangle {
+										color: "#066ac9"
+										radius: 8
+									}
 								}
 							}
 						}
 
 						ColumnLayout {
-
+							Layout.margins: 16
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: priceLabel.implicitHeight
-								+ priceValue.implicitHeight
+												+ priceValue.implicitHeight
 
 								Label {
 									id: priceLabel
@@ -494,7 +558,7 @@ Flickable {
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: discountLabel.implicitHeight
-								+ discountValue.implicitHeight
+												+ discountValue.implicitHeight
 
 								Label {
 									id: discountLabel
@@ -517,7 +581,7 @@ Flickable {
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: totalLabel.implicitHeight
-								+ totalValue.implicitHeight
+												+ totalValue.implicitHeight
 
 								Label {
 									id: totalLabel
@@ -540,39 +604,86 @@ Flickable {
 
 						Button {
 							id: placeOrder
-							text: qsTr("Place Order")
-							font.pointSize: 15
+							Layout.margins: 16
 							Layout.fillWidth: true
+							text: qsTr("Place Order")
+							font.pointSize: 14
+							font.family: "roboto"
+							implicitHeight: 36
+							contentItem: Text {
+								color: "#ffffff"
+								text: "Place order"
+								horizontalAlignment: Text.AlignHCenter
+								verticalAlignment: Text.AlignVCenter
+								font.weight: Font.Medium
+								font.family: "Roboto"
+								font.pointSize: 14
+							}
+							background: Rectangle {
+								color: "#0cbc87"
+								radius: 8
+							}
 						}
 					}
 				}
 
-				Frame {
+				Rectangle {
 					id: premium
 					Layout.fillWidth: true
-					Layout.alignment: Qt.AlignTop
+					implicitHeight: premiumAdCard.height
+					radius: 8
+					color: "#1d3b53"
+					Layout.margins: 16
 
 					ColumnLayout {
-						anchors.fill: parent
+						id: premiumAdCard
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
+						Layout.margins: 16
 
 						Label {
 							text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
-							font.pointSize: 21
 							wrapMode: Text.Wrap
+							font.pointSize: 22
+							font.family: "roboto"
+							color: "#ffffff"
 							Layout.fillWidth: true
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						Label {
 							text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
-							font.pointSize: 15
+							font.pointSize: 16
+							font.family: "roboto"
+							color: "#ffffff"
 							wrapMode: Text.Wrap
 							Layout.fillWidth: true
+							Layout.margins: 16
 						}
 
 						Button {
 							text: qsTr("Purchase Premium")
-							font.pointSize: 13
-							Layout.fillWidth: true
+							font.pointSize: 14
+							Layout.margins: 16
+							font.family: "roboto"
+							implicitHeight: 36
+							contentItem: Text {
+								color: "#000000"
+								text: "Purchase premium"
+								horizontalAlignment: Text.AlignHCenter
+								verticalAlignment: Text.AlignVCenter
+								font.weight: Font.Medium
+								font.family: "Roboto"
+								font.pointSize: 14
+							}
+							background: Rectangle {
+								color: "#f7c32e"
+								radius: 8
+							}
 						}
 					}
 				}
