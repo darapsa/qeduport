@@ -322,12 +322,20 @@ Flickable {
 
 							ColumnLayout {
 
-								Frame {
+								Rectangle {
+									implicitHeight: paymentCard.height
+									Layout.margins:16
 									Layout.fillWidth: true
+									border.width: 1
+									radius: 8
+									border.color: "#4d000000"
 
 									ColumnLayout {
-										anchors.fill: parent
-
+										id: paymentCard
+										anchors {
+											left: parent.left
+											right: parent.right
+										}
 										Label {
 											text: qsTr("Credit or Debit Card")
 											font.pointSize: 16
