@@ -56,341 +56,351 @@ Flickable {
 					}
 				}
 
-				ColumnLayout {
-
-					Label {
-						text: qsTr("Personal Details")
-						font.pointSize: 22
-						font.family: "roboto"
-						Layout.fillWidth: true
-					}
-
-					GridLayout {
-						columns: width < 768 ? 1 : 2
-						rows: width < 768 ? 4 : 7
-						columnSpacing: 0
-						rowSpacing: 0
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Your name *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: name
-										placeholderText: qsTr("Name")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Email address *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: email
-										placeholderText: qsTr("Email")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Mobile number *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: mobile
-										placeholderText: qsTr("Mobile number")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Select country *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: country
-										placeholderText: qsTr("Select country")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Select state *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: province
-										placeholderText: qsTr("Select state")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Postal code *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: postal
-										placeholderText: qsTr("PIN code")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-
-						ColumnLayout {
-							Layout.topMargin: 16
-							Layout.leftMargin: 8
-							Layout.rightMargin: 8
-
-							Label {
-								text: qsTr("Address *")
-								font.pointSize: 12
-								font.family: "roboto"
-								Layout.fillWidth: true
-							}
-
-							Rectangle {
-								implicitHeight: 56
-								color: "#f5f7f9"
-								radius: 8
-								border.width: 0
-								Layout.fillWidth: true
-								RowLayout {
-									anchors.fill: parent
-									TextField {
-										id: address
-										placeholderText: qsTr("Address")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
-										Layout.fillHeight: true
-										background: Rectangle {
-											color: "transparent"
-										}
-									}
-								}
-							}
-						}
-					}
+				Rectangle {
+					Layout.fillWidth: true
+					implicitHeight: personal.height
 
 					ColumnLayout {
+						id: personal
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
 
 						Label {
-							text: qsTr("Payment method")
+							text: qsTr("Personal Details")
 							font.pointSize: 22
 							font.family: "roboto"
 							Layout.fillWidth: true
 						}
 
-						ColumnLayout {
+						GridLayout {
+							columns: width < 768 ? 1 : 2
+							rows: width < 768 ? 4 : 7
+							columnSpacing: 0
+							rowSpacing: 0
 
-							Frame {
-								Layout.fillWidth: true
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
 
-								ColumnLayout {
-									anchors.fill: parent
+								Label {
+									text: qsTr("Your name *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
 
-									Label {
-										text: qsTr("Credit or Debit Card")
-										font.pointSize: 16
-										font.family: "roboto"
-										Layout.fillWidth: true
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: name
+											placeholderText: qsTr("Name")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
 									}
 								}
 							}
 
-							Frame {
-								Layout.fillWidth: true
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
 
-								ColumnLayout {
-									anchors.fill: parent
+								Label {
+									text: qsTr("Email address *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
 
-									Label {
-										text: qsTr("Pay with Net Banking")
-										font.pointSize: 15
-										Layout.fillWidth: true
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: email
+											placeholderText: qsTr("Email")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
 									}
+								}
+							}
+
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
+
+								Label {
+									text: qsTr("Mobile number *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
+
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: mobile
+											placeholderText: qsTr("Mobile number")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
+								}
+							}
+
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
+
+								Label {
+									text: qsTr("Select country *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: country
+											placeholderText: qsTr("Select country")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
+								}
+							}
+
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
+
+								Label {
+									text: qsTr("Select state *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
+
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: province
+											placeholderText: qsTr("Select state")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
+								}
+							}
+
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
+
+								Label {
+									text: qsTr("Postal code *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
+
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: postal
+											placeholderText: qsTr("PIN code")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
+								}
+							}
+
+							ColumnLayout {
+								Layout.topMargin: 16
+								Layout.leftMargin: 8
+								Layout.rightMargin: 8
+
+								Label {
+									text: qsTr("Address *")
+									font.pointSize: 12
+									font.family: "roboto"
+									Layout.fillWidth: true
+								}
+
+								Rectangle {
+									implicitHeight: 56
+									color: "#f5f7f9"
+									radius: 8
+									border.width: 0
+									Layout.fillWidth: true
+									RowLayout {
+										anchors.fill: parent
+										TextField {
+											id: address
+											placeholderText: qsTr("Address")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+											Layout.fillHeight: true
+											background: Rectangle {
+												color: "transparent"
+											}
+										}
+									}
+								}
+							}
+						}
+
+						ColumnLayout {
+
+							Label {
+								text: qsTr("Payment method")
+								font.pointSize: 22
+								font.family: "roboto"
+								Layout.fillWidth: true
+							}
+
+							ColumnLayout {
+
+								Frame {
+									Layout.fillWidth: true
 
 									ColumnLayout {
+										anchors.fill: parent
 
 										Label {
-											text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
+											text: qsTr("Credit or Debit Card")
+											font.pointSize: 16
+											font.family: "roboto"
+											Layout.fillWidth: true
+										}
+									}
+								}
+
+								Frame {
+									Layout.fillWidth: true
+
+									ColumnLayout {
+										anchors.fill: parent
+
+										Label {
+											text: qsTr("Pay with Net Banking")
 											font.pointSize: 15
-											wrapMode: Text.Wrap
 											Layout.fillWidth: true
 										}
 
-										Label {
-											text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-											font.pointSize: 15
-											wrapMode: Text.Wrap
-											Layout.fillWidth: true
-										}
+										ColumnLayout {
 
-										ComboBox {
-											id: banks
-											font.pointSize: 15
-											model: ListModel {
-												ListElement {
-													label: "Please choose one"
-												}
-												ListElement {
-													label: "Bank of America"
-												}
-												ListElement {
-													label: "Bank of India"
-												}
-												ListElement {
-													label: "Bank of London"
-												}
+											Label {
+												text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
+												font.pointSize: 15
+												wrapMode: Text.Wrap
+												Layout.fillWidth: true
 											}
-											delegate: ItemDelegate {
-												contentItem: Text {
-													text: label
-													font.pointSize: 14
+
+											Label {
+												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
+												font.pointSize: 15
+												wrapMode: Text.Wrap
+												Layout.fillWidth: true
+											}
+
+											ComboBox {
+												id: banks
+												font.pointSize: 15
+												model: ListModel {
+													ListElement {
+														label: "Please choose one"
+													}
+													ListElement {
+														label: "Bank of America"
+													}
+													ListElement {
+														label: "Bank of India"
+													}
+													ListElement {
+														label: "Bank of London"
+													}
+												}
+												delegate: ItemDelegate {
+													contentItem: Text {
+														text: label
+														font.pointSize: 14
+													}
 												}
 											}
 										}
