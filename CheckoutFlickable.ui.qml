@@ -74,9 +74,9 @@ Flickable {
 							font.pointSize: 22
 							font.family: "roboto"
 							Layout.fillWidth: true
-                            Layout.rightMargin: 16
-                            Layout.leftMargin: 16
-                            Layout.topMargin: 16
+							Layout.rightMargin: 16
+							Layout.leftMargin: 16
+							Layout.topMargin: 16
 						}
 
 						GridLayout {
@@ -341,41 +341,59 @@ Flickable {
 											font.pointSize: 16
 											font.family: "roboto"
 											Layout.fillWidth: true
+											padding: 16
 										}
 									}
 								}
 
-								Frame {
+								Rectangle {
+									implicitHeight: paymentNetBanking.height
+									Layout.margins: 16
 									Layout.fillWidth: true
+									border.width: 1
+									radius: 8
+									border.color: "#4d000000"
 
 									ColumnLayout {
-										anchors.fill: parent
+										id: paymentNetBanking
+										anchors {
+											left: parent.left
+											right: parent.right
+										}
 
 										Label {
 											text: qsTr("Pay with Net Banking")
-											font.pointSize: 15
+											font.pointSize: 16
+											font.family: "roboto"
 											Layout.fillWidth: true
+											Layout.rightMargin: 16
+											Layout.leftMargin: 16
+											Layout.topMargin: 16
 										}
 
 										ColumnLayout {
-
+											Layout.margins: 16
 											Label {
 												text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-												font.pointSize: 15
+												font.pointSize: 14
+												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
 											Label {
 												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-												font.pointSize: 15
+												font.pointSize: 16
+												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
 											ComboBox {
 												id: banks
-												font.pointSize: 15
+												font.pointSize: 14
+												font.family: "roboto"
+												Layout.topMargin: 24
 												model: ListModel {
 													ListElement {
 														label: "Please choose one"
@@ -393,7 +411,8 @@ Flickable {
 												delegate: ItemDelegate {
 													contentItem: Text {
 														text: label
-														font.pointSize: 14
+														font.pointSize: 16
+														font.family: "roboto"
 													}
 												}
 											}
