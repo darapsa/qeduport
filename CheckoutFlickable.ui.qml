@@ -423,8 +423,6 @@ Flickable {
 													color: "#f5f7f9"
 												}
 												popup: Popup {
-													width: banks.width
-													implicitHeight: contentItem.height
 													background: Rectangle {
 														id: banksDropDown
 														radius: 8
