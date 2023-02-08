@@ -416,6 +416,12 @@ Flickable {
 														font.family: "roboto"
 													}
 												}
+												background: Rectangle {
+													radius: 8
+													implicitHeight: 36
+													implicitWidth: 200
+													color: "#f5f7f9"
+												}
 											}
 										}
 									}
