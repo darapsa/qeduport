@@ -8,6 +8,12 @@ GridLayout {
 	property alias signInButton: button
 	property alias signInSignUp: signUp
 
+	FontLoader {
+		id: heebo
+		name: "Heebo"
+		source: "Heebo/Heebo-Bold.ttf"
+	}
+
 	ColumnLayout {
 		Layout.rightMargin: 16
 		Layout.leftMargin: 16
@@ -16,12 +22,11 @@ GridLayout {
 			spacing: 16
 			ColumnLayout {
 				id: columnLayout
-				Layout.fillWidth: true
 				
 				Label {
 					id: signInTitle
-					text: qsTr("Sign In Title")
-					font.family: "Roboto"
+					text: qsTr("Login Into Eduport")
+					font.family: heebo.name
 					font.weight: Font.Medium
 					font.pointSize: 40
 				}
@@ -29,16 +34,20 @@ GridLayout {
 				Label {
 					id: signInSubtitle
 					color: "#6c757d"
-					text: qsTr("Sign In Subtitle")
+					text: qsTr("Nice to see you! Please log"
+						+ " in with your account.")
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
 					font.weight: Font.Normal
 					font.pointSize: 22
+					font.family: "Roboto"
 				}
 			}
 			ColumnLayout {
 				Label {
 					text: qsTr("Email address *")
 					font.pixelSize: 16
-					font.family: "roboto"
+					font.family: "Roboto"
 				}
 
 				Rectangle {
@@ -63,7 +72,7 @@ GridLayout {
 							id: email
 							placeholderText: qsTr("E-mail")
 							font.pixelSize: 16
-							font.family: "roboto"
+							font.family: "Roboto"
 							Layout.fillWidth: true
 							Layout.fillHeight: true
 							background: Rectangle {
@@ -78,7 +87,7 @@ GridLayout {
 				Label {
 					text: qsTr("Password *")
 					font.pixelSize: 16
-					font.family: "roboto"
+					font.family: "Roboto"
 				}
 
 				Rectangle {
@@ -98,8 +107,9 @@ GridLayout {
 						}
 						TextField {
 							id: password
-							placeholderText: qsTr("Password")
+							placeholderText: qsTr("password")
 							font.pixelSize: 16
+							font.family: "Roboto"
 							Layout.fillWidth: true
 							Layout.fillHeight: true
 							background: Rectangle {
@@ -111,7 +121,7 @@ GridLayout {
 			}
 			Label {
 				id: passwordHelper
-				text: "Your password must atleast 8 characters long"
+				text: "Your password must be 8 characters at least"
 				font.pixelSize: 12
 				color: "#6c757d"
 			}
@@ -126,6 +136,7 @@ GridLayout {
 					contentItem: Text {
 						color: "#6c757d"
 						text: rememberCheckBox.text
+						font: rememberCheckBox.font
 						verticalAlignment: Text.AlignVCenter
 						leftPadding: rememberCheckBox.indicator.width + rememberCheckBox.spacing
 					}
@@ -169,11 +180,13 @@ GridLayout {
 			Label {
 				text: qsTr("Don't have an account?")
 				font.pixelSize: 16
+				font.family: "Roboto"
 			}
 			Text {
 				id: signUp
 				text: "<a href=\"sign-up.html\">Signup here</a>"
 				font.pixelSize: 16
+				font.family: "Roboto"
 				font.underline: false
 				linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 			}
