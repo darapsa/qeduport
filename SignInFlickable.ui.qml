@@ -26,6 +26,8 @@ GridLayout {
 				Label {
 					id: signInTitle
 					text: qsTr("Login Into Eduport")
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
 					font.family: heebo.name
 					font.weight: Font.Medium
 					font.pointSize: 40
