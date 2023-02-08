@@ -108,6 +108,7 @@ GridLayout {
 						TextField {
 							id: password
 							placeholderText: qsTr("password")
+							echoMode: TextInput.Password
 							font.pixelSize: 16
 							font.family: "Roboto"
 							Layout.fillWidth: true
