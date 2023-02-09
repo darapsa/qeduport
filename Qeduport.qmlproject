@@ -24,4 +24,6 @@ Project {
 	multilanguageSupport: true
 	supportedLanguages: ["en", "id"]
 	primaryLanguage: "en"
+
+    mainFile: "RecentlyViewedCard.ui.qml"
 }
