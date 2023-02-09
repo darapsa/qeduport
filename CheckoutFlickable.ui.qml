@@ -422,12 +422,6 @@ Flickable {
 													implicitWidth: 200
 													color: "#f5f7f9"
 												}
-												popup: Popup {
-													background: Rectangle {
-														id: banksDropDown
-														radius: 8
-													}
-												}
 											}
 										}
 									}
