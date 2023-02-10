@@ -164,7 +164,7 @@ GridLayout {
 
 				contentItem: Text {
 					color: "#ffffff"
-					text: "Login"
+					text: "Sign Up"
 					horizontalAlignment: Text.AlignHCenter
 					verticalAlignment: Text.AlignVCenter
 					font.weight: Font.Medium
