@@ -93,13 +93,13 @@ Flickable {
 								Label {
 									id: price
 									text: "$150"
-									font.pixelSize: 21
+									font.pixelSize: 32
 								}
 
 								Label {
 									id: originalPrice
 									text: "$350"
-									font.pixelSize: 15
+									font.pixelSize: 14
 									font.strikeout: true
 								}
 
@@ -108,14 +108,17 @@ Flickable {
 									implicitWidth: discount.width
 									implicitHeight: discount.height
 									radius: 8
-									color: "#6c757d"
+									color: "#fd7e14"
 									Label {
 										id: discount
 										text: qsTr("60% off")
-										font.pixelSize: 14
+										font.pixelSize: 12
 										horizontalAlignment: Text.AlignHCenter
 										verticalAlignment: Text.AlignVCenter
-										padding: 4
+                                        bottomPadding: 2
+                                        topPadding: 2
+                                        rightPadding: 8
+                                        leftPadding: 8
 									}
 								}
 							}
@@ -125,7 +128,7 @@ Flickable {
 
 								Label {
 									text: qsTr("5 days left at this price")
-									font.pixelSize: 15
+									font.pixelSize: 14
 								}
 							}
 						}
