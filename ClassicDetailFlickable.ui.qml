@@ -94,25 +94,29 @@ Flickable {
 									id: price
 									text: "$150"
 									font.pixelSize: 32
+									font.family: "roboto"
 								}
 
 								Label {
 									id: originalPrice
 									text: "$350"
+									color: "#4d000000"
 									font.pixelSize: 14
 									font.strikeout: true
+									font.family: "roboto"
 								}
 
 								Rectangle {
 									id: discountLabel
 									implicitWidth: discount.width
 									implicitHeight: discount.height
-									radius: 8
+									radius: 4
 									color: "#fd7e14"
 									Label {
 										id: discount
 										text: qsTr("60% off")
 										font.pixelSize: 12
+										font.family: "roboto"
 										horizontalAlignment: Text.AlignHCenter
 										verticalAlignment: Text.AlignVCenter
                                         bottomPadding: 2
@@ -129,6 +133,7 @@ Flickable {
 								Label {
 									text: qsTr("5 days left at this price")
 									font.pixelSize: 14
+									font.family: "roboto"
 								}
 							}
 						}
@@ -144,7 +149,8 @@ Flickable {
 							text: qsTr("Free trial")
 							contentItem: Text {
 								text: trial.text
-								font.pixelSize: 15
+								font.pixelSize: 14
+								font.family: "roboto"
 								color: trial.down ? "#ffffff"
 								: "#066ac9"
 							}
@@ -161,7 +167,8 @@ Flickable {
 							text: qsTr("Buy course")
 							contentItem: Text {
 								text: buy.text
-								font.pixelSize: 15
+								font.pixelSize: 14
+								font.family: "roboto"
 								color: "#ffffff"
 							}
 							background: Rectangle {
