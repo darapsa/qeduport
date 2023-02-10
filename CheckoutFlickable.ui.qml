@@ -392,6 +392,7 @@ Flickable {
 
 											ComboBox {
 												id: banks
+												Layout.fillWidth: true
 												font.pointSize: 14
 												font.family: "roboto"
 												Layout.topMargin: 24
