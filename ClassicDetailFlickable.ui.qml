@@ -87,7 +87,7 @@ Flickable {
 						Layout.bottomMargin: 16
 
 						ColumnLayout {
-
+							spacing: 8
 							RowLayout {
 								implicitWidth: price.width + originalPrice.width + discountLabel.width
 								Label {
@@ -134,20 +134,22 @@ Flickable {
 									text: qsTr("5 days left at this price")
 									font.pixelSize: 14
 									font.family: "roboto"
+									color: "#d6293e"
 								}
 							}
 						}
 					}
 
-					GridLayout {
-						columns: flickable.width < 378 ? 1 : 2
-						rows: flickable.width < 378 ? 2 : 1
+					RowLayout {
 						Layout.bottomMargin: 16
-
+						Layout.fillWidth: true
+						spacing: 16
 						Button {
 							id: trial
 							text: qsTr("Free trial")
+							Layout.fillWidth: true
 							contentItem: Text {
+								horizontalAlignment: Text.AlignHCenter
 								text: trial.text
 								font.pixelSize: 14
 								font.family: "roboto"
@@ -165,7 +167,9 @@ Flickable {
 						Button {
 							id: buy
 							text: qsTr("Buy course")
+							Layout.fillWidth: true
 							contentItem: Text {
+								horizontalAlignment: Text.AlignHCenter
 								text: buy.text
 								font.pixelSize: 14
 								font.family: "roboto"
