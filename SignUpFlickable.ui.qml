@@ -59,7 +59,6 @@ GridLayout {
 						TextField {
 							id: email
 							placeholderText: qsTr("E-mail")
-							Layout.fillWidth: true
 							font.pixelSize: 16
 							font.family: "roboto"
 							Layout.fillWidth: true
