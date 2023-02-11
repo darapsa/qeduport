@@ -126,6 +126,7 @@ Flickable {
 								placeholderText: "*********"
 								echoMode: TextInput.Password
 								font.pixelSize: 16
+								font.family: "Roboto"
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -166,6 +167,7 @@ Flickable {
 								placeholderText: "*********"
 								echoMode: TextInput.Password
 								font.pixelSize: 16
+								font.family: "Roboto"
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -187,6 +189,7 @@ Flickable {
 						contentItem: Text {
 							color: "#6c757d"
 							text: agreementCheckBox.text
+							font: agreementCheckBox.font
 							verticalAlignment: Text.AlignVCenter
 							leftPadding: agreementCheckBox.indicator.width + agreementCheckBox.spacing
 						}
@@ -221,12 +224,14 @@ Flickable {
 				Label {
 					text: qsTr("Already have an account?")
 					font.pixelSize: 16
+					font.family: "Roboto"
 				}
 
 				Text {
 					id: signIn
 					text: "<a href=\"sign-in.html\">Sign in here</a>"
 					font.pixelSize: 16
+					font.family: "Roboto"
 					font.underline: false
 					linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 				}
