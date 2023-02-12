@@ -102,7 +102,18 @@ Item {
 						text: badgeText
 						color: badgeColor
 						font {
-							family: roboto.name
+							family: Qt.platform.os
+								== "android" ||
+								Qt.platform.os
+								== "linux" ||
+								Qt.platform.os
+								== "osx" ||
+								Qt.platform.os
+								== "unix" ||
+								Qt.platform.os
+								== "windows"
+								? "Roboto"
+								: roboto.name
 							pixelSize: 13
 						}
 						anchors.centerIn: parent
