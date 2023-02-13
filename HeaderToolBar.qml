@@ -14,6 +14,10 @@ ToolBar {
 				|| Qt.platform.os == "unix"
 				|| Qt.platform.os == "windows"
 
+	background: Rectangle {
+		implicitHeight: 64
+	}
+
 	FontLoader {
 		id: roboto
 		name: "Roboto"
@@ -27,6 +31,10 @@ ToolBar {
 			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
 			icon.color: "transparent"
 			onClicked: optionsMenu.open()
+			background: Rectangle {
+				implicitHeight: 64
+			}
+
 			Menu {
 				id: optionsMenu
 				y: parent.height
