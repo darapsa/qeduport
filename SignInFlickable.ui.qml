@@ -34,7 +34,7 @@ Flickable {
 
 					Label {
 						id: signInTitle
-						text: qsTr("Login Into Eduport")
+						text: qsTr("Login into Eduport")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font.family: heebo.name
@@ -45,9 +45,7 @@ Flickable {
 					Label {
 						id: signInSubtitle
 						color: "#6c757d"
-						text: qsTr("Nice to see you! "
-							+ "Please log in with "
-							+ "your account.")
+						text: qsTr("Nice to see you! Please log in with your account.")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font.weight: Font.Normal
@@ -134,8 +132,7 @@ Flickable {
 				}
 				Label {
 					id: passwordHelper
-					text: "Your password must be 8 "
-						+ "characters at least"
+					text: "Your password must be 8 characters at least"
 					font.pixelSize: 12
 					color: "#6c757d"
 				}
@@ -157,8 +154,7 @@ Flickable {
 					}
 					Text {
 						id: forgotPassword
-						text: "<a href=\"#\">Forgot "
-							+ "password?</a>"
+						text: "<a href=\"#\">Forgot password?</a>"
 						font.family: "Roboto"
 						font.pointSize: 14
 						horizontalAlignment: Text.AlignRight
@@ -203,8 +199,7 @@ Flickable {
 				}
 				Text {
 					id: signUp
-					text: "<a href=\"sign-up.html\">Signup "
-						+ "here</a>"
+					text: "<a href=\"sign-up.html\">Signup here</a>"
 					font.pixelSize: 16
 					font.family: "Roboto"
 					font.underline: false
