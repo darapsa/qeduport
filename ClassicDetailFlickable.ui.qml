@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.15
 
 Flickable {
 	id: flickable
+	property alias header: header
 	property alias detailImage: image
 	property alias detailPrice: price
 	property alias detailOriginalPrice: originalPrice
@@ -23,6 +24,7 @@ Flickable {
 		}
 
 		HeaderToolBar {
+			id: header
 			Layout.fillWidth: true
 		}
 

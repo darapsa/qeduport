@@ -3,6 +3,11 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 ToolBar {
+	property alias optionsMenu: optionsMenu
+	property alias optionProfile: profile
+	property alias optionSettings: settings
+	property alias optionHelp: help
+	property alias optionSign: sign
 	property bool doesntEmbed: Qt.platform.os == "android"
 				|| Qt.platform.os == "linux"
 				|| Qt.platform.os == "osx"
@@ -26,15 +31,19 @@ ToolBar {
 				id: optionsMenu
 				y: parent.height
 				Action {
+					id: profile
 					text: qsTr("Edit Profile")
 				}
 				Action {
+					id: settings
 					text: qsTr("Account Settings")
 				}
 				Action {
+					id: help
 					text: qsTr("Help")
 				}
 				Action {
+					id: sign
 					text: qsTr("Sign Out")
 				}
 				delegate: MenuItem {

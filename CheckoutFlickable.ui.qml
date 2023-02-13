@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
+	property alias header: header
 	property alias checkoutAlert: alert
 	property alias checkoutLogin: login
 	property alias checkoutName: name
@@ -27,6 +28,7 @@ Flickable {
 		}
 
 		HeaderToolBar {
+			id: header
 			Layout.fillWidth: true
 		}
 
