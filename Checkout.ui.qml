@@ -27,7 +27,7 @@ Flickable {
 			right: parent.right
 		}
 
-		HeaderToolBar {
+		Header {
 			id: header
 			Layout.fillWidth: true
 		}

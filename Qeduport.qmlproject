@@ -1,7 +1,8 @@
 import QmlProject 1.1
 
 Project {
-	mainUiFile: "CheckoutFlickable.ui.qml"
+	mainFile: "RecentlyViewedCard.ui.qml"
+	mainUiFile: "Checkout.ui.qml"
 
 	QmlFiles {
 		directory: "."
@@ -24,6 +25,4 @@ Project {
 	multilanguageSupport: true
 	supportedLanguages: ["en", "id"]
 	primaryLanguage: "en"
-
-    mainFile: "RecentlyViewedCard.ui.qml"
 }
