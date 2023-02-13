@@ -38,7 +38,6 @@ Item {
 			ColumnLayout {
 				FontLoader {
 					id: bold
-					name: "Heebo"
 					source: "Heebo/Heebo-Bold.ttf"
 				}
 
@@ -52,7 +51,6 @@ Item {
 
 				FontLoader {
 					id: medium
-					name: "Heebo"
 					source: "Heebo/Heebo-Bold.ttf"
 				}
 
