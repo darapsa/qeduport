@@ -17,11 +17,11 @@ Item {
 	property alias imageArea: imageArea
 	property alias titleArea: titleArea
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
-	property bool doesntEmbed: Qt.platform.os == "android"
-				|| Qt.platform.os == "linux"
-				|| Qt.platform.os == "osx"
-				|| Qt.platform.os == "unix"
-				|| Qt.platform.os == "windows"
+	property bool doesntEmbed: Qt.platform.os === "android"
+				|| Qt.platform.os === "linux"
+				|| Qt.platform.os === "osx"
+				|| Qt.platform.os === "unix"
+				|| Qt.platform.os === "windows"
 
 	DropShadow {
 		source: rectangle

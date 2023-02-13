@@ -8,11 +8,11 @@ ToolBar {
 	property alias optionSettings: settings
 	property alias optionHelp: help
 	property alias optionSign: sign
-	property bool doesntEmbed: Qt.platform.os == "android"
-				|| Qt.platform.os == "linux"
-				|| Qt.platform.os == "osx"
-				|| Qt.platform.os == "unix"
-				|| Qt.platform.os == "windows"
+	property bool doesntEmbed: Qt.platform.os === "android"
+				|| Qt.platform.os === "linux"
+				|| Qt.platform.os === "osx"
+				|| Qt.platform.os === "unix"
+				|| Qt.platform.os === "windows"
 
 	background: Rectangle {
 		implicitHeight: 64
