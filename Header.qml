@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 ToolBar {
+	property alias toolButton: toolButton
 	property alias optionsMenu: optionsMenu
 	property alias optionProfile: profile
 	property alias optionSettings: settings
@@ -27,6 +28,7 @@ ToolBar {
 		anchors.fill: parent
 		layoutDirection: Qt.RightToLeft
 		ToolButton {
+			id: toolButton
 			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
 			icon.color: "transparent"
 			onClicked: optionsMenu.open()
