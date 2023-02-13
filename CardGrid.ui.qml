@@ -98,7 +98,6 @@ Item {
 
 					FontLoader {
 						id: roboto
-						name: "Roboto"
 						source: doesntEmbed ? ""
 						: "Roboto/Roboto-Regular.ttf"
 					}

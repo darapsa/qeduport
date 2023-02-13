@@ -20,7 +20,6 @@ ToolBar {
 
 	FontLoader {
 		id: roboto
-		name: "Roboto"
 		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
 	}
 

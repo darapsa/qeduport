@@ -12,7 +12,6 @@ Flickable {
 
 	FontLoader {
 		id: heebo
-		name: "Heebo"
 		source: "Heebo/Heebo-Bold.ttf"
 	}
 
