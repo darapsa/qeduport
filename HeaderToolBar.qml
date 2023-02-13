@@ -3,10 +3,16 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 ToolBar {
+	property bool doesntEmbed: Qt.platform.os == "android"
+				|| Qt.platform.os == "linux"
+				|| Qt.platform.os == "osx"
+				|| Qt.platform.os == "unix"
+				|| Qt.platform.os == "windows"
+
 	FontLoader {
 		id: roboto
 		name: "Roboto"
-		source: "Roboto/Roboto-Medium.ttf"
+		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
 	}
 
 	RowLayout {
@@ -33,17 +39,7 @@ ToolBar {
 				}
 				delegate: MenuItem {
 					font {
-						family: Qt.platform.os
-							== "android"
-							|| Qt.platform.os
-							== "linux"
-							|| Qt.platform.os
-							== "osx"
-							|| Qt.platform.os
-							== "unix"
-							|| Qt.platform.os
-							== "windows"
-							? "Roboto"
+						family: doesntEmbed ? "Roboto"
 							: roboto.name
 						pixelSize: 15
 						weight: Font.Medium

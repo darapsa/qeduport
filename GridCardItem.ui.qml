@@ -17,6 +17,11 @@ Item {
 	property alias imageArea: imageArea
 	property alias titleArea: titleArea
 //	property string textTruncateText: "Rooms oh fully taken by worse do. Points afraid but may end afraid but.."
+	property bool doesntEmbed: Qt.platform.os == "android"
+				|| Qt.platform.os == "linux"
+				|| Qt.platform.os == "osx"
+				|| Qt.platform.os == "unix"
+				|| Qt.platform.os == "windows"
 
 	DropShadow {
 		source: rectangle
@@ -94,7 +99,8 @@ Item {
 					FontLoader {
 						id: roboto
 						name: "Roboto"
-						source: "Roboto/Roboto-Regular.ttf"
+						source: doesntEmbed ? ""
+						: "Roboto/Roboto-Regular.ttf"
 					}
 
 					Label {
@@ -102,16 +108,7 @@ Item {
 						text: badgeText
 						color: badgeColor
 						font {
-							family: Qt.platform.os
-								== "android" ||
-								Qt.platform.os
-								== "linux" ||
-								Qt.platform.os
-								== "osx" ||
-								Qt.platform.os
-								== "unix" ||
-								Qt.platform.os
-								== "windows"
+							family: doesntEmbed
 								? "Roboto"
 								: roboto.name
 							pixelSize: 13
