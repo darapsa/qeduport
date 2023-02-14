@@ -6,6 +6,11 @@ Flickable {
 	property alias header: header
 	property alias counter: counter
 	property alias popular: popular
+	property bool doesntEmbed: Qt.platform.os === "android"
+				|| Qt.platform.os === "linux"
+				|| Qt.platform.os === "osx"
+				|| Qt.platform.os === "unix"
+				|| Qt.platform.os === "windows"
 	contentHeight: body.height
 
 	ColumnLayout {
@@ -52,8 +57,16 @@ Flickable {
 						horizontalAlignment: Text.AlignHCenter
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.family: heebo.name
-						font.pixelSize: 24
+						font {
+							family: heebo.name
+							pixelSize: 24
+						}
+					}
+
+					FontLoader {
+						id: roboto
+						source: doesntEmbed ? ""
+						: "Roboto/Roboto-Medium.ttf"
 					}
 
 					Label {
@@ -62,8 +75,12 @@ Flickable {
 						horizontalAlignment: Text.AlignHCenter
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.family: "Roboto"
-						font.pixelSize: 19
+						font {
+							family: doesntEmbed
+								? "Roboto"
+								: roboto.name
+							pixelSize: 19
+						}
 					}
 				}
 
