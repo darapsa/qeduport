@@ -77,10 +77,13 @@ Flickable {
 				: width < 992 ? width / 3
 				: width / 4
 				cellHeight: cellWidth * 1.3
-				height: width < 576 ? cellHeight * count
-				: width < 768 ? cellHeight * count / 2
-				: width < 992 ? cellHeight * count / 3
-				: cellHeight * count / 4
+				height: width < 576
+				? cellHeight * count
+				: width < 768
+				? cellHeight * (count + count % 2) / 2
+				: width < 992
+				? cellHeight * (count + (count + 1) % 3) / 3
+				: cellHeight * (count + (count + 2) % 4) / 4
 				anchors {
 					top: counter.bottom
 					left: parent.left
