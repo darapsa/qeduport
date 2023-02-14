@@ -91,7 +91,6 @@ Flickable {
 						ColumnLayout {
 							spacing: 8
 							RowLayout {
-								implicitWidth: price.width + originalPrice.width + discountLabel.width
 								Label {
 									id: price
 									text: "$150"
