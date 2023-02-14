@@ -54,12 +54,8 @@ Flickable {
 				Image {
 					id: image
 					source: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
-					sourceSize {
-						width: parent.width - 16
-						height: parent.width * 3 / 4
-					}
-					width: sourceSize.width
-					height: sourceSize.height
+					width: parent.width - 16
+					height: parent.width * 3 / 4
 					anchors {
 						top: parent.top
 						topMargin: 8
