@@ -53,7 +53,7 @@ Flickable {
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font.family: heebo.name
-						font.pointSize: 40
+						font.pixelSize: 24
 					}
 
 					Label {
@@ -63,7 +63,7 @@ Flickable {
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font.family: "Roboto"
-						font.pointSize: 22
+						font.pixelSize: 19
 					}
 				}
 
