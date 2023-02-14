@@ -137,8 +137,10 @@ Item {
 				Label {
 					id: title
 					text: titleText
+					color: Qt.rgba(.141, .161, .176, 1.0)
 					wrapMode: Text.Wrap
 					Layout.fillWidth: true
+					Layout.bottomMargin: 8
 					font {
 						family: heebo.name
 						pixelSize: 21
@@ -153,10 +155,13 @@ Item {
 				Label {
 					id: textTruncate
 					text: textTruncateText
+					color: Qt.rgba(.455, .459, .475, 1.0)
 					wrapMode: Text.Wrap
 					Layout.fillWidth: true
+					Layout.bottomMargin: 8
 					font {
-						weight: Font.Light
+						family: doesntEmbed ? "Roboto"
+							: roboto.name
 						pointSize: 14
 					}
 				}
