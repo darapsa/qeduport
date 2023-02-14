@@ -22,8 +22,64 @@ Flickable {
 		}
 
 		Item {
-			implicitHeight: counter.height + popular.height
+			implicitHeight: banner.height + counter.height
+						+ popular.height
 			Layout.fillWidth: true
+
+			GridLayout {
+				id: banner
+				columns: width < 992 ? 1 : 2
+				rows: width < 992 ? 2 : 1
+				anchors {
+					top: parent.top
+					topMargin: 48
+					left: parent.left
+					leftMargin: 51.28
+					right: parent.right
+					rightMargin: 51.28
+				}
+
+				ColumnLayout {
+
+					FontLoader {
+						id: heebo
+						source: "Heebo/Heebo-Bold.ttf"
+					}
+
+					Label {
+						text: qsTr("Limitless learning at your fingertips")
+						color: "#24292d"
+						horizontalAlignment: Text.AlignHCenter
+						wrapMode: Text.Wrap
+						Layout.fillWidth: true
+						font.family: heebo.name
+						font.pointSize: 40
+					}
+
+					Label {
+						text: qsTr("Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.")
+						color: "#747579"
+						horizontalAlignment: Text.AlignHCenter
+						wrapMode: Text.Wrap
+						Layout.fillWidth: true
+						font.family: "Roboto"
+						font.pointSize: 22
+					}
+				}
+
+				ColumnLayout {
+					Layout.topMargin: 48
+					Layout.leftMargin: 24
+					Layout.rightMargin: 24
+
+					Image {
+						id: image
+						source: "https://eduport.webestica.com/assets/images/element/07.png"
+						fillMode: Image.PreserveAspectFit
+						Layout.fillWidth: true
+					}
+				}
+			}
 
 			GridView {
 				id: counter
@@ -36,7 +92,7 @@ Flickable {
 				: width < 1200 ? cellHeight * count / 2
 				: cellHeight
 				anchors {
-					top: parent.top
+					top: banner.bottom
 					left: parent.left
 					right: parent.right
 				}
