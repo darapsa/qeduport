@@ -6,6 +6,7 @@ Flickable {
 	property alias header: header
 	property alias counter: counter
 	property alias popular: popular
+	property alias getStarted: getStarted
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
@@ -80,6 +81,43 @@ Flickable {
 								? "Roboto"
 								: roboto.name
 							pixelSize: 19
+						}
+					}
+
+					Button {
+						id: getStarted
+						Layout.alignment: Qt.AlignHCenter
+						Layout.leftMargin: 24
+						Layout.rightMargin: 24
+						Layout.bottomMargin: 25.6
+						horizontalPadding: 24
+						verticalPadding: 12.8
+						contentItem: Text {
+							color: getStarted.down
+								? "#ffffff"
+								: "#d6293e"
+							text: qsTr("Get Started")
+							horizontalAlignment: Text
+								.AlignHCenter
+							verticalAlignment: Text
+								.AlignVCenter
+							font {
+								family: doesntEmbed
+								? "Roboto"
+								: roboto.name
+								pixelSize: 16
+								weight: Font.Medium
+							}
+						}
+						background: Rectangle {
+							radius: 8
+							color: getStarted.down
+								? "#d6293e"
+								: Qt.rgba(.839, .16, .243, .1)
+							border {
+								color: getStarted.down ? "#d6293e" : "transparent"
+								width: 1
+							}
 						}
 					}
 				}
