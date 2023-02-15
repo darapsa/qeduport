@@ -1,8 +1,7 @@
 import QmlProject 1.1
 
 Project {
-	mainFile: "RecentlyViewedCard.ui.qml"
-	mainUiFile: "Checkout.ui.qml"
+	mainUiFile: "HomeDefault.ui.qml"
 
 	QmlFiles {
 		directory: "."
