@@ -114,15 +114,19 @@ Flickable {
 		}
 
 		GridLayout {
+			Layout.fillWidth: true
 			columns: width < 992 ? 1 : 2
 			rows: width < 992 ? 2 : 1
 
 			ColumnLayout {
-/*
+				Layout.alignment: Qt.AlignTop
+				Layout.maximumWidth: body.width / 2
+
 				Item {
 					Layout.fillWidth: true
 					Layout.leftMargin: 15
 					Layout.rightMargin: 15
+					implicitHeight: mainContent.height
 
 					DropShadow {
 						source: mainContent
@@ -133,10 +137,46 @@ Flickable {
 					Rectangle {
 						id: mainContent
 						radius: 5.2
-						anchors.fill: parent
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
+						implicitHeight: tabsContent.height
+
+						ColumnLayout {
+							id: tabsContent
+							anchors {
+								left: parent.left
+								leftMargin: 25.6
+								right: parent.right
+								rightMargin: 25.6
+							}
+
+							Label {
+								text: qsTr("Course Description")
+								color: "#24292d"
+								wrapMode: Text.Wrap
+								Layout.fillWidth: true
+								Layout.bottomMargin: 16
+								font {
+									family: heebo.name
+									pointSize: 20.1
+								}
+							}
+
+							Label {
+								text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
+								color: "#747579"
+								wrapMode: Text.Wrap
+								Layout.fillWidth: true
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+						}
 					}
 				}
-*/
 			}
 
 			ColumnLayout {
