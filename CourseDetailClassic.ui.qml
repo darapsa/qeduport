@@ -120,7 +120,8 @@ Flickable {
 
 			ColumnLayout {
 				Layout.alignment: Qt.AlignTop
-				Layout.maximumWidth: body.width / 2
+				Layout.maximumWidth: body.width < 992
+					? body.width : body.width / 2
 
 				Item {
 					Layout.fillWidth: true
