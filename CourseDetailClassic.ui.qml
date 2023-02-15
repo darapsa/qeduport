@@ -113,185 +113,208 @@ Flickable {
 			}
 		}
 
-		Item {
-			Layout.fillWidth: true
-			implicitHeight: width * 1.2
+		GridLayout {
+			columns: width < 992 ? 1 : 2
+			rows: width < 992 ? 2 : 1
 
-			DropShadow {
-				source: rectangle
-				color: Qt.rgba(.113, .227, .325, .15)
-				anchors.fill: rectangle
+			ColumnLayout {
+/*
+				Item {
+					Layout.fillWidth: true
+					Layout.leftMargin: 15
+					Layout.rightMargin: 15
+
+					DropShadow {
+						source: mainContent
+						color: Qt.rgba(.113, .227, .325, .15)
+						anchors.fill: mainContent
+					}
+
+					Rectangle {
+						id: mainContent
+						radius: 5.2
+						anchors.fill: parent
+					}
+				}
+*/
 			}
 
-			Rectangle {
-				id: rectangle
-				radius: 10
-				anchors {
-					top: parent.top
-					topMargin: 25.6
-					left: parent.left
-					leftMargin: 12.8
-					right: parent.right
-					rightMargin: 12.8
-					bottom: parent.bottom
-				}
+			ColumnLayout {
 
-				Image {
-					id: image
-					source: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
-					width: parent.width - 16
-					height: parent.width * 3 / 4
-					anchors {
-						top: parent.top
-						topMargin: 8
-						horizontalCenter: parent.horizontalCenter
+				Item {
+					Layout.fillWidth: true
+					implicitHeight: width * 1.2
+
+					DropShadow {
+						source: rightSidebar
+						color: Qt.rgba(.113, .227, .325, .15)
+						anchors.fill: rightSidebar
 					}
-					layer.enabled: true
-					layer.effect: OpacityMask {
-						maskSource: Rectangle {
-							width: image.width
-							height: image.height
-							radius: 10
+
+					Rectangle {
+						id: rightSidebar
+						radius: 10
+						anchors {
+							top: parent.top
+							topMargin: 25.6
+							left: parent.left
+							leftMargin: 12.8
+							right: parent.right
+							rightMargin: 12.8
+							bottom: parent.bottom
 						}
-					}
-				}
 
-				ColumnLayout {
-					width: parent.width - 16
-					anchors {
-						top: image.bottom
-						horizontalCenter: parent.horizontalCenter
-						bottom: parent.bottom
-						bottomMargin: 8
-					}
-
-					RowLayout {
-						Layout.topMargin: 16
-						Layout.bottomMargin: 16
+						Image {
+							id: image
+							source: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
+							width: parent.width - 16
+							height: parent.width * 3 / 4
+							anchors {
+								top: parent.top
+								topMargin: 8
+								horizontalCenter: parent.horizontalCenter
+							}
+							layer.enabled: true
+							layer.effect: OpacityMask {
+								maskSource: Rectangle {
+									width: image.width
+									height: image.height
+									radius: 10
+									    }
+							}
+						}
 
 						ColumnLayout {
-							spacing: 8
+							width: parent.width - 16
+							anchors {
+								top: image.bottom
+								horizontalCenter: parent.horizontalCenter
+								bottom: parent.bottom
+								bottomMargin: 8
+							}
+
 							RowLayout {
-								Label {
-									id: price
-									text: "$150"
-									font {
-										family: heebo.name
-										pointSize: 23
-									}
-								}
+								Layout.topMargin: 16
+								Layout.bottomMargin: 16
 
-								Label {
-									id: originalPrice
-									text: "$350"
-									color: "#4d000000"
-									font {
-										family: doesntEmbed
-											? "Roboto"
-											: regular.name
-										pointSize: 15
-										strikeout: true
-									}
-								}
+								ColumnLayout {
+									spacing: 8
 
-								Rectangle {
-									id: discountLabel
-									implicitWidth: discount.width
-									implicitHeight: discount.height
-									radius: 6
-									color: "#fd7e14"
-									Label {
-										id: discount
-										text: qsTr("60% off")
-										color: "white"
-										font {
-											family: doesntEmbed
-												? "Roboto"
-												: regular.name
-											pointSize: 13.6
+									RowLayout {
+
+										Label {
+											id: price
+											text: "$150"
+											font {
+												family: heebo.name
+												pointSize: 23
+											}
 										}
-										horizontalAlignment: Text.AlignHCenter
-										verticalAlignment: Text.AlignVCenter
-										topPadding: 4.46
-										leftPadding: 8.29
-										rightPadding: 8.29
-										bottomPadding: 4.46
+
+										Label {
+											id: originalPrice
+											text: "$350"
+											color: "#4d000000"
+											font {
+												family: doesntEmbed ? "Roboto" : regular.name
+												pointSize: 15
+												strikeout: true
+											}
+										}
+
+										Rectangle {
+											id: discountLabel
+											implicitWidth: discount.width
+											implicitHeight: discount.height
+											radius: 6
+											color: "#fd7e14"
+
+											Label {
+												id: discount
+												text: qsTr("60% off")
+												color: "white"
+												font {
+													family: doesntEmbed ? "Roboto" : regular.name
+													pointSize: 13.6
+												}
+												horizontalAlignment: Text.AlignHCenter
+												verticalAlignment: Text.AlignVCenter
+												topPadding: 4.46
+												leftPadding: 8.29
+												rightPadding: 8.29
+												bottomPadding: 4.46
+											}
+										}
+									}
+
+									RowLayout {
+										id: time
+
+										Label {
+											text: qsTr("5 days left at this price")
+											color: "#d6293e"
+											font {
+												family: doesntEmbed ? "Roboto" : regular.name
+												pointSize: 15
+											}
+										}
 									}
 								}
 							}
 
 							RowLayout {
-								id: time
+								Layout.topMargin: 16
+								Layout.fillWidth: true
+								spacing: 16
 
-								Label {
-									text: qsTr("5 days left at this price")
-									color: "#d6293e"
-									font {
-										family: doesntEmbed
-											? "Roboto"
-											: regular.name
-										pointSize: 15
+								Button {
+									id: trial
+									text: qsTr("Free trial")
+									horizontalPadding: 16
+									verticalPadding: 8
+									contentItem: Text {
+										horizontalAlignment: Text.AlignHCenter
+										text: trial.text
+										color: trial.down ? "#ffffff" : "#066ac9"
+										font {
+											family: doesntEmbed ? "Roboto" : medium.name
+											weight: Font.Medium
+											pointSize: 15
+										}
+									}
+									background: Rectangle {
+										color: trial.down ? "#066ac9" : "#ffffff"
+										radius: 5.2
+										border {
+											color: "#066ac9"
+											width: 1
+										}
 									}
 								}
-							}
-						}
-					}
 
-					RowLayout {
-						Layout.topMargin: 16
-						Layout.fillWidth: true
-						spacing: 16
-
-						Button {
-							id: trial
-							text: qsTr("Free trial")
-							horizontalPadding: 16
-							verticalPadding: 8
-							contentItem: Text {
-								horizontalAlignment: Text.AlignHCenter
-								text: trial.text
-								color: trial.down ? "#ffffff" : "#066ac9"
-								font {
-									family: doesntEmbed
-										? "Roboto"
-										: medium.name
-									weight: Font.Medium
-									pointSize: 15
-								}
-							}
-							background: Rectangle {
-								color: trial.down ? "#066ac9" : "#ffffff"
-								radius: 5.2
-								border {
-									color: "#066ac9"
-									width: 1
-								}
-							}
-						}
-
-						Button {
-							id: buy
-							text: qsTr("Buy course")
-							horizontalPadding: 16
-							verticalPadding: 8
-							contentItem: Text {
-								horizontalAlignment: Text.AlignHCenter
-								text: buy.text
-								color: "#ffffff"
-								font {
-									family: doesntEmbed
-										? "Roboto"
-										: medium.name
-									weight: Font.Medium
-									pointSize: 15
-								}
-							}
-							background: Rectangle {
-								color: buy.down ? "#0aa073" : "#0cbc87"
-								radius: 5.2
-								border {
-									color: buy.down ? "#0a966c" : "#0cbc87"
-									width: 1
+								Button {
+									id: buy
+									text: qsTr("Buy course")
+									horizontalPadding: 16
+									verticalPadding: 8
+									contentItem: Text {
+										horizontalAlignment: Text.AlignHCenter
+										text: buy.text
+										color: "#ffffff"
+										font {
+											family: doesntEmbed ? "Roboto" : medium.name
+											weight: Font.Medium
+											pointSize: 15
+										}
+									}
+									background: Rectangle {
+										color: buy.down ? "#0aa073" : "#0cbc87"
+										radius: 5.2
+										border {
+											color: buy.down ? "#0a966c" : "#0cbc87"
+											width: 1
+										}
+									}
 								}
 							}
 						}
