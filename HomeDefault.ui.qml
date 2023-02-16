@@ -174,25 +174,33 @@ Flickable {
 				}
 			}
 
-			GridView {
-				id: popular
-				interactive: false
-				cellWidth: width < 576 ? width
-				: width < 768 ? width / 2
-				: width < 992 ? width / 3
-				: width / 4
-				cellHeight: cellWidth * 1.3
-				height: width < 576
-				? cellHeight * count
-				: width < 768
-				? cellHeight * (count + count % 2) / 2
-				: width < 992
-				? cellHeight * (count + (count + 1) % 3) / 3
-				: cellHeight * (count + (count + 2) % 4) / 4
+			SwipeView {
 				anchors {
 					top: counter.bottom
 					left: parent.left
 					right: parent.right
+				}
+				height: popular.height
+
+				GridView {
+					id: popular
+					interactive: false
+					cellWidth: width < 576 ? width
+						: width < 768 ? width / 2
+						: width < 992 ? width / 3
+						: width / 4
+					cellHeight: cellWidth * 1.3
+					width: parent.width
+					height: width < 576
+						? cellHeight * count
+						: width < 768
+						? cellHeight
+						* (count + count % 2) / 2
+						: width < 992
+						? cellHeight
+						* (count + (count + 1) % 3) / 3
+						: cellHeight
+						* (count + (count + 2) % 4) / 4
 				}
 			}
 		}
