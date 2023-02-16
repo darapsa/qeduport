@@ -164,6 +164,39 @@ Flickable {
 			}
 		}
 
+		ColumnLayout {
+			Layout.leftMargin: 15
+			Layout.rightMargin: 15
+			Layout.bottomMargin: 25.6
+
+			Label {
+				text: qsTr("Most Popular Courses")
+				color: "#24292d"
+				horizontalAlignment: Text.AlignHCenter
+				wrapMode: Text.Wrap
+				Layout.fillWidth: true
+				Layout.bottomMargin: 8
+				font {
+					family: doesntEmbed ? "Roboto"
+							: roboto.name
+					pointSize: 44
+				}
+			}
+
+			Label {
+				text: qsTr("Choose from hundreds of courses from specialist organizations")
+				color: "#747579"
+				horizontalAlignment: Text.AlignHCenter
+				wrapMode: Text.Wrap
+				Layout.fillWidth: true
+				font {
+					family: doesntEmbed ? "Roboto"
+							: roboto.name
+					pointSize: 14
+				}
+			}
+		}
+
 		SwipeView {
 			Layout.fillWidth: true
 			Layout.preferredHeight: popular.height
