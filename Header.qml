@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 ToolBar {
+	property alias logo: logo
 	property alias toolButton: toolButton
 	property alias optionsMenu: optionsMenu
 	property alias optionProfile: profile
@@ -24,17 +25,28 @@ ToolBar {
 		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
 	}
 
-	RowLayout {
+	Item {
 		anchors.fill: parent
-		layoutDirection: Qt.RightToLeft
+
 		ToolButton {
-			id: toolButton
-			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
-			icon.color: "transparent"
-			onClicked: optionsMenu.open()
+			id: logo
+			anchors.left: parent.left
+			icon.source: "https://eduport.webestica.com/assets/images/logo.svg"
+			icon.width: 115
 			background: Rectangle {
 				implicitHeight: 64
 			}
+		}
+
+		ToolButton {
+			id: toolButton
+			anchors.right: parent.right
+			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
+			icon.color: "transparent"
+			background: Rectangle {
+				implicitHeight: 64
+			}
+			onClicked: optionsMenu.open()
 
 			Menu {
 				id: optionsMenu
