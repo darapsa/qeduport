@@ -197,7 +197,96 @@ Flickable {
 			}
 		}
 
+		TabBar {
+			id: tabs
+			currentIndex: tabsContent.currentIndex
+			background: Rectangle{
+				color: Qt.rgba(.0235, .416, .788, .1)
+				radius: 10
+			}
+			horizontalPadding: 16
+			verticalPadding: 10
+			Layout.bottomMargin: 25.6
+
+			TabButton {
+				id: webDesign
+				text: qsTr("Web Design")
+				horizontalPadding: 16
+				verticalPadding: 8
+				anchors {
+					rightMargin: 8
+					bottomMargin: 8
+				}
+				background: Rectangle {
+					color: "#066ac9"
+					radius: 5.2
+				}
+			}
+
+			TabButton {
+				id: development
+				text: qsTr("Development")
+				horizontalPadding: 16
+				verticalPadding: 8
+				anchors {
+					rightMargin: 8
+					bottomMargin: 8
+				}
+				background: Rectangle {
+					color: "#066ac9"
+					radius: 5.2
+				}
+			}
+
+			TabButton {
+				id: graphicDesign
+				text: qsTr("Graphic Design")
+				horizontalPadding: 16
+				verticalPadding: 8
+				anchors {
+					rightMargin: 8
+					bottomMargin: 8
+				}
+				background: Rectangle {
+					color: "#066ac9"
+					radius: 5.2
+				}
+			}
+
+			TabButton {
+				id: marketing
+				text: qsTr("Marketing")
+				horizontalPadding: 16
+				verticalPadding: 8
+				anchors {
+					rightMargin: 8
+					bottomMargin: 8
+				}
+				background: Rectangle {
+					color: "#066ac9"
+					radius: 5.2
+				}
+			}
+
+			TabButton {
+				id: finance
+				text: qsTr("Finance")
+				horizontalPadding: 16
+				verticalPadding: 8
+				anchors {
+					rightMargin: 8
+					bottomMargin: 8
+				}
+				background: Rectangle {
+					color: "#066ac9"
+					radius: 5.2
+				}
+			}
+		}
+
 		SwipeView {
+			id: tabsContent
+			currentIndex: tabs.currentIndex
 			Layout.fillWidth: true
 			Layout.preferredHeight: popular.height
 
