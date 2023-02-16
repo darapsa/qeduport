@@ -3,7 +3,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
-	property alias header: header
 	property alias counter: counter
 	property alias popular: popular
 	property alias getStarted: getStarted
@@ -20,11 +19,6 @@ Flickable {
 			top: parent.top
 			left: parent.left
 			right: parent.right
-		}
-
-		Header {
-			id: header
-			Layout.fillWidth: true
 		}
 
 		Item {

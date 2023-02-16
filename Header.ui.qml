@@ -46,7 +46,6 @@ ToolBar {
 			background: Rectangle {
 				implicitHeight: 64
 			}
-			onClicked: optionsMenu.open()
 
 			Menu {
 				id: optionsMenu

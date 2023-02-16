@@ -4,8 +4,6 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 Flickable {
-	id: flickable
-	property alias header: header
 	property alias introBadge: introBadge
 	property alias introTitleHeader: introTitleHeader
 	property alias introTitleParagraph: introTitleParagraph
@@ -29,11 +27,6 @@ Flickable {
 			top: parent.top
 			left: parent.left
 			right: parent.right
-		}
-
-		Header {
-			id: header
-			Layout.fillWidth: true
 		}
 
 		FontLoader {

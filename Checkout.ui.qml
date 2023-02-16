@@ -3,7 +3,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
-	property alias header: header
 	property alias checkoutAlert: alert
 	property alias checkoutLogin: login
 	property alias checkoutName: name
@@ -25,11 +24,6 @@ Flickable {
 			top: parent.top
 			left: parent.left
 			right: parent.right
-		}
-
-		Header {
-			id: header
-			Layout.fillWidth: true
 		}
 
 		GridLayout {
