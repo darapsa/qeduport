@@ -206,6 +206,7 @@ Flickable {
 			}
 			horizontalPadding: 16
 			verticalPadding: 10
+			Layout.fillWidth: true
 			Layout.bottomMargin: 25.6
 
 			TabButton {
