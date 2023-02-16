@@ -51,7 +51,7 @@ Flickable {
 				FontLoader {
 					id: roboto
 					source: doesntEmbed ? ""
-					: "Roboto/Roboto-Medium.ttf"
+						: "Roboto/Roboto-Medium.ttf"
 				}
 
 				Label {
@@ -61,8 +61,7 @@ Flickable {
 					wrapMode: Text.Wrap
 					Layout.fillWidth: true
 					font {
-						family: doesntEmbed
-							? "Roboto"
+						family: doesntEmbed ? "Roboto"
 							: roboto.name
 						pixelSize: 19
 					}
@@ -97,9 +96,13 @@ Flickable {
 						radius: 8
 						color: getStarted.down
 							? "#d6293e"
-							: Qt.rgba(.839, .16, .243, .1)
+							: Qt.rgba(.839, .16,
+								.243, .1)
 						border {
-							color: getStarted.down ? "#d6293e" : "transparent"
+							color:
+							getStarted.down
+							? "#d6293e"
+							: "transparent"
 							width: 1
 						}
 					}
@@ -124,8 +127,8 @@ Flickable {
 			id: counter
 			interactive: false
 			cellWidth: width < 576 ? width
-			: width < 1200 ? width / 2
-			: width / 4
+				: width < 1200 ? width / 2
+				: width / 4
 			cellHeight: 125.6
 			Layout.fillWidth: true
 			Layout.preferredHeight: width < 576
