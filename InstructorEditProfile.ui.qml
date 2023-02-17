@@ -25,7 +25,7 @@ Flickable {
 				Layout.rightMargin: 15
 
 				Rectangle {
-					Layout.fillWidth: true
+					implicitWidth: editProfile.width
 					implicitHeight: editProfile.height
 					radius: 8
 					border {
@@ -35,14 +35,13 @@ Flickable {
 
 					ColumnLayout {
 						id: editProfile
-						anchors {
-							left: parent.left
-							right: parent.right
-						}
 
 						Rectangle {
-							Layout.fillWidth: true
-							implicitHeight: cardHeader.height
+							implicitWidth:
+							cardHeader.width
+							implicitHeight:
+							cardHeader.height
+							radius: 8
 							border {
 								width: 1
 								color: "#1a000000"
@@ -52,10 +51,6 @@ Flickable {
 								id: cardHeader
 								text: qsTr("Edit Profile")
 								padding: 16
-								anchors {
-									left: parent.left
-									right: parent.right
-								}
 								font {
 									family: doesntEmbed ? "Roboto" : bold.name
 									weight: Font.Bold
