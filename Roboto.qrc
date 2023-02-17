@@ -2,5 +2,6 @@
 	<qresource prefix="qeduport">
 		<file>Roboto/Roboto-Regular.ttf</file>
 		<file>Roboto/Roboto-Medium.ttf</file>
+		<file>Roboto/Roboto-Bold.ttf</file>
 	</qresource>
 </RCC>
