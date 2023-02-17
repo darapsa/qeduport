@@ -36,26 +36,29 @@ Flickable {
 					ColumnLayout {
 						id: editProfile
 
+						Label {
+							id: cardHeader
+							text:
+							qsTr("Edit Profile")
+							padding: 16
+							font {
+								family:
+								doesntEmbed
+								? "Roboto"
+								: bold.name
+								weight: Font
+									.Bold
+								pointSize: 23
+							}
+						}
+
 						Rectangle {
-							implicitWidth:
-							cardHeader.width
-							implicitHeight:
-							cardHeader.height
-							radius: 8
+							width: cardHeader.width
+							height: 1
 							border {
 								width: 1
-								color: "#1a000000"
-							}
-
-							Label {
-								id: cardHeader
-								text: qsTr("Edit Profile")
-								padding: 16
-								font {
-									family: doesntEmbed ? "Roboto" : bold.name
-									weight: Font.Bold
-									pointSize: 23
-								}
+								color:
+								"#0a000000"
 							}
 						}
 
