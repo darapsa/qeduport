@@ -17,6 +17,11 @@ Flickable {
 
 	ColumnLayout {
 		id: main
+		anchors {
+			top: parent.top
+			left: parent.left
+			right: parent.right
+		}
 
 		RowLayout {
 
@@ -25,7 +30,7 @@ Flickable {
 				Layout.rightMargin: 15
 
 				Rectangle {
-					implicitWidth: editProfile.width
+					Layout.fillWidth: true
 					implicitHeight: editProfile.height
 					radius: 8
 					border {
@@ -35,9 +40,14 @@ Flickable {
 
 					ColumnLayout {
 						id: editProfile
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
 
 						Label {
 							id: cardHeader
+							Layout.fillWidth: true
 							text:
 							qsTr("Edit Profile")
 							padding: 16
@@ -53,7 +63,7 @@ Flickable {
 						}
 
 						Rectangle {
-							width: cardHeader.width
+							Layout.fillWidth: true
 							height: 1
 							border {
 								width: 1
