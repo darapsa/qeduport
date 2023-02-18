@@ -438,6 +438,34 @@ Flickable {
 									}
 								}
 							}
+
+							Button {
+								id: saveButton
+								Layout.topMargin: 25.6
+								Layout.leftMargin: 12.8
+								Layout.rightMargin: 12.8
+								horizontalPadding: 16
+								verticalPadding: 8
+								contentItem: Text {
+									color: "white"
+									text: qsTr("Save changes")
+									horizontalAlignment: Text.AlignHCenter
+									verticalAlignment: Text.AlignVCenter
+									font {
+										family: doesntEmbed ? "Roboto" : medium.name
+										weight: Font.Medium
+										pointSize: 15
+									}
+								}
+								background: Rectangle {
+									radius: 5.2
+									color: saveButton.down ? "#0555a1" : "#066ac9"
+									border {
+										color: saveButton.down ? "#055097" : "#066ac9"
+										width: 1
+									}
+								}
+							}
 						}
 					}
 				}
