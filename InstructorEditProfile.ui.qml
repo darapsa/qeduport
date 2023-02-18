@@ -141,6 +141,116 @@ Flickable {
 								}
 							}
 						}
+
+						ColumnLayout {
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
+							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								Layout.bottomMargin: 9
+								text: qsTr("Full name")
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+							}
+						}
+
+						ColumnLayout {
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
+							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								Layout.bottomMargin: 9
+								text: qsTr("Username")
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+							}
+						}
+
+						ColumnLayout {
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
+							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								Layout.bottomMargin: 9
+								text: qsTr("Email id")
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+							}
+						}
+
+						ColumnLayout {
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
+							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								Layout.bottomMargin: 9
+								text: qsTr("Phone number")
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+							}
+						}
+
+						ColumnLayout {
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
+							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								Layout.bottomMargin: 9
+								text: qsTr("Location")
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+							}
+						}
 					}
 				}
 			}
