@@ -401,7 +401,34 @@ Flickable {
 								}
 							}
 
-							RowLayout {
+							Rectangle {
+								Layout.fillWidth: true
+								implicitHeight: location.height
+								radius: 5.2
+								border {
+									width: 1
+									color: "#dde0e3"
+								}
+
+								TextField {
+									id: location
+									text: "California"
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
+									anchors {
+										left: parent.left
+										right: parent.right
+									}
+									background: Rectangle {
+										color: "transparent"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
+								}
 							}
 						}
 					}
