@@ -54,16 +54,11 @@ Flickable {
 						Label {
 							id: cardHeader
 							Layout.fillWidth: true
-							text:
-							qsTr("Edit Profile")
+							text: qsTr("Edit Profile")
 							padding: 16
 							font {
-								family:
-								doesntEmbed
-								? "Roboto"
-								: bold.name
-								weight: Font
-									.Bold
+								family: doesntEmbed ? "Roboto" : bold.name
+								weight: Font.Bold
 								pointSize: 23
 							}
 						}
@@ -73,8 +68,7 @@ Flickable {
 							height: 1
 							border {
 								width: .5
-								color:
-								"#0a000000"
+								color: "#0a000000"
 							}
 						}
 
@@ -88,8 +82,7 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Profile picture")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
@@ -123,8 +116,8 @@ Flickable {
 									contentItem: Text {
 										color: uploadButton.down ? "#ffffff" : "#066ac9"
 										text: qsTr("Change")
-										horizontalAlignment: Text .AlignHCenter
-										verticalAlignment: Text .AlignVCenter
+										horizontalAlignment: Text.AlignHCenter
+										verticalAlignment: Text.AlignVCenter
 										font {
 											family: doesntEmbed ? "Roboto" : regular.name
 											pointSize: 15
@@ -228,8 +221,7 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Username")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
@@ -403,8 +395,7 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Location")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
