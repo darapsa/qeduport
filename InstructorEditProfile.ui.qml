@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 
 Flickable {
 	property bool doesntEmbed: Qt.platform.os === "android"
@@ -78,15 +79,15 @@ Flickable {
 						}
 
 						ColumnLayout {
-							Layout.topMargin: 41.6
-							Layout.leftMargin: 32.8
-							Layout.rightMargin: 32.8
+							Layout.topMargin: 16
+							Layout.leftMargin: 20
+							Layout.rightMargin: 20
 							Layout.bottomMargin: 16
 
 							Label {
 								Layout.fillWidth: true
+								Layout.bottomMargin: 9
 								text: qsTr("Profile picture")
-								padding: 16
 								color:
 								"#747579"
 								font {
@@ -97,9 +98,27 @@ Flickable {
 
 							RowLayout {
 
-								Image {
-									source: "https://eduport.webestica.com/assets/images/avatar/07.jpg"
-									fillMode: Image.PreserveAspectFit
+								Item {
+									Layout.rightMargin: 25.6
+									implicitWidth: 82
+									implicitHeight: 82
+
+									Image {
+										id: avatar
+										source: "https://eduport.webestica.com/assets/images/avatar/07.jpg"
+										sourceSize {
+											width: 82
+											height: 82
+										}
+										layer.enabled: true
+										layer.effect: OpacityMask {
+											maskSource: Rectangle {
+												width: 82
+												height: 82
+												radius: 82
+											}
+										}
+									}
 								}
 
 								Button {
