@@ -220,7 +220,62 @@ Flickable {
 								}
 							}
 
-							RowLayout {
+							Rectangle {
+								Layout.fillWidth: true
+								implicitHeight: userName.height
+								radius: 5.2
+								border {
+									width: 1
+									color: "#dde0e3"
+								}
+
+								Label {
+									id: domainName
+									text: "Eduport.com"
+									height: userName.height
+									width: parent.width / 2
+									anchors.left: parent.left
+									verticalAlignment: Text.AlignVCenter
+									topPadding: 6
+									leftPadding: 12
+									rightPadding: 12
+									bottomPadding: 6
+									background: Rectangle {
+										color: "#e9ecef"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
+								}
+
+								Rectangle {
+									width: 1
+									height: userName.height
+									anchors.horizontalCenter: parent.horizontalCenter
+									border {
+										width: .5
+										color: "#88dde0e3"
+									}
+								}
+
+								TextField {
+									id: userName
+									text: "loristev"
+									width: parent.width / 2
+									anchors.right: parent.right
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
+									background: Rectangle {
+										color: "transparent"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
+								}
 							}
 						}
 
