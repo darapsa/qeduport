@@ -297,15 +297,41 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Email id")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
 								}
 							}
 
-							RowLayout {
+							Rectangle {
+								Layout.fillWidth: true
+								implicitHeight: emailID.height
+								radius: 5.2
+								border {
+									width: 1
+									color: "#dde0e3"
+								}
+
+								TextField {
+									id: emailID
+									text: "example@gmail.com"
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
+									anchors {
+										left: parent.left
+										right: parent.right
+									}
+									background: Rectangle {
+										color: "transparent"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
+								}
 							}
 						}
 
