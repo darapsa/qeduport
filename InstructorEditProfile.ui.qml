@@ -66,7 +66,7 @@ Flickable {
 							Layout.fillWidth: true
 							height: 1
 							border {
-								width: 1
+								width: .5
 								color:
 								"#0a000000"
 							}
