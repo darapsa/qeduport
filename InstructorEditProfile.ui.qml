@@ -17,6 +17,11 @@ Flickable {
 	}
 
 	FontLoader {
+		id: medium
+		source: "Roboto/Roboto-Medium.ttf"
+	}
+
+	FontLoader {
 		id: regular
 		source: "Roboto/Roboto-Regular.ttf"
 	}
@@ -119,7 +124,8 @@ Flickable {
 										horizontalAlignment: Text.AlignHCenter
 										verticalAlignment: Text.AlignVCenter
 										font {
-											family: doesntEmbed ? "Roboto" : regular.name
+											family: doesntEmbed ? "Roboto" : medium.name
+											weight: Font.Medium
 											pointSize: 15
 										}
 									}
