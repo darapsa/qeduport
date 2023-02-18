@@ -152,15 +152,53 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Full name")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
 								}
 							}
 
-							RowLayout {
+							Rectangle {
+								Layout.fillWidth: true
+								implicitHeight: firstName.height
+								radius: 5.2
+								border {
+									width: 1
+									color: "#dde0e3"
+								}
+
+								TextField {
+									id: firstName
+									text: "Lori"
+									placeholderText: qsTr("First name")
+									width: parent.width / 2
+									anchors.left: parent.left
+									background: Rectangle {
+										color: "transparent"
+									}
+								}
+
+								Rectangle {
+									width: 1
+									height: firstName.height
+									anchors.horizontalCenter: parent.horizontalCenter
+									border {
+										width: .5
+										color: "#88dde0e3"
+									}
+								}
+
+								TextField {
+									id: lastName
+									text: "Stevens"
+									placeholderText: qsTr("Last name")
+									width: parent.width / 2
+									anchors.right: parent.right
+									background: Rectangle {
+										color: "transparent"
+									}
+								}
 							}
 						}
 
