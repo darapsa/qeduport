@@ -15,6 +15,11 @@ Flickable {
 		source: "Roboto/Roboto-Bold.ttf"
 	}
 
+	FontLoader {
+		id: regular
+		source: "Roboto/Roboto-Regular.ttf"
+	}
+
 	ColumnLayout {
 		id: main
 		anchors {
@@ -77,6 +82,50 @@ Flickable {
 							Layout.leftMargin: 32.8
 							Layout.rightMargin: 32.8
 							Layout.bottomMargin: 16
+
+							Label {
+								Layout.fillWidth: true
+								text: qsTr("Profile picture")
+								padding: 16
+								color:
+								"#747579"
+								font {
+									family: doesntEmbed ? "Roboto" : regular.name
+									pointSize: 15
+								}
+							}
+
+							RowLayout {
+
+								Image {
+									source: "https://eduport.webestica.com/assets/images/avatar/07.jpg"
+									fillMode: Image.PreserveAspectFit
+								}
+
+								Button {
+									id: uploadButton
+									horizontalPadding: 16
+									verticalPadding: 8
+									contentItem: Text {
+										color: uploadButton.down ? "#ffffff" : "#066ac9"
+										text: qsTr("Change")
+										horizontalAlignment: Text .AlignHCenter
+										verticalAlignment: Text .AlignVCenter
+										font {
+											family: doesntEmbed ? "Roboto" : regular.name
+											pointSize: 15
+										}
+									}
+									background: Rectangle {
+										radius: 5.2
+										color: uploadButton.down ? "#066ac9" : Qt.rgba(.0235, .416, .788, .1)
+										border {
+											color: uploadButton.down ? "#066ac9" : "transparent"
+											width: 1
+										}
+									}
+								}
+							}
 						}
 					}
 				}
