@@ -98,25 +98,20 @@ Flickable {
 
 							RowLayout {
 
-								Item {
+								Image {
+									id: avatar
 									Layout.rightMargin: 25.6
-									implicitWidth: 82
-									implicitHeight: 82
-
-									Image {
-										id: avatar
-										source: "https://eduport.webestica.com/assets/images/avatar/07.jpg"
-										sourceSize {
+									source: "https://eduport.webestica.com/assets/images/avatar/07.jpg"
+									sourceSize {
+										width: 82
+										height: 82
+									}
+									layer.enabled: true
+									layer.effect: OpacityMask {
+										maskSource: Rectangle {
 											width: 82
 											height: 82
-										}
-										layer.enabled: true
-										layer.effect: OpacityMask {
-											maskSource: Rectangle {
-												width: 82
-												height: 82
-												radius: 82
-											}
+											radius: 82
 										}
 									}
 								}
