@@ -174,6 +174,10 @@ Flickable {
 									placeholderText: qsTr("First name")
 									width: parent.width / 2
 									anchors.left: parent.left
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
 									background: Rectangle {
 										color: "transparent"
 									}
@@ -195,6 +199,10 @@ Flickable {
 									placeholderText: qsTr("Last name")
 									width: parent.width / 2
 									anchors.right: parent.right
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
 									background: Rectangle {
 										color: "transparent"
 									}
