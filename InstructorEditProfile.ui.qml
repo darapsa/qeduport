@@ -13,17 +13,17 @@ Flickable {
 
 	FontLoader {
 		id: bold
-		source: "Roboto/Roboto-Bold.ttf"
+		source: doesntEmbed ? "" : "Roboto/Roboto-Bold.ttf"
 	}
 
 	FontLoader {
 		id: medium
-		source: "Roboto/Roboto-Medium.ttf"
+		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
 	}
 
 	FontLoader {
 		id: regular
-		source: "Roboto/Roboto-Regular.ttf"
+		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
 	}
 
 	ColumnLayout {
