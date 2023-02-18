@@ -181,6 +181,10 @@ Flickable {
 									background: Rectangle {
 										color: "transparent"
 									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
 								}
 
 								Rectangle {
@@ -205,6 +209,10 @@ Flickable {
 									bottomPadding: 8
 									background: Rectangle {
 										color: "transparent"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
 									}
 								}
 							}
