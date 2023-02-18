@@ -316,6 +316,7 @@ Flickable {
 								TextField {
 									id: emailID
 									text: "example@gmail.com"
+									placeholderText: qsTr("Email")
 									topPadding: 8
 									leftPadding: 16
 									rightPadding: 16
@@ -364,6 +365,7 @@ Flickable {
 								TextField {
 									id: phoneNumber
 									text: "1234567890"
+									placeholderText: qsTr("Phone number")
 									topPadding: 8
 									leftPadding: 16
 									rightPadding: 16
