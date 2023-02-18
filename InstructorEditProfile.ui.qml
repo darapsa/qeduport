@@ -345,15 +345,41 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.bottomMargin: 8
 								text: qsTr("Phone number")
-								color:
-								"#747579"
+								color: "#747579"
 								font {
 									family: doesntEmbed ? "Roboto" : regular.name
 									pointSize: 15
 								}
 							}
 
-							RowLayout {
+							Rectangle {
+								Layout.fillWidth: true
+								implicitHeight: phoneNumber.height
+								radius: 5.2
+								border {
+									width: 1
+									color: "#dde0e3"
+								}
+
+								TextField {
+									id: phoneNumber
+									text: "1234567890"
+									topPadding: 8
+									leftPadding: 16
+									rightPadding: 16
+									bottomPadding: 8
+									anchors {
+										left: parent.left
+										right: parent.right
+									}
+									background: Rectangle {
+										color: "transparent"
+									}
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
+								}
 							}
 						}
 
