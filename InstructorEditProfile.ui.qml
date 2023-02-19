@@ -4,6 +4,12 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 Flickable {
+	property alias firstName: firstName
+	property alias lastName: lastName
+	property alias userName: userName
+	property alias emailID: emailID
+	property alias phoneNumber: phoneNumber
+	property alias location: location
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
