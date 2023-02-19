@@ -7,6 +7,7 @@ Flickable {
 	property alias introBadge: introBadge
 	property alias introTitleHeader: introTitleHeader
 	property alias introTitleParagraph: introTitleParagraph
+	property alias courseDescription: courseDescription
 	property alias detailImage: image
 	property alias detailPrice: price
 	property alias detailOriginalPrice: originalPrice
@@ -159,6 +160,7 @@ Flickable {
 							}
 
 							Label {
+								id: courseDescription
 								text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
 								color: "#747579"
 								wrapMode: Text.Wrap
