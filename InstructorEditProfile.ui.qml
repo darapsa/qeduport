@@ -10,6 +10,7 @@ Flickable {
 	property alias emailID: emailID
 	property alias phoneNumber: phoneNumber
 	property alias location: location
+	property alias saveButton: saveButton
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
