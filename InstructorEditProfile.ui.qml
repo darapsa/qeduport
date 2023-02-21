@@ -466,9 +466,10 @@ Flickable {
 								}
 								background: Rectangle {
 									radius: 5.2
-									color: saveButton.down ? "#0555a1" : "#066ac9"
+									color: saveButton.down ? "#0555a1" : saveButton.enabled ? "#066ac9" : "#a6066ac9"
 									border {
-										color: saveButton.down ? "#055097" : "#066ac9"
+										color: saveButton.down ? "#055097" : saveButton.enabled ? "#066ac9" : "#a6066ac9"
+
 										width: 1
 									}
 								}
