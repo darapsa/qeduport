@@ -284,21 +284,20 @@ Flickable {
 			}
 		}
 
-		SwipeView {
+		StackLayout {
 			id: tabsContent
 			currentIndex: tabs.currentIndex
-			Layout.fillWidth: true
 			Layout.preferredHeight: popular.height
 
 			GridView {
 				id: popular
 				interactive: false
+				Layout.fillWidth: true
 				cellWidth: width < 576 ? width
 					: width < 768 ? width / 2
 					: width < 992 ? width / 3
 					: width / 4
 				cellHeight: cellWidth * 1.3
-				width: parent.width
 				height: width < 576
 					? cellHeight * count
 					: width < 768
