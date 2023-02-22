@@ -44,7 +44,7 @@ Flickable {
 					Layout.fillWidth: true
 					font {
 						family: heebo.name
-						pixelSize: 24
+						pointSize: 23.6 + .0432 * width
 					}
 				}
 
