@@ -177,9 +177,8 @@ Flickable {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 				font {
-					family: doesntEmbed ? "Roboto"
-							: roboto.name
-					pointSize: 44
+					family: heebo.name
+					pointSize: 22.5 + .020625 * width
 				}
 			}
 
