@@ -191,7 +191,7 @@ Flickable {
 				font {
 					family: doesntEmbed ? "Roboto"
 							: roboto.name
-					pointSize: 14
+					pointSize: 15
 				}
 			}
 		}
