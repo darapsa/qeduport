@@ -1,7 +1,7 @@
 import QmlProject 1.1
 
 Project {
-	mainUiFile: "InstructorEditProfile.ui.qml"
+	mainUiFile: "HomeDefault.ui.qml"
 
 	QmlFiles {
 		directory: "."
