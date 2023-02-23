@@ -12,7 +12,7 @@ Rectangle {
 		Layout.margins: 8
 		Button {
 			id: play
-			icon.source: "../person-circle.svg"
+			icon.source: "Font-Awesome/svgs/solid/circle-play.svg"
 			icon.color: "#ffffff"
 			Layout.margins: 8
 			display: AbstractButton.IconOnly
