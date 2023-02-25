@@ -170,9 +170,10 @@ Flickable {
 		}
 
 		ColumnLayout {
+			Layout.topMargin: 64
 			Layout.leftMargin: 15
 			Layout.rightMargin: 15
-			Layout.bottomMargin: 25.6
+			Layout.bottomMargin: 48
 
 			Label {
 				text: qsTr("Most Popular Courses")
