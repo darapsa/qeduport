@@ -131,7 +131,7 @@ Flickable {
 				: width / 4
 			cellHeight: 125.6
 			Layout.fillWidth: true
-			Layout.preferredHeight: width < 576
+			implicitHeight: width < 576
 				? cellHeight * count
 				: width < 1200 ? cellHeight * count / 2
 				: cellHeight
