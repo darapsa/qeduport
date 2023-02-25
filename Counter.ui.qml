@@ -7,33 +7,35 @@ Item {
 		color: bgColor
 		radius: 8
 		anchors {
-			top: parent.top
+			fill: parent
 			topMargin: 25.6
-			left: parent.left
 			leftMargin: 12.8
-			right: parent.right
 			rightMargin: 12.8
-			bottom: parent.bottom
 		}
 
-		RowLayout {
+		Item {
 			anchors {
-				top: parent.top
-				topMargin: 25.6
-				left: parent.left
-				leftMargin: 25.6
-				right: parent.right
-				rightMargin: 25.6
-				bottom: parent.bottom
-				bottomMargin: 25.6
+				fill: parent
+				margins: 25.6
 			}
 
 			Image {
+				id: image
 				source: icon
-				sourceSize.height: parent.height
+				sourceSize.height: column.height * 3 / 4
+				fillMode: Image.PreserveAspectFit
+				x: (parent.width - (width + column.width + 25.6)) / 2
+				anchors.verticalCenter: parent.verticalCenter
 			}
 
 			ColumnLayout {
+				id: column
+				spacing: 0
+				anchors {
+					left: image.right
+					leftMargin: 25.6
+				}
+
 				FontLoader {
 					id: bold
 					source: "Heebo/Heebo-Bold.ttf"
@@ -43,21 +45,25 @@ Item {
 					text: count
 					font {
 						family: bold.name
-						pixelSize: 21
+						pointSize: 20.1
+						weight: Font.Bold
 					}
+					Layout.fillWidth: true
 				}
 
 				FontLoader {
 					id: medium
-					source: "Heebo/Heebo-Bold.ttf"
+					source: "Heebo/Heebo-Medium.ttf"
 				}
 
 				Label {
 					text: title
 					font {
 						family: medium.name
-						pixelSize: 15
+						pointSize: 15
+						weight: Font.Medium
 					}
+					Layout.fillWidth: true
 				}
 			}
 		}
