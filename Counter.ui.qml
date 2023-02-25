@@ -3,8 +3,6 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Item {
-	property alias area: area
-
 	Rectangle {
 		color: bgColor
 		radius: 8
@@ -62,11 +60,6 @@ Item {
 					}
 				}
 			}
-		}
-
-		MouseArea {
-			id: area
-			anchors.fill: parent
 		}
 	}
 }
