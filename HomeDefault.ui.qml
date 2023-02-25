@@ -162,6 +162,11 @@ Flickable {
 					bgColor: "#1a17a2b8"
 				}
 			}
+
+			delegate: Counter {
+				implicitWidth: counter.cellWidth
+				implicitHeight: counter.cellHeight
+			}
 		}
 
 		ColumnLayout {
