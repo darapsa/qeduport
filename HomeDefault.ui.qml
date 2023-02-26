@@ -249,78 +249,23 @@ Flickable {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 25.6
 
-				TabButton {
-					id: webDesign
-					text: qsTr("Web Design")
-					horizontalPadding: 16
-					verticalPadding: 8
-					anchors {
-						rightMargin: 8
-						bottomMargin: 8
-					}
-					background: Rectangle {
-						color: "#066ac9"
-						radius: 5.2
-					}
-				}
+				Repeater {
+					model: ["Web Design", "Development",
+						       "Graphic Design",
+						       "Marketing", "Finance"]
 
-				TabButton {
-					id: development
-					text: qsTr("Development")
-					horizontalPadding: 16
-					verticalPadding: 8
-					anchors {
-						rightMargin: 8
-						bottomMargin: 8
-					}
-					background: Rectangle {
-						color: "#066ac9"
-						radius: 5.2
-					}
-				}
-
-				TabButton {
-					id: graphicDesign
-					text: qsTr("Graphic Design")
-					horizontalPadding: 16
-					verticalPadding: 8
-					anchors {
-						rightMargin: 8
-						bottomMargin: 8
-					}
-					background: Rectangle {
-						color: "#066ac9"
-						radius: 5.2
-					}
-				}
-
-				TabButton {
-					id: marketing
-					text: qsTr("Marketing")
-					horizontalPadding: 16
-					verticalPadding: 8
-					anchors {
-						rightMargin: 8
-						bottomMargin: 8
-					}
-					background: Rectangle {
-						color: "#066ac9"
-						radius: 5.2
-					}
-				}
-
-				TabButton {
-					id: finance
-					text: qsTr("Finance")
-					horizontalPadding: 16
-					verticalPadding: 8
-					anchors {
-						rightMargin: 8
-						bottomMargin: 8
-					}
-					background: Rectangle {
-						color: "#066ac9"
-						radius: 5.2
+					TabButton {
+						text: modelData
+						horizontalPadding: 16
+						verticalPadding: 8
+						anchors {
+							rightMargin: 8
+							bottomMargin: 8
+						}
+						background: Rectangle {
+							color: "#066ac9"
+							radius: 5.2
+						}
 					}
 				}
 			}
