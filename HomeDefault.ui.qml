@@ -208,145 +208,148 @@ Flickable {
 			Layout.rightMargin: 15
 			Layout.bottomMargin: 48
 
-			Label {
-				text: qsTr("Most Popular Courses")
-				color: "#24292d"
-				horizontalAlignment: Text.AlignHCenter
-				wrapMode: Text.Wrap
+			ColumnLayout {
+				Layout.bottomMargin: 25.6
+
+				Label {
+					text: qsTr("Most Popular Courses")
+					color: "#24292d"
+					horizontalAlignment: Text.AlignHCenter
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
+					Layout.bottomMargin: 8
+					font {
+						family: heebo.name
+						pointSize: 22.5 + .020625 * width
+					}
+				}
+
+				Label {
+					text: qsTr("Choose from hundreds of courses from specialist organizations")
+					color: "#747579"
+					horizontalAlignment: Text.AlignHCenter
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
+					font {
+						family: doesntEmbed ? "Roboto" : roboto.name
+						pointSize: 15
+					}
+				}
+			}
+
+			TabBar {
+				id: tabs
+				currentIndex: tabsContent.currentIndex
+				background: Rectangle{
+					color: Qt.rgba(.0235, .416, .788, .1)
+					radius: 10
+				}
+				horizontalPadding: 16
+				verticalPadding: 10
 				Layout.fillWidth: true
-				Layout.bottomMargin: 8
-				font {
-					family: heebo.name
-					pointSize: 22.5 + .020625 * width
+				Layout.bottomMargin: 25.6
+
+				TabButton {
+					id: webDesign
+					text: qsTr("Web Design")
+					horizontalPadding: 16
+					verticalPadding: 8
+					anchors {
+						rightMargin: 8
+						bottomMargin: 8
+					}
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 5.2
+					}
+				}
+
+				TabButton {
+					id: development
+					text: qsTr("Development")
+					horizontalPadding: 16
+					verticalPadding: 8
+					anchors {
+						rightMargin: 8
+						bottomMargin: 8
+					}
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 5.2
+					}
+				}
+
+				TabButton {
+					id: graphicDesign
+					text: qsTr("Graphic Design")
+					horizontalPadding: 16
+					verticalPadding: 8
+					anchors {
+						rightMargin: 8
+						bottomMargin: 8
+					}
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 5.2
+					}
+				}
+
+				TabButton {
+					id: marketing
+					text: qsTr("Marketing")
+					horizontalPadding: 16
+					verticalPadding: 8
+					anchors {
+						rightMargin: 8
+						bottomMargin: 8
+					}
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 5.2
+					}
+				}
+
+				TabButton {
+					id: finance
+					text: qsTr("Finance")
+					horizontalPadding: 16
+					verticalPadding: 8
+					anchors {
+						rightMargin: 8
+						bottomMargin: 8
+					}
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 5.2
+					}
 				}
 			}
 
-			Label {
-				text: qsTr("Choose from hundreds of courses from specialist organizations")
-				color: "#747579"
-				horizontalAlignment: Text.AlignHCenter
-				wrapMode: Text.Wrap
-				Layout.fillWidth: true
-				font {
-					family: doesntEmbed ? "Roboto"
-							: roboto.name
-					pointSize: 15
-				}
-			}
-		}
+			StackLayout {
+				id: tabsContent
+				currentIndex: tabs.currentIndex
+				Layout.preferredHeight: popular.height
 
-		TabBar {
-			id: tabs
-			currentIndex: tabsContent.currentIndex
-			background: Rectangle{
-				color: Qt.rgba(.0235, .416, .788, .1)
-				radius: 10
-			}
-			horizontalPadding: 16
-			verticalPadding: 10
-			Layout.fillWidth: true
-			Layout.bottomMargin: 25.6
-
-			TabButton {
-				id: webDesign
-				text: qsTr("Web Design")
-				horizontalPadding: 16
-				verticalPadding: 8
-				anchors {
-					rightMargin: 8
-					bottomMargin: 8
+				GridView {
+					id: popular
+					interactive: false
+					Layout.fillWidth: true
+					cellWidth: width < 576 ? width
+						: width < 768 ? width / 2
+						: width < 992 ? width / 3
+						: width / 4
+					cellHeight: cellWidth * 1.3
+					height: width < 576
+						? cellHeight * count
+						: width < 768
+						? cellHeight
+						* (count + count % 2) / 2
+						: width < 992
+						? cellHeight
+						* (count + (count + 1) % 3) / 3
+						: cellHeight
+						* (count + (count + 2) % 4) / 4
 				}
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 5.2
-				}
-			}
-
-			TabButton {
-				id: development
-				text: qsTr("Development")
-				horizontalPadding: 16
-				verticalPadding: 8
-				anchors {
-					rightMargin: 8
-					bottomMargin: 8
-				}
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 5.2
-				}
-			}
-
-			TabButton {
-				id: graphicDesign
-				text: qsTr("Graphic Design")
-				horizontalPadding: 16
-				verticalPadding: 8
-				anchors {
-					rightMargin: 8
-					bottomMargin: 8
-				}
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 5.2
-				}
-			}
-
-			TabButton {
-				id: marketing
-				text: qsTr("Marketing")
-				horizontalPadding: 16
-				verticalPadding: 8
-				anchors {
-					rightMargin: 8
-					bottomMargin: 8
-				}
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 5.2
-				}
-			}
-
-			TabButton {
-				id: finance
-				text: qsTr("Finance")
-				horizontalPadding: 16
-				verticalPadding: 8
-				anchors {
-					rightMargin: 8
-					bottomMargin: 8
-				}
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 5.2
-				}
-			}
-		}
-
-		StackLayout {
-			id: tabsContent
-			currentIndex: tabs.currentIndex
-			Layout.preferredHeight: popular.height
-
-			GridView {
-				id: popular
-				interactive: false
-				Layout.fillWidth: true
-				cellWidth: width < 576 ? width
-					: width < 768 ? width / 2
-					: width < 992 ? width / 3
-					: width / 4
-				cellHeight: cellWidth * 1.3
-				height: width < 576
-					? cellHeight * count
-					: width < 768
-					? cellHeight
-					* (count + count % 2) / 2
-					: width < 992
-					? cellHeight
-					* (count + (count + 1) % 3) / 3
-					: cellHeight
-					* (count + (count + 2) % 4) / 4
 			}
 		}
 	}
