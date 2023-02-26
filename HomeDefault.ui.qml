@@ -258,6 +258,8 @@ Flickable {
 						text: modelData
 						horizontalPadding: 16
 						verticalPadding: 8
+						width: Math.max(124,
+								tabs.width / 5)
 						anchors {
 							rightMargin: 8
 							bottomMargin: 8
