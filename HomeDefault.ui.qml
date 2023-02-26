@@ -26,10 +26,12 @@ Flickable {
 			columns: width < 992 ? 1 : 2
 			rows: width < 992 ? 2 : 1
 			Layout.topMargin: 48
-			Layout.leftMargin: 51.28
-			Layout.rightMargin: 51.28
+			Layout.leftMargin: -9
+			Layout.rightMargin: -9
 
 			ColumnLayout {
+				Layout.leftMargin: 15
+				Layout.rightMargin: 15
 
 				FontLoader {
 					id: heebo
