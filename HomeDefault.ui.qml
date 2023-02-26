@@ -34,6 +34,8 @@ Flickable {
 				Layout.leftMargin: 15
 				Layout.rightMargin: 15
 				Layout.bottomMargin: 48
+				Layout.maximumWidth: body.width < 992
+					? body.width : body.width / 2
 
 				FontLoader {
 					id: heebo
@@ -113,16 +115,18 @@ Flickable {
 				}
 			}
 
-			ColumnLayout {
+			Item {
 				Layout.topMargin: 48
 				Layout.leftMargin: 24
 				Layout.rightMargin: 24
+				Layout.fillWidth: true
+				implicitHeight: image.height
 
 				Image {
 					id: image
 					source: "https://eduport.webestica.com/assets/images/element/07.png"
+					width: parent.width
 					fillMode: Image.PreserveAspectFit
-					Layout.fillWidth: true
 				}
 			}
 		}
