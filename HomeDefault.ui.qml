@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 
 Flickable {
 	property alias counter: counter
@@ -121,6 +122,30 @@ Flickable {
 				Layout.rightMargin: 24
 				Layout.fillWidth: true
 				implicitHeight: image.height
+
+				DropShadow {
+					source: angularRectangle
+					anchors.fill: angularRectangle
+					color: Qt.rgba(.113, .227, .325, .15)
+				}
+
+				Rectangle {
+					id: angularRectangle
+					radius: 8
+					implicitWidth: angularImage.width + 16
+					implicitHeight: angularImage.height + 16
+					anchors {
+						top: parent.top
+						right: parent.right
+						rightMargin: 24
+					}
+
+					Image {
+						id: angularImage
+						source: "https://eduport.webestica.com/assets/images/client/angular.svg"
+						anchors.centerIn: parent
+					}
+				}
 
 				Image {
 					id: image
