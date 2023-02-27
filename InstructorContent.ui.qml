@@ -36,7 +36,26 @@ GridLayout {
 			font.styleName: "Regular"
 			font.pointSize: 16
 			font.family: "roboto"
-
+			
+		}
+		RowLayout{
+			spacing: 16
+			ListInlineItem {
+				id: listInlineItem1
+			}
+			
+			ListInlineItem {
+				id: listInlineItem2
+			}
+			
+			ListInlineItem {
+				id: listInlineItem3
+			}
+			
+			ListInlineItem {
+				id: listInlineItem4
+			}
+			
 		}
 	}
 	
