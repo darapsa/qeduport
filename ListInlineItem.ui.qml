@@ -11,6 +11,7 @@ RowLayout {
 	RowLayout {
 		id:listInlineItem
 		Rectangle {
+			id: inlineItemIconBg
 			radius: 100
 			color: "#4dfd7e14"
 			Layout.preferredHeight: 42
