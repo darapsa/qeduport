@@ -237,33 +237,40 @@ Flickable {
 				}
 			}
 
-			TabBar {
-				id: tabs
-				currentIndex: tabsContent.currentIndex
-				background: Rectangle{
-					color: Qt.rgba(.0235, .416, .788, .1)
-					radius: 10
-				}
-				horizontalPadding: 16
-				verticalPadding: 10
+			property int currentIndex: 0
+
+			Rectangle {
+				color: Qt.rgba(.0235, .416, .788, .1)
+				radius: 10
+				implicitHeight: tabs.height + 20
 				Layout.fillWidth: true
 				Layout.bottomMargin: 25.6
 
-				Repeater {
-					model: ["Web Design", "Development",
-						       "Graphic Design",
-						       "Marketing", "Finance"]
+				GridView {
+					id: tabs
+					interactive: false
+					anchors {
+						left: parent.left
+						leftMargin: 16
+						right: parent.right
+						rightMargin: 16
+						verticalCenter: parent.verticalCenter
+					}
+					cellWidth: 132.906
+					cellHeight: 46.5
+					implicitHeight: width < 266 ? cellHeight * 5 : width < 399 ? cellHeight * 3 : width < 665 ? cellHeight * 2 : cellHeight
 
-					TabButton {
+					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
+
+					delegate: Label {
 						text: modelData
-						horizontalPadding: 16
-						verticalPadding: 8
-						width: Math.max(124,
-								tabs.width / 5)
-						anchors {
-							rightMargin: 8
-							bottomMargin: 8
-						}
+						height: 38
+						topPadding: 8
+						leftPadding: 16
+						rightPadding: tabs.width < 532 ? 64 : 24
+						rightInset: tabs.width < 532 ? 48 : 8
+						bottomPadding: tabs.width < 532 ? 8 : 16
+						bottomInset: tabs.width < 532 ? 0 : 8
 						background: Rectangle {
 							color: "#066ac9"
 							radius: 5.2
