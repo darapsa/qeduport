@@ -1,0 +1,5 @@
+<RCC>
+	<qresource prefix="qeduport">
+		<file>Material/svg/filled/school.svg</file>
+	</qresource>
+</RCC>

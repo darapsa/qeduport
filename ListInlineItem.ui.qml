@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.12
+
 
 RowLayout {
 	id:listInline
@@ -17,15 +19,21 @@ RowLayout {
 			Layout.minimumWidth: 42
 			
 			Image {
-				id: image
+				id: inlineItemIcon
 				anchors.verticalCenter: parent.verticalCenter
-				source: "qrc:/qtquickplugin/images/template_image.png"
+				source: "Material/svg/filled/school.svg"
 				anchors.horizontalCenter: parent.horizontalCenter
 				fillMode: Image.PreserveAspectFit
 				Layout.preferredHeight: 12
 				Layout.preferredWidth: 12
 				Layout.minimumHeight: 12
 				Layout.minimumWidth: 12
+
+				ColorOverlay{
+					anchors.fill: inlineItemIcon
+					source: inlineItemIcon
+					color: "#fd7e14"
+				}
 			}
 		}
 		Label {
