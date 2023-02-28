@@ -5,7 +5,8 @@ import QtGraphicalEffects 1.15
 
 Flickable {
 	property alias counter: counter
-	property alias popular: popular
+	property alias tabs: tabs
+	property alias tabPane: tabPane
 	property alias getStarted: getStarted
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
@@ -242,8 +243,6 @@ Flickable {
 				}
 			}
 
-			property int currentIndex: 0
-
 			Rectangle {
 				color: Qt.rgba(.0235, .416, .788, .1)
 				radius: 10
@@ -265,34 +264,40 @@ Flickable {
 					cellHeight: 46
 					implicitHeight: width < 284 ? cellHeight * 5 : width < 426 ? cellHeight * 3 : width < 710 ? cellHeight * 2 : cellHeight
 
-					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
-
-					delegate: Label {
-						text: modelData
-						font {
-							family: doesntEmbed ? "Roboto" : regular.name
-							pointSize: 15
+					model: ListModel {
+						ListElement {
+							label: "Web Design"
+							index: 0
 						}
-						height: 38
-						topPadding: 8
-						leftPadding: 16
-						rightPadding: 16
-						bottomPadding: 8
-						background: Rectangle {
-							color: "#066ac9"
-							radius: 5.2
+						ListElement {
+							label: "Development"
+							index: 1
+						}
+						ListElement {
+							label: "Graphic Design"
+							index: 2
+						}
+						ListElement {
+							label: "Marketing"
+							index: 3
+						}
+						ListElement {
+							label: "Finance"
+							index: 4
 						}
 					}
+
+					delegate: TabItem {}
 				}
 			}
 
 			StackLayout {
 				id: tabsContent
 				currentIndex: tabs.currentIndex
-				Layout.preferredHeight: popular.height
+				Layout.preferredHeight: tabPane.height
 
 				GridView {
-					id: popular
+					id: tabPane
 					interactive: false
 					Layout.fillWidth: true
 					cellWidth: width < 576 ? width
