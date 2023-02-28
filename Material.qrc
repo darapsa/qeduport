@@ -1,5 +1,9 @@
 <RCC>
 	<qresource prefix="qeduport">
 		<file>Material/svg/filled/school.svg</file>
+		<file>Material/svg/filled/home.svg</file>
+		<file>Material/svg/filled/chat.svg</file>
+		<file>Material/svg/filled/my_courses.svg</file>
+		<file>Material/svg/filled/play_circle_outline.svg</file>
 	</qresource>
 </RCC>
