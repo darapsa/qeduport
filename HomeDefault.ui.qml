@@ -14,6 +14,11 @@ Flickable {
 				|| Qt.platform.os === "windows"
 	contentHeight: body.height
 
+	FontLoader {
+		id: regular
+		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
+	}
+
 	ColumnLayout {
 		id: body
 		anchors {
@@ -56,7 +61,7 @@ Flickable {
 				}
 
 				FontLoader {
-					id: roboto
+					id: medium
 					source: doesntEmbed ? ""
 						: "Roboto/Roboto-Medium.ttf"
 				}
@@ -69,7 +74,7 @@ Flickable {
 					Layout.fillWidth: true
 					font {
 						family: doesntEmbed ? "Roboto"
-							: roboto.name
+							: medium.name
 						pointSize: 18.75
 					}
 				}
@@ -94,7 +99,7 @@ Flickable {
 						font {
 							family: doesntEmbed
 							? "Roboto"
-							: roboto.name
+							: medium.name
 							pixelSize: 16
 							weight: Font.Medium
 						}
@@ -231,7 +236,7 @@ Flickable {
 					wrapMode: Text.Wrap
 					Layout.fillWidth: true
 					font {
-						family: doesntEmbed ? "Roboto" : roboto.name
+						family: doesntEmbed ? "Roboto" : medium.name
 						pointSize: 15
 					}
 				}
@@ -256,21 +261,23 @@ Flickable {
 						rightMargin: 16
 						verticalCenter: parent.verticalCenter
 					}
-					cellWidth: 132.906
-					cellHeight: 46.5
-					implicitHeight: width < 266 ? cellHeight * 5 : width < 399 ? cellHeight * 3 : width < 665 ? cellHeight * 2 : cellHeight
+					cellWidth: 142
+					cellHeight: 46
+					implicitHeight: width < 284 ? cellHeight * 5 : width < 426 ? cellHeight * 3 : width < 710 ? cellHeight * 2 : cellHeight
 
 					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
 
 					delegate: Label {
 						text: modelData
+						font {
+							family: doesntEmbed ? "Roboto" : regular.name
+							pointSize: 15
+						}
 						height: 38
 						topPadding: 8
 						leftPadding: 16
-						rightPadding: tabs.width < 532 ? 64 : 24
-						rightInset: tabs.width < 532 ? 48 : 8
-						bottomPadding: tabs.width < 532 ? 8 : 16
-						bottomInset: tabs.width < 532 ? 0 : 8
+						rightPadding: 16
+						bottomPadding: 8
 						background: Rectangle {
 							color: "#066ac9"
 							radius: 5.2
