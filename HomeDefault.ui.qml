@@ -6,7 +6,7 @@ import QtGraphicalEffects 1.15
 Flickable {
 	property alias counter: counter
 	property alias tabs: tabs
-	property alias tabPane: tabPane
+	property alias tabsContent: tabsContent
 	property alias getStarted: getStarted
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
@@ -252,6 +252,7 @@ Flickable {
 
 				GridView {
 					id: tabs
+					property int currentCount: 8
 					interactive: false
 					anchors {
 						left: parent.left
@@ -263,58 +264,146 @@ Flickable {
 					cellWidth: 142
 					cellHeight: 46
 					implicitHeight: width < 284 ? cellHeight * 5 : width < 426 ? cellHeight * 3 : width < 710 ? cellHeight * 2 : cellHeight
-
 					model: ListModel {
 						ListElement {
 							label: "Web Design"
-							index: 0
+							count: 8
 						}
 						ListElement {
 							label: "Development"
-							index: 1
+							count: 6
 						}
 						ListElement {
 							label: "Graphic Design"
-							index: 2
+							count: 4
 						}
 						ListElement {
 							label: "Marketing"
-							index: 3
+							count: 2
 						}
 						ListElement {
 							label: "Finance"
-							index: 4
+							count: 2
 						}
 					}
-
 					delegate: TabItem {}
 				}
 			}
 
 			StackLayout {
-				id: tabsContent
 				currentIndex: tabs.currentIndex
-				Layout.preferredHeight: tabPane.height
+				Layout.preferredHeight: width < 576 ? width * 1.3
+					* tabs.currentCount
+					: width < 768 ? width / 2 * 1.3
+					* (tabs.currentCount + tabs.currentCount % 2) / 2
+					: width < 992 ? width / 3 * 1.3
+					* (tabs.currentCount + (tabs.currentCount + 1) % 3) / 3
+					: width / 4 * 1.3
+					* (tabs.currentCount + (tabs.currentCount + 2) % 4) / 4
 
-				GridView {
-					id: tabPane
-					interactive: false
-					Layout.fillWidth: true
-					cellWidth: width < 576 ? width
-						: width < 768 ? width / 2
-						: width < 992 ? width / 3
-						: width / 4
-					cellHeight: cellWidth * 1.3
-					height: width < 576
-						? cellHeight * count
-						: width < 768
-						? cellHeight
-						* (count + count % 2) / 2
-						: width < 992
-						? cellHeight
-						* (count + (count + 1) % 3) / 3
-						: cellHeight
-						* (count + (count + 2) % 4) / 4
+				Repeater {
+					id: tabsContent
+					model: ListModel {
+						ListElement {
+							content: [
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+									level: "All level"
+									levelColor: "#ff6f42c1"
+									levelBackgroundColor: "#1a6f42c1"
+									title: "Sketch from A to Z: for app designer"
+									truncated: "Proposal indulged no do sociable he throwing settling."
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/02.jpg"
+									level: "Beginner"
+									levelColor: "#ff0cbc87"
+									levelBackgroundColor: "#1a0cbc87"
+									title: "Graphic Design Masterclass"
+									truncated: "Rooms oh fully taken by worse do Points afraid but may end Rooms"
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/03.jpg"
+									level: "Beginner"
+									levelColor: "#ff0cbc87"
+									levelBackgroundColor: "#1a0cbc87"
+									title: "Create a Design System in Figma"
+									truncated: "Rooms oh fully taken by worse do. Points afraid but may end afraid but may end."
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/07.jpg"
+									level: "Beginner"
+									levelColor: "#ff0cbc87"
+									levelBackgroundColor: "#1a0cbc87"
+									title: "Deep Learning with React-Native"
+									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/11.jpg"
+									level: "All level"
+									levelColor: "#ff6f42c1"
+									levelBackgroundColor: "#1a6f42c1"
+									title: "Build Responsive Websites with HTML"
+									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/12.jpg"
+									level: "Beginner"
+									levelColor: "#ff0cbc87"
+									levelBackgroundColor: "#1a0cbc87"
+									title: "Build Websites with CSS"
+									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/04.jpg"
+									level: "All level"
+									levelColor: "#ff6f42c1"
+									levelBackgroundColor: "#1a6f42c1"
+									title: "Learn Invision"
+									truncated: "Arrived off she elderly beloved him Course regard to up he hardly."
+								},
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/09.jpg"
+									level: "All level"
+									levelColor: "#ff6f42c1"
+									levelBackgroundColor: "#1a6f42c1"
+									title: "JavaScript: Full Understanding"
+									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+								}
+							]
+						}
+					}
+
+					GridView {
+						id: tabPane
+						interactive: false
+						cellWidth: width < 576 ? width
+							: width < 768 ? width / 2
+							: width < 992 ? width / 3
+							: width / 4
+						cellHeight: cellWidth * 1.3
+						height: width < 576
+							? cellHeight * count
+							: width < 768
+							? cellHeight
+							* (count + count % 2) / 2
+							: width < 992
+							? cellHeight
+							* (count + (count + 1) % 3) / 3
+							: cellHeight
+							* (count + (count + 2) % 4) / 4
+						model: content
+						delegate: CardGrid {
+							width: tabPane.cellWidth
+							height: tabPane.cellHeight
+							imageSource: image
+							badgeText: level
+							badgeColor: levelColor
+							badgeBackgroundColor: levelBackgroundColor
+							titleText: title
+							textTruncateText: truncated
+						}
+					}
 				}
 			}
 		}
