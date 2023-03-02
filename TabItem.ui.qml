@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 
 Button {
+	id: button
 	property int currentIndex: 0
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
@@ -17,8 +18,9 @@ Button {
 	height: 38
 	horizontalPadding: 16
 	verticalPadding: 8
+	text: label
 	contentItem: Text {
-		text: label
+		text: button.text
 		color: index == currentIndex ? "white" : "#066ac9"
 		font {
 			family: doesntEmbed ? "Roboto" : regular.name
