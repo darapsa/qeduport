@@ -252,7 +252,7 @@ Flickable {
 
 				GridView {
 					id: tabs
-					property int currentCount: 8
+					property int currentItemCount: 8
 					interactive: false
 					anchors {
 						left: parent.left
@@ -293,13 +293,13 @@ Flickable {
 			StackLayout {
 				currentIndex: tabs.currentIndex
 				Layout.preferredHeight: width < 576 ? width * 1.3
-					* tabs.currentCount
+					* tabs.currentItemCount
 					: width < 768 ? width / 2 * 1.3
-					* (tabs.currentCount + tabs.currentCount % 2) / 2
+					* (tabs.currentItemCount + tabs.currentItemCount % 2) / 2
 					: width < 992 ? width / 3 * 1.3
-					* (tabs.currentCount + (tabs.currentCount + 1) % 3) / 3
+					* (tabs.currentItemCount + (tabs.currentItemCount + 1) % 3) / 3
 					: width / 4 * 1.3
-					* (tabs.currentCount + (tabs.currentCount + 2) % 4) / 4
+					* (tabs.currentItemCount + (tabs.currentItemCount + 2) % 4) / 4
 
 				Repeater {
 					id: tabsContent
