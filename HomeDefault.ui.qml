@@ -252,7 +252,6 @@ Flickable {
 
 				GridView {
 					id: tabs
-					property int currentItemCount: 8
 					interactive: false
 					anchors {
 						left: parent.left
@@ -264,42 +263,21 @@ Flickable {
 					cellWidth: 142
 					cellHeight: 46
 					implicitHeight: width < 284 ? cellHeight * 5 : width < 426 ? cellHeight * 3 : width < 710 ? cellHeight * 2 : cellHeight
-					model: ListModel {
-						ListElement {
-							label: "Web Design"
-							count: 8
-						}
-						ListElement {
-							label: "Development"
-							count: 6
-						}
-						ListElement {
-							label: "Graphic Design"
-							count: 4
-						}
-						ListElement {
-							label: "Marketing"
-							count: 2
-						}
-						ListElement {
-							label: "Finance"
-							count: 2
-						}
-					}
+					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
 					delegate: TabItem {}
 				}
 			}
 
 			StackLayout {
 				currentIndex: tabs.currentIndex
-				Layout.preferredHeight: width < 576 ? width * 1.3
-					* tabs.currentItemCount
-					: width < 768 ? width / 2 * 1.3
-					* (tabs.currentItemCount + tabs.currentItemCount % 2) / 2
-					: width < 992 ? width / 3 * 1.3
-					* (tabs.currentItemCount + (tabs.currentItemCount + 1) % 3) / 3
-					: width / 4 * 1.3
-					* (tabs.currentItemCount + (tabs.currentItemCount + 2) % 4) / 4
+				property int currentCount: tabsContent.itemAt(currentIndex).count
+				Layout.preferredHeight: width < 576
+					? width * 1.3 * currentCount
+					: width < 768
+					? width / 2 * 1.3 * (currentCount + currentCount % 2) / 2
+					: width < 992
+					? width / 3 * 1.3 * (currentCount + (currentCount + 1) % 3) / 3
+					: width / 4 * 1.3 * (currentCount + (currentCount + 2) % 4) / 4
 
 				Repeater {
 					id: tabsContent
@@ -382,16 +360,6 @@ Flickable {
 							: width < 992 ? width / 3
 							: width / 4
 						cellHeight: cellWidth * 1.3
-						height: width < 576
-							? cellHeight * count
-							: width < 768
-							? cellHeight
-							* (count + count % 2) / 2
-							: width < 992
-							? cellHeight
-							* (count + (count + 1) % 3) / 3
-							: cellHeight
-							* (count + (count + 2) % 4) / 4
 						model: content
 						delegate: CardGrid {
 							width: tabPane.cellWidth
