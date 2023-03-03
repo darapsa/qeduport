@@ -272,15 +272,15 @@ Flickable {
 				currentIndex: tabs.currentIndex
 				Layout.preferredHeight: width < 576
 					? width * 1.3
-					* tabsContent.itemAt(tabsContent.index).count
+					* tabsContent.itemAt(currentIndex).count
 					: width < 768
 					? width / 2 * 1.3
-					* (tabsContent.itemAt(tabsContent.index).count + tabsContent.itemAt(tabsContent.index).count % 2) / 2
+					* (tabsContent.itemAt(currentIndex).count + tabsContent.itemAt(currentIndex).count % 2) / 2
 					: width < 992
 					? width / 3 * 1.3
-					* (tabsContent.itemAt(tabsContent.index).count + (tabsContent.itemAt(tabsContent.index).count + 1) % 3) / 3
+					* (tabsContent.itemAt(currentIndex).count + (tabsContent.itemAt(currentIndex).count + 1) % 3) / 3
 					: width / 4 * 1.3
-					* (tabsContent.itemAt(tabsContent.index).count + (tabsContent.itemAt(tabsContent.index).count + 2) % 4) / 4
+					* (tabsContent.itemAt(currentIndex).count + (tabsContent.itemAt(currentIndex).count + 2) % 4) / 4
 
 				Repeater {
 					id: tabsContent
