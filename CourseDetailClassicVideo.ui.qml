@@ -68,13 +68,14 @@ Item{
 				}
 			}
 			RowLayout {
+				id: priceAndTime
 				spacing: 8
 				Layout.rightMargin: 16
 				Layout.leftMargin: 16
 				Layout.topMargin: 16
 				Layout.bottomMargin: 4
 				Label {
-					id: price
+					id: publishedPrice
 					color: "#000000"
 					text: "$150"
 					font.weight: Font.Medium
