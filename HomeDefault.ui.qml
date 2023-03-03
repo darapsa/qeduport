@@ -270,17 +270,14 @@ Flickable {
 
 			StackLayout {
 				currentIndex: tabs.currentIndex
+				property int currentCount: tabsContent.itemAt(currentIndex).count
 				Layout.preferredHeight: width < 576
-					? width * 1.3
-					* tabsContent.itemAt(currentIndex).count
+					? width * 1.3 * currentCount
 					: width < 768
-					? width / 2 * 1.3
-					* (tabsContent.itemAt(currentIndex).count + tabsContent.itemAt(currentIndex).count % 2) / 2
+					? width / 2 * 1.3 * (currentCount + currentCount % 2) / 2
 					: width < 992
-					? width / 3 * 1.3
-					* (tabsContent.itemAt(currentIndex).count + (tabsContent.itemAt(currentIndex).count + 1) % 3) / 3
-					: width / 4 * 1.3
-					* (tabsContent.itemAt(currentIndex).count + (tabsContent.itemAt(currentIndex).count + 2) % 4) / 4
+					? width / 3 * 1.3 * (currentCount + (currentCount + 1) % 3) / 3
+					: width / 4 * 1.3 * (currentCount + (currentCount + 2) % 4) / 4
 
 				Repeater {
 					id: tabsContent
