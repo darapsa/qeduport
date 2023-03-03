@@ -18,7 +18,7 @@ Button {
 	height: 38
 	horizontalPadding: 16
 	verticalPadding: 8
-	text: label
+	text: modelData
 	contentItem: Text {
 		text: button.text
 		color: index == currentIndex ? "white" : "#066ac9"
