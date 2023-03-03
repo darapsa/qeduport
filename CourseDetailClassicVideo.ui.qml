@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 Item{
+	Layout.minimumHeight: courseVideoCard.height
+	Layout.minimumWidth: courseVideoCard.width
 	DropShadow {
 		color: "#4d000000"
 		source: courseVideoCard
@@ -14,6 +16,8 @@ Item{
 	}
 	Rectangle {
 		id: courseVideoCard
+		Layout.minimumHeight: courseDetailVideo.height
+		Layout.minimumWidth: courseDetailVideo.width
 		radius: 8
 		anchors.fill: parent
 		anchors.rightMargin: 8
@@ -30,8 +34,8 @@ Item{
 				Layout.leftMargin: 8
 				Layout.bottomMargin: 0
 				Layout.topMargin: 8
-				Layout.minimumHeight: 250
-				Layout.minimumWidth: 350
+				Layout.minimumHeight: 250/2
+				Layout.minimumWidth: 350/2
 				Layout.fillHeight: true
 				Layout.fillWidth: true
 				Image {
@@ -72,7 +76,7 @@ Item{
 				spacing: 8
 				Layout.rightMargin: 16
 				Layout.leftMargin: 16
-				Layout.topMargin: 16
+				Layout.topMargin: 8
 				Layout.bottomMargin: 4
 				Label {
 					id: publishedPrice
@@ -92,7 +96,6 @@ Item{
 					verticalAlignment: Text.AlignVCenter
 					font.pointSize: 16
 					font.family: "Roboto"
-					Layout.fillHeight: true
 				}
 				Label{
 					id: discount
