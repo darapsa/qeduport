@@ -3,9 +3,9 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
-Item{
-	Layout.minimumHeight: courseVideoCard.height
-	Layout.minimumWidth: courseVideoCard.width
+Item {
+	width: 350
+	height: 450
 	DropShadow {
 		color: "#4d000000"
 		source: courseVideoCard
@@ -16,8 +16,6 @@ Item{
 	}
 	Rectangle {
 		id: courseVideoCard
-		Layout.minimumHeight: courseDetailVideo.height
-		Layout.minimumWidth: courseDetailVideo.width
 		radius: 8
 		anchors.fill: parent
 		anchors.rightMargin: 8
@@ -34,8 +32,6 @@ Item{
 				Layout.leftMargin: 8
 				Layout.bottomMargin: 0
 				Layout.topMargin: 8
-				Layout.minimumHeight: 250/2
-				Layout.minimumWidth: 350/2
 				Layout.fillHeight: true
 				Layout.fillWidth: true
 				Image {
@@ -52,7 +48,7 @@ Item{
 					source: courseVideoImage
 					maskSource: courseVideoThumbnail
 				}
-				ColorOverlay{
+				ColorOverlay {
 					anchors.fill: courseVideoMask
 					source: courseVideoMask
 					color: "#80000000"
@@ -97,7 +93,7 @@ Item{
 					font.pointSize: 16
 					font.family: "Roboto"
 				}
-				Label{
+				Label {
 					id: discount
 					color: "#ffffff"
 					text: "60% off"
@@ -117,26 +113,26 @@ Item{
 					}
 				}
 			}
-			RowLayout{
+			RowLayout {
 				id: timerContent
 				Layout.topMargin: 4
 				Layout.bottomMargin: 8
 				Layout.rightMargin: 16
 				Layout.leftMargin: 16
 				spacing: 8
-				Image{
+				Image {
 					id: timerIcon
 					source: "Material/svg/filled/timer.svg"
 					sourceSize.height: 24
 					sourceSize.width: 24
-					ColorOverlay{
+					ColorOverlay {
 						anchors.fill: timerIcon
 						source: timerIcon
 						color: "#d6293e"
 					}
 				}
 
-				Label{
+				Label {
 					color: "#d6293e"
 					text: "5 days left at this price"
 					font.family: "Roboto"
@@ -144,12 +140,12 @@ Item{
 					font.styleName: "Regular"
 				}
 			}
-			RowLayout{
+			RowLayout {
 				id: cardFooterButton
 				Layout.topMargin: 8
 				Layout.margins: 16
 				spacing: 8
-				
+
 				Button {
 					id: freeTrialButton
 					text: qsTr("Free trial")
@@ -157,9 +153,8 @@ Item{
 					font.pointSize: 14
 					font.family: "Roboto"
 					Layout.fillWidth: true
-					
 				}
-				
+
 				Button {
 					id: buyButton
 					text: qsTr("Buy course")
