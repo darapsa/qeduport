@@ -125,7 +125,10 @@ Flickable {
 
 					DropShadow {
 						source: mainContent
-						color: Qt.rgba(.113, .227, .325, .15)
+						color: "#4d000000"
+						verticalOffset: 4
+						radius: 12
+						samples: 12
 						anchors.fill: mainContent
 					}
 
