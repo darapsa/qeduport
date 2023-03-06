@@ -262,7 +262,7 @@ Flickable {
 					}
 					cellWidth: 142
 					cellHeight: 46
-					implicitHeight: Math.ceil(count /Math.floor(count / (cellWidth * count / width))) * cellHeight
+					implicitHeight: Math.ceil(count / Math.floor(count / (cellWidth * count / width))) * cellHeight
 					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
 					delegate: TabItem {}
 				}
