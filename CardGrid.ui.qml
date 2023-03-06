@@ -185,7 +185,7 @@ Item {
 
 			Rectangle {
 				border {
-					color: "#449a9ea4"
+					color: "#229a9ea4"
 					width: .5
 				}
 				height: 1
