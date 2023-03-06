@@ -82,37 +82,30 @@ Item {
 					Layout.fillWidth: true
 					Layout.bottomMargin: 8
 
-					Rectangle {
+					FontLoader {
+						id: roboto
+						source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
+					}
+
+					Label {
 						id: badge
-						color: badgeBackgroundColor
-						implicitWidth: badgeLabel
-							.width + 18
-						implicitHeight: badgeLabel
-							.height + 6
-						radius: 6
 						anchors {
 							left: parent.left
-							verticalCenter: parent
-								.verticalCenter
+							verticalCenter: parent.verticalCenter
 						}
-
-						FontLoader {
-							id: roboto
-							source: doesntEmbed ? ""
-							: "Roboto/Roboto-Regular.ttf"
+						topPadding: 4.463
+						leftPadding: 8.287
+						rightPadding: 8.287
+						bottomPadding: 4.463
+						text: badgeText
+						color: badgeColor
+						font {
+							family: doesntEmbed ? "Roboto" : roboto.name
+							pixelSize: 13
 						}
-
-						Label {
-							id: badgeLabel
-							text: badgeText
-							color: badgeColor
-							font {
-								family: doesntEmbed
-								? "Roboto"
-								: roboto.name
-								pixelSize: 13
-							}
-							anchors.centerIn: parent
+						background: Rectangle {
+							color: badgeBackgroundColor
+							radius: 6
 						}
 					}
 
