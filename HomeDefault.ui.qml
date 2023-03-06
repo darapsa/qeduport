@@ -270,14 +270,14 @@ Flickable {
 
 			StackLayout {
 				currentIndex: tabs.currentIndex
-				readonly property real cardItemHeight: width * 1.6
+				property real preservedAspectHeight: width * 1.6
 				Layout.preferredHeight: width < 576
-					? cardItemHeight * tabsContent.currentCount
+					? preservedAspectHeight * tabsContent.currentCount
 					: width < 768
-					? cardItemHeight * (tabsContent.currentCount + tabsContent.currentCount % 2) / 4
+					? preservedAspectHeight / 2 * Math.ceil(tabsContent.currentCount / 2)
 					: width < 992
-					? cardItemHeight * (tabsContent.currentCount + (tabsContent.currentCount + 1) % 3) / 9
-					: cardItemHeight * (tabsContent.currentCount + (tabsContent.currentCount + 2) % 4) / 16
+					? preservedAspectHeight / 3 * Math.ceil(tabsContent.currentCount / 3)
+					: preservedAspectHeight / 4 * Math.ceil(tabsContent.currentCount / 4)
 
 				Repeater {
 					id: tabsContent
