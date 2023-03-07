@@ -184,34 +184,50 @@ Flickable {
 								}
 							}
 
-							ColumnLayout {
+							StackLayout {
 								id: tabsContent
-								Layout.topMargin: 25.6
+								currentIndex: tabs.currentIndex
+								Layout.topMargin: 33.6
+								Layout.leftMargin: 25.6
+								Layout.rightMargin: 25.6
 								Layout.bottomMargin: 25.6
 
-								Label {
-									text: qsTr("Course Description")
-									color: "#24292d"
-									wrapMode: Text.Wrap
-									Layout.fillWidth: true
-									Layout.bottomMargin: 16
-									font {
-										family: heebo.name
-										pointSize: 20.1
+								ColumnLayout {
+
+									Label {
+										text: qsTr("Course Description")
+										color: "#24292d"
+										wrapMode: Text.Wrap
+										Layout.fillWidth: true
+										Layout.bottomMargin: 16
+										font {
+											family: heebo.name
+											pointSize: 20.1
+										}
+									}
+
+									Label {
+										id: courseDescription
+										text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
+										color: "#747579"
+										wrapMode: Text.Wrap
+										Layout.fillWidth: true
+										font {
+											family: doesntEmbed ? "Roboto" : regular.name
+											pointSize: 15
+										}
 									}
 								}
 
-								Label {
-									id: courseDescription
-									text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
-									color: "#747579"
-									wrapMode: Text.Wrap
-									Layout.fillWidth: true
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
-								}
+								Item {}
+
+								InstructorContent {}
+
+								Item {}
+
+								Item {}
+
+								Item {}
 							}
 						}
 					}
