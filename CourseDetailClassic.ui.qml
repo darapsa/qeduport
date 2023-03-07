@@ -163,7 +163,7 @@ Flickable {
 								Layout.fillWidth: true
 								Layout.topMargin: 16
 								Layout.bottomMargin: 16
-								cellWidth: 128
+								cellWidth: 105.016
 								cellHeight: 46
 								implicitHeight: Math.ceil(count / Math.floor(count / (cellWidth * count / width))) * cellHeight
 								model: ["Overview", "Curriculum", "Instructor", "Reviews", "FAQs", "Comment"]
