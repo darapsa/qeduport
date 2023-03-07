@@ -50,59 +50,67 @@ Flickable {
 			source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
 		}
 
-		ColumnLayout {
-			Layout.topMargin: 48
-			Layout.leftMargin: 15
-			Layout.rightMargin: 15
-			Layout.bottomMargin: 48
+		Rectangle {
+			color: "#f5f7f9"
+			Layout.fillWidth: true
+			implicitHeight: pageIntro.height + 96
 
-			Rectangle {
-				Layout.bottomMargin: 16
-				implicitWidth: introBadge.width
-				implicitHeight: introBadge.height
-				radius: 5.2
-				color: Qt.rgba( .0235, .416, .788, 1.0)
+			ColumnLayout {
+				id: pageIntro
+				anchors {
+					left: parent.left
+					leftMargin: 15
+					right: parent.right
+					rightMargin: 15
+					verticalCenter: parent.verticalCenter
+				}
+
+				Rectangle {
+					Layout.bottomMargin: 16
+					implicitWidth: introBadge.width
+					implicitHeight: introBadge.height
+					radius: 5.2
+					color: Qt.rgba( .0235, .416, .788, 1.0)
+					Label {
+						id: introBadge
+						text: qsTr("Digital Marketing")
+						color: "white"
+						font {
+							family: doesntEmbed ? "Roboto" : bold.name
+							weight: Font.Bold
+							pointSize: 15
+						}
+						horizontalAlignment: Text.AlignHCenter
+						verticalAlignment: Text.AlignVCenter
+						topPadding: 8
+						leftPadding: 25.6
+						rightPadding: 25.6
+						bottomPadding: 8
+					}
+				}
+
 				Label {
-					id: introBadge
-					text: qsTr("Digital Marketing")
-					color: "white"
+					id: introTitleHeader
+					text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
+					color: "#24292d"
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
 					font {
-						family: doesntEmbed ? "Roboto"
-								: bold.name
-						weight: Font.Bold
+						family: heebo.name
+						pointSize: 30
+					}
+				}
+
+				Label {
+					id: introTitleParagraph
+					text: qsTr("Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.")
+					color: "#747579"
+					wrapMode: Text.Wrap
+					Layout.fillWidth: true
+					font {
+						family: doesntEmbed ? "Roboto" : regular.name
 						pointSize: 15
 					}
-					horizontalAlignment: Text.AlignHCenter
-					verticalAlignment: Text.AlignVCenter
-					topPadding: 8
-					leftPadding: 25.6
-					rightPadding: 25.6
-					bottomPadding: 8
-				}
-			}
-
-			Label {
-				id: introTitleHeader
-				text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
-				color: "#24292d"
-				wrapMode: Text.Wrap
-				Layout.fillWidth: true
-				font {
-					family: heebo.name
-					pointSize: 30
-				}
-			}
-
-			Label {
-				id: introTitleParagraph
-				text: qsTr("Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.")
-				color: "#747579"
-				wrapMode: Text.Wrap
-				Layout.fillWidth: true
-				font {
-					family: doesntEmbed ? "Roboto"
-						: regular.name
-					pointSize: 15
 				}
 			}
 		}
