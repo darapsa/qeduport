@@ -7,6 +7,7 @@ Flickable {
 	property alias introBadge: introBadge
 	property alias introTitleHeader: introTitleHeader
 	property alias introTitleParagraph: introTitleParagraph
+	property alias tabs: tabs
 	property alias courseDescription: courseDescription
 	property alias detailImage: image
 	property alias detailPrice: price
@@ -167,7 +168,20 @@ Flickable {
 								cellHeight: 46
 								implicitHeight: Math.ceil(count / Math.floor(count / (cellWidth * count / width))) * cellHeight
 								model: ["Overview", "Curriculum", "Instructor", "Reviews", "FAQs", "Comment"]
-								delegate: TabItem {}
+								delegate: TabItem {
+									contentItem: Text {
+										text: modelData
+										color: "#066ac9"
+										font {
+											family: doesntEmbed ? "Roboto" : regular.name
+											pointSize: 15
+										}
+									}
+									background: Rectangle {
+										color: index == currentIndex ? "#1a0fffff" : "transparent"
+										radius: 5.2
+									}
+								}
 							}
 
 							ColumnLayout {
