@@ -139,10 +139,9 @@ Flickable {
 							left: parent.left
 							right: parent.right
 						}
-						implicitHeight: tabsContent.height
+						implicitHeight: tabs.height + tabsContent.height + 83.2
 
 						ColumnLayout {
-							id: tabsContent
 							anchors {
 								left: parent.left
 								leftMargin: 25.6
@@ -150,27 +149,46 @@ Flickable {
 								rightMargin: 25.6
 							}
 
-							Label {
-								text: qsTr("Course Description")
-								color: "#24292d"
-								wrapMode: Text.Wrap
+							GridView {
+								id: tabs
+								interactive: false
 								Layout.fillWidth: true
+								Layout.topMargin: 16
 								Layout.bottomMargin: 16
-								font {
-									family: heebo.name
-									pointSize: 20.1
-								}
+								cellWidth: 128
+								cellHeight: 46
+								implicitHeight: Math.ceil(count / Math.floor(count / (cellWidth * count / width))) * cellHeight
+								model: ["Overview", "Curriculum", "Instructor", "Reviews", "FAQs", "Comment"]
+								delegate: TabItem {}
 							}
 
-							Label {
-								id: courseDescription
-								text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
-								color: "#747579"
-								wrapMode: Text.Wrap
-								Layout.fillWidth: true
-								font {
-									family: doesntEmbed ? "Roboto" : regular.name
-									pointSize: 15
+							ColumnLayout {
+								id: tabsContent
+								Layout.topMargin: 25.6
+								Layout.bottomMargin: 25.6
+
+								Label {
+									text: qsTr("Course Description")
+									color: "#24292d"
+									wrapMode: Text.Wrap
+									Layout.fillWidth: true
+									Layout.bottomMargin: 16
+									font {
+										family: heebo.name
+										pointSize: 20.1
+									}
+								}
+
+								Label {
+									id: courseDescription
+									text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
+									color: "#747579"
+									wrapMode: Text.Wrap
+									Layout.fillWidth: true
+									font {
+										family: doesntEmbed ? "Roboto" : regular.name
+										pointSize: 15
+									}
 								}
 							}
 						}
