@@ -116,7 +116,7 @@ Flickable {
 		}
 
 		GridLayout {
-			Layout.fillWidth: true
+			Layout.topMargin: 64
 			columns: width < 992 ? 1 : 2
 			rows: width < 992 ? 2 : 1
 
