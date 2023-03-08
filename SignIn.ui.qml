@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.15
 
 Flickable {
 	property string titleHeader: qsTr("Login into Eduport!")
-	property string titleParagraph: qsTr("Nice to see you! Please log in with your account.")
+	property alias titleParagraph: titleParagraph
 	property string emailLabel: qsTr("Email address *")
 	property string emailImage: "Bootstrap/icons/envelope-fill.svg"
 	property alias email: email
@@ -61,7 +61,8 @@ Flickable {
 					}
 
 					Label {
-						text: titleParagraph
+						id: titleParagraph
+						text: qsTr("Nice to see you! Please log in with your account.")
 						color: "#6c757d"
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
