@@ -3,6 +3,10 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
+	property string titleHeader: qsTr("Login into Eduport!")
+	property string titleParagraph: qsTr("Nice to see you! Please log in with your account.")
+	property string emailLabel: qsTr("Email address *")
+	property string emailImage: "Bootstrap/icons/envelope-fill.svg"
 	property alias email: email
 	property alias password: password
 	property alias button: button
@@ -47,8 +51,7 @@ Flickable {
 					id: columnLayout
 
 					Label {
-						id: signInTitle
-						text: qsTr("Login into Eduport!")
+						text: titleHeader
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font {
@@ -58,9 +61,8 @@ Flickable {
 					}
 
 					Label {
-						id: signInSubtitle
+						text: titleParagraph
 						color: "#6c757d"
-						text: qsTr("Nice to see you! Please log in with your account.")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
 						font {
@@ -71,7 +73,7 @@ Flickable {
 				}
 				ColumnLayout {
 					Label {
-						text: qsTr("Email address *")
+						text: emailLabel
 						font {
 							pointSize: 15
 							family: doesntEmbed ? "Roboto" : regular.name
@@ -88,12 +90,9 @@ Flickable {
 						RowLayout {
 							anchors.fill: parent
 							Image {
-								id: envelope
-								source: "Bootstrap/icons/envelope-fill.svg"
-								sourceSize {
-									width: 24
-									height: 24
-								}
+								source: emailImage
+								Layout.maximumHeight: 24
+								Layout.maximumWidth: 24
 								Layout.margins: 16
 							}
 							TextField {
