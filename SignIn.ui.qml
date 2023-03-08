@@ -7,11 +7,26 @@ Flickable {
 	property alias signInPassword: password
 	property alias signInButton: button
 	property alias signInSignUp: signUp
+	readonly property bool doesntEmbed: Qt.platform.os === "android"
+				|| Qt.platform.os === "linux"
+				|| Qt.platform.os === "osx"
+				|| Qt.platform.os === "unix"
+				|| Qt.platform.os === "windows"
 	contentHeight: container.height
 
 	FontLoader {
 		id: heebo
 		source: "Heebo/Heebo-Bold.ttf"
+	}
+
+	FontLoader {
+		id: medium
+		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
+	}
+
+	FontLoader {
+		id: regular
+		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
 	}
 
 	GridLayout {
@@ -33,12 +48,13 @@ Flickable {
 
 					Label {
 						id: signInTitle
-						text: qsTr("Login into Eduport")
+						text: qsTr("Login into Eduport!")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.family: heebo.name
-						font.weight: Font.Medium
-						font.pointSize: 40
+						font {
+							family: heebo.name
+							pointSize: 21.75 + .013125 * columnLayout.width
+						}
 					}
 
 					Label {
@@ -47,16 +63,19 @@ Flickable {
 						text: qsTr("Nice to see you! Please log in with your account.")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.weight: Font.Normal
-						font.pointSize: 22
-						font.family: "Roboto"
+						font {
+							pointSize: 18.75
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 				}
 				ColumnLayout {
 					Label {
 						text: qsTr("Email address *")
-						font.pixelSize: 16
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 
 					Rectangle {
@@ -80,8 +99,10 @@ Flickable {
 							TextField {
 								id: email
 								placeholderText: qsTr("E-mail")
-								font.pixelSize: 16
-								font.family: "Roboto"
+								font {
+									pointSize: 16
+									family: doesntEmbed ? "Roboto" : regular.name
+								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -95,8 +116,10 @@ Flickable {
 				ColumnLayout {
 					Label {
 						text: qsTr("Password *")
-						font.pixelSize: 16
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 
 					Rectangle {
@@ -118,8 +141,10 @@ Flickable {
 								id: password
 								placeholderText: qsTr("password")
 								echoMode: TextInput.Password
-								font.pixelSize: 16
-								font.family: "Roboto"
+								font {
+									pointSize: 16
+									family: doesntEmbed ? "Roboto" : regular.name
+								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -132,7 +157,10 @@ Flickable {
 				Label {
 					id: passwordHelper
 					text: "Your password must be 8 characters at least"
-					font.pixelSize: 12
+					font {
+						pointSize: 14
+						family: doesntEmbed ? "Roboto" : regular.name
+					}
 					color: "#6c757d"
 				}
 				RowLayout {
@@ -140,8 +168,10 @@ Flickable {
 					CheckBox {
 						id: rememberCheckBox
 						text: qsTr("Remember me")
-						font.pointSize: 14
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 						Layout.fillWidth: true
 						contentItem: Text {
 							color: "#6c757d"
@@ -154,12 +184,13 @@ Flickable {
 					Text {
 						id: forgotPassword
 						text: "<a href=\"#\">Forgot password?</a>"
-						font.family: "Roboto"
-						font.pointSize: 14
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 						horizontalAlignment: Text.AlignRight
 						Layout.fillWidth: true
-						linkColor: Qt.rgba(.0235, .416,
-							.788, 1.0)
+						linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 					}
 				}
 				Button {
@@ -172,18 +203,17 @@ Flickable {
 					contentItem: Text {
 						color: "#ffffff"
 						text: "Login"
-						horizontalAlignment: Text
-							.AlignHCenter
-						verticalAlignment: Text
-							.AlignVCenter
-						font.weight: Font.Medium
-						font.family: "Roboto"
-						font.pointSize: 14
+						horizontalAlignment: Text.AlignHCenter
+						verticalAlignment: Text.AlignVCenter
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : medium.name
+							weight: Font.Medium
+						}
 					}
 
 					background: Rectangle {
-						color: button.down
-							? "#055aab" : "#066ac9"
+						color: button.down ? "#055aab" : "#066ac9"
 						radius: 8
 					}
 				}
@@ -193,17 +223,20 @@ Flickable {
 				Layout.alignment: Qt.AlignHCenter
 				Label {
 					text: qsTr("Don't have an account?")
-					font.pixelSize: 16
-					font.family: "Roboto"
+					font {
+						pointSize: 15
+						family: doesntEmbed ? "Roboto" : regular.name
+					}
 				}
 				Text {
 					id: signUp
 					text: "<a href=\"sign-up.html\">Signup here</a>"
-					font.pixelSize: 16
-					font.family: "Roboto"
-					font.underline: false
-					linkColor: Qt.rgba(.0235, .416, .788,
-						1.0)
+					font {
+						pointSize: 15
+						family: doesntEmbed ? "Roboto" : regular.name
+						underline: false
+					}
+					linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 				}
 			}
 		}
