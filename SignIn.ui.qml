@@ -193,16 +193,16 @@ Flickable {
 						linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 					}
 				}
+
 				Button {
 					id: button
 					text: qsTr("Login")
-					font.pixelSize: 16
 					implicitHeight: 40
 					Layout.fillWidth: true
 
 					contentItem: Text {
 						color: "#ffffff"
-						text: "Login"
+						text: button.text
 						horizontalAlignment: Text.AlignHCenter
 						verticalAlignment: Text.AlignVCenter
 						font {
@@ -213,7 +213,7 @@ Flickable {
 					}
 
 					background: Rectangle {
-						color: button.down ? "#055aab" : "#066ac9"
+						color: button.down ? "#0555a1" : button.enabled ? "#066ac9" : "#a6066ac9"
 						radius: 8
 					}
 				}
