@@ -3,10 +3,10 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
-	property alias signInEmail: email
-	property alias signInPassword: password
-	property alias signInButton: button
-	property alias signInSignUp: signUp
+	property alias email: email
+	property alias password: password
+	property alias button: button
+	property alias signUp: signUp
 	readonly property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
