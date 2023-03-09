@@ -15,7 +15,6 @@ Item {
 	property color badgeColor: "#ff6f42c1"
 	property color badgeBackgroundColor: "#1a6f42c1"
 	property string titleText: "Build Responsive Websites with HTML"
-	property alias imageArea: imageArea
 	property alias titleArea: titleArea
 	property string textTruncateText: "Far advanced settling say finished raillery. Offered chiefly farther"
 	property bool doesntEmbed: Qt.platform.os === "android"
@@ -58,11 +57,6 @@ Item {
 					height: image.height
 					radius: 10
 				}
-			}
-
-			MouseArea {
-				id: imageArea
-				anchors.fill: parent
 			}
 		}
 
