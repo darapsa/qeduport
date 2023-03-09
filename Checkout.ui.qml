@@ -34,6 +34,8 @@ Flickable {
 			Layout.fillWidth: true
 
 			ColumnLayout {
+				Layout.maximumWidth: body.width < 1200
+					? body.width : body.width * 2 / 3
 
 				RowLayout {
 					id: alert
