@@ -533,10 +533,7 @@ Flickable {
 									}
 								}
 							}
-						}
 
-						ColumnLayout {
-							Layout.margins: 16
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: priceLabel.implicitHeight
