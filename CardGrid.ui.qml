@@ -33,7 +33,7 @@ Item {
 
 	Rectangle {
 		id: rectangle
-		radius: 10
+		radius: 8
 		anchors {
 			fill: parent
 			topMargin: 25.6
