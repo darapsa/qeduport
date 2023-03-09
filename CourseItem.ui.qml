@@ -4,6 +4,9 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 ColumnLayout {
+	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+	property string titleText: "Sketch from A to Z: for app designer"
+	property string priceText: "$150"
 	readonly property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
@@ -49,7 +52,7 @@ ColumnLayout {
 					left: parent.left
 					right: parent.right
 				}
-				source: image
+				source: imageSource
 				fillMode: Image.PreserveAspectFit
 				layer.enabled: true
 				layer.effect: OpacityMask {
@@ -67,7 +70,7 @@ ColumnLayout {
 
 			Label {
 				Layout.fillWidth: true
-				text: title
+				text: titleText
 				font {
 					family: heebo.name
 					pointSize: 15
@@ -83,7 +86,7 @@ ColumnLayout {
 						left: parent.left
 						bottom: parent.bottom
 					}
-					text: price
+					text: priceText
 					color: "#0cbc87"
 					font {
 						family: doesntEmbed ? "Roboto" : regular.name

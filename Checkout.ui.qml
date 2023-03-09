@@ -554,6 +554,9 @@ Flickable {
 							}
 							delegate: CourseItem {
 								width: courseItems.width
+								imageSource: image
+								titleText: title
+								priceText: price
 							}
 						}
 
