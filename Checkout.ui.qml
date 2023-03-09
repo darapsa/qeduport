@@ -14,6 +14,8 @@ Flickable {
 	property alias checkoutAddress: address
 	property alias checkoutBanks: banks
 	property alias courseItems: courseItems
+	property alias priceValue: priceValue
+	property alias discountValue: discountValue
 	property alias checkoutTotalValue: totalValue
 	property alias checkoutPlaceOrder: placeOrder
 	property alias checkoutPremium: premium
