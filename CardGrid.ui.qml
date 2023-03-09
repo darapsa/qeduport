@@ -55,7 +55,7 @@ Item {
 				maskSource: Rectangle {
 					width: image.width
 					height: image.height
-					radius: 10
+					radius: 8
 				}
 			}
 		}
