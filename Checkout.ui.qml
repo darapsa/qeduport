@@ -535,8 +535,41 @@ Flickable {
 							}
 						}
 
+						ListView {
+							id: courseItems
+							interactive: false
+							Layout.fillWidth: true
+							implicitHeight: count * (width * 400 / 533 + (width < 362 ? 37.5 : 18.75) + 86.5)
+							model: ListModel {
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+									title: "Sketch from A to Z: for app designer"
+									price: "$150"
+								}
+								ListElement {
+									image: "https://eduport.webestica.com/assets/images/courses/4by3/18.jpg"
+									title: "The Complete Video Production Bootcamp"
+									price: "$350"
+								}
+							}
+							delegate: CourseItem {
+								width: courseItems.width
+							}
+						}
+
+						Rectangle {
+							Layout.fillWidth: true
+							Layout.topMargin: 16
+							Layout.bottomMargin: 16
+							height: 1
+							border {
+								width: .5
+								color: "#0a000000"
+							}
+						}
+
 						ColumnLayout {
-							Layout.margins: 16
+
 							Item {
 								Layout.fillWidth: true
 								implicitHeight: priceLabel.implicitHeight
