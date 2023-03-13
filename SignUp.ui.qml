@@ -3,11 +3,20 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Flickable {
-	property alias signUpEmail: email
-	property alias signUpPassword: password
-	property alias signUpConfirmPassword: confirmPassword
-	property alias signUpButton: button
-	property alias signUpSignIn: signIn
+	property string titleHeader: qsTr("Sign up for your account!")
+	property alias titleParagraph: titleParagraph
+	property string emailLabel: qsTr("Email address *")
+	property string emailImage: "Bootstrap/icons/envelope-fill.svg"
+	property alias email: email
+	property alias password: password
+	property alias confirmPassword: confirmPassword
+	property alias button: button
+	property alias signIn: signIn
+	readonly property bool doesntEmbed: Qt.platform.os === "android"
+				|| Qt.platform.os === "linux"
+				|| Qt.platform.os === "osx"
+				|| Qt.platform.os === "unix"
+				|| Qt.platform.os === "windows"
 	contentHeight: container.height
 
 	FontLoader {
@@ -15,7 +24,17 @@ Flickable {
 		source: "Heebo/Heebo-Bold.ttf"
 	}
 
-	GridLayout {
+	FontLoader {
+		id: medium
+		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
+	}
+
+	FontLoader {
+		id: regular
+		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
+	}
+
+		GridLayout {
 		id: container
 		anchors {
 			top: parent.top
@@ -33,33 +52,36 @@ Flickable {
 					id: columnLayout
 
 					Label {
-						id: signUpTitle
-						text: qsTr("Sign up for your account!")
+						text: titleHeader
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.family: heebo.name
-						font.weight: Font.Medium
-						font.pointSize: 40
+						font {
+							family: heebo.name
+							pointSize: 21.75 + .013125 * columnLayout.width
+						}
 					}
 
 					Label {
-						id: signUpSubtitle
+						id: titleParagraph
 						color: "#6c757d"
 						text: qsTr("Nice to see you! Please Sign up with your account.")
 						wrapMode: Text.Wrap
 						Layout.fillWidth: true
-						font.weight: Font.Normal
-						font.pointSize: 22
-						font.family: "Roboto"
+						font {
+							pointSize: 18.75
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 				}
 
 				ColumnLayout {
 
 					Label {
-						text: qsTr("Email address *")
-						font.pixelSize: 16
-						font.family: "Roboto"
+						text: emailLabel
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 
 					Rectangle {
@@ -73,8 +95,7 @@ Flickable {
 							anchors.fill: parent
 
 							Image {
-								id: envelope
-								source: "Bootstrap/icons/envelope-fill.svg"
+								source: emailImage
 								Layout.maximumHeight: 24
 								Layout.maximumWidth: 24
 								Layout.margins: 16
@@ -83,8 +104,10 @@ Flickable {
 							TextField {
 								id: email
 								placeholderText: qsTr("E-mail")
-								font.pixelSize: 16
-								font.family: "Roboto"
+								font {
+									pointSize: 16
+									family: doesntEmbed ? "Roboto" : regular.name
+								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -99,8 +122,10 @@ Flickable {
 
 					Label {
 						text: qsTr("Password *")
-						font.pixelSize: 16
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 
 					Rectangle {
@@ -124,8 +149,10 @@ Flickable {
 								id: password
 								placeholderText: "*********"
 								echoMode: TextInput.Password
-								font.pixelSize: 16
-								font.family: "Roboto"
+								font {
+									pointSize: 16
+									family: doesntEmbed ? "Roboto" : regular.name
+								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -140,8 +167,10 @@ Flickable {
 
 					Label {
 						text: qsTr("Confirm Password *")
-						font.pixelSize: 16
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 					}
 
 					Rectangle {
@@ -165,8 +194,10 @@ Flickable {
 								id: confirmPassword
 								placeholderText: "*********"
 								echoMode: TextInput.Password
-								font.pixelSize: 16
-								font.family: "Roboto"
+								font {
+									pointSize: 16
+									family: doesntEmbed ? "Roboto" : regular.name
+								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
 								background: Rectangle {
@@ -178,12 +209,15 @@ Flickable {
 				}
 
 				RowLayout {
+					Layout.fillWidth: true
 
 					CheckBox {
 						id: agreementCheckBox
 						text: "By signing up, you agree to the <a href=\"#\">terms of service</a>"
-						font.pointSize: 14
-						font.family: "Roboto"
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : regular.name
+						}
 						Layout.fillWidth: true
 						contentItem: Text {
 							color: "#6c757d"
@@ -198,20 +232,23 @@ Flickable {
 				Button {
 					id: button
 					text: qsTr("Sign Up")
-					font.pixelSize: 16
 					implicitHeight: 40
 					Layout.fillWidth: true
+
 					contentItem: Text {
 						color: "#ffffff"
-						text: "Sign Up"
+						text: button.text
 						horizontalAlignment: Text.AlignHCenter
 						verticalAlignment: Text.AlignVCenter
-						font.weight: Font.Medium
-						font.family: "Roboto"
-						font.pointSize: 14
+						font {
+							pointSize: 15
+							family: doesntEmbed ? "Roboto" : medium.name
+							weight: Font.Medium
+						}
 					}
+
 					background: Rectangle {
-						color: button.down ? "#055aab" : "#066ac9"
+						color: button.down ? "#0555a1" : button.enabled ? "#066ac9" : "#a6066ac9"
 						radius: 8
 					}
 				}
@@ -222,16 +259,20 @@ Flickable {
 
 				Label {
 					text: qsTr("Already have an account?")
-					font.pixelSize: 16
-					font.family: "Roboto"
+					font {
+						pointSize: 15
+						family: doesntEmbed ? "Roboto" : regular.name
+					}
 				}
 
 				Text {
 					id: signIn
 					text: "<a href=\"sign-in.html\">Sign in here</a>"
-					font.pixelSize: 16
-					font.family: "Roboto"
-					font.underline: false
+					font {
+						pointSize: 15
+						family: doesntEmbed ? "Roboto" : regular.name
+						underline: false
+					}
 					linkColor: Qt.rgba(.0235, .416, .788, 1.0)
 				}
 			}
