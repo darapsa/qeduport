@@ -4,6 +4,9 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 
 Flickable {
+	property string bannerTitleText: qsTr("Limitless learning at your fingertips")
+	property string bannerContentText: qsTr("Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.")
+	property alias image: image
 	property alias counter: counter
 	property alias tabs: tabs
 	property alias tabsContent: tabsContent
@@ -50,7 +53,7 @@ Flickable {
 				}
 
 				Label {
-					text: qsTr("Limitless learning at your fingertips")
+					text: bannerTitleText
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					wrapMode: Text.Wrap
@@ -68,7 +71,7 @@ Flickable {
 				}
 
 				Label {
-					text: qsTr("Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.")
+					text: bannerContentText
 					color: "#747579"
 					horizontalAlignment: Text.AlignHCenter
 					wrapMode: Text.Wrap
