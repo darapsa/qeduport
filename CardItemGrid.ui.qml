@@ -16,10 +16,6 @@ Item {
 	Rectangle {
 		id: cardItem
 		anchors.fill: parent
-		anchors.rightMargin: 16
-		anchors.leftMargin: 16
-		anchors.bottomMargin: 16
-		anchors.topMargin: 16
 		Layout.minimumWidth: 300
 		Layout.minimumHeight: 475
 		radius: 8
@@ -95,6 +91,7 @@ Item {
 						height: 24
 						text: qsTr("Button")
 						anchors.right: parent.right
+						checkable: true
 						anchors.rightMargin: 0
 						padding: 0
 						rightPadding: 0
@@ -107,7 +104,7 @@ Item {
 
 						Connections {
 							target: favorite
-							onClicked: item1.state = "favorite pressed"
+							onStateChanged: favorite.state = "favorite checked"
 						}
 					}
 				}
@@ -115,7 +112,7 @@ Item {
 
 			Label {
 				id: cardTitle
-				color: "#24292d"
+				color: "#000000"
 				text: qsTr("Course title")
 				wrapMode: Text.Wrap
 				Layout.fillWidth: true
@@ -126,22 +123,145 @@ Item {
 				Layout.rightMargin: 20
 				Layout.leftMargin: 20
 			}
+
+			RowLayout {
+				id: ratingStar
+				Layout.topMargin: 0
+				spacing: 8
+				Layout.fillWidth: false
+				Layout.margins: 20
+				Layout.rightMargin: 20
+				Layout.leftMargin: 20
+
+				Button {
+					id: star
+					padding: 0
+					rightPadding: 0
+					leftPadding: 0
+					bottomPadding: 0
+					topPadding: 0
+					icon.color: "#80000000"
+					flat: true
+					icon.source: "Material/svg/outlined/star.svg"
+					autoRepeat: false
+					checkable: true
+					display: AbstractButton.IconOnly
+					Layout.maximumHeight: 20
+					Layout.maximumWidth: 20
+					Layout.minimumHeight: 20
+					Layout.minimumWidth: 20
+					Layout.preferredHeight: 20
+					Layout.preferredWidth: 20
+
+					Connections {
+						target: star
+						onStateChanged: star.state = "star checked"
+					}
+				}
+				Label {
+					id: listInlineItemRating
+					color: "#000000"
+					text: "4.0/5/0"
+					font.pointSize: 14
+					font.family: "Roboto"
+					Layout.fillWidth: false
+				}
+			}
+
+			ColumnLayout {
+				id: cardFooter
+				spacing: 8
+				Rectangle {
+					id: cardFooterBorder
+					color: "#dde0e3"
+					border.color: "#dde0e3"
+					border.width: 0
+					Layout.rightMargin: 20
+					Layout.leftMargin: 20
+					Layout.preferredHeight: 1
+					Layout.minimumHeight: 1
+					Layout.fillWidth: true
+				}
+
+				RowLayout {
+					id: cardFooterContent
+					spacing: 8
+					Layout.margins: 20
+					Layout.rightMargin: 20
+					Layout.leftMargin: 20
+
+					RowLayout {
+						id: cardFooterTimer
+						Layout.fillWidth: true
+						spacing: 8
+						Image {
+							id: timerIcon
+							source: "Material/svg/outlined/schedule.svg"
+							sourceSize.height: 16
+							sourceSize.width: 16
+							ColorOverlay {
+								anchors.fill: timerIcon
+								source: timerIcon
+								color: "#d6293e"
+							}
+						}
+
+						Label {
+							color: "#000000"
+							text: "12h 56m"
+							font.family: "Roboto"
+							font.pointSize: 14
+							font.styleName: "Regular"
+						}
+					}
+
+					RowLayout {
+						id: cardFooterLecturers
+						Layout.fillWidth: true
+						spacing: 8
+						Image {
+							id: lecturersIcon
+							source: "Material/svg/outlined/table.svg"
+							sourceSize.height: 16
+							sourceSize.width: 16
+							ColorOverlay {
+								anchors.fill: lecturersIcon
+								source: lecturersIcon
+								color: "#fd7e14"
+							}
+						}
+
+						Label {
+							color: "#000000"
+							text: "12h 56m"
+							font.family: "Roboto"
+							font.pointSize: 14
+							font.styleName: "Regular"
+						}
+					}
+				}
+			}
 		}
 	}
 	states: [
 		State {
-			name: "favorite pressed"
-			when: favorite.pressed
+			name: "favorite checked"
+			when: favorite.checked
 
 			PropertyChanges {
 				target: favorite
 				icon.color: "#d6293e"
-				icon.source: "Font-Awesome/svgs/solid/heart.svg"
+				icon.source: "Material/svg/filled/heart.svg"
 			}
+		},
+		State {
+			name: "rating checked"
+			when: star.checked
 
 			PropertyChanges {
-				target: favorite
-				layer.enabled: true
+				target: star
+				icon.color: "#f7c32e"
+				icon.source: "Material/svg/filled/star.svg"
 			}
 		}
 	]
