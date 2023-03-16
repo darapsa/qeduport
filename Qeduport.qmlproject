@@ -19,6 +19,7 @@ Project {
 		filter: "*.ttf"
 	}
 
+	importPaths: [ "imports" ]
 	qdsVersion: "3.9"
 	quickVersion: "2.15"
 	multilanguageSupport: true

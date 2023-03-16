@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import "Bootstrap/Button" as BsBtn
 
 Flickable {
 	property string titleHeader: qsTr("Login into Eduport!")
@@ -194,28 +195,11 @@ Flickable {
 					}
 				}
 
-				Button {
+				BsBtn.Primary {
 					id: button
 					text: qsTr("Login")
 					implicitHeight: 40
 					Layout.fillWidth: true
-
-					contentItem: Text {
-						color: "#ffffff"
-						text: button.text
-						horizontalAlignment: Text.AlignHCenter
-						verticalAlignment: Text.AlignVCenter
-						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : medium.name
-							weight: Font.Medium
-						}
-					}
-
-					background: Rectangle {
-						color: button.down ? "#0555a1" : button.enabled ? "#066ac9" : "#a6066ac9"
-						radius: 8
-					}
 				}
 			}
 
