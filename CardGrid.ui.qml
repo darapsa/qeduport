@@ -138,7 +138,7 @@ Item {
 				Layout.bottomMargin: 8
 				font {
 					family: heebo.name
-					pixelSize: 21
+					pointSize: 20.1 + .00075 * parent.width
 				}
 
 				MouseArea {
