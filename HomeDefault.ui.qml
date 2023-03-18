@@ -365,7 +365,8 @@ Flickable {
 							: width < 768 ? width / 2
 							: width < 992 ? width / 3
 							: width / 4
-						cellHeight: cellWidth * 1.6
+						cellHeight: cellWidth
+							* 400 / 533 + 273.35
 						model: content
 						delegate: CardGrid {
 							width: tabPane.cellWidth
