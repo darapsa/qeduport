@@ -274,6 +274,8 @@ Flickable {
 			StackLayout {
 				currentIndex: tabs.currentIndex
 				property real preservedAspectHeight: width * 1.6
+				Layout.leftMargin: -12.8
+				Layout.rightMargin: -12.8
 				Layout.preferredHeight: width < 576
 					? preservedAspectHeight * tabsContent.currentCount
 					: width < 768
