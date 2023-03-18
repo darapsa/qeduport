@@ -189,6 +189,7 @@ Item {
 					Layout.margins: 20
 					Layout.rightMargin: 20
 					Layout.leftMargin: 20
+					width: cardFooterBorder.width
 
 					RowLayout {
 						id: cardFooterTimer
