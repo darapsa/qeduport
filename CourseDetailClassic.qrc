@@ -1,0 +1,7 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="qeduport">
+		<file>Course/Detail/Classic.ui.qml</file>
+		<file>Course/Detail/Classic/Content/Instructor.ui.qml</file>
+		<file>Course/Detail/Classic/Content/Instructor/ListInlineItem.ui.qml</file>
+	</qresource>
+</RCC>

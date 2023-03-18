@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import "Classic/Content" as Content
+import "../.."
 
 Flickable {
 	property alias introBadge: introBadge
@@ -33,22 +35,22 @@ Flickable {
 
 		FontLoader {
 			id: heebo
-			source: "Heebo/Heebo-Bold.ttf"
+			source: "../../Heebo/Heebo-Bold.ttf"
 		}
 
 		FontLoader {
 			id: bold
-			source: doesntEmbed ? "" : "Roboto/Roboto-Bold.ttf"
+			source: doesntEmbed ? "" : "../../Roboto/Roboto-Bold.ttf"
 		}
 
 		FontLoader {
 			id: medium
-			source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
+			source: doesntEmbed ? "" : "../../Roboto/Roboto-Medium.ttf"
 		}
 
 		FontLoader {
 			id: regular
-			source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
+			source: doesntEmbed ? "" : "../../Roboto/Roboto-Regular.ttf"
 		}
 
 		Rectangle {
@@ -221,7 +223,7 @@ Flickable {
 
 								Item {}
 
-								InstructorContent {}
+								Content.Instructor {}
 
 								Item {}
 

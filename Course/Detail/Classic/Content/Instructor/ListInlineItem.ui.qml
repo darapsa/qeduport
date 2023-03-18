@@ -22,7 +22,7 @@ RowLayout {
 			Image {
 				id: inlineItemIcon
 				anchors.verticalCenter: parent.verticalCenter
-				source: "Material/svg/filled/school.svg"
+				source: "../../../../../Material/svg/filled/school.svg"
 				anchors.horizontalCenter: parent.horizontalCenter
 				fillMode: Image.PreserveAspectFit
 				Layout.preferredHeight: 12
