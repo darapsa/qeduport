@@ -229,7 +229,7 @@ Flickable {
 					Layout.bottomMargin: 8
 					font {
 						family: heebo.name
-						pointSize: 22.5 + .020625 * width
+						pointSize: 22.5 + .01875 * parent.width
 					}
 				}
 
