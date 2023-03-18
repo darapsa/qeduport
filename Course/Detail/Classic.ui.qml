@@ -11,13 +11,13 @@ Flickable {
 	property alias introTitleParagraph: introTitleParagraph
 	property alias tabs: tabs
 	property alias courseDescription: courseDescription
-	property alias detailImage: image
-	property alias detailPrice: price
-	property alias detailOriginalPrice: originalPrice
-	property alias detailDiscount: discount
-	property alias detailTime: time
-	property alias detailTrial: trial
-	property alias detailBuy: buy
+	property alias image: image
+	property string priceText: "$150"
+	property alias originalPrice: originalPrice
+	property alias discount: discount
+	property alias time: time
+	property alias trial: trial
+	property alias buy: buy
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
@@ -300,8 +300,7 @@ Flickable {
 									RowLayout {
 
 										Label {
-											id: price
-											text: "$150"
+											text: priceText
 											font {
 												family: heebo.name
 												pointSize: 23
