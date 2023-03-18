@@ -373,7 +373,7 @@ Flickable {
 							badgeColor: levelColor
 							badgeBackgroundColor: levelBackgroundColor
 							titleText: title
-							textTruncateText: truncated
+							truncatedText: truncated
 						}
 					}
 				}

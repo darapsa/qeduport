@@ -16,7 +16,7 @@ Item {
 	property color badgeBackgroundColor: "#1a6f42c1"
 	property string titleText: "Build Responsive Websites with HTML"
 	property alias titleArea: titleArea
-	property string textTruncateText: "Far advanced settling say finished raillery. Offered chiefly farther"
+	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
 	property bool doesntEmbed: Qt.platform.os === "android"
 				|| Qt.platform.os === "linux"
 				|| Qt.platform.os === "osx"
@@ -148,8 +148,7 @@ Item {
 			}
 
 			Label {
-				id: textTruncate
-				text: textTruncateText
+				text: truncatedText
 				color: Qt.rgba(.455, .459, .475, 1.0)
 				wrapMode: Text.Wrap
 				Layout.fillWidth: true
