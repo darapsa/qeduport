@@ -151,6 +151,8 @@ Item {
 				text: truncatedText
 				color: Qt.rgba(.455, .459, .475, 1.0)
 				wrapMode: Text.Wrap
+				elide: Text.ElideRight
+				maximumLineCount: 2
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 				font {
