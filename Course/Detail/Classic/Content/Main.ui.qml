@@ -79,8 +79,18 @@ ColumnLayout {
 					Layout.leftMargin: 25.6
 					Layout.rightMargin: 25.6
 					Layout.bottomMargin: 25.6
+					Layout.preferredHeight: switch (
+							currentIndex) {
+						case 0:
+							return overview.height;
+						case 2:
+							return instructor.height;
+						default:
+							return 0;
+					}
 
 					ColumnLayout {
+						id: overview
 
 						Label {
 							text: qsTr("Course Description")
@@ -109,7 +119,9 @@ ColumnLayout {
 
 					Item {}
 
-					MainTabContents.Instructor {}
+					MainTabContents.Instructor {
+						id: instructor
+					}
 
 					Item {}
 
