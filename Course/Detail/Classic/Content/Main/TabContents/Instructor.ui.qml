@@ -18,7 +18,7 @@ ColumnLayout {
 
 		Image {
 			Layout.fillWidth: true
-			Layout.fillHeight: true
+			Layout.maximumHeight: height
 			source: "https://eduport.webestica.com/assets/images/instructor/01.jpg"
 			fillMode: Image.PreserveAspectFit
 		}
