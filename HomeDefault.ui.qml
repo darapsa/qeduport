@@ -6,7 +6,7 @@ import QtGraphicalEffects 1.15
 Flickable {
 	property string bannerTitleText: qsTr("Limitless learning at your fingertips")
 	property string bannerContentText: qsTr("Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.")
-	property alias image: image
+	property string imageSource: "https://eduport.webestica.com/assets/images/element/07.png"
 	property alias counter: counter
 	property alias tabs: tabs
 	property alias tabsContent: tabsContent
@@ -158,7 +158,7 @@ Flickable {
 
 				Image {
 					id: image
-					source: "https://eduport.webestica.com/assets/images/element/07.png"
+					source: imageSource
 					width: parent.width
 					fillMode: Image.PreserveAspectFit
 				}
