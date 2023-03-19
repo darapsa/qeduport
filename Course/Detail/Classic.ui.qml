@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-import "Classic/Content" as Content
+import "Classic/Content/Main/TabContents" as ContentMainTabContents
 import "../.."
 
 Flickable {
@@ -223,7 +223,7 @@ Flickable {
 
 								Item {}
 
-								Content.Instructor {}
+								ContentMainTabContents.Instructor {}
 
 								Item {}
 
