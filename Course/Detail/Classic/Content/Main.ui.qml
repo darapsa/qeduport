@@ -44,11 +44,11 @@ ColumnLayout {
 				GridView {
 					id: tabs
 					interactive: false
-					Layout.fillWidth: true
 					Layout.topMargin: 16
 					Layout.bottomMargin: 16
 					cellWidth: 105.016
 					cellHeight: 46
+					implicitWidth: parent.width
 					implicitHeight: Math.ceil(count
 							/ Math.floor(count
 							/ (cellWidth * count
