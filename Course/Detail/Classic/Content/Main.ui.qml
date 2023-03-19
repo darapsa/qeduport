@@ -31,7 +31,7 @@ ColumnLayout {
 				left: parent.left
 				right: parent.right
 			}
-			implicitHeight: tabs.height + tabsContent.height + 83.2
+			implicitHeight: tabs.height + tabContents.height + 83.2
 
 			ColumnLayout {
 				anchors {
@@ -73,7 +73,7 @@ ColumnLayout {
 				}
 
 				StackLayout {
-					id: tabsContent
+					id: tabContents
 					currentIndex: tabs.currentIndex
 					Layout.topMargin: 33.6
 					Layout.leftMargin: 25.6
