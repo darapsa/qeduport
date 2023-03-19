@@ -79,6 +79,7 @@ ColumnLayout {
 					Layout.leftMargin: 25.6
 					Layout.rightMargin: 25.6
 					Layout.bottomMargin: 25.6
+					Layout.preferredWidth: parent.width
 					Layout.preferredHeight: switch (
 							currentIndex) {
 						case 0:
