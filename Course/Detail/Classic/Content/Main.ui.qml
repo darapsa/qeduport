@@ -36,19 +36,19 @@ ColumnLayout {
 			ColumnLayout {
 				anchors {
 					left: parent.left
-					leftMargin: 25.6
 					right: parent.right
-					rightMargin: 25.6
 				}
 
 				GridView {
 					id: tabs
 					interactive: false
 					Layout.topMargin: 16
+					Layout.leftMargin: 25.6
+					Layout.rightMargin: 25.6
 					Layout.bottomMargin: 16
 					cellWidth: 105.016
 					cellHeight: 46
-					implicitWidth: parent.width
+					implicitWidth: parent.width - 51.2
 					implicitHeight: Math.ceil(count
 							/ Math.floor(count
 							/ (cellWidth * count
@@ -75,17 +75,18 @@ ColumnLayout {
 				StackLayout {
 					id: tabContents
 					currentIndex: tabs.currentIndex
-					Layout.topMargin: 33.6
+					Layout.topMargin: 25.6
 					Layout.leftMargin: 25.6
 					Layout.rightMargin: 25.6
 					Layout.bottomMargin: 25.6
-					Layout.preferredWidth: parent.width
+					Layout.preferredWidth: parent.width - 51.2
 					Layout.preferredHeight: switch (
 							currentIndex) {
 						case 0:
 							return overview.height;
 						case 2:
-							return instructor.height;
+							return instructor
+								.height;
 						default:
 							return 0;
 					}
