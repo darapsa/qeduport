@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import QtMultimedia 5.15
 import "Classic/Content" as Content
 
 Flickable {
@@ -173,6 +174,15 @@ Flickable {
 							}
 						}
 
+						MediaPlayer {
+							id: mediaPlayer
+						}
+
+						VideoOutput {
+							anchors.fill: image
+							source: mediaPlayer
+						}
+
 						Button {
 							anchors.centerIn: image
 							display: AbstractButton.IconOnly
@@ -185,6 +195,7 @@ Flickable {
 								color: "#ffffff"
 								source: "../../Font-Awesome/svgs/solid/circle-play.svg"
 							}
+							onClicked: mediaPlayer.play()
 						}
 
 						ColumnLayout {
