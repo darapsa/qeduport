@@ -169,7 +169,21 @@ Flickable {
 									width: image.width
 									height: image.height
 									radius: 10
-									    }
+								}
+							}
+						}
+
+						Button {
+							anchors.centerIn: image
+							display: AbstractButton.IconOnly
+							flat: true
+							width: 44
+							height: 44
+							icon {
+								width: 44
+								height: 44
+								color: "#ffffff"
+								source: "../../Font-Awesome/svgs/solid/circle-play.svg"
 							}
 						}
 
