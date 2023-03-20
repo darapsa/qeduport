@@ -11,6 +11,7 @@ Flickable {
 	property alias introTitleParagraph: introTitleParagraph
 	property alias mainContent: mainContent
 	property alias image: image
+	property alias mediaPlayer: mediaPlayer
 	property string priceText: "$150"
 	property alias originalPrice: originalPrice
 	property alias discount: discount
