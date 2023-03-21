@@ -1,9 +1,6 @@
 <RCC>
 	<qresource prefix="qeduport">
 		<file>Font-Awesome/svgs/solid/heart.svg</file>
-		<file>Font-Awesome/svgs/solid/user-tie.svg</file>
-		<file>Font-Awesome/svgs/solid/user-graduate.svg</file>
-		<file>Font-Awesome/svgs/solid/tv.svg</file>
 		<file>Font-Awesome/svgs/solid/circle-play.svg</file>
 	</qresource>
 </RCC>
