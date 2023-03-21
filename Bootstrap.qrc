@@ -1,8 +1,5 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qeduport">
-		<file>imports/Bootstrap/Bootstrap.qml</file>
-		<file>imports/Bootstrap/qmldir</file>
-		<file>Bootstrap/Button/Primary.ui.qml</file>
 		<file>Bootstrap/icons/patch-check-fill.svg</file>
 		<file>Bootstrap/icons/envelope-fill.svg</file>
 	</qresource>

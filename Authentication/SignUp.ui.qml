@@ -1,40 +1,23 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
+import Eduport 1.0
+import "../Button" as BsBtn
 
 Flickable {
 	property string titleHeader: qsTr("Sign up for your account!")
 	property alias titleParagraph: titleParagraph
 	property string emailLabel: qsTr("Email address *")
-	property string emailImage: "Bootstrap/icons/envelope-fill.svg"
+	property string emailImage: "../Bootstrap/icons/envelope-fill.svg"
 	property alias email: email
 	property alias password: password
 	property alias confirmPassword: confirmPassword
 	property alias button: button
 	property alias signIn: signIn
-	readonly property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
 	contentHeight: container.height
 
-	FontLoader {
-		id: heebo
-		source: "Heebo/Heebo-Bold.ttf"
-	}
-
-	FontLoader {
-		id: medium
-		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
-	}
-
-	FontLoader {
-		id: regular
-		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
-	}
-
-		GridLayout {
+	GridLayout {
 		id: container
 		anchors {
 			top: parent.top
@@ -52,12 +35,16 @@ Flickable {
 					id: columnLayout
 
 					Label {
-						text: titleHeader
-						wrapMode: Text.Wrap
 						Layout.fillWidth: true
+						text: titleHeader
+						wrapMode: Label.Wrap
 						font {
-							family: heebo.name
-							pointSize: 21.75 + .013125 * columnLayout.width
+							family: Eduport.hFont
+									.family
+							pointSize: 21.75
+								+ .013125
+								* columnLayout
+									.width
 						}
 					}
 
@@ -65,11 +52,13 @@ Flickable {
 						id: titleParagraph
 						color: "#6c757d"
 						text: qsTr("Nice to see you! Please Sign up with your account.")
-						wrapMode: Text.Wrap
+						wrapMode: Label.Wrap
 						Layout.fillWidth: true
 						font {
-							pointSize: 18.75
-							family: doesntEmbed ? "Roboto" : regular.name
+							family: Bootstrap
+								.bodyFont.family
+							pointSize: Eduport
+								.fontSizeLead
 						}
 					}
 				}
@@ -79,8 +68,11 @@ Flickable {
 					Label {
 						text: emailLabel
 						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : regular.name
+							family: Bootstrap
+								.bodyFont.family
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 					}
 
@@ -105,8 +97,8 @@ Flickable {
 								id: email
 								placeholderText: qsTr("E-mail")
 								font {
-									pointSize: 16
-									family: doesntEmbed ? "Roboto" : regular.name
+									family: Bootstrap.bodyFont.family
+									pointSize: Eduport.fontSizeFormControl
 								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
@@ -123,8 +115,11 @@ Flickable {
 					Label {
 						text: qsTr("Password *")
 						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : regular.name
+							family: Bootstrap
+								.bodyFont.family
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 					}
 
@@ -139,7 +134,7 @@ Flickable {
 							anchors.fill: parent
 
 							Image {
-								source: "Font-Awesome/svgs/solid/lock.svg"
+								source: "../Font-Awesome/svgs/solid/lock.svg"
 								Layout.maximumHeight: 24
 								Layout.maximumWidth: 24
 								Layout.margins: 16
@@ -150,8 +145,8 @@ Flickable {
 								placeholderText: "*********"
 								echoMode: TextInput.Password
 								font {
-									pointSize: 16
-									family: doesntEmbed ? "Roboto" : regular.name
+									family: Bootstrap.bodyFont.family
+									pointSize: Eduport.fontSizeFormControl
 								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
@@ -168,8 +163,11 @@ Flickable {
 					Label {
 						text: qsTr("Confirm Password *")
 						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : regular.name
+							family: Bootstrap
+								.bodyFont.family
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 					}
 
@@ -184,7 +182,7 @@ Flickable {
 							anchors.fill: parent
 
 							Image {
-								source: "Font-Awesome/svgs/solid/lock.svg"
+								source: "../Font-Awesome/svgs/solid/lock.svg"
 								Layout.maximumHeight: 24
 								Layout.maximumWidth: 24
 								Layout.margins: 16
@@ -195,8 +193,8 @@ Flickable {
 								placeholderText: "*********"
 								echoMode: TextInput.Password
 								font {
-									pointSize: 16
-									family: doesntEmbed ? "Roboto" : regular.name
+									family: Bootstrap.bodyFont.family
+									pointSize: Eduport.fontSizeFormControl
 								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
@@ -215,8 +213,8 @@ Flickable {
 						id: agreementCheckBox
 						text: "By signing up, you agree to the <a href=\"#\">terms of service</a>"
 						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : regular.name
+							family: Bootstrap.bodyFont.family
+							pointSize: Bootstrap.bodyFont.pointSize
 						}
 						Layout.fillWidth: true
 						contentItem: Text {
@@ -229,28 +227,11 @@ Flickable {
 					}
 				}
 
-				Button {
+				BsBtn.Primary {
 					id: button
 					text: qsTr("Sign Up")
 					implicitHeight: 40
 					Layout.fillWidth: true
-
-					contentItem: Text {
-						color: "#ffffff"
-						text: button.text
-						horizontalAlignment: Text.AlignHCenter
-						verticalAlignment: Text.AlignVCenter
-						font {
-							pointSize: 15
-							family: doesntEmbed ? "Roboto" : medium.name
-							weight: Font.Medium
-						}
-					}
-
-					background: Rectangle {
-						color: button.down ? "#0555a1" : button.enabled ? "#066ac9" : "#a6066ac9"
-						radius: 8
-					}
 				}
 			}
 
@@ -260,8 +241,8 @@ Flickable {
 				Label {
 					text: qsTr("Already have an account?")
 					font {
-						pointSize: 15
-						family: doesntEmbed ? "Roboto" : regular.name
+						family: Bootstrap.bodyFont.family
+						pointSize: Bootstrap.bodyFont.pointSize
 					}
 				}
 
@@ -269,8 +250,8 @@ Flickable {
 					id: signIn
 					text: "<a href=\"sign-in.html\">Sign in here</a>"
 					font {
-						pointSize: 15
-						family: doesntEmbed ? "Roboto" : regular.name
+						family: Bootstrap.bodyFont.family
+						pointSize: Bootstrap.bodyFont.pointSize
 						underline: false
 					}
 					linkColor: Qt.rgba(.0235, .416, .788, 1.0)

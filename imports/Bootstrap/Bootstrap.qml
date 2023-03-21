@@ -1,5 +1,4 @@
 pragma Singleton
-
 import QtQuick 2.15
 
 QtObject {
@@ -16,9 +15,16 @@ QtObject {
 	readonly property FontLoader medium: FontLoader {
 		source: haveRoboto ? "" : "../../Roboto/Roboto-Medium.ttf"
 	}
+	readonly property FontLoader regular: FontLoader {
+		source: haveRoboto ? "" : "../../Roboto/Roboto-Regular.ttf"
+	}
+	readonly property font bodyFont: Qt.font({
+		family: haveRoboto ? "Roboto" : regular.name,
+		pointSize: 15
+	})
 	readonly property font btnFont: Qt.font({
-		pointSize: 15,
 		family: haveRoboto ? "Roboto" : medium.name,
+		pointSize: 15,
 		weight: Font.Medium
 	})
 }

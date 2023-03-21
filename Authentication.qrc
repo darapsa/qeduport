@@ -1,0 +1,6 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="qeduport">
+		<file>Authentication/SignIn.ui.qml</file>
+		<file>Authentication/SignUp.ui.qml</file>
+	</qresource>
+</RCC>

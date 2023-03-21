@@ -1,0 +1,2 @@
+module Eduport
+singleton Eduport 1.0 Eduport.qml

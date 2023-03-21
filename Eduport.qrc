@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="qeduport">
+		<file>imports/Bootstrap/Bootstrap.qml</file>
+		<file>imports/Bootstrap/qmldir</file>
+		<file>imports/Eduport/Eduport.qml</file>
+		<file>imports/Eduport/qmldir</file>
+		<file>Button/Primary.ui.qml</file>
+	</qresource>
+</RCC>
