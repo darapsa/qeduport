@@ -1,5 +1,0 @@
-<!DOCTYPE RCC><RCC version="1.0">
-	<qresource prefix="qeduport">
-		<file>Bootstrap/icons/patch-check-fill.svg</file>
-	</qresource>
-</RCC>

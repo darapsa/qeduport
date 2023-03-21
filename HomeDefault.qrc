@@ -1,6 +1,7 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qeduport">
-		<file>Home/Default.ui.qml</file>
+		<file>Bootstrap/icons/patch-check-fill.svg</file>
 		<file>Home/Default/Counter.ui.qml</file>
+		<file>Home/Default.ui.qml</file>
 	</qresource>
 </RCC>
