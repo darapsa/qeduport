@@ -1,18 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import Bootstrap 5.3
 
 Button {
 	property int currentIndex: 0
-	property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
-
-	FontLoader {
-		id: regular
-		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
-	}
 
 	height: 38
 	horizontalPadding: 16
@@ -21,8 +12,8 @@ Button {
 		text: modelData
 		color: index == currentIndex ? "white" : "#066ac9"
 		font {
-			family: doesntEmbed ? "Roboto" : regular.name
-			pointSize: 15
+			family: Bootstrap.bodyFont.family
+			pointSize: Bootstrap.bodyFont.pointSize
 		}
 	}
 	background: Rectangle {
