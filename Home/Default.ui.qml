@@ -49,7 +49,9 @@ Flickable {
 					Layout.fillWidth: true
 					font {
 						family: Eduport.hFont.family
-						pointSize: 23.6 + .0432 * width
+						weight: Eduport.hFont.weight
+						pointSize: 23.6
+							+ .027 * parent.width
 					}
 				}
 

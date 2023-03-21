@@ -14,9 +14,11 @@ QtObject {
 		source: "../../Heebo/Heebo-Medium.ttf"
 	}
 	readonly property font hFont: Qt.font({
-		family: bold.name
+		family: bold.name,
+		weight: Font.Bold
 	})
 	readonly property font normalFont: Qt.font({
-		family: medium.name
+		family: medium.name,
+		weight: Font.Medium
 	})
 }
