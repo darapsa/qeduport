@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Eduport 1.0
 
 Item {
 	Rectangle {
@@ -36,32 +37,22 @@ Item {
 					leftMargin: 25.6
 				}
 
-				FontLoader {
-					id: bold
-					source: "Heebo/Heebo-Bold.ttf"
-				}
-
 				Label {
 					text: count
 					font {
-						family: bold.name
+						family: Eduport.hFont.family
 						pointSize: 20.1
-						weight: Font.Bold
+							+ .00075 * parent.width
 					}
 					Layout.fillWidth: true
-				}
-
-				FontLoader {
-					id: medium
-					source: "Heebo/Heebo-Medium.ttf"
 				}
 
 				Label {
 					text: title
 					font {
-						family: medium.name
-						pointSize: 15
-						weight: Font.Medium
+						family: Eduport.normalFont
+								.family
+						pointSize: h6FontSize
 					}
 					Layout.fillWidth: true
 				}
