@@ -2,10 +2,10 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
-	readonly property real fontSizeLead: 18.75
-	readonly property real fontSizeFormControl: 16
+	readonly property real leadFontSize: 18.75
+	readonly property real formControlFontSize: 16
 	readonly property real h6FontSize: 15
-	readonly property real fontSizeFormText: 14
+	readonly property real formTextFontSize: 14
 
 	readonly property FontLoader bold: FontLoader {
 		source: "../../Heebo/Heebo-Bold.ttf"

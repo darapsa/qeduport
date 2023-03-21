@@ -57,7 +57,7 @@ Flickable {
 							family: Bootstrap
 								.bodyFont.family
 							pointSize: Eduport
-								.fontSizeLead
+								.leadFontSize
 						}
 					}
 				}
@@ -95,7 +95,7 @@ Flickable {
 								placeholderText: qsTr("E-mail")
 								font {
 									family: Bootstrap.bodyFont.family
-									pointSize: Eduport.fontSizeFormControl
+									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
@@ -142,7 +142,7 @@ Flickable {
 								echoMode: TextInput.Password
 								font {
 									family: Bootstrap.bodyFont.family
-									pointSize: Eduport.fontSizeFormControl
+									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
@@ -161,7 +161,7 @@ Flickable {
 						family: Bootstrap.bodyFont
 								.family
 						pointSize: Eduport
-							.fontSizeFormText
+							.formTextFontSize
 					}
 					color: "#6c757d"
 				}

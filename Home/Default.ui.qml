@@ -64,7 +64,7 @@ Flickable {
 					font {
 						family: Bootstrap.bodyFont
 								.family
-						pointSize: Eduport.fontSizeLead
+						pointSize: Eduport.leadFontSize
 					}
 				}
 
