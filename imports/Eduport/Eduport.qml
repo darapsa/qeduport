@@ -17,7 +17,7 @@ QtObject {
 		family: bold.name,
 		weight: Font.Bold
 	})
-	readonly property font normalFont: Qt.font({
+	readonly property font fwNormalFont: Qt.font({
 		family: medium.name,
 		weight: Font.Medium
 	})

@@ -41,6 +41,7 @@ Item {
 					text: count
 					font {
 						family: Eduport.hFont.family
+						weight: Eduport.hFont.weight
 						pointSize: 20.1
 							+ .00075 * parent.width
 					}
@@ -50,8 +51,10 @@ Item {
 				Label {
 					text: title
 					font {
-						family: Eduport.normalFont
-								.family
+						family: Eduport.fwNormalFont
+									.family
+						weight: Eduport.fwNormalFont
+									.weight
 						pointSize: h6FontSize
 					}
 					Layout.fillWidth: true
