@@ -2,6 +2,7 @@
 	<qresource prefix="qeduport">
 		<file>Heebo/Heebo-Bold.ttf</file>
 		<file>Heebo/Heebo-Medium.ttf</file>
+		<file>Heebo/Heebo-Regular.ttf</file>
 		<file>imports/Bootstrap/Bootstrap.qml</file>
 		<file>imports/Bootstrap/qmldir</file>
 		<file>imports/Eduport/Eduport.qml</file>

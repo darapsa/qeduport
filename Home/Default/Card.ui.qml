@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
+import Eduport 1.4
 
 Item {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/11.jpg"
@@ -17,11 +19,6 @@ Item {
 	property string titleText: "Build Responsive Websites with HTML"
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
-	property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
 
 	DropShadow {
 		source: rectangle
@@ -86,11 +83,6 @@ Item {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 
-				FontLoader {
-					id: roboto
-					source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
-				}
-
 				Label {
 					id: badge
 					anchors.left: parent.left
@@ -101,8 +93,10 @@ Item {
 					text: badgeText
 					color: badgeColor
 					font {
-						family: doesntEmbed ? "Roboto" : roboto.name
-						pixelSize: 13
+						family: Bootstrap.bodyFont
+									.family
+						pointSize: Bootstrap
+								.badgeFontSize
 					}
 					background: Rectangle {
 						color: badgeBackgroundColor
@@ -112,21 +106,17 @@ Item {
 
 				Image {
 					id: favorite
-					source: "Font-Awesome/svgs/solid/heart.svg"
+					source: "../../Font-Awesome/svgs/solid/heart.svg"
 					sourceSize {
 						width: 15
 						height: 15
 					}
 					anchors {
 						right: parent.right
-						verticalCenter: parent.verticalCenter
+						verticalCenter: parent
+								.verticalCenter
 					}
 				}
-			}
-
-			FontLoader {
-				id: heebo
-				source: "Heebo/Heebo-Bold.ttf"
 			}
 
 			Label {
@@ -137,7 +127,8 @@ Item {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 				font {
-					family: heebo.name
+					family: Eduport.hFont.family
+					weight: Eduport.hFont.weight
 					pointSize: 20.1 + .00075 * parent.width
 				}
 
@@ -156,9 +147,9 @@ Item {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 				font {
-					family: doesntEmbed ? "Roboto"
-						: roboto.name
-					pointSize: 14
+					family: Bootstrap.bodyFont.family
+					weight: Bootstrap.bodyFont.weight
+					pointSize: Bootstrap.bodyFont.pointSize
 				}
 			}
 
@@ -200,6 +191,13 @@ Item {
 						left: parent.left
 						bottom: parent.bottom
 					}
+					font {
+						family: Eduport.fwLightFont
+									.family
+						weight: Eduport.fwLightFont
+									.weight
+						pointSize: Eduport.h6FontSize
+					}
 				}
 
 				Label {
@@ -209,6 +207,13 @@ Item {
 						top: parent.top
 						right: parent.right
 						bottom: parent.bottom
+					}
+					font {
+						family: Eduport.fwLightFont
+									.family
+						weight: Eduport.fwLightFont
+									.weight
+						pointSize: Eduport.h6FontSize
 					}
 				}
 			}

@@ -251,12 +251,20 @@ Flickable {
 						leftMargin: 16
 						right: parent.right
 						rightMargin: 16
-						verticalCenter: parent.verticalCenter
+						verticalCenter: parent
+								.verticalCenter
 					}
 					cellWidth: 142
 					cellHeight: 46
-					implicitHeight: Math.ceil(count / Math.floor(count / (cellWidth * count / width))) * cellHeight
-					model: ["Web Design", "Development", "Graphic Design", "Marketing", "Finance"]
+					implicitHeight: Math.ceil(count
+							/ Math.floor(count
+								/ (cellWidth
+									* count
+									/ width)
+								)) * cellHeight
+					model: ["Web Design", "Development",
+						"Graphic Design", "Marketing",
+						"Finance"]
 					delegate: TabItem {}
 				}
 			}
@@ -266,13 +274,20 @@ Flickable {
 				property real preservedAspectHeight: width * 1.6
 				Layout.leftMargin: -12.8
 				Layout.rightMargin: -12.8
-				Layout.preferredHeight: width < 576
-					? preservedAspectHeight * tabsContent.currentCount
-					: width < 768
-					? preservedAspectHeight / 2 * Math.ceil(tabsContent.currentCount / 2)
-					: width < 992
-					? preservedAspectHeight / 3 * Math.ceil(tabsContent.currentCount / 3)
-					: preservedAspectHeight / 4 * Math.ceil(tabsContent.currentCount / 4)
+				Layout.preferredHeight: body.width < 576
+					? preservedAspectHeight
+					* tabsContent.currentCount
+					: body.width < 768
+					? preservedAspectHeight / 2
+					* Math.ceil(tabsContent.currentCount
+							/ 2)
+					: body.width < 992
+					? preservedAspectHeight / 3
+					* Math.ceil(tabsContent.currentCount
+							/ 3)
+					: preservedAspectHeight / 4
+					* Math.ceil(tabsContent.currentCount
+							/ 4)
 
 				Repeater {
 					id: tabsContent
@@ -351,20 +366,26 @@ Flickable {
 					GridView {
 						id: tabPane
 						interactive: false
-						cellWidth: width < 576 ? width
-							: width < 768 ? width / 2
-							: width < 992 ? width / 3
+						cellWidth: body.width < 576
+							? width
+							: body.width < 768
+							? width / 2
+							: body.width < 992
+							? width / 3
 							: width / 4
 						cellHeight: cellWidth
 							* 400 / 533 + 273.35
 						model: content
-						delegate: CardGrid {
-							width: tabPane.cellWidth
-							height: tabPane.cellHeight
+						delegate: Default.Card {
+							width: tabPane
+								.cellWidth
+							height: tabPane
+								.cellHeight
 							imageSource: image
 							badgeText: level
 							badgeColor: levelColor
-							badgeBackgroundColor: levelBackgroundColor
+							badgeBackgroundColor
+							: levelBackgroundColor
 							titleText: title
 							truncatedText: truncated
 						}

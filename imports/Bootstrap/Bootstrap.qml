@@ -2,6 +2,8 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
+	readonly property real badgeFontSize: 13.6
+
 	readonly property color btnColor: "#ffffff"
 	readonly property color btnBg: "#066ac9"
 	readonly property color btnActiveBg: "#0555a1"
@@ -20,11 +22,12 @@ QtObject {
 	}
 	readonly property font bodyFont: Qt.font({
 		family: haveRoboto ? "Roboto" : regular.name,
+		weight: Font.Normal,
 		pointSize: 15
 	})
 	readonly property font btnFont: Qt.font({
 		family: haveRoboto ? "Roboto" : medium.name,
-		pointSize: 15,
-		weight: Font.Medium
+		weight: Font.Medium,
+		pointSize: 15
 	})
 }

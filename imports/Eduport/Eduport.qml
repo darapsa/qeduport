@@ -13,6 +13,9 @@ QtObject {
 	readonly property FontLoader medium: FontLoader {
 		source: "../../Heebo/Heebo-Medium.ttf"
 	}
+	readonly property FontLoader regular: FontLoader {
+		source: "../../Heebo/Heebo-Regular.ttf"
+	}
 	readonly property font hFont: Qt.font({
 		family: bold.name,
 		weight: Font.Bold
@@ -20,5 +23,9 @@ QtObject {
 	readonly property font fwNormalFont: Qt.font({
 		family: medium.name,
 		weight: Font.Medium
+	})
+	readonly property font fwLightFont: Qt.font({
+		family: regular.name,
+		weight: Font.Normal
 	})
 }
