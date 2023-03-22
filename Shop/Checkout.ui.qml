@@ -6,22 +6,22 @@ import Eduport 1.4
 import "../Label" as Lbl
 
 Flickable {
-	property alias checkoutAlert: alert
-	property alias checkoutLogin: login
-	property alias checkoutName: name
-	property alias checkoutEmail: email
-	property alias checkoutMobile: mobile
-	property alias checkoutCountry: country
-	property alias checkoutState: province
-	property alias checkoutPostal: postal
-	property alias checkoutAddress: address
-	property alias checkoutBanks: banks
+	property alias alert: alert
+	property alias login: login
+	property alias name: name
+	property alias email: email
+	property alias mobile: mobile
+	property alias country: country
+	property alias state: province
+	property alias postal: postal
+	property alias address: address
+	property alias banks: banks
 	property alias courseItems: courseItems
 	property alias priceValue: priceValue
 	property alias discountValue: discountValue
-	property alias checkoutTotalValue: totalValue
-	property alias checkoutPlaceOrder: placeOrder
-	property alias checkoutPremium: premium
+	property alias totalValue: totalValue
+	property alias placeOrder: placeOrder
+	property alias premium: premium
 	contentHeight: body.height
 
 	ColumnLayout {
