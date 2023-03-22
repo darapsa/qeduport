@@ -7,6 +7,14 @@ QtObject {
 	readonly property real h6FontSize: 15
 	readonly property real formTextFontSize: 14
 
+	readonly property bool haveRoboto: Qt.platform.os === "android"
+					|| Qt.platform.os === "linux"
+					|| Qt.platform.os === "osx"
+					|| Qt.platform.os === "unix"
+					|| Qt.platform.os === "windows"
+	readonly property FontLoader roboto: FontLoader {
+		source: haveRoboto ? "" : "../../Roboto/Roboto-Bold.ttf"
+	}
 	readonly property FontLoader bold: FontLoader {
 		source: "../../Heebo/Heebo-Bold.ttf"
 	}
@@ -16,6 +24,10 @@ QtObject {
 	readonly property FontLoader regular: FontLoader {
 		source: "../../Heebo/Heebo-Regular.ttf"
 	}
+	readonly property font baseFont: Qt.font({
+		family: haveRoboto ? "Roboto" : roboto.name,
+		weight: Font.Bold
+	})
 	readonly property font hFont: Qt.font({
 		family: bold.name,
 		weight: Font.Bold

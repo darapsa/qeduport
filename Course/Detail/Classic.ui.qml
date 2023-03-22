@@ -3,6 +3,9 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import QtMultimedia 5.15
+import Bootstrap 5.3
+import Eduport 1.4
+import "../../Label" as Lbl
 import "Classic/Content" as Content
 
 Flickable {
@@ -18,11 +21,6 @@ Flickable {
 	property alias time: time
 	property alias trial: trial
 	property alias buy: buy
-	property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
 	contentHeight: body.height
 
 	ColumnLayout {
@@ -31,26 +29,6 @@ Flickable {
 			top: parent.top
 			left: parent.left
 			right: parent.right
-		}
-
-		FontLoader {
-			id: heebo
-			source: "../../Heebo/Heebo-Bold.ttf"
-		}
-
-		FontLoader {
-			id: bold
-			source: doesntEmbed ? "" : "../../Roboto/Roboto-Bold.ttf"
-		}
-
-		FontLoader {
-			id: medium
-			source: doesntEmbed ? "" : "../../Roboto/Roboto-Medium.ttf"
-		}
-
-		FontLoader {
-			id: regular
-			source: doesntEmbed ? "" : "../../Roboto/Roboto-Regular.ttf"
 		}
 
 		Rectangle {
@@ -74,17 +52,16 @@ Flickable {
 					implicitHeight: introBadge.height
 					radius: 5.2
 					color: Qt.rgba( .0235, .416, .788, 1.0)
-					Label {
+					Lbl.Hx {
 						id: introBadge
 						text: qsTr("Digital Marketing")
 						color: "white"
-						font {
-							family: doesntEmbed ? "Roboto" : bold.name
-							weight: Font.Bold
-							pointSize: 15
-						}
-						horizontalAlignment: Text.AlignHCenter
-						verticalAlignment: Text.AlignVCenter
+						font.family: Eduport.baseFont
+									.family
+						horizontalAlignment: Text
+								.AlignHCenter
+						verticalAlignment: Text
+								.AlignVCenter
 						topPadding: 8
 						leftPadding: 25.6
 						rightPadding: 25.6
@@ -92,36 +69,28 @@ Flickable {
 					}
 				}
 
-				Label {
+				Lbl.Hx {
 					id: introTitleHeader
 					text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
 					color: "#24292d"
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
-					font {
-						family: heebo.name
-						pointSize: 30
-					}
+					font.pointSize: 22.5
+							+ .01875 * parent.width
 				}
 
-				Label {
+				Lbl.Body {
 					id: introTitleParagraph
 					text: qsTr("Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.")
 					color: "#747579"
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
-					font {
-						family: doesntEmbed ? "Roboto" : regular.name
-						pointSize: 15
-					}
 				}
 			}
 		}
 
 		GridLayout {
 			Layout.topMargin: 64
-			columns: width < 992 ? 1 : 2
-			rows: width < 992 ? 2 : 1
+			columns: body.width < 992 ? 1 : 2
+			rows: body.width < 992 ? 2 : 1
 
 			Content.Main {
 				id: mainContent
@@ -217,23 +186,17 @@ Flickable {
 
 									RowLayout {
 
-										Label {
+										Lbl.Hx {
 											text: priceText
-											font {
-												family: heebo.name
-												pointSize: 23
-											}
+											font.pointSize: 21
+												+ .0075 * parent.width
 										}
 
-										Label {
+										Lbl.Body {
 											id: originalPrice
 											text: "$350"
 											color: "#4d000000"
-											font {
-												family: doesntEmbed ? "Roboto" : regular.name
-												pointSize: 15
-												strikeout: true
-											}
+											font.strikeout: true
 										}
 
 										Rectangle {
@@ -248,8 +211,9 @@ Flickable {
 												text: qsTr("60% off")
 												color: "white"
 												font {
-													family: doesntEmbed ? "Roboto" : regular.name
-													pointSize: 13.6
+													family: Bootstrap.bodyFont.family
+													weight: Bootstrap.bodyFont.weight
+													pointSize: Bootstrap.badgeFontSize
 												}
 												horizontalAlignment: Text.AlignHCenter
 												verticalAlignment: Text.AlignVCenter
@@ -264,13 +228,9 @@ Flickable {
 									RowLayout {
 										id: time
 
-										Label {
+										Lbl.Body {
 											text: qsTr("5 days left at this price")
 											color: "#d6293e"
-											font {
-												family: doesntEmbed ? "Roboto" : regular.name
-												pointSize: 15
-											}
 										}
 									}
 								}
@@ -283,22 +243,19 @@ Flickable {
 
 								Button {
 									id: trial
-									text: qsTr("Free trial")
 									horizontalPadding: 16
 									verticalPadding: 8
+									text: qsTr("Free trial")
+									font: Bootstrap.btnFont
 									contentItem: Text {
 										horizontalAlignment: Text.AlignHCenter
 										text: trial.text
+										font: trial.font
 										color: trial.down ? "#ffffff" : "#066ac9"
-										font {
-											family: doesntEmbed ? "Roboto" : medium.name
-											weight: Font.Medium
-											pointSize: 15
-										}
 									}
 									background: Rectangle {
-										color: trial.down ? "#066ac9" : "#ffffff"
 										radius: 5.2
+										color: trial.down ? "#066ac9" : "#ffffff"
 										border {
 											color: "#066ac9"
 											width: 1
@@ -308,22 +265,19 @@ Flickable {
 
 								Button {
 									id: buy
-									text: qsTr("Buy course")
 									horizontalPadding: 16
 									verticalPadding: 8
+									text: qsTr("Buy course")
+									font: Bootstrap.btnFont
 									contentItem: Text {
 										horizontalAlignment: Text.AlignHCenter
 										text: buy.text
+										font: buy.font
 										color: "#ffffff"
-										font {
-											family: doesntEmbed ? "Roboto" : medium.name
-											weight: Font.Medium
-											pointSize: 15
-										}
 									}
 									background: Rectangle {
-										color: buy.down ? "#0aa073" : "#0cbc87"
 										radius: 5.2
+										color: buy.down ? "#0aa073" : "#0cbc87"
 										border {
 											color: buy.down ? "#0a966c" : "#0cbc87"
 											width: 1

@@ -7,6 +7,8 @@
 		<file>imports/Bootstrap/qmldir</file>
 		<file>imports/Eduport/Eduport.qml</file>
 		<file>imports/Eduport/qmldir</file>
+		<file>Label/Hx.ui.qml</file>
+		<file>Label/Body.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
 	</qresource>
 </RCC>

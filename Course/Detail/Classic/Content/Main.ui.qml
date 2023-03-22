@@ -2,7 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import "../../../.."
+import "../../../../Label" as Lbl
 import "Main/TabContents" as MainTabContents
 
 ColumnLayout {
@@ -61,8 +63,9 @@ ColumnLayout {
 							text: modelData
 							color: "#066ac9"
 							font {
-								family: doesntEmbed ? "Roboto" : regular.name
-								pointSize: 15
+								family: Bootstrap.bodyFont.family
+								weight: Bootstrap.bodyFont.weight
+								pointSize: Bootstrap.bodyFont.pointSize
 							}
 						}
 						background: Rectangle {
@@ -94,28 +97,21 @@ ColumnLayout {
 					ColumnLayout {
 						id: overview
 
-						Label {
+						Lbl.Hx {
 							text: qsTr("Course Description")
 							color: "#24292d"
-							wrapMode: Text.Wrap
 							Layout.fillWidth: true
 							Layout.bottomMargin: 16
-							font {
-								family: heebo.name
-								pointSize: 20.1
-							}
+							font.pointSize: 20.1
+								+ .00075
+								* parent.width
 						}
 
-						Label {
+						Lbl.Body {
 							id: courseDescription
 							text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
 							color: "#747579"
-							wrapMode: Text.Wrap
 							Layout.fillWidth: true
-							font {
-								family: doesntEmbed ? "Roboto" : regular.name
-								pointSize: 15
-							}
 						}
 					}
 
