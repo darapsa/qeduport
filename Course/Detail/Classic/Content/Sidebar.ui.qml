@@ -79,7 +79,7 @@ ColumnLayout {
 					width: 44
 					height: 44
 					color: "#ffffff"
-					source: "../../Font-Awesome/svgs/solid/circle-play.svg"
+					source: "../../../../Font-Awesome/svgs/solid/circle-play.svg"
 				}
 				onClicked: mediaPlayer.play()
 			}
