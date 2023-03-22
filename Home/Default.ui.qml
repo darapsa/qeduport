@@ -78,26 +78,18 @@ Flickable {
 					Layout.bottomMargin: 25.6
 					horizontalPadding: 24
 					verticalPadding: 12.8
+					text: qsTr("Get Started")
+					font: Bootstrap.btnFont
 					contentItem: Text {
-						color: getStarted.down
-							? "#ffffff"
-							: "#d6293e"
-						text: qsTr("Get Started")
 						horizontalAlignment: Text
 							.AlignHCenter
 						verticalAlignment: Text
 							.AlignVCenter
-						font {
-							family: Bootstrap
-								.btnFont
-								.family
-							weight: Bootstrap
-								.btnFont
-								.weight
-							pointSize: Bootstrap
-								.btnFont
-								.pointSize
-						}
+						text: getStarted.text
+						font: getStarted.font
+						color: getStarted.down
+							? "#ffffff"
+							: "#d6293e"
 					}
 					background: Rectangle {
 						radius: 8
@@ -106,8 +98,7 @@ Flickable {
 							: Qt.rgba(.839, .16,
 								.243, .1)
 						border {
-							color:
-							getStarted.down
+							color: getStarted.down
 							? "#d6293e"
 							: "transparent"
 							width: 1
