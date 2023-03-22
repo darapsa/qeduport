@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Bootstrap 5.3
 import Eduport 1.4
+import "../../Label" as Lbl
 
 Item {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/11.jpg"
@@ -83,7 +84,7 @@ Item {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 
-				Label {
+				Lbl.Body {
 					id: badge
 					anchors.left: parent.left
 					topPadding: 4.463
@@ -92,12 +93,7 @@ Item {
 					bottomPadding: 4.463
 					text: badgeText
 					color: badgeColor
-					font {
-						family: Bootstrap.bodyFont
-									.family
-						pointSize: Bootstrap
-								.badgeFontSize
-					}
+					font.pointSize: Bootstrap.badgeFontSize
 					background: Rectangle {
 						color: badgeBackgroundColor
 						radius: 6
@@ -119,18 +115,13 @@ Item {
 				}
 			}
 
-			Label {
+			Lbl.Hx {
 				id: title
 				text: titleText
 				color: Qt.rgba(.141, .161, .176, 1.0)
-				wrapMode: Text.Wrap
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
-				font {
-					family: Eduport.hFont.family
-					weight: Eduport.hFont.weight
-					pointSize: 20.1 + .00075 * parent.width
-				}
+				font.pointSize: 20.1 + .00075 * parent.width
 
 				MouseArea {
 					id: titleArea
@@ -138,19 +129,13 @@ Item {
 				}
 			}
 
-			Label {
+			Lbl.Body {
 				text: truncatedText
 				color: Qt.rgba(.455, .459, .475, 1.0)
-				wrapMode: Text.Wrap
 				elide: Text.ElideRight
 				maximumLineCount: 2
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
-				font {
-					family: Bootstrap.bodyFont.family
-					weight: Bootstrap.bodyFont.weight
-					pointSize: Bootstrap.bodyFont.pointSize
-				}
 			}
 
 			RowLayout {
