@@ -1,6 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
+import Eduport 1.4
+import "../Label" as Lbl
 
 Flickable {
 	property alias checkoutAlert: alert
@@ -44,17 +47,19 @@ Flickable {
 					id: alert
 					Layout.alignment: Qt.AlignHCenter
 
-					Label {
+					Lbl.Body {
 						text: qsTr("Already have an account?")
-						font.pointSize: 15
 					}
 
 					Text {
 						id: login
-						text: "<a href=\"sign-in.html\">" + qsTr(
-								  "Log in") + "</a>"
-						font.pointSize: 15
-						font.underline: false
+						text: "<a href=\"sign-in.html\">" + qsTr("Log in") + "</a>"
+						font {
+							family: Bootstrap.bodyFont.family
+							weight: Bootstrap.bodyFont.weight
+							pointSize: Bootstrap.bodyFont.pointSize
+							underline: false
+						}
 					}
 				}
 
@@ -70,10 +75,11 @@ Flickable {
 							right: parent.right
 						}
 
-						Label {
+						Lbl.Hx {
 							text: qsTr("Personal Details")
-							font.pointSize: 22
-							font.family: "roboto"
+							font.pointSize: 20.1
+								+ .00075
+								* parent.width
 							Layout.fillWidth: true
 							Layout.rightMargin: 16
 							Layout.leftMargin: 16
@@ -82,17 +88,17 @@ Flickable {
 
 						GridLayout {
 							Layout.margins: 16
-							columns: width < 768 ? 1 : 2
-							rows: width < 768 ? 4 : 7
+							columns: body.width
+								< 768 ? 1 : 2
+							rows: body.width < 768
+								? 4 : 7
 							columnSpacing: 0
 							rowSpacing: 16
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Your name *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -121,10 +127,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Email address *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -153,10 +157,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Mobile number *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -185,10 +187,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Select country *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 								Rectangle {
@@ -216,10 +216,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Select state *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -249,10 +247,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Postal code *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -281,10 +277,8 @@ Flickable {
 
 							ColumnLayout {
 
-								Label {
+								Lbl.Body {
 									text: qsTr("Address *")
-									font.pointSize: 12
-									font.family: "roboto"
 									Layout.fillWidth: true
 								}
 
@@ -314,10 +308,9 @@ Flickable {
 
 						ColumnLayout {
 
-							Label {
+							Lbl.Hx {
 								text: qsTr("Payment method")
-								font.pointSize: 22
-								font.family: "roboto"
+								font.pointSize: 20.1 + .00075 * parent.width
 								Layout.fillWidth: true
 								Layout.margins: 16
 							}
@@ -338,10 +331,8 @@ Flickable {
 											left: parent.left
 											right: parent.right
 										}
-										Label {
+										Lbl.Body {
 											text: qsTr("Credit or Debit Card")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											padding: 16
 										}
@@ -363,10 +354,8 @@ Flickable {
 											right: parent.right
 										}
 
-										Label {
+										Lbl.Body {
 											text: qsTr("Pay with Net Banking")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.rightMargin: 16
 											Layout.leftMargin: 16
@@ -375,18 +364,14 @@ Flickable {
 
 										ColumnLayout {
 											Layout.margins: 16
-											Label {
+											Lbl.Body {
 												text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-												font.pointSize: 14
-												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
-											Label {
+											Lbl.Body {
 												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-												font.pointSize: 14
-												font.family: "roboto"
 												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
@@ -414,8 +399,11 @@ Flickable {
 												delegate: ItemDelegate {
 													contentItem: Text {
 														text: label
-														font.pointSize: 16
-														font.family: "roboto"
+														font {
+															family: Bootstrap.bodyFont.family
+															weight: Bootstrap.bodyFont.weight
+															pointSize: Bootstrap.bodyFont.pointSize
+														}
 													}
 												}
 												background: Rectangle {
@@ -453,10 +441,11 @@ Flickable {
 							left: parent.left
 							right: parent.right
 						}
-						Label {
+						Lbl.Hx {
 							text: qsTr("Order Summary")
-							font.pointSize: 22
-							font.family: "roboto"
+							font.pointSize: 20.625
+								+ .0046875
+								* parent.width
 							Layout.fillWidth: true
 							Layout.rightMargin: 16
 							Layout.leftMargin: 16
@@ -555,7 +544,7 @@ Flickable {
 									price: "$350"
 								}
 							}
-							delegate: CourseItem {
+							delegate: Course {
 								width: courseItems.width
 								imageSource: image
 								titleText: title
@@ -584,14 +573,17 @@ Flickable {
 								Label {
 									id: priceLabel
 									text: qsTr("Original Price")
-									font.pointSize: 15
+									font {
+										family: Eduport.fwLightFont.family
+										weight: Eduport.fwLightFont.weight
+										pointSize: Eduport.h6FontSize
+									}
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
-								Label {
+								Lbl.Hx {
 									id: priceValue
 									text: "$500"
-									font.pointSize: 15
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -607,14 +599,17 @@ Flickable {
 								Label {
 									id: discountLabel
 									text: qsTr("Coupon Discount")
-									font.pointSize: 15
+									font {
+										family: Eduport.fwLightFont.family
+										weight: Eduport.fwLightFont.weight
+										pointSize: Eduport.h6FontSize
+									}
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
-								Label {
+								Lbl.Body {
 									id: discountValue
-									text: "-" + "$20"
-									font.pointSize: 15
+									text: "-$20"
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -627,17 +622,17 @@ Flickable {
 								implicitHeight: totalLabel.implicitHeight
 												+ totalValue.implicitHeight
 
-								Label {
+								Lbl.Hx {
 									id: totalLabel
 									text: qsTr("Total")
-									font.pointSize: 21
+									font.pointSize: 20.1 + .00075 * parent.width
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
-								Label {
+								Lbl.Hx {
 									id: totalValue
 									text: "$480"
-									font.pointSize: 21
+									font.pointSize: 20.1 + .00075 * parent.width
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter
@@ -651,17 +646,14 @@ Flickable {
 							Layout.margins: 16
 							Layout.fillWidth: true
 							text: qsTr("Place Order")
-							font.pointSize: 14
-							font.family: "roboto"
+							font: Bootstrap.btnFont
 							implicitHeight: 36
 							contentItem: Text {
+								text: placeOrder.text
+								font: placeOrder.font
 								color: "#ffffff"
-								text: "Place order"
 								horizontalAlignment: Text.AlignHCenter
 								verticalAlignment: Text.AlignVCenter
-								font.weight: Font.Medium
-								font.family: "Roboto"
-								font.pointSize: 14
 							}
 							background: Rectangle {
 								color: "#0cbc87"

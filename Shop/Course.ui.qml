@@ -2,26 +2,12 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import "../Label" as Lbl
 
 ColumnLayout {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
 	property string titleText: "Sketch from A to Z: for app designer"
 	property string priceText: "$150"
-	readonly property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
-
-	FontLoader {
-		id: heebo
-		source: "Heebo/Heebo-Bold.ttf"
-	}
-
-	FontLoader {
-		id: regular
-		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
-	}
 
 	Rectangle {
 		Layout.fillWidth: true
@@ -68,19 +54,15 @@ ColumnLayout {
 	       ColumnLayout {
 			Layout.topMargin: 16
 
-			Label {
+			Lbl.Hx {
 				Layout.fillWidth: true
 				text: titleText
-				font {
-					family: heebo.name
-					pointSize: 15
-				}
 			}
 
 			Item {
 				Layout.fillWidth: true
 				Layout.topMargin: 16
-				Label {
+				Lbl.Body {
 					anchors {
 						top: parent.top
 						left: parent.left
@@ -88,10 +70,6 @@ ColumnLayout {
 					}
 					text: priceText
 					color: "#0cbc87"
-					font {
-						family: doesntEmbed ? "Roboto" : regular.name
-						pointSize: 15
-					}
 				}
 		       }
 	       }
