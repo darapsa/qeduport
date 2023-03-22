@@ -41,6 +41,8 @@ Flickable {
 						font {
 							family: Eduport.hFont
 									.family
+							weight: Eduport.hFont
+									.weight
 							pointSize: 21.75
 								+ .013125
 								* columnLayout
@@ -57,6 +59,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Eduport
 								.leadFontSize
 						}
@@ -70,6 +74,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Bootstrap
 								.bodyFont
 								.pointSize
@@ -98,6 +104,7 @@ Flickable {
 								placeholderText: qsTr("E-mail")
 								font {
 									family: Bootstrap.bodyFont.family
+									weight: Bootstrap.bodyFont.weight
 									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
@@ -117,6 +124,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Bootstrap
 								.bodyFont
 								.pointSize
@@ -146,6 +155,7 @@ Flickable {
 								echoMode: TextInput.Password
 								font {
 									family: Bootstrap.bodyFont.family
+									weight: Bootstrap.bodyFont.weight
 									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
@@ -165,6 +175,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Bootstrap
 								.bodyFont
 								.pointSize
@@ -194,6 +206,7 @@ Flickable {
 								echoMode: TextInput.Password
 								font {
 									family: Bootstrap.bodyFont.family
+									weight: Bootstrap.bodyFont.weight
 									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
@@ -213,8 +226,13 @@ Flickable {
 						id: agreementCheckBox
 						text: "By signing up, you agree to the <a href=\"#\">terms of service</a>"
 						font {
-							family: Bootstrap.bodyFont.family
-							pointSize: Bootstrap.bodyFont.pointSize
+							family: Bootstrap
+								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 						Layout.fillWidth: true
 						contentItem: Text {
@@ -241,8 +259,12 @@ Flickable {
 				Label {
 					text: qsTr("Already have an account?")
 					font {
-						family: Bootstrap.bodyFont.family
-						pointSize: Bootstrap.bodyFont.pointSize
+						family: Bootstrap.bodyFont
+									.family
+						weight: Bootstrap.bodyFont
+									.weight
+						pointSize: Bootstrap.bodyFont
+								.pointSize
 					}
 				}
 
@@ -250,8 +272,12 @@ Flickable {
 					id: signIn
 					text: "<a href=\"sign-in.html\">Sign in here</a>"
 					font {
-						family: Bootstrap.bodyFont.family
-						pointSize: Bootstrap.bodyFont.pointSize
+						family: Bootstrap.bodyFont
+									.family
+						weight: Bootstrap.bodyFont
+									.weight
+						pointSize: Bootstrap.bodyFont
+								.pointSize
 						underline: false
 					}
 					linkColor: Qt.rgba(.0235, .416, .788, 1.0)

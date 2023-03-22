@@ -40,6 +40,8 @@ Flickable {
 						font {
 							family: Eduport.hFont
 									.family
+							weight: Eduport.hFont
+									.weight
 							pointSize: 21.75
 								+ .013125
 								* columnLayout
@@ -56,6 +58,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Eduport
 								.leadFontSize
 						}
@@ -68,6 +72,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Bootstrap
 								.bodyFont
 								.pointSize
@@ -95,6 +101,7 @@ Flickable {
 								placeholderText: qsTr("E-mail")
 								font {
 									family: Bootstrap.bodyFont.family
+									weight: Bootstrap.bodyFont.weight
 									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
@@ -114,6 +121,8 @@ Flickable {
 						font {
 							family: Bootstrap
 								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
 							pointSize: Bootstrap
 								.bodyFont
 								.pointSize
@@ -142,6 +151,7 @@ Flickable {
 								echoMode: TextInput.Password
 								font {
 									family: Bootstrap.bodyFont.family
+									weight: Bootstrap.bodyFont.weight
 									pointSize: Eduport.formControlFontSize
 								}
 								Layout.fillWidth: true
@@ -159,7 +169,9 @@ Flickable {
 					text: qsTr("Your password must be 8 characters at least")
 					font {
 						family: Bootstrap.bodyFont
-								.family
+									.family
+						weight: Bootstrap.bodyFont
+									.weight
 						pointSize: Eduport
 							.formTextFontSize
 					}
@@ -171,8 +183,13 @@ Flickable {
 						id: rememberCheckBox
 						text: qsTr("Remember me")
 						font {
-							family: Bootstrap.bodyFont.family
-							pointSize: Bootstrap.bodyFont.pointSize
+							family: Bootstrap
+								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 						Layout.fillWidth: true
 						contentItem: Text {
@@ -187,8 +204,13 @@ Flickable {
 						id: forgotPassword
 						text: "<a href=\"#\">Forgot password?</a>"
 						font {
-							family: Bootstrap.bodyFont.family
-							pointSize: Bootstrap.bodyFont.pointSize
+							family: Bootstrap
+								.bodyFont.family
+							weight: Bootstrap
+								.bodyFont.weight
+							pointSize: Bootstrap
+								.bodyFont
+								.pointSize
 						}
 						horizontalAlignment: Text.AlignRight
 						Layout.fillWidth: true
@@ -210,8 +232,12 @@ Flickable {
 				Label {
 					text: qsTr("Don't have an account?")
 					font {
-						family: Bootstrap.bodyFont.family
-						pointSize: Bootstrap.bodyFont.pointSize
+						family: Bootstrap.bodyFont
+									.family
+						weight: Bootstrap.bodyFont
+									.weight
+						pointSize: Bootstrap.bodyFont
+								.pointSize
 					}
 				}
 
@@ -219,8 +245,12 @@ Flickable {
 					id: signUp
 					text: "<a href=\"sign-up.html\">Signup here</a>"
 					font {
-						family: Bootstrap.bodyFont.family
-						pointSize: Bootstrap.bodyFont.pointSize
+						family: Bootstrap.bodyFont
+									.family
+						weight: Bootstrap.bodyFont
+									.weight
+						pointSize: Bootstrap.bodyFont
+								.pointSize
 						underline: false
 					}
 					linkColor: Qt.rgba(.0235, .416, .788, 1.0)
