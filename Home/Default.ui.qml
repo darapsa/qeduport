@@ -27,8 +27,8 @@ Flickable {
 
 		GridLayout {
 			id: banner
-			columns: width < 992 ? 1 : 2
-			rows: width < 992 ? 2 : 1
+			columns: body.width < 992 ? 1 : 2
+			rows: body.width < 992 ? 2 : 1
 			Layout.leftMargin: -9
 			Layout.rightMargin: -9
 			Layout.bottomMargin: 48
@@ -150,14 +150,14 @@ Flickable {
 		GridView {
 			id: counter
 			interactive: false
-			cellWidth: width < 576 ? width
-				: width < 1200 ? width / 2
+			cellWidth: body.width < 576 ? width
+				: body.width < 1200 ? width / 2
 				: width / 4
 			cellHeight: 125.6
 			Layout.fillWidth: true
-			implicitHeight: width < 576
+			implicitHeight: body.width < 576
 				? cellHeight * count
-				: width < 1200 ? cellHeight * count / 2
+				: body.width < 1200 ? cellHeight * count / 2
 				: cellHeight
 
 			model: ListModel {
