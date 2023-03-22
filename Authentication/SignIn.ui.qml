@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import Bootstrap 5.3
 import Eduport 1.4
+import "../Label" as Lbl
 import "../Button" as BsBtn
 
 Flickable {
@@ -33,51 +34,28 @@ Flickable {
 				ColumnLayout {
 					id: columnLayout
 
-					Label {
+					Lbl.Hx {
 						Layout.fillWidth: true
 						text: titleHeader
-						wrapMode: Label.Wrap
-						font {
-							family: Eduport.hFont
-									.family
-							weight: Eduport.hFont
-									.weight
-							pointSize: 21.75
+						font.pointSize: 21.75
 								+ .013125
 								* columnLayout
 									.width
-						}
 					}
 
-					Label {
+					Lbl.Body {
 						id: titleParagraph
 						text: qsTr("Nice to see you! Please log in with your account.")
-						wrapMode: Label.Wrap
 						color: "#6c757d"
 						Layout.fillWidth: true
-						font {
-							family: Bootstrap
-								.bodyFont.family
-							weight: Bootstrap
-								.bodyFont.weight
-							pointSize: Eduport
+						font.pointSize: Eduport
 								.leadFontSize
-						}
 					}
 				}
 
 				ColumnLayout {
-					Label {
+					Lbl.Body {
 						text: emailLabel
-						font {
-							family: Bootstrap
-								.bodyFont.family
-							weight: Bootstrap
-								.bodyFont.weight
-							pointSize: Bootstrap
-								.bodyFont
-								.pointSize
-						}
 					}
 
 					Rectangle {
@@ -116,17 +94,8 @@ Flickable {
 
 				ColumnLayout {
 
-					Label {
+					Lbl.Body {
 						text: qsTr("Password *")
-						font {
-							family: Bootstrap
-								.bodyFont.family
-							weight: Bootstrap
-								.bodyFont.weight
-							pointSize: Bootstrap
-								.bodyFont
-								.pointSize
-						}
 					}
 
 					Rectangle {
@@ -164,17 +133,11 @@ Flickable {
 					}
 				}
 
-				Label {
+				Lbl.Body {
 					id: passwordHelper
 					text: qsTr("Your password must be 8 characters at least")
-					font {
-						family: Bootstrap.bodyFont
-									.family
-						weight: Bootstrap.bodyFont
-									.weight
-						pointSize: Eduport
+					font.pointSize: Eduport
 							.formTextFontSize
-					}
 					color: "#6c757d"
 				}
 				RowLayout {
@@ -229,16 +192,8 @@ Flickable {
 			RowLayout {
 				Layout.alignment: Qt.AlignHCenter
 
-				Label {
+				Lbl.Body {
 					text: qsTr("Don't have an account?")
-					font {
-						family: Bootstrap.bodyFont
-									.family
-						weight: Bootstrap.bodyFont
-									.weight
-						pointSize: Bootstrap.bodyFont
-								.pointSize
-					}
 				}
 
 				Text {
