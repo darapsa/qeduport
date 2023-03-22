@@ -5,8 +5,8 @@ import Eduport 1.4
 Label {
 	wrapMode: Label.Wrap
 	font {
-		family: Eduport.hFont.family
-		weight: Eduport.hFont.weight
+		family: Eduport.hxFont.family
+		weight: Eduport.hxFont.weight
 		pointSize: Eduport.h6FontSize
 	}
 }
