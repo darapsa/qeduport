@@ -64,6 +64,8 @@ Flickable {
 					font {
 						family: Bootstrap.bodyFont
 								.family
+						weight: Bootstrap.bodyFont
+								.weight
 						pointSize: Eduport.leadFontSize
 					}
 				}
@@ -89,10 +91,12 @@ Flickable {
 							family: Bootstrap
 								.btnFont
 								.family
+							weight: Bootstrap
+								.btnFont
+								.weight
 							pointSize: Bootstrap
 								.btnFont
 								.pointSize
-							weight: Font.Medium
 						}
 					}
 					background: Rectangle {
@@ -216,6 +220,7 @@ Flickable {
 					Layout.bottomMargin: 8
 					font {
 						family: Eduport.hFont.family
+						weight: Eduport.hFont.weight
 						pointSize: 22.5 + .01875
 								* parent.width
 					}
@@ -230,6 +235,8 @@ Flickable {
 					font {
 						family: Bootstrap.bodyFont
 								.family
+						weight: Bootstrap.bodyFont
+								.weight
 						pointSize: Bootstrap.bodyFont
 								.pointSize
 					}
