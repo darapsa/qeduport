@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import Eduport 1.4
+import "../../Label" as Lbl
 
 Item {
 	Rectangle {
@@ -37,14 +38,10 @@ Item {
 					leftMargin: 25.6
 				}
 
-				Label {
+				Lbl.Hx {
 					text: count
-					font {
-						family: Eduport.hFont.family
-						weight: Eduport.hFont.weight
-						pointSize: 20.1
+					font.pointSize: 20.1
 							+ .00075 * parent.width
-					}
 					Layout.fillWidth: true
 				}
 
