@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.15
 import Bootstrap 5.3
 import Eduport 1.4
 import ".."
+import "../Label" as Lbl
 import "Default" as Default
 
 Flickable {
@@ -41,33 +42,21 @@ Flickable {
 				Layout.maximumWidth: body.width < 992
 					? body.width : body.width / 2
 
-				Label {
+				Lbl.Hx {
 					text: bannerTitleText
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
-					font {
-						family: Eduport.hFont.family
-						weight: Eduport.hFont.weight
-						pointSize: 23.6
+					font.pointSize: 23.6
 							+ .027 * parent.width
-					}
 				}
 
-				Label {
+				Lbl.Body {
 					text: bannerContentText
 					color: "#747579"
 					horizontalAlignment: Text.AlignHCenter
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
-					font {
-						family: Bootstrap.bodyFont
-								.family
-						weight: Bootstrap.bodyFont
-								.weight
-						pointSize: Eduport.leadFontSize
-					}
+					font.pointSize: Eduport.leadFontSize
 				}
 
 				Button {
@@ -202,35 +191,22 @@ Flickable {
 			ColumnLayout {
 				Layout.bottomMargin: 25.6
 
-				Label {
+				Lbl.Hx {
 					text: qsTr("Most Popular Courses")
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					wrapMode: Text.Wrap
 					Layout.fillWidth: true
 					Layout.bottomMargin: 8
-					font {
-						family: Eduport.hFont.family
-						weight: Eduport.hFont.weight
-						pointSize: 22.5 + .01875
-								* parent.width
-					}
+					font.pointSize: 22.5
+							+ .01875 * parent.width
 				}
 
-				Label {
+				Lbl.Body {
 					text: qsTr("Choose from hundreds of courses from specialist organizations")
 					color: "#747579"
 					horizontalAlignment: Text.AlignHCenter
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
-					font {
-						family: Bootstrap.bodyFont
-								.family
-						weight: Bootstrap.bodyFont
-								.weight
-						pointSize: Bootstrap.bodyFont
-								.pointSize
-					}
 				}
 			}
 
