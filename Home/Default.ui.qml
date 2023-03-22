@@ -195,7 +195,6 @@ Flickable {
 					text: qsTr("Most Popular Courses")
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
-					wrapMode: Text.Wrap
 					Layout.fillWidth: true
 					Layout.bottomMargin: 8
 					font.pointSize: 22.5
