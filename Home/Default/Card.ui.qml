@@ -115,13 +115,12 @@ Item {
 				}
 			}
 
-			Lbl.Hx {
+			Lbl.H5 {
 				id: title
 				text: titleText
 				color: Qt.rgba(.141, .161, .176, 1.0)
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
-				font.pointSize: 20.1 + .00075 * parent.width
 
 				MouseArea {
 					id: titleArea

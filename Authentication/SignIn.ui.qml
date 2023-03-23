@@ -35,13 +35,9 @@ Flickable {
 				ColumnLayout {
 					id: columnLayout
 
-					Lbl.Hx {
+					Lbl.H2 {
 						Layout.fillWidth: true
 						text: titleHeader
-						font.pointSize: 21.75
-								+ .013125
-								* columnLayout
-									.width
 					}
 
 					Lbl.Body {

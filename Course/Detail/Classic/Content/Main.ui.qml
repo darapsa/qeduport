@@ -97,14 +97,11 @@ ColumnLayout {
 					ColumnLayout {
 						id: overview
 
-						Lbl.Hx {
+						Lbl.H5 {
 							text: qsTr("Course Description")
 							color: "#24292d"
 							Layout.fillWidth: true
 							Layout.bottomMargin: 16
-							font.pointSize: 20.1
-								+ .00075
-								* parent.width
 						}
 
 						Lbl.Body {

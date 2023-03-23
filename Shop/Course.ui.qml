@@ -54,7 +54,7 @@ ColumnLayout {
 	       ColumnLayout {
 			Layout.topMargin: 16
 
-			Lbl.Hx {
+			Lbl.H6 {
 				Layout.fillWidth: true
 				text: titleText
 			}

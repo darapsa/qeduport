@@ -76,11 +76,8 @@ Flickable {
 							right: parent.right
 						}
 
-						Lbl.Hx {
+						Lbl.H5 {
 							text: qsTr("Personal Details")
-							font.pointSize: 20.1
-								+ .00075
-								* parent.width
 							Layout.fillWidth: true
 							Layout.rightMargin: 16
 							Layout.leftMargin: 16
@@ -273,9 +270,8 @@ Flickable {
 
 						ColumnLayout {
 
-							Lbl.Hx {
+							Lbl.H5 {
 								text: qsTr("Payment method")
-								font.pointSize: 20.1 + .00075 * parent.width
 								Layout.fillWidth: true
 								Layout.margins: 16
 							}
@@ -406,11 +402,9 @@ Flickable {
 							left: parent.left
 							right: parent.right
 						}
-						Lbl.Hx {
+
+						Lbl.H4 {
 							text: qsTr("Order Summary")
-							font.pointSize: 20.625
-								+ .0046875
-								* parent.width
 							Layout.fillWidth: true
 							Layout.rightMargin: 16
 							Layout.leftMargin: 16
@@ -541,7 +535,7 @@ Flickable {
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
-								Lbl.Hx {
+								Lbl.H6 {
 									id: priceValue
 									text: "$500"
 									anchors {
@@ -582,17 +576,15 @@ Flickable {
 								implicitHeight: totalLabel.implicitHeight
 												+ totalValue.implicitHeight
 
-								Lbl.Hx {
+								Lbl.H5 {
 									id: totalLabel
 									text: qsTr("Total")
-									font.pointSize: 20.1 + .00075 * parent.width
 									anchors.verticalCenter: parent.verticalCenter
 								}
 
-								Lbl.Hx {
+								Lbl.H5 {
 									id: totalValue
 									text: "$480"
-									font.pointSize: 20.1 + .00075 * parent.width
 									anchors {
 										right: parent.right
 										verticalCenter: parent.verticalCenter

@@ -42,13 +42,11 @@ Flickable {
 				Layout.maximumWidth: body.width < 992
 					? body.width : body.width / 2
 
-				Lbl.Hx {
+				Lbl.Display6 {
 					text: bannerTitleText
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
-					font.pointSize: 23.6
-							+ .027 * parent.width
 				}
 
 				Lbl.Body {
@@ -191,14 +189,12 @@ Flickable {
 			ColumnLayout {
 				Layout.bottomMargin: 25.6
 
-				Lbl.Hx {
+				Lbl.H1 {
 					text: qsTr("Most Popular Courses")
 					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 					Layout.bottomMargin: 8
-					font.pointSize: 22.5
-							+ .01875 * parent.width
 				}
 
 				Lbl.Body {

@@ -103,13 +103,8 @@ ColumnLayout {
 
 						RowLayout {
 
-							Lbl.Hx {
+							Lbl.H3 {
 								text: priceText
-								font.pointSize
-									: 21
-									+ .0075
-									* parent
-									.width
 							}
 
 							Lbl.Body {

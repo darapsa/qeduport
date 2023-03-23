@@ -42,7 +42,7 @@ Flickable {
 					implicitHeight: introBadge.height
 					radius: 5.2
 					color: Qt.rgba( .0235, .416, .788, 1.0)
-					Lbl.Hx {
+					Lbl.H6 {
 						id: introBadge
 						text: qsTr("Digital Marketing")
 						color: "white"
@@ -59,13 +59,11 @@ Flickable {
 					}
 				}
 
-				Lbl.Hx {
+				Lbl.H1 {
 					id: introTitleHeader
 					text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
 					color: "#24292d"
 					Layout.fillWidth: true
-					font.pointSize: 22.5
-							+ .01875 * parent.width
 				}
 
 				Lbl.Body {

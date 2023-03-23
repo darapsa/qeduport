@@ -38,10 +38,8 @@ Item {
 					leftMargin: 25.6
 				}
 
-				Lbl.Hx {
+				Lbl.H5 {
 					text: count
-					font.pointSize: 20.1
-							+ .00075 * parent.width
 					Layout.fillWidth: true
 				}
 
