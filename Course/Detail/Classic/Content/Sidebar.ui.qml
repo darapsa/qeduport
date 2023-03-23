@@ -3,7 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import QtMultimedia 5.15
-import Bootstrap 5.3
+import Eduport 1.4
 import "../../../../Label" as Lbl
 import "../../../../Button" as Btn
 
@@ -133,9 +133,9 @@ ColumnLayout {
 									text: qsTr("60% off")
 									color: "white"
 									font {
-										family: Bootstrap.bodyFont.family
-										weight: Bootstrap.bodyFont.weight
-										pointSize: Bootstrap.badgeFontSize
+										family: Eduport.bodyFont.family
+										weight: Eduport.bodyFont.weight
+										pointSize: Eduport.bsBadgeFontSize
 									}
 									horizontalAlignment: Text.AlignHCenter
 									verticalAlignment: Text.AlignVCenter
@@ -168,7 +168,7 @@ ColumnLayout {
 						horizontalPadding: 16
 						verticalPadding: 8
 						text: qsTr("Free trial")
-						font: Bootstrap.btnFont
+						font: Eduport.bsBtnFont
 						contentItem: Text {
 							horizontalAlignment
 								: Text

@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import Bootstrap 5.3
 import Eduport 1.4
 import "../TextField" as TxtFld
 import "../Label" as Lbl
@@ -57,9 +56,9 @@ Flickable {
 						id: login
 						text: "<a href=\"sign-in.html\">" + qsTr("Log in") + "</a>"
 						font {
-							family: Bootstrap.bodyFont.family
-							weight: Bootstrap.bodyFont.weight
-							pointSize: Bootstrap.bodyFont.pointSize
+							family: Eduport.bodyFont.family
+							weight: Eduport.bodyFont.weight
+							pointSize: Eduport.bodyFont.pointSize
 							underline: false
 						}
 					}
@@ -360,9 +359,9 @@ Flickable {
 													contentItem: Text {
 														text: label
 														font {
-															family: Bootstrap.bodyFont.family
-															weight: Bootstrap.bodyFont.weight
-															pointSize: Bootstrap.bodyFont.pointSize
+															family: Eduport.bodyFont.family
+															weight: Eduport.bodyFont.weight
+															pointSize: Eduport.bodyFont.pointSize
 														}
 													}
 												}
@@ -599,24 +598,24 @@ Flickable {
 							text: qsTr("Place Order")
 							implicitHeight: 36
 							font {
-								family: Bootstrap.btnFont.family
-								weight: Bootstrap.btnFont.weight
-								pointSize: Bootstrap.btnLgFontSize
+								family: Eduport.bsBtnFont.family
+								weight: Eduport.bsBtnFont.weight
+								pointSize: Eduport.bsBtnLgFontSize
 							}
 							background: Rectangle {
-								color: placeOrder.down ? Bootstrap.btnSuccessActiveBG
+								color: placeOrder.down ? Eduport.bsBtnSuccessActiveBG
 									: placeOrder.enabled
-									? Bootstrap.btnSuccessBg
-									: Bootstrap.btnSuccessDisabledBg
+									? Eduport.bsBtnSuccessBg
+									: Eduport.bsBtnSuccessDisabledBg
 								border {
-									width: Bootstrap.btnBorderWidth
+									width: Eduport.bsBtnBorderWidth
 									color: placeOrder.down
-										? Bootstrap.btnSuccessActiveBorderColor
+										? Eduport.bsBtnSuccessActiveBorderColor
 										: placeOrder.enabled
-										? Bootstrap.btnSuccessBorderColor
-										: Bootstrap.btnSuccessDisabledBorderColor
+										? Eduport.bsBtnSuccessBorderColor
+										: Eduport.bsBtnSuccessDisabledBorderColor
 								}
-								radius: Bootstrap.btnLgBorderRadius
+								radius: Eduport.bsBtnLgBorderRadius
 							}
 						}
 					}
@@ -657,7 +656,7 @@ Flickable {
 						Button {
 							id: premiumButton 
 							text: qsTr("Purchase Premium")
-							font: Bootstrap.btnFont
+							font: Eduport.bsBtnFont
 							Layout.margins: 16
 							implicitHeight: 36
 							contentItem: Text {

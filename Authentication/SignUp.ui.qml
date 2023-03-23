@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import Bootstrap 5.3
 import Eduport 1.4
 import "../Label" as Lbl
 import "../TextField" as TxtFld
@@ -159,11 +158,11 @@ Flickable {
 						id: agreementCheckBox
 						text: "By signing up, you agree to the <a href=\"#\">terms of service</a>"
 						font {
-							family: Bootstrap
+							family: Eduport
 								.bodyFont.family
-							weight: Bootstrap
+							weight: Eduport
 								.bodyFont.weight
-							pointSize: Bootstrap
+							pointSize: Eduport
 								.bodyFont
 								.pointSize
 						}
@@ -197,11 +196,11 @@ Flickable {
 					id: signIn
 					text: "<a href=\"sign-in.html\">Sign in here</a>"
 					font {
-						family: Bootstrap.bodyFont
+						family: Eduport.bodyFont
 									.family
-						weight: Bootstrap.bodyFont
+						weight: Eduport.bodyFont
 									.weight
-						pointSize: Bootstrap.bodyFont
+						pointSize: Eduport.bodyFont
 								.pointSize
 						underline: false
 					}

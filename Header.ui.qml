@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import Bootstrap 5.3
+import Eduport 1.4
 
 ToolBar {
 	property alias logo: logo
@@ -58,7 +58,7 @@ ToolBar {
 					text: qsTr("Sign Out")
 				}
 				delegate: MenuItem {
-					font: Bootstrap.btnFont
+					font: Eduport.bsBtnFont
 				}
 			}
 		}

@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-import Bootstrap 5.3
 import Eduport 1.4
 import ".."
 import "../Label" as Lbl
@@ -67,7 +66,7 @@ Flickable {
 					horizontalPadding: 24
 					verticalPadding: 12.8
 					text: qsTr("Get Started")
-					font: Bootstrap.btnFont
+					font: Eduport.bsBtnFont
 					contentItem: Text {
 						horizontalAlignment: Text
 							.AlignHCenter

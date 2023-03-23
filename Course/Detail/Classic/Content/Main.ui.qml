@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-import Bootstrap 5.3
 import "../../../../Label" as Lbl
 import "../../../../Button/NavLink" as NavLink
 import "Main/TabContents" as MainTabContents

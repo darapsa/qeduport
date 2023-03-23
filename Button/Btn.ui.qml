@@ -1,25 +1,25 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import Bootstrap 5.3
+import Eduport 1.4
 
 Button {
 	id: button
-	horizontalPadding: Bootstrap.btnPaddingX
-	verticalPadding: Bootstrap.btnPaddingY
-	font: Bootstrap.btnFont
+	horizontalPadding: Eduport.bsBtnPaddingX
+	verticalPadding: Eduport.bsBtnPaddingY
+	font: Eduport.bsBtnFont
 	contentItem: Text {
 		text: button.text
 		font: button.font
-		color: Bootstrap.btnColor
+		color: Eduport.bsBtnColor
 		horizontalAlignment: Text.AlignHCenter
 		verticalAlignment: Text.AlignVCenter
 	}
 	background: Rectangle {
-		color: Bootstrap.btnBg
+		color: Eduport.bsBtnBg
 		border {
-			width: Bootstrap.btnBorderWidth
-			color: Bootstrap.btnBorderColor
+			width: Eduport.bsBtnBorderWidth
+			color: Eduport.bsBtnBorderColor
 		}
-		radius: Bootstrap.btnBorderRadius
+		radius: Eduport.bsBtnBorderRadius
 	}
 }

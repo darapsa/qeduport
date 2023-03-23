@@ -2,7 +2,6 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-import Bootstrap 5.3
 import Eduport 1.4
 import "../../Label" as Lbl
 
@@ -93,7 +92,7 @@ Item {
 					bottomPadding: 4.463
 					text: badgeText
 					color: badgeColor
-					font.pointSize: Bootstrap.badgeFontSize
+					font.pointSize: Eduport.bsBadgeFontSize
 					background: Rectangle {
 						color: badgeBackgroundColor
 						radius: 6

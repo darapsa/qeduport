@@ -1,22 +1,22 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import Bootstrap 5.3
+import Eduport 1.4
 
 Btn {
 	id: button
 	background: Rectangle {
-		color: button.down ? Bootstrap.btnPrimaryActiveBG
+		color: button.down ? Eduport.bsBtnPrimaryActiveBG
 			: button.enabled
-			? Bootstrap.btnPrimaryBg
-			: Bootstrap.btnPrimaryDisabledBg
+			? Eduport.bsBtnPrimaryBg
+			: Eduport.bsBtnPrimaryDisabledBg
 		border {
-			width: Bootstrap.btnBorderWidth
+			width: Eduport.bsBtnBorderWidth
 			color: button.down
-				? Bootstrap.btnPrimaryActiveBorderColor
+				? Eduport.bsBtnPrimaryActiveBorderColor
 				: button.enabled
-				? Bootstrap.btnPrimaryBorderColor
-				: Bootstrap.btnPrimaryDisabledBorderColor
+				? Eduport.bsBtnPrimaryBorderColor
+				: Eduport.bsBtnPrimaryDisabledBorderColor
 		}
-		radius: Bootstrap.btnBorderRadius
+		radius: Eduport.bsBtnBorderRadius
 	}
 }

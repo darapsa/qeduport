@@ -1,7 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import Bootstrap 5.3
 import Eduport 1.4
 import "../Label" as Lbl
 import "../TextField" as TxtFld
@@ -127,11 +126,11 @@ Flickable {
 						id: rememberCheckBox
 						text: qsTr("Remember me")
 						font {
-							family: Bootstrap
+							family: Eduport
 								.bodyFont.family
-							weight: Bootstrap
+							weight: Eduport
 								.bodyFont.weight
-							pointSize: Bootstrap
+							pointSize: Eduport
 								.bodyFont
 								.pointSize
 						}
@@ -148,11 +147,11 @@ Flickable {
 						id: forgotPassword
 						text: "<a href=\"#\">Forgot password?</a>"
 						font {
-							family: Bootstrap
+							family: Eduport
 								.bodyFont.family
-							weight: Bootstrap
+							weight: Eduport
 								.bodyFont.weight
-							pointSize: Bootstrap
+							pointSize: Eduport
 								.bodyFont
 								.pointSize
 						}
@@ -181,11 +180,11 @@ Flickable {
 					id: signUp
 					text: "<a href=\"sign-up.html\">Signup here</a>"
 					font {
-						family: Bootstrap.bodyFont
+						family: Eduport.bodyFont
 									.family
-						weight: Bootstrap.bodyFont
+						weight: Eduport.bodyFont
 									.weight
-						pointSize: Bootstrap.bodyFont
+						pointSize: Eduport.bodyFont
 								.pointSize
 						underline: false
 					}
