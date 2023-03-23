@@ -327,13 +327,11 @@ Flickable {
 											Layout.margins: 16
 											Lbl.Body {
 												text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
 											Lbl.Body {
 												text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-												wrapMode: Text.Wrap
 												Layout.fillWidth: true
 											}
 
@@ -631,11 +629,8 @@ Flickable {
 						}
 						Layout.margins: 16
 
-						Label {
+						Lbl.H5 {
 							text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
-							wrapMode: Text.Wrap
-							font.pointSize: 22
-							font.family: "roboto"
 							color: "#ffffff"
 							Layout.fillWidth: true
 							Layout.rightMargin: 16
@@ -643,30 +638,25 @@ Flickable {
 							Layout.topMargin: 16
 						}
 
-						Label {
+						Lbl.Body {
 							text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
-							font.pointSize: 16
-							font.family: "roboto"
 							color: "#ffffff"
-							wrapMode: Text.Wrap
 							Layout.fillWidth: true
 							Layout.margins: 16
 						}
 
 						Button {
+							id: premiumButton 
 							text: qsTr("Purchase Premium")
-							font.pointSize: 14
+							font: Bootstrap.btnFont
 							Layout.margins: 16
-							font.family: "roboto"
 							implicitHeight: 36
 							contentItem: Text {
 								color: "#000000"
-								text: "Purchase premium"
+								text: premiumButton.text
+								font: premiumButton.font
 								horizontalAlignment: Text.AlignHCenter
 								verticalAlignment: Text.AlignVCenter
-								font.weight: Font.Medium
-								font.family: "Roboto"
-								font.pointSize: 14
 							}
 							background: Rectangle {
 								color: "#f7c32e"
