@@ -6,8 +6,11 @@ QtObject {
 
 	readonly property color btnColor: "#ffffff"
 	readonly property color btnBg: "#066ac9"
+	readonly property color btnBorderColor: "#066ac9"
 	readonly property color btnActiveBg: "#0555a1"
+	readonly property color btnActiveBorderColor: "#055097"
 	readonly property color btnDisabledBg: "#a6066ac9"
+	readonly property color btnDisabledBorderColor: "#a6066ac9"
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
 					|| Qt.platform.os === "linux"

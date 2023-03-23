@@ -4,6 +4,8 @@ import Bootstrap 5.3
 
 Button {
 	id: button
+	horizontalPadding: 16
+	verticalPadding: 8
 	font: Bootstrap.btnFont
 	contentItem: Text {
 		text: button.text
@@ -15,6 +17,12 @@ Button {
 	background: Rectangle {
 		color: button.down ? Bootstrap.btnActiveBG : button.enabled
 			? Bootstrap.btnBg : Bootstrap.btnDisabledBg
-		radius: 8
+		border {
+			color: button.down ? Bootstrap.btnActiveBorderColor
+				: button.enabled ? Bootstrap.btnBorderColor
+				: Bootstrap.btnDisabledBorderColor
+			width: 1
+		}
+		radius: 5.2
 	}
 }
