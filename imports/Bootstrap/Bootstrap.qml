@@ -4,13 +4,30 @@ import QtQuick 2.15
 QtObject {
 	readonly property real badgeFontSize: 13.6
 
+	readonly property real btnPaddingX: 16
+	readonly property real btnPaddingY: 8
+	readonly property font btnFont: Qt.font({
+		family: haveRoboto ? "Roboto" : medium.name,
+		weight: Font.Medium,
+		pointSize: 15
+	})
 	readonly property color btnColor: "#ffffff"
-	readonly property color btnBg: "#066ac9"
-	readonly property color btnBorderColor: "#066ac9"
-	readonly property color btnActiveBg: "#0555a1"
-	readonly property color btnActiveBorderColor: "#055097"
-	readonly property color btnDisabledBg: "#a6066ac9"
-	readonly property color btnDisabledBorderColor: "#a6066ac9"
+	readonly property color btnBg: "transparent"
+	readonly property real btnBorderWidth: 1
+	readonly property color btnBorderColor: "transparent"
+	readonly property real btnBorderRadius: 5.2
+	readonly property color btnPrimaryBg: "#066ac9"
+	readonly property color btnPrimaryBorderColor: "#066ac9"
+	readonly property color btnPrimaryActiveBg: "#0555a1"
+	readonly property color btnPrimaryActiveBorderColor: "#055097"
+	readonly property color btnPrimaryDisabledBg: "#a6066ac9"
+	readonly property color btnPrimaryDisabledBorderColor: "#a6066ac9"
+
+	readonly property font bodyFont: Qt.font({
+		family: haveRoboto ? "Roboto" : regular.name,
+		weight: Font.Normal,
+		pointSize: 15
+	})
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
 					|| Qt.platform.os === "linux"
@@ -23,14 +40,4 @@ QtObject {
 	readonly property FontLoader regular: FontLoader {
 		source: haveRoboto ? "" : "../../Roboto/Roboto-Regular.ttf"
 	}
-	readonly property font bodyFont: Qt.font({
-		family: haveRoboto ? "Roboto" : regular.name,
-		weight: Font.Normal,
-		pointSize: 15
-	})
-	readonly property font btnFont: Qt.font({
-		family: haveRoboto ? "Roboto" : medium.name,
-		weight: Font.Medium,
-		pointSize: 15
-	})
 }

@@ -16,6 +16,7 @@
 		<file>Label/H1.ui.qml</file>
 		<file>Label/Display6.ui.qml</file>
 		<file>TextField/Input.ui.qml</file>
+		<file>Button/Btn.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
 	</qresource>
 </RCC>
