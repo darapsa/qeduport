@@ -19,5 +19,7 @@
 		<file>Button/Btn.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
 		<file>Button/Success.ui.qml</file>
+		<file>Header.ui.qml</file>
+		<file>TabItem.ui.qml</file>
 	</qresource>
 </RCC>
