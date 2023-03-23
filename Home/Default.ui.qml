@@ -6,6 +6,7 @@ import Bootstrap 5.3
 import Eduport 1.4
 import ".."
 import "../Label" as Lbl
+import "../Button" as Btn
 import "Default" as Default
 
 Flickable {
@@ -234,7 +235,7 @@ Flickable {
 					model: ["Web Design", "Development",
 						"Graphic Design", "Marketing",
 						"Finance"]
-					delegate: TabItem {}
+					delegate: Btn.NavLink {}
 				}
 			}
 

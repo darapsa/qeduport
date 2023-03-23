@@ -2,6 +2,7 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
+	readonly property color primary: "#066ac9"
 	readonly property real badgeFontSize: 13.6
 
 	readonly property real btnPaddingX: 16
@@ -18,20 +19,22 @@ QtObject {
 	readonly property real btnBorderRadius: 5.2
 	readonly property real btnLgFontSize: 16
 	readonly property real btnLgBorderRadius: 8
-	readonly property color btnPrimaryBg: "#066ac9"
-	readonly property color btnPrimaryBorderColor: btnPrimaryBg
+	readonly property color btnPrimaryBg: primary
+	readonly property color btnPrimaryBorderColor: primary
 	readonly property color btnPrimaryActiveBg: "#0555a1"
 	readonly property color btnPrimaryActiveBorderColor: "#055097"
 	readonly property color btnPrimaryDisabledBg: "#a6066ac9"
-	readonly property color btnPrimaryDisabledBorderColor
-							: btnPrimaryDisabledBg
+	readonly property color btnPrimaryDisabledBorderColor: btnPrimaryDisabledBg
 	readonly property color btnSuccessBg: "#0cbc87"
 	readonly property color btnSuccessBorderColor: btnSuccessBg
 	readonly property color btnSuccessActiveBg: "#0a966c"
 	readonly property color btnSuccessActiveBorderColor: "#098d65"
 	readonly property color btnSuccessDisabledBg: "#a60cbc87"
-	readonly property color btnSuccessDisabledBorderColor
-							: btnSuccessDisabledBg
+	readonly property color btnSuccessDisabledBorderColor: btnSuccessDisabledBg
+
+	readonly property real navPillsBorderRadius: btnBorderRadius
+	readonly property color navPillsLinkActiveColor: btnColor
+	readonly property color navPillsLinkActiveBg: primary
 
 	readonly property font bodyFont: Qt.font({
 		family: haveRoboto ? "Roboto" : regular.name,

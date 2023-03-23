@@ -3,8 +3,8 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Bootstrap 5.3
-import "../../../.."
 import "../../../../Label" as Lbl
+import "../../../../Button/NavLink" as NavLink
 import "Main/TabContents" as MainTabContents
 
 ColumnLayout {
@@ -58,21 +58,7 @@ ColumnLayout {
 					model: ["Overview", "Curriculum",
 						"Instructor", "Reviews", "FAQs",
 						"Comment"]
-					delegate: TabItem {
-						contentItem: Text {
-							text: modelData
-							color: "#066ac9"
-							font {
-								family: Bootstrap.bodyFont.family
-								weight: Bootstrap.bodyFont.weight
-								pointSize: Bootstrap.bodyFont.pointSize
-							}
-						}
-						background: Rectangle {
-							color: index == currentIndex ? "#1a0fffff" : "transparent"
-							radius: 5.2
-						}
-					}
+					delegate: NavLink.TabsLine {}
 				}
 
 				StackLayout {
