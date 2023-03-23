@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import "../../../../../../Label" as Lbl
 import "Instructor"
 
 ColumnLayout {
@@ -30,22 +31,14 @@ ColumnLayout {
 			Layout.bottomMargin: 16
 			spacing: 0
 
-			Label {
+			Lbl.H3 {
 				text: qsTr("Louis Ferguson")
-				font {
-					family: heebo.name
-					pointSize: 21
-						+ .0075 * parent.parent.width
-				}
 			}
 
-			Label {
+			Lbl.Body {
 				Layout.bottomMargin: 8
 				color: "#66000000"
 				text: qsTr("Instructor of Marketing")
-				font.styleName: "Regular"
-				font.pointSize: 15
-				font.family: "roboto"
 			}
 /*
 			GridLayout {
@@ -67,23 +60,15 @@ ColumnLayout {
 		}
 	}
 
-	Label {
+	Lbl.H5 {
 		Layout.bottomMargin: 16
 		text: qsTr("About Instructor")
-		font {
-			family: heebo.name
-			pointSize: 20.1 + .0075 * parent.width
-		}
 	}
 
-	Label {
+	Lbl.Body {
 		Layout.fillWidth: true
 		Layout.bottomMargin: 16
 		color: "#66000000"
 		text: qsTr("Fulfilled direction use continual set him propriety continued. Saw met applauded favorite deficient engrossed concealed and her. Concluded boy perpetual old supposing. Farther related bed and passage comfort civilly. Dashboard see frankness objection abilities. As hastened oh produced prospect formerly up am. Placing forming nay looking old married few has. Margaret disposed of add screened rendered six say his striking confined. As it so contrasted oh estimating instrument. Size like body someone had. Are conduct viewing boy minutes warrant the expense? Tolerably behavior may admit daughters offending her ask own. Praise effect wishes change way and any wanted.")
-		wrapMode: Text.Wrap
-		font.styleName: "Regular"
-		font.pointSize: 14
-		font.family: "roboto"
 	}
 }
