@@ -10,12 +10,12 @@ Btn {
 			? Bootstrap.btnPrimaryBg
 			: Bootstrap.btnPrimaryDisabledBg
 		border {
+			width: Bootstrap.btnBorderWidth
 			color: button.down
 				? Bootstrap.btnPrimaryActiveBorderColor
 				: button.enabled
 				? Bootstrap.btnPrimaryBorderColor
 				: Bootstrap.btnPrimaryDisabledBorderColor
-			width: Bootstrap.btnBorderWidth
 		}
 		radius: Bootstrap.btnBorderRadius
 	}
