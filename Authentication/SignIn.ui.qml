@@ -5,7 +5,7 @@ import Bootstrap 5.3
 import Eduport 1.4
 import "../Label" as Lbl
 import "../TextField" as TxtFld
-import "../Button" as BsBtn
+import "../Button" as Btn
 
 Flickable {
 	property string titleHeader: qsTr("Login into Eduport!")
@@ -162,7 +162,7 @@ Flickable {
 					}
 				}
 
-				BsBtn.Primary {
+				Btn.Primary {
 					id: button
 					text: qsTr("Login")
 					implicitHeight: 40

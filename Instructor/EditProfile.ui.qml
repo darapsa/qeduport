@@ -5,7 +5,7 @@ import QtGraphicalEffects 1.15
 import Bootstrap 5.3
 import "../Label" as Lbl
 import "../TextField" as TxtFld
-import "../Button" as BsBtn
+import "../Button" as Btn
 
 Flickable {
 	property alias firstName: firstName
@@ -353,7 +353,7 @@ Flickable {
 								}
 							}
 
-							BsBtn.Primary {
+							Btn.Primary {
 								id: saveButton
 								Layout.topMargin: 25.6
 								Layout.leftMargin: 12.8
