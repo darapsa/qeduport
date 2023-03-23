@@ -2,6 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
+import "../Label" as Lbl
+import "../TextField" as TxtFld
 
 Flickable {
 	property alias firstName: firstName
@@ -11,27 +14,7 @@ Flickable {
 	property alias phoneNumber: phoneNumber
 	property alias location: location
 	property alias saveButton: saveButton
-	property bool doesntEmbed: Qt.platform.os === "android"
-				|| Qt.platform.os === "linux"
-				|| Qt.platform.os === "osx"
-				|| Qt.platform.os === "unix"
-				|| Qt.platform.os === "windows"
 	contentHeight: main.height
-
-	FontLoader {
-		id: bold
-		source: doesntEmbed ? "" : "Roboto/Roboto-Bold.ttf"
-	}
-
-	FontLoader {
-		id: medium
-		source: doesntEmbed ? "" : "Roboto/Roboto-Medium.ttf"
-	}
-
-	FontLoader {
-		id: regular
-		source: doesntEmbed ? "" : "Roboto/Roboto-Regular.ttf"
-	}
 
 	ColumnLayout {
 		id: main
@@ -63,16 +46,11 @@ Flickable {
 							right: parent.right
 						}
 
-						Label {
+						Lbl.H3 {
 							id: cardHeader
 							Layout.fillWidth: true
 							text: qsTr("Edit Profile")
 							padding: 16
-							font {
-								family: doesntEmbed ? "Roboto" : bold.name
-								weight: Font.Bold
-								pointSize: 23
-							}
 						}
 
 						Rectangle {
@@ -95,15 +73,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Profile picture")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								RowLayout {
@@ -130,16 +104,14 @@ Flickable {
 										id: uploadButton
 										horizontalPadding: 16
 										verticalPadding: 8
+										text: qsTr("Change")
+										font: Bootstrap.btnFont
 										contentItem: Text {
 											color: uploadButton.down ? "#ffffff" : "#066ac9"
-											text: qsTr("Change")
+											text: uploadButton.text
+											font: uploadButton.font
 											horizontalAlignment: Text.AlignHCenter
 											verticalAlignment: Text.AlignVCenter
-											font {
-												family: doesntEmbed ? "Roboto" : medium.name
-												weight: Font.Medium
-												pointSize: 15
-											}
 										}
 										background: Rectangle {
 											radius: 5.2
@@ -158,15 +130,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Full name")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								Rectangle {
@@ -178,7 +146,7 @@ Flickable {
 										color: "#dde0e3"
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: firstName
 										text: "Lori"
 										placeholderText: qsTr("First name")
@@ -188,13 +156,6 @@ Flickable {
 										leftPadding: 16
 										rightPadding: 16
 										bottomPadding: 8
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 
 									Rectangle {
@@ -207,7 +168,7 @@ Flickable {
 										}
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: lastName
 										text: "Stevens"
 										placeholderText: qsTr("Last name")
@@ -217,13 +178,6 @@ Flickable {
 										leftPadding: 16
 										rightPadding: 16
 										bottomPadding: 8
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 								}
 							}
@@ -233,15 +187,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Username")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								Rectangle {
@@ -253,7 +203,7 @@ Flickable {
 										color: "#dde0e3"
 									}
 
-									Label {
+									Lbl.Body {
 										id: domainName
 										text: "Eduport.com"
 										height: userName.height
@@ -267,10 +217,6 @@ Flickable {
 										background: Rectangle {
 											color: "#e9ecef"
 										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 
 									Rectangle {
@@ -283,7 +229,7 @@ Flickable {
 										}
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: userName
 										text: "loristev"
 										width: parent.width / 2
@@ -292,13 +238,6 @@ Flickable {
 										leftPadding: 16
 										rightPadding: 16
 										bottomPadding: 8
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 								}
 							}
@@ -308,15 +247,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Email id")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								Rectangle {
@@ -328,7 +263,7 @@ Flickable {
 										color: "#dde0e3"
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: emailID
 										text: "example@gmail.com"
 										placeholderText: qsTr("Email")
@@ -340,13 +275,6 @@ Flickable {
 											left: parent.left
 											right: parent.right
 										}
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 								}
 							}
@@ -356,15 +284,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Phone number")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								Rectangle {
@@ -376,7 +300,7 @@ Flickable {
 										color: "#dde0e3"
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: phoneNumber
 										text: "1234567890"
 										placeholderText: qsTr("Phone number")
@@ -388,13 +312,6 @@ Flickable {
 											left: parent.left
 											right: parent.right
 										}
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
-										}
 									}
 								}
 							}
@@ -404,15 +321,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Label {
+								Lbl.Body {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Location")
 									color: "#747579"
-									font {
-										family: doesntEmbed ? "Roboto" : regular.name
-										pointSize: 15
-									}
 								}
 
 								Rectangle {
@@ -424,7 +337,7 @@ Flickable {
 										color: "#dde0e3"
 									}
 
-									TextField {
+									TxtFld.Input {
 										id: location
 										text: "California"
 										topPadding: 8
@@ -434,13 +347,6 @@ Flickable {
 										anchors {
 											left: parent.left
 											right: parent.right
-										}
-										background: Rectangle {
-											color: "transparent"
-										}
-										font {
-											family: doesntEmbed ? "Roboto" : regular.name
-											pointSize: 15
 										}
 									}
 								}
@@ -453,16 +359,14 @@ Flickable {
 								Layout.rightMargin: 12.8
 								horizontalPadding: 16
 								verticalPadding: 8
+								text: qsTr("Save changes")
+								font: Bootstrap.btnFont
 								contentItem: Text {
 									color: "white"
-									text: qsTr("Save changes")
+									text: saveButton.text
+									font: saveButton.font
 									horizontalAlignment: Text.AlignHCenter
 									verticalAlignment: Text.AlignVCenter
-									font {
-										family: doesntEmbed ? "Roboto" : medium.name
-										weight: Font.Medium
-										pointSize: 15
-									}
 								}
 								background: Rectangle {
 									radius: 5.2
