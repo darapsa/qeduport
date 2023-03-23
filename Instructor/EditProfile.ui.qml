@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.15
 import Bootstrap 5.3
 import "../Label" as Lbl
 import "../TextField" as TxtFld
+import "../Button" as BsBtn
 
 Flickable {
 	property alias firstName: firstName
@@ -352,31 +353,12 @@ Flickable {
 								}
 							}
 
-							Button {
+							BsBtn.Primary {
 								id: saveButton
 								Layout.topMargin: 25.6
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
-								horizontalPadding: 16
-								verticalPadding: 8
 								text: qsTr("Save changes")
-								font: Bootstrap.btnFont
-								contentItem: Text {
-									color: "white"
-									text: saveButton.text
-									font: saveButton.font
-									horizontalAlignment: Text.AlignHCenter
-									verticalAlignment: Text.AlignVCenter
-								}
-								background: Rectangle {
-									radius: 5.2
-									color: saveButton.down ? "#0555a1" : saveButton.enabled ? "#066ac9" : "#a6066ac9"
-									border {
-										color: saveButton.down ? "#055097" : saveButton.enabled ? "#066ac9" : "#a6066ac9"
-
-										width: 1
-									}
-								}
 							}
 						}
 					}
