@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import Bootstrap 5.3
 import Eduport 1.4
 import "../Label" as Lbl
+import "../TextField" as TxtFld
 import "../Button" as BsBtn
 
 Flickable {
@@ -74,19 +75,11 @@ Flickable {
 								Layout.margins: 16
 							}
 
-							TextField {
+							TxtFld.Input {
 								id: email
 								placeholderText: qsTr("E-mail")
-								font {
-									family: Bootstrap.bodyFont.family
-									weight: Bootstrap.bodyFont.weight
-									pointSize: Eduport.formControlFontSize
-								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
-								background: Rectangle {
-									color: "transparent"
-								}
 							}
 						}
 					}
@@ -114,20 +107,12 @@ Flickable {
 								Layout.margins: 16
 							}
 
-							TextField {
+							TxtFld.Input {
 								id: password
 								placeholderText: qsTr("password")
 								echoMode: TextInput.Password
-								font {
-									family: Bootstrap.bodyFont.family
-									weight: Bootstrap.bodyFont.weight
-									pointSize: Eduport.formControlFontSize
-								}
 								Layout.fillWidth: true
 								Layout.fillHeight: true
-								background: Rectangle {
-									color: "transparent"
-								}
 							}
 						}
 					}

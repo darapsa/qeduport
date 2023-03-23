@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import Bootstrap 5.3
 import Eduport 1.4
+import "../TextField" as TxtFld
 import "../Label" as Lbl
 
 Flickable {
@@ -110,16 +111,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: name
 											placeholderText: qsTr("Name")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -140,16 +136,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: email
 											placeholderText: qsTr("Email")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -170,16 +161,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: mobile
 											placeholderText: qsTr("Mobile number")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -199,16 +185,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: country
 											placeholderText: qsTr("Select country")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -229,17 +210,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: province
-											placeholderText: qsTr(
-																 "Select state")
-											font.pointSize: 16
-											font.family: "roboto"
+											placeholderText: qsTr("Select state")
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -260,16 +235,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: postal
 											placeholderText: qsTr("PIN code")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -290,16 +260,11 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											id: address
 											placeholderText: qsTr("Address")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}
@@ -490,15 +455,10 @@ Flickable {
 									Layout.fillWidth: true
 									RowLayout {
 										anchors.fill: parent
-										TextField {
+										TxtFld.Input {
 											placeholderText: qsTr("COUPON CODE")
-											font.pointSize: 16
-											font.family: "roboto"
 											Layout.fillWidth: true
 											Layout.fillHeight: true
-											background: Rectangle {
-												color: "transparent"
-											}
 										}
 									}
 								}

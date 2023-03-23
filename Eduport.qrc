@@ -9,6 +9,7 @@
 		<file>imports/Eduport/qmldir</file>
 		<file>Label/Hx.ui.qml</file>
 		<file>Label/Body.ui.qml</file>
+		<file>TextField/Input.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
 	</qresource>
 </RCC>
