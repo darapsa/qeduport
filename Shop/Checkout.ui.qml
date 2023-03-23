@@ -5,6 +5,7 @@ import Bootstrap 5.3
 import Eduport 1.4
 import "../TextField" as TxtFld
 import "../Label" as Lbl
+import "../Button" as Btn
 
 Flickable {
 	property alias alert: alert
@@ -591,23 +592,31 @@ Flickable {
 							}
 						}
 
-						Button {
+						Btn.Success {
 							id: placeOrder
 							Layout.margins: 16
 							Layout.fillWidth: true
 							text: qsTr("Place Order")
-							font: Bootstrap.btnFont
 							implicitHeight: 36
-							contentItem: Text {
-								text: placeOrder.text
-								font: placeOrder.font
-								color: "#ffffff"
-								horizontalAlignment: Text.AlignHCenter
-								verticalAlignment: Text.AlignVCenter
+							font {
+								family: Bootstrap.btnFont.family
+								weight: Bootstrap.btnFont.weight
+								pointSize: Bootstrap.btnLgFontSize
 							}
 							background: Rectangle {
-								color: "#0cbc87"
-								radius: 8
+								color: placeOrder.down ? Bootstrap.btnSuccessActiveBG
+									: placeOrder.enabled
+									? Bootstrap.btnSuccessBg
+									: Bootstrap.btnSuccessDisabledBg
+								border {
+									width: Bootstrap.btnBorderWidth
+									color: placeOrder.down
+										? Bootstrap.btnSuccessActiveBorderColor
+										: placeOrder.enabled
+										? Bootstrap.btnSuccessBorderColor
+										: Bootstrap.btnSuccessDisabledBorderColor
+								}
+								radius: Bootstrap.btnLgBorderRadius
 							}
 						}
 					}

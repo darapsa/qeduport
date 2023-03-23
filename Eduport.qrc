@@ -18,5 +18,6 @@
 		<file>TextField/Input.ui.qml</file>
 		<file>Button/Btn.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
+		<file>Button/Success.ui.qml</file>
 	</qresource>
 </RCC>

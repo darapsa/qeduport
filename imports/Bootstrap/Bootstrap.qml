@@ -16,12 +16,20 @@ QtObject {
 	readonly property real btnBorderWidth: 1
 	readonly property color btnBorderColor: "transparent"
 	readonly property real btnBorderRadius: 5.2
+	readonly property real btnLgFontSize: 16
+	readonly property real btnLgBorderRadius: 5.2
 	readonly property color btnPrimaryBg: "#066ac9"
 	readonly property color btnPrimaryBorderColor: "#066ac9"
 	readonly property color btnPrimaryActiveBg: "#0555a1"
 	readonly property color btnPrimaryActiveBorderColor: "#055097"
 	readonly property color btnPrimaryDisabledBg: "#a6066ac9"
 	readonly property color btnPrimaryDisabledBorderColor: "#a6066ac9"
+	readonly property color btnSuccessBg: "#0cbc87"
+	readonly property color btnSuccessBorderColor: "#0cbc87"
+	readonly property color btnSuccessActiveBg: "#0a966c"
+	readonly property color btnSuccessActiveBorderColor: "#098d65"
+	readonly property color btnSuccessDisabledBg: "#a60cbc87"
+	readonly property color btnSuccessDisabledBorderColor: "#a60cbc87"
 
 	readonly property font bodyFont: Qt.font({
 		family: haveRoboto ? "Roboto" : regular.name,

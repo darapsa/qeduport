@@ -5,6 +5,7 @@ import QtGraphicalEffects 1.15
 import QtMultimedia 5.15
 import Bootstrap 5.3
 import "../../../../Label" as Lbl
+import "../../../../Button" as Btn
 
 ColumnLayout {
 	property alias image: image
@@ -190,32 +191,9 @@ ColumnLayout {
 						}
 					}
 
-					Button {
+					Btn.Success {
 						id: buy
-						horizontalPadding: 16
-						verticalPadding: 8
 						text: qsTr("Buy course")
-						font: Bootstrap.btnFont
-						contentItem: Text {
-							horizontalAlignment
-								: Text
-								.AlignHCenter
-							text: buy.text
-							font: buy.font
-							color: "#ffffff"
-						}
-						background: Rectangle {
-							radius: 5.2
-							color: buy.down
-								? "#0aa073"
-								: "#0cbc87"
-							border {
-								color: buy.down
-								? "#0a966c"
-								: "#0cbc87"
-								width: 1
-							}
-						}
 					}
 				}
 			}
