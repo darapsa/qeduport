@@ -170,9 +170,8 @@ Item {
 					id: duration
 					text: "15h 30m"
 					anchors {
-						top: parent.top
 						left: parent.left
-						bottom: parent.bottom
+						verticalCenter: parent.verticalCenter
 					}
 					font {
 						family: Eduport.fwLightFont
@@ -187,9 +186,8 @@ Item {
 					id: lectures
 					text: "68 lectures"
 					anchors {
-						top: parent.top
 						right: parent.right
-						bottom: parent.bottom
+						verticalCenter: parent.verticalCenter
 					}
 					font {
 						family: Eduport.fwLightFont
