@@ -191,21 +191,55 @@ Item {
 			Item {
 				Layout.fillWidth: true
 
-				Lbl.FwLight {
-					id: duration
-					text: "15h 30m"
+				RowLayout {
 					anchors {
 						left: parent.left
-						verticalCenter: parent.verticalCenter
+						verticalCenter: parent
+								.verticalCenter
+					}
+
+					Image {
+						source: "../../Font-Awesome/svgs/regular/clock.svg"
+						sourceSize {
+							width: 15
+							height: 15
+						}
+						ColorOverlay {
+							anchors.fill: parent
+							source: parent
+							color: "#d6293e"
+						}
+						Layout.rightMargin: 8
+					}
+
+					Lbl.FwLight {
+						text: "15h 30m"
 					}
 				}
 
-				Lbl.FwLight {
-					id: lectures
-					text: "68 lectures"
+				RowLayout {
 					anchors {
 						right: parent.right
-						verticalCenter: parent.verticalCenter
+						verticalCenter: parent
+								.verticalCenter
+					}
+
+					Image {
+						source: "../../Font-Awesome/svgs/solid/table.svg"
+						sourceSize {
+							width: 15
+							height: 15
+						}
+						ColorOverlay {
+							anchors.fill: parent
+							source: parent
+							color: "#fd7e14"
+						}
+						Layout.rightMargin: 8
+					}
+
+					Lbl.FwLight {
+						text: "68 lectures"
 					}
 				}
 			}
