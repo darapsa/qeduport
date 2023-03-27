@@ -141,11 +141,11 @@ Item {
 				Repeater {
 					model: 5
 					Image {
-						source: (index + 1) / rating <= 1.0
-							? "../../Font-Awesome/svgs/solid/star.svg"
-							: (index + 1) / rating < 1.25
+						source: rating == 0.0 || (index + 1.0) / rating >= 1.25
+							? "../../Font-Awesome/svgs/regular/star.svg"
+							: (index + 1.0) / rating > 1.0
 							? "../../Font-Awesome/svgs/solid/star-half-stroke.svg"
-							: "../../Font-Awesome/svgs/regular/star.svg"
+							: "../../Font-Awesome/svgs/solid/star.svg"
 						sourceSize {
 							width: 15
 							height: 13
