@@ -16,6 +16,7 @@ Item {
 	property string badgeText: "All level"
 	property color badgeColor: "#ff6f42c1"
 	property color badgeBackgroundColor: "#1a6f42c1"
+	property alias favorite: favorite
 	property string titleText: "Build Responsive Websites with HTML"
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
@@ -100,12 +101,21 @@ Item {
 					}
 				}
 
-				Image {
+				Button {
 					id: favorite
-					source: "../../Font-Awesome/svgs/solid/heart.svg"
-					sourceSize {
-						width: 15
-						height: 15
+					display: AbstractButton.IconOnly
+					padding: 0
+					width: 15
+					height: 15
+					flat: true
+					checkable: true
+					icon {
+						source: checked
+							? "../../Font-Awesome/svgs/solid/heart.svg"
+							: "../../Font-Awesome/svgs/regular/heart.svg"
+						color: checked
+							? "#d6293e"
+							: "transparent"
 					}
 					anchors {
 						right: parent.right
