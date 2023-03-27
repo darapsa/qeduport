@@ -138,6 +138,7 @@ Item {
 			}
 
 			RowLayout {
+
 				Repeater {
 					model: 5
 					Image {
@@ -156,6 +157,11 @@ Item {
 							color: "#f7c32e"
 						}
 					}
+				}
+
+				Lbl.FwLight {
+					text: rating.toFixed(1) + "/5.0"
+					Layout.leftMargin: 8
 				}
 			}
 		}
