@@ -271,6 +271,7 @@ Flickable {
 									levelBackgroundColor: "#1a6f42c1"
 									title: "Sketch from A to Z: for app designer"
 									truncated: "Proposal indulged no do sociable he throwing settling."
+									rate: 4.0
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/02.jpg"
@@ -279,6 +280,7 @@ Flickable {
 									levelBackgroundColor: "#1a0cbc87"
 									title: "Graphic Design Masterclass"
 									truncated: "Rooms oh fully taken by worse do Points afraid but may end Rooms"
+									rate: 4.5
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/03.jpg"
@@ -287,6 +289,7 @@ Flickable {
 									levelBackgroundColor: "#1a0cbc87"
 									title: "Create a Design System in Figma"
 									truncated: "Rooms oh fully taken by worse do. Points afraid but may end afraid but may end."
+									rate: 4.5
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/07.jpg"
@@ -295,6 +298,7 @@ Flickable {
 									levelBackgroundColor: "#1a0cbc87"
 									title: "Deep Learning with React-Native"
 									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+									rate: 4.0
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/11.jpg"
@@ -303,6 +307,7 @@ Flickable {
 									levelBackgroundColor: "#1a6f42c1"
 									title: "Build Responsive Websites with HTML"
 									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+									rate: 4.0
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/12.jpg"
@@ -311,6 +316,7 @@ Flickable {
 									levelBackgroundColor: "#1a0cbc87"
 									title: "Build Websites with CSS"
 									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+									rate: 4.5
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/04.jpg"
@@ -319,6 +325,7 @@ Flickable {
 									levelBackgroundColor: "#1a6f42c1"
 									title: "Learn Invision"
 									truncated: "Arrived off she elderly beloved him Course regard to up he hardly."
+									rate: 3.5
 								},
 								ListElement {
 									image: "https://eduport.webestica.com/assets/images/courses/4by3/09.jpg"
@@ -327,6 +334,7 @@ Flickable {
 									levelBackgroundColor: "#1a6f42c1"
 									title: "JavaScript: Full Understanding"
 									truncated: "Far advanced settling say finished raillery. Offered chiefly farther"
+									rate: 5.0
 								}
 							]
 						}
@@ -357,6 +365,7 @@ Flickable {
 							: levelBackgroundColor
 							titleText: title
 							truncatedText: truncated
+							rating: rate
 						}
 					}
 				}

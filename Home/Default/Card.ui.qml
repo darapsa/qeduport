@@ -19,6 +19,7 @@ Item {
 	property string titleText: "Build Responsive Websites with HTML"
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
+	property real rating: 4.0
 
 	DropShadow {
 		source: rectangle
@@ -137,7 +138,25 @@ Item {
 			}
 
 			RowLayout {
-				id: listInline
+				Repeater {
+					model: 5
+					Image {
+						source: (index + 1) / rating <= 1.0
+							? "../../Font-Awesome/svgs/solid/star.svg"
+							: (index + 1) / rating < 1.25
+							? "../../Font-Awesome/svgs/solid/star-half-stroke.svg"
+							: "../../Font-Awesome/svgs/regular/star.svg"
+						sourceSize {
+							width: 15
+							height: 13
+						}
+						ColorOverlay {
+							anchors.fill: parent
+							source: parent
+							color: "#f7c32e"
+						}
+					}
+				}
 			}
 		}
 

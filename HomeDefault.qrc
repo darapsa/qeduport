@@ -6,6 +6,11 @@
 		<file>Font-Awesome/svgs/solid/heart.svg</file>
 		<file>Bootstrap/icons/patch-check-fill.svg</file>
 		<file>Home/Default/Counter.ui.qml</file>
+		<file>Font-Awesome/svgs/solid/star.svg</file>
+		<file>Font-Awesome/svgs/solid/star-half-stroke.svg</file>
+		<file>Font-Awesome/svgs/regular/star.svg</file>
+		<file>Font-Awesome/svgs/regular/clock.svg</file>
+		<file>Font-Awesome/svgs/solid/table.svg</file>
 		<file>Home/Default/Card.ui.qml</file>
 		<file>Home/Default.ui.qml</file>
 	</qresource>
