@@ -185,35 +185,21 @@ Item {
 			Item {
 				Layout.fillWidth: true
 
-				Label {
+				Lbl.FwLight {
 					id: duration
 					text: "15h 30m"
 					anchors {
 						left: parent.left
 						verticalCenter: parent.verticalCenter
 					}
-					font {
-						family: Eduport.fwLightFont
-									.family
-						weight: Eduport.fwLightFont
-									.weight
-						pointSize: Eduport.h6FontSize
-					}
 				}
 
-				Label {
+				Lbl.FwLight {
 					id: lectures
 					text: "68 lectures"
 					anchors {
 						right: parent.right
 						verticalCenter: parent.verticalCenter
-					}
-					font {
-						family: Eduport.fwLightFont
-									.family
-						weight: Eduport.fwLightFont
-									.weight
-						pointSize: Eduport.h6FontSize
 					}
 				}
 			}

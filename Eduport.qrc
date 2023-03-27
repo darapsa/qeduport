@@ -6,6 +6,7 @@
 		<file>imports/Eduport/Eduport.qml</file>
 		<file>imports/Eduport/qmldir</file>
 		<file>Label/Body.ui.qml</file>
+		<file>Label/FwLight.ui.qml</file>
 		<file>Label/H6.ui.qml</file>
 		<file>Label/H5.ui.qml</file>
 		<file>Label/H4.ui.qml</file>
