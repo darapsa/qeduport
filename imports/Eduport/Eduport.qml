@@ -2,13 +2,19 @@ pragma Singleton
 import QtQuick 2.15
 
 QtObject {
+	enum Mode {
+		Light = 0,
+		Dark
+	}
+	property int mode: Eduport.Mode.Light
+
 	readonly property real leadFontSize: 18.75
 	readonly property real formControlFontSize: 16
 	readonly property real h6FontSize: 15
 	readonly property real formTextFontSize: 14
 
 	readonly property real navPillsBorderRadius: bsBtnBorderRadius
-	readonly property color navPillsLinkActiveColor: bsBtnColor
+	readonly property color navPillsLinkActiveColor: "#ffffff"
 	readonly property color navPillsLinkActiveBg: bsPrimary
 
 	readonly property font baseFont: Qt.font({
@@ -35,7 +41,14 @@ QtObject {
 	})
 
 	readonly property color bsPrimary: "#066ac9"
+	property color bsLight: "#f5f7f9"
+
 	readonly property real bsBadgeFontSize: 13.6
+
+	property color bsBodyBg: mode == Eduport.Mode.Light
+					? "#ffffff" : "#222529"
+
+	property real bsBorderRadius: 5.2
 
 	property real bsBoxShadowOffsetX: 0
 	property real bsBoxShadowOffsetY: 0
@@ -49,7 +62,7 @@ QtObject {
 		weight: Font.Medium,
 		pointSize: 15
 	})
-	readonly property color bsBtnColor: "#ffffff"
+	readonly property color bsBtnColor: "#747579"
 	readonly property color bsBtnBg: "transparent"
 	readonly property real bsBtnBorderWidth: 1
 	readonly property color bsBtnBorderColor: bsBtnBg
@@ -70,6 +83,9 @@ QtObject {
 	readonly property color bsBtnSuccessDisabledBg: "#a60cbc87"
 	readonly property color bsBtnSuccessDisabledBorderColor:
 							bsBtnSuccessDisabledBg
+
+	property color bsGray800: mode == Eduport.Mode.Light
+					? "#24292d" : "#f7f5f5"
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
 					|| Qt.platform.os === "linux"

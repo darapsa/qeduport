@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Eduport 1.4
 import "DropShadow" as DrpShdw
+import "Button" as Btn
 import "Label" as Lbl
 
 ToolBar {
@@ -17,6 +18,8 @@ ToolBar {
 	property alias accountSettings: accountSettings
 	property alias help: help
 	property alias log: log
+	property alias light: light
+	property alias dark: dark
 
 	background: Rectangle {
 		implicitHeight: 70
@@ -170,26 +173,57 @@ ToolBar {
 				Item {
 					implicitHeight: mode.height + 16
 
-					RowLayout {
-						id: mode
-						spacing: 0
+					Rectangle {
+						implicitHeight: mode.height
+									+ 8
+						color: Eduport.bsLight
+						radius: Eduport.bsBorderRadius
 						anchors {
 							left: parent.left
-							leftMargin: 4
 							right: parent.right
-							rightMargin: 4
 							bottom: parent.bottom
-							bottomMargin: 4
 						}
 
-						Button {
-							text: qsTr("Light")
-							Layout.fillWidth: true
-						}
+						RowLayout {
+							id: mode
+							spacing: 0
+							anchors {
+								left: parent
+									.left
+								leftMargin: 4
+								right: parent
+									.right
+								rightMargin: 4
+								verticalCenter
+								: parent
+								.verticalCenter
+							}
 
-						Button {
-							text: qsTr("Dark")
-							Layout.fillWidth: true
+							Btn.Sm {
+								id: light
+								text:
+								qsTr("Light")
+								Layout
+								.fillWidth:
+									true
+								checked: Eduport
+								.mode == Eduport
+								.Mode.Light
+								enabled: !checked
+							}
+
+							Btn.Sm {
+								id: dark
+								text:
+								qsTr("Dark")
+								Layout
+								.fillWidth:
+									true
+								checked: Eduport
+								.mode == Eduport
+								.Mode.Dark
+								enabled: !checked
+							}
 						}
 					}
 				}
