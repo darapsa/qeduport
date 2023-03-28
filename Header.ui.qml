@@ -123,7 +123,11 @@ ToolBar {
 							}
 
 							ColorOverlay {
-								color: Eduport
+								color:
+								highlighted
+								? Eduport
+								.bsDropdownLinkHoverColor
+								: Eduport
 								.bsDropdownLinkColor
 								source: parent
 								anchors.fill:
@@ -134,10 +138,23 @@ ToolBar {
 						Text {
 							text: menuItem.text
 							font: menuItem.font
-							color: Eduport
-							.bsDropdownLinkColor
+							color: highlighted
+								? Eduport
+								.bsDropdownLinkHoverColor
+								: Eduport
+								.bsDropdownLinkColor
 							Layout.fillWidth: true
 						}
+					}
+					background: Rectangle {
+						color: highlighted
+							? Eduport
+							.bsDropdownLinkHoverBg
+							: Eduport.mode
+							== Eduport.Mode.Light
+							? Eduport.bsBodyBg
+							: Eduport.bsDark
+						radius: 5.2
 					}
 				}
 				background: Item {

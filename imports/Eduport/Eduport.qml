@@ -91,6 +91,8 @@ QtObject {
 	property color bsDropdownColor: "#747579"
 	property color bsDropdownLinkColor: mode == Eduport.Mode.Light
 						? "#747579" : "#c5c6cc"
+	property color bsDropdownLinkHoverColor: "#066ac9"
+	property color bsDropdownLinkHoverBg: "#1a066ac9"
 
 	property color bsHeadingColor: mode == Eduport.Mode.Light
 					? "#24292d" : "#ffffff"
