@@ -81,8 +81,6 @@ ToolBar {
 
 			Menu {
 				id: menu
-				onOpened: x -= 15
-				onClosed: x += 15
 				y: parent.height
 				horizontalPadding: 10
 				verticalPadding: 16
