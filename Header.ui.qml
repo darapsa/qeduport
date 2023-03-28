@@ -192,6 +192,8 @@ ToolBar {
 								text: emailText
 								font.pointSize:
 									14
+								color: Eduport
+								.bsDropdownColor
 							}
 						}
 					}

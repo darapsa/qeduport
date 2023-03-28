@@ -87,8 +87,12 @@ QtObject {
 	readonly property color bsBtnSuccessDisabledBorderColor:
 							bsBtnSuccessDisabledBg
 
+	property color bsDropdownColor: "#747579"
 	property color bsDropdownLinkColor: mode == Eduport.Mode.Light
 						? "#747579" : "#c5c6cc"
+
+	property color bsHeadingColor: mode == Eduport.Mode.Light
+					? "#24292d" : "#ffffff"
 
 	property color bsGray300: mode == Eduport.Mode.Light
 					? "#dde0e3" : "#3e3e40"
