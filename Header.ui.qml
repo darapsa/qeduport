@@ -68,6 +68,20 @@ ToolBar {
 			}
 		}
 
+		Component {
+			id: menuSeparator
+			MenuSeparator {
+				contentItem: Rectangle {
+					implicitWidth: menu.width
+					implicitHeight: 1
+					color: Eduport.mode
+						== Eduport.Mode.Light
+						? Eduport.bsGray500
+						: Eduport.bsGray300
+				}
+			}
+		}
+
 		ToolButton {
 			id: profile
 			padding: 0
@@ -148,7 +162,8 @@ ToolBar {
 					}
 				}
 
-				MenuSeparator {
+				Loader {
+					sourceComponent: menuSeparator
 				}
 
 				Action {
@@ -171,7 +186,8 @@ ToolBar {
 					text: qsTr("Sign Out")
 				}
 
-				MenuSeparator {
+				Loader {
+					sourceComponent: menuSeparator
 				}
 
 				Item {
