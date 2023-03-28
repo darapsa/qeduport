@@ -10,7 +10,7 @@ Button {
 	contentItem: Text {
 		text: button.text
 		font: button.font
-		color: Eduport.bsBtnColor
+		color: Eduport.bsBtnPrimaryColor
 		horizontalAlignment: Text.AlignHCenter
 		verticalAlignment: Text.AlignVCenter
 	}

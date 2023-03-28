@@ -72,6 +72,7 @@ QtObject {
 	readonly property real bsBtnBorderRadius: 5.2
 	readonly property real bsBtnLgFontSize: 16
 	readonly property real bsBtnLgBorderRadius: 8
+	property color bsBtnPrimaryColor: "#ffffff"
 	readonly property color bsBtnPrimaryBg: bsPrimary
 	readonly property color bsBtnPrimaryBorderColor: bsPrimary
 	readonly property color bsBtnPrimaryActiveBg: "#0555a1"
