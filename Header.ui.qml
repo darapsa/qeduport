@@ -103,7 +103,42 @@ ToolBar {
 				horizontalPadding: 10
 				verticalPadding: 16
 				delegate: MenuItem {
+					id: menuItem
 					font: Eduport.bsBtnFont
+					horizontalPadding: 16
+					verticalPadding: 6.4
+					spacing: 8
+					contentItem: RowLayout {
+
+						Image {
+							source: menuItem.icon
+								.source
+							sourceSize {
+								width:
+								menuItem.icon
+									.width
+								height:
+								menuItem.icon
+								.height
+							}
+
+							ColorOverlay {
+								color: Eduport
+								.bsDropdownLinkColor
+								source: parent
+								anchors.fill:
+									parent
+							}
+						}
+
+						Text {
+							text: menuItem.text
+							font: menuItem.font
+							color: Eduport
+							.bsDropdownLinkColor
+							Layout.fillWidth: true
+						}
+					}
 				}
 				background: Item {
 					implicitWidth: 260.734
@@ -168,21 +203,45 @@ ToolBar {
 
 				Action {
 					id: editProfile
+					icon {
+						source:
+						"Bootstrap/icons/person.svg"
+						width: 19
+						height: 22
+					}
 					text: qsTr("Edit Profile")
 				}
 
 				Action {
 					id: accountSettings
+					icon {
+						source:
+						"Bootstrap/icons/gear.svg"
+						width: 19
+						height: 22
+					}
 					text: qsTr("Account Settings")
 				}
 
 				Action {
 					id: help
+					icon {
+						source:
+						"Bootstrap/icons/info-circle.svg"
+						width: 19
+						height: 22
+					}
 					text: qsTr("Help")
 				}
 
 				Action {
 					id: log
+					icon {
+						source:
+						"Bootstrap/icons/power.svg"
+						width: 19
+						height: 22
+					}
 					text: qsTr("Sign Out")
 				}
 

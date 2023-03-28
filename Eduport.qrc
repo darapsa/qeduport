@@ -5,6 +5,10 @@
 		<file>Heebo/Heebo-Regular.ttf</file>
 		<file>imports/Eduport/Eduport.qml</file>
 		<file>imports/Eduport/qmldir</file>
+		<file>Bootstrap/icons/person.svg</file>
+		<file>Bootstrap/icons/gear.svg</file>
+		<file>Bootstrap/icons/info-circle.svg</file>
+		<file>Bootstrap/icons/power.svg</file>
 		<file>Bootstrap/icons/sun.svg</file>
 		<file>Bootstrap/icons/moon-stars.svg</file>
 		<file>Button/Sm.ui.qml</file>
