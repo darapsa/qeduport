@@ -12,6 +12,8 @@ ToolBar {
 	property alias profile: profile
 	property string imageSource: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
 	property alias menu: menu
+	property alias info: info
+	property alias divider: divider
 	property string fullNameText: "Lori Ferguson"
 	property string emailText: "example@gmail.com"
 	property alias editProfile: editProfile
@@ -178,10 +180,11 @@ ToolBar {
 				}
 
 				Item {
-					implicitHeight: info.height + 16
+					id: info
+					implicitHeight: layout.height + 16
 
 					RowLayout {
-						id: info
+						id: layout
 						spacing: 16
 						anchors {
 							top: parent.top
@@ -217,6 +220,7 @@ ToolBar {
 				}
 
 				Loader {
+					id: divider
 					sourceComponent: menuSeparator
 				}
 
