@@ -201,28 +201,66 @@ ToolBar {
 
 							Btn.Sm {
 								id: light
+								display:
+								AbstractButton.
+								TextBesideIcon
+								icon {
+									source:
+									"Bootstrap/icons/sun.svg"
+									width:
+									16
+									height:
+									16
+									color:
+									checked 
+									?
+									Eduport
+									.bsGray800
+									:
+									Eduport
+									.bsBtnColor
+								}
 								text:
 								qsTr("Light")
-								Layout
-								.fillWidth:
-									true
 								checked: Eduport
 								.mode == Eduport
 								.Mode.Light
 								enabled: !checked
+								Layout
+								.fillWidth:
+									true
 							}
 
 							Btn.Sm {
 								id: dark
+								display:
+								AbstractButton.
+								TextBesideIcon
+								icon {
+									source:
+									"Bootstrap/icons/moon-stars.svg"
+									width:
+									16
+									height:
+									16
+									color:
+									checked 
+									?
+									Eduport
+									.bsGray800
+									:
+									Eduport
+									.bsBtnColor
+								}
 								text:
 								qsTr("Dark")
-								Layout
-								.fillWidth:
-									true
 								checked: Eduport
 								.mode == Eduport
 								.Mode.Dark
 								enabled: !checked
+								Layout
+								.fillWidth:
+									true
 							}
 						}
 					}

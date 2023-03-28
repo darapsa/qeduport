@@ -5,6 +5,14 @@
 		<file>Heebo/Heebo-Regular.ttf</file>
 		<file>imports/Eduport/Eduport.qml</file>
 		<file>imports/Eduport/qmldir</file>
+		<file>Bootstrap/icons/sun.svg</file>
+		<file>Bootstrap/icons/moon-stars.svg</file>
+		<file>Button/Sm.ui.qml</file>
+		<file>Button/Btn.ui.qml</file>
+		<file>Button/Primary.ui.qml</file>
+		<file>Button/Success.ui.qml</file>
+		<file>Button/NavLink.ui.qml</file>
+		<file>Button/NavLink/TabsLine.ui.qml</file>
 		<file>DropShadow/Box.ui.qml</file>
 		<file>Label/Body.ui.qml</file>
 		<file>Label/FwLight.ui.qml</file>
@@ -16,12 +24,6 @@
 		<file>Label/H1.ui.qml</file>
 		<file>Label/Display6.ui.qml</file>
 		<file>TextField/Input.ui.qml</file>
-		<file>Button/Btn.ui.qml</file>
-		<file>Button/Primary.ui.qml</file>
-		<file>Button/Success.ui.qml</file>
-		<file>Button/Sm.ui.qml</file>
-		<file>Button/NavLink.ui.qml</file>
-		<file>Button/NavLink/TabsLine.ui.qml</file>
 		<file>Header.ui.qml</file>
 	</qresource>
 </RCC>
