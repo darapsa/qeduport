@@ -35,8 +35,7 @@ Button {
 			text: button.text
 			font: button.font
 			color: checked ? Eduport.bsGray800 : Eduport.bsBtnColor
-			horizontalAlignment: Text.AlignHCenter
-			verticalAlignment: Text.AlignVCenter
+			Layout.fillWidth: true
 		}
 	}
 	background: Rectangle {
