@@ -41,7 +41,10 @@ QtObject {
 	})
 
 	readonly property color bsPrimary: "#066ac9"
-	property color bsLight: "#f5f7f9"
+	property color bsLight: mode == Eduport.Mode.Light
+					? "#f5f7f9" : "#2a2c31"
+	property color bsDark: mode == Eduport.Mode.Light
+					? "#24292d" : "#0f0f10"
 
 	readonly property real bsBadgeFontSize: 13.6
 

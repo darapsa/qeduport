@@ -99,6 +99,10 @@ ToolBar {
 						id: rectangle
 						anchors.fill: parent
 						radius: 5.2
+						color: Eduport.mode
+							== Eduport.Mode.Light
+							? Eduport.bsBodyBg
+							: Eduport.bsDark
 					}
 
 					DrpShdw.Box {
