@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Eduport 1.4
+import "DropShadow" as DrpShdw
 import "Label" as Lbl
 
 ToolBar {
@@ -87,10 +88,20 @@ ToolBar {
 				delegate: MenuItem {
 					font: Eduport.bsBtnFont
 				}
-				background: Rectangle {
+				background: Item {
 					implicitWidth: 260.734
 					implicitHeight: 295.406
-					radius: 5.2
+
+					Rectangle {
+						id: rectangle
+						anchors.fill: parent
+						radius: 5.2
+					}
+
+					DrpShdw.Box {
+						source: rectangle
+						anchors.fill: rectangle
+					}
 				}
 
 				Item {
