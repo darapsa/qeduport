@@ -208,14 +208,6 @@ ToolBar {
 									16
 									height:
 									16
-									color:
-									checked 
-									?
-									Eduport
-									.bsGray800
-									:
-									Eduport
-									.bsBtnColor
 								}
 								text:
 								qsTr("Light")
@@ -237,14 +229,6 @@ ToolBar {
 									16
 									height:
 									16
-									color:
-									checked 
-									?
-									Eduport
-									.bsGray800
-									:
-									Eduport
-									.bsBtnColor
 								}
 								text:
 								qsTr("Dark")

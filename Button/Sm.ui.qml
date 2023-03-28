@@ -22,8 +22,10 @@ Button {
 				width: button.icon.width
 				height: button.icon.height
 			}
+
 			ColorOverlay {
-				color: button.icon.color
+				color: checked
+					? Eduport.bsGray800 : Eduport.bsBtnColor
 				source: parent
 				anchors.fill: parent
 			}
