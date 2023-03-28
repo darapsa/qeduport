@@ -37,6 +37,11 @@ QtObject {
 	readonly property color bsPrimary: "#066ac9"
 	readonly property real bsBadgeFontSize: 13.6
 
+	property real bsBoxShadowOffsetX: 0
+	property real bsBoxShadowOffsetY: 0
+	property int bsBoxShadowBlurRadius: 40
+	property color bsBoxShadowColor: "#261d3a53"
+
 	readonly property real bsBtnPaddingX: 16
 	readonly property real bsBtnPaddingY: 8
 	readonly property font bsBtnFont: Qt.font({

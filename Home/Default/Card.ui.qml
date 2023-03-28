@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Eduport 1.4
+import "../../DropShadow" as DrpShdw
 import "../../Label" as Lbl
 
 Item {
@@ -22,11 +23,8 @@ Item {
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
 	property real rating: 4.0
 
-	DropShadow {
+	DrpShdw.Box {
 		source: rectangle
-		color: "#261d3a53"
-		radius: 5
-		samples: 11
 		anchors.fill: rectangle
 	}
 

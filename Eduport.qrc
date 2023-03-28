@@ -5,6 +5,7 @@
 		<file>Heebo/Heebo-Regular.ttf</file>
 		<file>imports/Eduport/Eduport.qml</file>
 		<file>imports/Eduport/qmldir</file>
+		<file>DropShadow/Box.ui.qml</file>
 		<file>Label/Body.ui.qml</file>
 		<file>Label/FwLight.ui.qml</file>
 		<file>Label/H6.ui.qml</file>
