@@ -77,9 +77,8 @@ ToolBar {
 					implicitWidth: menu.width
 					implicitHeight: 1
 					color: Eduport.mode
-						== Eduport.Mode.Light
-						? Eduport.bsGray500
-						: Eduport.bsGray300
+						? Eduport.bsGray300
+						: Eduport.bsGray500
 				}
 			}
 		}
@@ -153,9 +152,8 @@ ToolBar {
 							? Eduport
 							.bsDropdownLinkHoverBg
 							: Eduport.mode
-							== Eduport.Mode.Light
-							? Eduport.bsBodyBg
-							: Eduport.bsDark
+							? Eduport.bsDark
+							: Eduport.bsBodyBg
 						radius: 5.2
 					}
 				}
@@ -168,9 +166,8 @@ ToolBar {
 						anchors.fill: parent
 						radius: 5.2
 						color: Eduport.mode
-							== Eduport.Mode.Light
-							? Eduport.bsBodyBg
-							: Eduport.bsDark
+							? Eduport.bsDark
+							: Eduport.bsBodyBg
 					}
 
 					DrpShdw.Box {

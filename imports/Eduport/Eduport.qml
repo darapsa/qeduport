@@ -41,15 +41,12 @@ QtObject {
 	})
 
 	readonly property color bsPrimary: "#066ac9"
-	property color bsLight: mode == Eduport.Mode.Light
-					? "#f5f7f9" : "#2a2c31"
-	property color bsDark: mode == Eduport.Mode.Light
-					? "#24292d" : "#0f0f10"
+	property color bsLight: mode ? "#2a2c31" : "#f5f7f9"
+	property color bsDark: mode ? "#0f0f10" : "#24292d"
 
 	readonly property real bsBadgeFontSize: 13.6
 
-	property color bsBodyBg: mode == Eduport.Mode.Light
-					? "#ffffff" : "#222529"
+	property color bsBodyBg: mode ? "#222529" : "#ffffff"
 
 	property real bsBorderRadius: 5.2
 
@@ -89,20 +86,15 @@ QtObject {
 							bsBtnSuccessDisabledBg
 
 	property color bsDropdownColor: "#747579"
-	property color bsDropdownLinkColor: mode == Eduport.Mode.Light
-						? "#747579" : "#c5c6cc"
+	property color bsDropdownLinkColor: mode ? "#c5c6cc" : "#747579"
 	property color bsDropdownLinkHoverColor: "#066ac9"
 	property color bsDropdownLinkHoverBg: "#1a066ac9"
 
-	property color bsHeadingColor: mode == Eduport.Mode.Light
-					? "#24292d" : "#ffffff"
+	property color bsHeadingColor: mode ? "#ffffff" : "#24292d"
 
-	property color bsGray300: mode == Eduport.Mode.Light
-					? "#dde0e3" : "#3e3e40"
-	property color bsGray500: mode == Eduport.Mode.Light
-					? "#9a9ea4" : "#bfc0c9"
-	property color bsGray800: mode == Eduport.Mode.Light
-					? "#24292d" : "#f7f5f5"
+	property color bsGray300: mode ? "#3e3e40" : "#dde0e3"
+	property color bsGray500: mode ? "#bfc0c9" : "#9a9ea4"
+	property color bsGray800: mode ? "#f7f5f5" : "#24292d"
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
 					|| Qt.platform.os === "linux"
