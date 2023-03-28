@@ -1,19 +1,21 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 import Eduport 1.4
 
 ToolBar {
 	property alias logo: logo
-	property alias toolButton: toolButton
-	property alias optionsMenu: optionsMenu
-	property alias optionProfile: profile
-	property alias optionSettings: settings
-	property alias optionHelp: help
-	property alias optionSign: sign
+	property alias profile: profile
+	property string imageSource: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
+	property alias menu: menu
+	property alias editProfile: editProfile
+	property alias accountSettings: accountSettings
+	property alias help: help
+	property alias log: log
 
 	background: Rectangle {
-		implicitHeight: 64
+		implicitHeight: 70
 	}
 
 	Item {
@@ -21,32 +23,55 @@ ToolBar {
 
 		ToolButton {
 			id: logo
-			anchors.left: parent.left
-			icon.source: "https://eduport.webestica.com/assets/images/logo.svg"
-			icon.width: 115
+			anchors {
+				left: parent.left
+				verticalCenter: parent.verticalCenter
+			}
+			icon {
+				source: "https://eduport.webestica.com/assets/images/logo.svg"
+				width: 115
+			}
 			background: Rectangle {
-				implicitHeight: 64
+				color: "transparent"
 			}
 		}
 
 		ToolButton {
-			id: toolButton
-			anchors.right: parent.right
-			icon.source: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
-			icon.color: "transparent"
+			id: profile
+			anchors {
+				right: parent.right
+				verticalCenter: parent.verticalCenter
+			}
+			contentItem: Image {
+				source: imageSource
+				sourceSize {
+					width: 40
+					height: 40
+				}
+				layer {
+					enabled: true
+					effect: OpacityMask {
+						maskSource: Rectangle {
+							width: 40
+							height: 40
+							radius: 40
+						}
+					}
+				}
+			}
 			background: Rectangle {
-				implicitHeight: 64
+				color: "transparent"
 			}
 
 			Menu {
-				id: optionsMenu
+				id: menu
 				y: parent.height
 				Action {
-					id: profile
+					id: editProfile
 					text: qsTr("Edit Profile")
 				}
 				Action {
-					id: settings
+					id: accountSettings
 					text: qsTr("Account Settings")
 				}
 				Action {
@@ -54,7 +79,7 @@ ToolBar {
 					text: qsTr("Help")
 				}
 				Action {
-					id: sign
+					id: log
 					text: qsTr("Sign Out")
 				}
 				delegate: MenuItem {
