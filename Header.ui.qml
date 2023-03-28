@@ -201,9 +201,6 @@ ToolBar {
 
 							Btn.Sm {
 								id: light
-								display:
-								AbstractButton.
-								TextBesideIcon
 								icon {
 									source:
 									"Bootstrap/icons/sun.svg"
@@ -233,9 +230,6 @@ ToolBar {
 
 							Btn.Sm {
 								id: dark
-								display:
-								AbstractButton.
-								TextBesideIcon
 								icon {
 									source:
 									"Bootstrap/icons/moon-stars.svg"
