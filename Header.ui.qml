@@ -181,8 +181,6 @@ ToolBar {
 						Button {
 							text: qsTr("Dark")
 							Layout.fillWidth: true
-							Layout.alignment:
-								Qt.AlignRight
 						}
 					}
 				}
