@@ -16,7 +16,7 @@ QtObject {
 		weight: Font.Bold
 	})
 	readonly property font bodyFont: Qt.font({
-		family: haveRoboto ? "Roboto" : robotRegular.name,
+		family: haveRoboto ? "Roboto" : robotoRegular.name,
 		weight: Font.Normal,
 		pointSize: 15
 	})
