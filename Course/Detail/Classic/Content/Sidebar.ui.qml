@@ -30,6 +30,7 @@ ColumnLayout {
 		Rectangle {
 			id: rectangle
 			radius: 8
+			color: Eduport.bsCardBg
 			anchors {
 				top: parent.top
 				topMargin: 25.6
