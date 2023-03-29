@@ -41,6 +41,7 @@ QtObject {
 	})
 
 	readonly property color bsPrimary: "#066ac9"
+	property color bsSecondary: "#9a9ea4"
 	property color bsLight: mode ? "#2a2c31" : "#f5f7f9"
 	property color bsDark: mode ? "#0f0f10" : "#24292d"
 	property color bsTertiaryBg: mode ? "#2b3035" : "#f8f9fa"

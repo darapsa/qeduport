@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 import Eduport 1.4
 import "../Label" as Lbl
 import "../TextField" as TxtFld
@@ -57,27 +58,63 @@ Flickable {
 					}
 
 					Rectangle {
-						implicitHeight: 56
-						color: "#f5f7f9"
-						radius: 8
-						border.width: 0
 						Layout.fillWidth: true
+						implicitHeight: email.height
+						radius: 5.2
+						color: Eduport.bsLight
 
 						RowLayout {
 							anchors.fill: parent
 
 							Image {
-								source: emailImage
-								Layout.maximumHeight: 24
-								Layout.maximumWidth: 24
-								Layout.margins: 16
+								Layout
+								.topMargin: 16
+								Layout
+								.leftMargin: 20
+								Layout
+								.rightMargin: 20
+								Layout
+								.bottomMargin:
+									16
+								source: 
+								emailImage
+								sourceSize {
+									width:
+									20
+									height:
+									20
+								}
+
+								ColorOverlay {
+									color:
+									Eduport
+									.bsSecondary
+									source:
+									parent
+									anchors
+									.fill:
+									parent
+								}
 							}
 
 							TxtFld.Input {
+								Layout
+								.fillWidth: true
+								Layout
+								.leftMargin: -1
 								id: email
-								placeholderText: qsTr("E-mail")
-								Layout.fillWidth: true
-								Layout.fillHeight: true
+								placeholderText:
+								qsTr("E-mail")
+								topPadding: 16
+								leftPadding: 5
+								rightPadding: 30
+								bottomPadding:
+									16
+								background:
+								Rectangle {
+									color:
+									"transparent"
+								}
 							}
 						}
 					}
@@ -90,28 +127,65 @@ Flickable {
 					}
 
 					Rectangle {
-						implicitHeight: 56
-						color: "#f5f7f9"
-						radius: 8
-						border.width: 0
 						Layout.fillWidth: true
+						implicitHeight: password.height
+						radius: 5.2
+						color: Eduport.bsLight
 
 						RowLayout {
 							anchors.fill: parent
 
 							Image {
+								Layout
+								.topMargin: 16
+								Layout
+								.leftMargin: 20
+								Layout
+								.rightMargin: 20
+								Layout
+								.bottomMargin:
+									16
 								source: "../Font-Awesome/svgs/solid/lock.svg"
-								Layout.maximumHeight: 24
-								Layout.maximumWidth: 24
-								Layout.margins: 16
+								sourceSize {
+									width:
+									18
+									height:
+									20
+								}
+
+								ColorOverlay {
+									color:
+									Eduport
+									.bsSecondary
+									source:
+									parent
+									anchors
+									.fill:
+									parent
+								}
 							}
 
 							TxtFld.Input {
+								Layout
+								.fillWidth: true
+								Layout
+								.leftMargin: -1
 								id: password
-								placeholderText: "*********"
-								echoMode: TextInput.Password
-								Layout.fillWidth: true
-								Layout.fillHeight: true
+								placeholderText:
+								"*********"
+								echoMode:
+								TextInput
+								.Password
+								topPadding: 16
+								leftPadding: 5
+								rightPadding: 30
+								bottomPadding:
+									16
+								background:
+								Rectangle {
+									color:
+									"transparent"
+								}
 							}
 						}
 					}
@@ -124,28 +198,67 @@ Flickable {
 					}
 
 					Rectangle {
-						implicitHeight: 56
-						color: "#f5f7f9"
-						radius: 8
-						border.width: 0
 						Layout.fillWidth: true
+						implicitHeight: confirmPassword
+									.height
+						radius: 5.2
+						color: Eduport.bsLight
 
 						RowLayout {
 							anchors.fill: parent
 
 							Image {
+								Layout
+								.topMargin: 16
+								Layout
+								.leftMargin: 20
+								Layout
+								.rightMargin: 20
+								Layout
+								.bottomMargin:
+									16
 								source: "../Font-Awesome/svgs/solid/lock.svg"
-								Layout.maximumHeight: 24
-								Layout.maximumWidth: 24
-								Layout.margins: 16
+								sourceSize {
+									width:
+									18
+									height:
+									20
+								}
+
+								ColorOverlay {
+									color:
+									Eduport
+									.bsSecondary
+									source:
+									parent
+									anchors
+									.fill:
+									parent
+								}
 							}
 
 							TxtFld.Input {
-								id: confirmPassword
-								placeholderText: "*********"
-								echoMode: TextInput.Password
-								Layout.fillWidth: true
-								Layout.fillHeight: true
+								Layout
+								.fillWidth: true
+								Layout
+								.leftMargin: -1
+								id:
+								confirmPassword
+								placeholderText:
+								"*********"
+								echoMode:
+								TextInput
+								.Password
+								topPadding: 16
+								leftPadding: 5
+								rightPadding: 30
+								bottomPadding:
+									16
+								background:
+								Rectangle {
+									color:
+									"transparent"
+								}
 							}
 						}
 					}
