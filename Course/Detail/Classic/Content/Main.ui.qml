@@ -66,6 +66,14 @@ ColumnLayout {
 					delegate: NavLink.TabsLine {}
 				}
 
+				MenuSeparator {
+					contentItem: Rectangle {
+						implicitWidth: container.width
+						implicitHeight: 1
+						color: Eduport.bsBorderColor
+					}
+				}
+
 				StackLayout {
 					id: tabContents
 					currentIndex: tabs.currentIndex
@@ -73,7 +81,8 @@ ColumnLayout {
 					Layout.leftMargin: 25.6
 					Layout.rightMargin: 25.6
 					Layout.bottomMargin: 25.6
-					Layout.preferredWidth: parent.width - 51.2
+					Layout.preferredWidth: parent.width
+									- 51.2
 					Layout.preferredHeight: switch (
 							currentIndex) {
 						case 0:
