@@ -62,7 +62,6 @@ Flickable {
 				Lbl.H1 {
 					id: introTitleHeader
 					text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
-					color: "#24292d"
 					Layout.fillWidth: true
 				}
 

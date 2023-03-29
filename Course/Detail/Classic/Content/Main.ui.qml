@@ -84,7 +84,6 @@ ColumnLayout {
 
 						Lbl.H5 {
 							text: qsTr("Course Description")
-							color: "#24292d"
 							Layout.fillWidth: true
 							Layout.bottomMargin: 16
 						}

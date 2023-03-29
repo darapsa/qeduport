@@ -49,7 +49,6 @@ Flickable {
 
 				Lbl.Display6 {
 					text: bannerTitleText
-					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 				}
@@ -196,7 +195,6 @@ Flickable {
 
 				Lbl.H1 {
 					text: qsTr("Most Popular Courses")
-					color: "#24292d"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 					Layout.bottomMargin: 8
