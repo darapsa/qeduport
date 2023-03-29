@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import QtMultimedia 5.15
 import Eduport 1.4
+import "../../../../DropShadow" as DrpShdw
 import "../../../../Label" as Lbl
 import "../../../../Button" as Btn
 
@@ -21,9 +22,8 @@ ColumnLayout {
 		Layout.fillWidth: true
 		implicitHeight: width * 1.2
 
-		DropShadow {
+		DrpShdw.Box {
 			source: rectangle
-			color: Qt.rgba(.113, .227, .325, .15)
 			anchors.fill: rectangle
 		}
 
