@@ -1,16 +1,19 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 import Eduport 1.4
+import "../../DropShadow" as DrpShdw
 import "../../Label" as Lbl
 import "Classic/Content" as Content
+import "Classic/Content/Sidebar" as ContentSidebar
 
 Flickable {
 	property alias introBadge: introBadge
 	property alias introTitleHeader: introTitleHeader
 	property alias introTitleParagraph: introTitleParagraph
 	property alias mainContent: mainContent
-	property alias rightSidebar: rightSidebar
+	property alias video: video
 	contentHeight: body.height
 
 	ColumnLayout {
@@ -85,8 +88,49 @@ Flickable {
 					? body.width : body.width / 2
 			}
 
-			Content.Sidebar {
-				id: rightSidebar
+			GridLayout {
+				Layout.topMargin: 48
+				Layout.bottomMargin: 48
+
+				ColumnLayout {
+					Layout.leftMargin: 15
+					Layout.rightMargin: 15
+
+					Item {
+						Layout.fillWidth: true
+						Layout.bottomMargin: 25.6
+						implicitHeight: video.height
+									+ 16
+
+						DrpShdw.Box {
+							source: videoRectangle
+							anchors.fill:
+								videoRectangle
+						}
+
+						Rectangle {
+							id: videoRectangle
+							color: Eduport.bsCardBg
+							radius: 8
+							anchors.fill: parent
+						}
+
+						ContentSidebar.Video {
+							id: video
+							anchors {
+								left: parent
+									.left
+								leftMargin: 8
+								right: parent
+									.right
+								rightMargin: 8
+								verticalCenter:
+								parent
+								.verticalCenter
+							}
+						}
+					}
+				}
 			}
 		}
 	}

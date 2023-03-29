@@ -4,7 +4,7 @@
 		<file>Course/Detail/Classic/Content/Main/TabContents/Instructor.ui.qml</file>
 		<file>Course/Detail/Classic/Content/Main/TabContents/Instructor/ListInlineItem.ui.qml</file>
 		<file>Course/Detail/Classic/Content/Main.ui.qml</file>
-		<file>Course/Detail/Classic/Content/Sidebar.ui.qml</file>
+		<file>Course/Detail/Classic/Content/Sidebar/Video.ui.qml</file>
 		<file>Course/Detail/Classic.ui.qml</file>
 	</qresource>
 </RCC>
