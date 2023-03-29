@@ -18,6 +18,11 @@ Flickable {
 	property alias getStarted: getStarted
 	contentHeight: body.height
 
+	Rectangle {
+		anchors.fill: parent
+		color: Eduport.bsBodyBg
+	}
+
 	ColumnLayout {
 		id: body
 		anchors {
