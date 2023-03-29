@@ -35,9 +35,10 @@ Flickable {
 					Layout.fillWidth: true
 					implicitHeight: editProfile.height
 					radius: 8
+					color: Eduport.bsBodyBg
 					border {
+						color: Eduport.bsBorderColor
 						width: 1
-						color: "#1a000000"
 					}
 
 					ColumnLayout {
@@ -50,16 +51,20 @@ Flickable {
 						Lbl.H3 {
 							id: cardHeader
 							Layout.fillWidth: true
-							text: qsTr("Edit Profile")
+							text:
+							qsTr("Edit Profile")
 							padding: 16
 						}
 
-						Rectangle {
-							Layout.fillWidth: true
-							height: 1
-							border {
-								width: .5
-								color: "#0a000000"
+						MenuSeparator {
+							contentItem: Rectangle {
+								implicitWidth:
+								editProfile
+									.width
+								implicitHeight:
+									1
+								color: Eduport
+								.bsBorderColor
 							}
 						}
 
@@ -140,9 +145,10 @@ Flickable {
 									Layout.fillWidth: true
 									implicitHeight: firstName.height
 									radius: 5.2
+									color: Eduport.bsBodyBg
 									border {
 										width: 1
-										color: "#dde0e3"
+										color: Eduport.bsGray300
 									}
 
 									TxtFld.Input {
@@ -151,19 +157,17 @@ Flickable {
 										placeholderText: qsTr("First name")
 										width: parent.width / 2
 										anchors.left: parent.left
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
+										background: Rectangle {
+											color: "transparent"
+										}
 									}
 
-									Rectangle {
-										width: 1
-										height: firstName.height
-										anchors.horizontalCenter: parent.horizontalCenter
-										border {
-											width: .5
-											color: "#88dde0e3"
+									ToolSeparator {
+										anchors.centerIn: parent
+										contentItem: Rectangle {
+											implicitWidth: 1
+											implicitHeight: firstName.height
+											color: Eduport.bsGray300
 										}
 									}
 
@@ -173,10 +177,9 @@ Flickable {
 										placeholderText: qsTr("Last name")
 										width: parent.width / 2
 										anchors.right: parent.right
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
+										background: Rectangle {
+											color: "transparent"
+										}
 									}
 								}
 							}
@@ -196,9 +199,10 @@ Flickable {
 									Layout.fillWidth: true
 									implicitHeight: userName.height
 									radius: 5.2
+									color: Eduport.bsBodyBg
 									border {
 										width: 1
-										color: "#dde0e3"
+										color: Eduport.bsGray300
 									}
 
 									Lbl.Body {
@@ -212,18 +216,18 @@ Flickable {
 										leftPadding: 12
 										rightPadding: 12
 										bottomPadding: 6
+										color: Eduport.bsBodyColor
 										background: Rectangle {
-											color: "#e9ecef"
+											color: Eduport.bsTertiaryBg
 										}
 									}
 
-									Rectangle {
-										width: 1
-										height: userName.height
-										anchors.horizontalCenter: parent.horizontalCenter
-										border {
-											width: .5
-											color: "#88dde0e3"
+									ToolSeparator {
+										anchors.centerIn: parent
+										contentItem: Rectangle {
+											implicitWidth: 1
+											implicitHeight: firstName.height
+											color: Eduport.bsGray300
 										}
 									}
 
@@ -232,10 +236,9 @@ Flickable {
 										text: "loristev"
 										width: parent.width / 2
 										anchors.right: parent.right
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
+										background: Rectangle {
+											color: "transparent"
+										}
 									}
 								}
 							}
@@ -251,28 +254,11 @@ Flickable {
 									text: qsTr("Email id")
 								}
 
-								Rectangle {
+								TxtFld.Input {
+									id: emailID
+									text: "example@gmail.com"
+									placeholderText: qsTr("Email")
 									Layout.fillWidth: true
-									implicitHeight: emailID.height
-									radius: 5.2
-									border {
-										width: 1
-										color: "#dde0e3"
-									}
-
-									TxtFld.Input {
-										id: emailID
-										text: "example@gmail.com"
-										placeholderText: qsTr("Email")
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
-										anchors {
-											left: parent.left
-											right: parent.right
-										}
-									}
 								}
 							}
 
@@ -287,28 +273,11 @@ Flickable {
 									text: qsTr("Phone number")
 								}
 
-								Rectangle {
+								TxtFld.Input {
+									id: phoneNumber
+									text: "1234567890"
+									placeholderText: qsTr("Phone number")
 									Layout.fillWidth: true
-									implicitHeight: phoneNumber.height
-									radius: 5.2
-									border {
-										width: 1
-										color: "#dde0e3"
-									}
-
-									TxtFld.Input {
-										id: phoneNumber
-										text: "1234567890"
-										placeholderText: qsTr("Phone number")
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
-										anchors {
-											left: parent.left
-											right: parent.right
-										}
-									}
 								}
 							}
 
@@ -323,27 +292,10 @@ Flickable {
 									text: qsTr("Location")
 								}
 
-								Rectangle {
+								TxtFld.Input {
+									id: location
+									text: "California"
 									Layout.fillWidth: true
-									implicitHeight: location.height
-									radius: 5.2
-									border {
-										width: 1
-										color: "#dde0e3"
-									}
-
-									TxtFld.Input {
-										id: location
-										text: "California"
-										topPadding: 8
-										leftPadding: 16
-										rightPadding: 16
-										bottomPadding: 8
-										anchors {
-											left: parent.left
-											right: parent.right
-										}
-									}
 								}
 							}
 

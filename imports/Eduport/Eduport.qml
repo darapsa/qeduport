@@ -43,12 +43,14 @@ QtObject {
 	readonly property color bsPrimary: "#066ac9"
 	property color bsLight: mode ? "#2a2c31" : "#f5f7f9"
 	property color bsDark: mode ? "#0f0f10" : "#24292d"
+	property color bsTertiaryBg: mode ? "#2b3035" : "#f8f9fa"
 
 	readonly property real bsBadgeFontSize: 13.6
 
 	property color bsBodyColor: mode ? "#a1a1a8" : "#747579"
 	property color bsBodyBg: mode ? "#222529" : "#ffffff"
 
+	property color bsBorderColor: mode ? "#12ffffff" : bsGray200
 	property real bsBorderRadius: 5.2
 
 	property real bsBoxShadowOffsetX: 0
@@ -96,9 +98,11 @@ QtObject {
 
 	property color bsHeadingColor: mode ? "#ffffff" : "#24292d"
 
+	property color bsGray200: mode ? "#464950" : "#eff1f2"
 	property color bsGray300: mode ? "#3e3e40" : "#dde0e3"
 	property color bsGray500: mode ? "#bfc0c9" : "#9a9ea4"
 	property color bsGray600: mode ? "#c5c6cc" : "#747579"
+	property color bsGray700: mode ? "#f3f1f1" : "#404448"
 	property color bsGray800: mode ? "#f7f5f5" : "#24292d"
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
