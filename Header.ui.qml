@@ -255,8 +255,7 @@ ToolBar {
 				implicitHeight: mode.height + 16
 
 				Rectangle {
-					implicitHeight: mode.height
-					+ 8
+					implicitHeight: mode.height + 8
 					color: Eduport.bsLight
 					radius: Eduport.bsBorderRadius
 					anchors {
