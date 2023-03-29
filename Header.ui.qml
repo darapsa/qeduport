@@ -25,6 +25,7 @@ ToolBar {
 
 	background: Rectangle {
 		implicitHeight: 70
+		color: Eduport.bsBodyBg
 	}
 
 	Item {
