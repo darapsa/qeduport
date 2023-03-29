@@ -98,6 +98,7 @@ QtObject {
 
 	property color bsGray300: mode ? "#3e3e40" : "#dde0e3"
 	property color bsGray500: mode ? "#bfc0c9" : "#9a9ea4"
+	property color bsGray600: mode ? "#c5c6cc" : "#747579"
 	property color bsGray800: mode ? "#f7f5f5" : "#24292d"
 
 	readonly property bool haveRoboto: Qt.platform.os === "android"
