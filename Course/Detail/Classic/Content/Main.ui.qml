@@ -2,6 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Eduport 1.4
+import "../../../../DropShadow" as DrpShdw
 import "../../../../Label" as Lbl
 import "../../../../Button/NavLink" as NavLink
 import "Main/TabContents" as MainTabContents
@@ -14,27 +16,31 @@ ColumnLayout {
 		Layout.fillWidth: true
 		Layout.leftMargin: 15
 		Layout.rightMargin: 15
-		implicitHeight: rectangle.height
-
-		DropShadow {
-			source: rectangle
-			color: "#4d000000"
-			verticalOffset: 4
-			radius: 12
-			samples: 12
-			anchors.fill: rectangle
-		}
+		implicitHeight: content.height
 
 		Rectangle {
-			id: rectangle
-			radius: 5.2
+			id: content
+			color: Eduport.bsBodyBg
 			anchors {
 				left: parent.left
 				right: parent.right
 			}
 			implicitHeight: tabs.height + tabContents.height + 83.2
 
+			DrpShdw.Box {
+				source: rectangle
+				anchors.fill: rectangle
+			}
+
+			Rectangle {
+				id: rectangle
+				anchors.fill: container
+				color: Eduport.bsCardBg
+				radius: 5.2
+			}
+
 			ColumnLayout {
+				id: container
 				anchors {
 					left: parent.left
 					right: parent.right

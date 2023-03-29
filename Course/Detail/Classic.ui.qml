@@ -22,7 +22,7 @@ Flickable {
 		}
 
 		Rectangle {
-			color: "#f5f7f9"
+			color: Eduport.bsLight
 			Layout.fillWidth: true
 			implicitHeight: pageIntro.height + 96
 
