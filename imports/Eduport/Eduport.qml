@@ -46,6 +46,7 @@ QtObject {
 
 	readonly property real bsBadgeFontSize: 13.6
 
+	property color bsBodyColor: mode ? "#a1a1a8" : "#747579"
 	property color bsBodyBg: mode ? "#222529" : "#ffffff"
 
 	property real bsBorderRadius: 5.2

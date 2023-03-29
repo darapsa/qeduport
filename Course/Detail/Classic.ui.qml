@@ -68,7 +68,6 @@ Flickable {
 				Lbl.Body {
 					id: introTitleParagraph
 					text: qsTr("Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do.")
-					color: "#747579"
 					Layout.fillWidth: true
 				}
 			}

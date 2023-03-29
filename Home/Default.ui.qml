@@ -55,7 +55,6 @@ Flickable {
 
 				Lbl.Body {
 					text: bannerContentText
-					color: "#747579"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 					font.pointSize: Eduport.leadFontSize
@@ -202,7 +201,6 @@ Flickable {
 
 				Lbl.Body {
 					text: qsTr("Choose from hundreds of courses from specialist organizations")
-					color: "#747579"
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 				}

@@ -91,7 +91,6 @@ ColumnLayout {
 						Lbl.Body {
 							id: courseDescription
 							text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
-							color: "#747579"
 							Layout.fillWidth: true
 						}
 					}

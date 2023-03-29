@@ -78,7 +78,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Profile picture")
-									color: "#747579"
 								}
 
 								RowLayout {
@@ -135,7 +134,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Full name")
-									color: "#747579"
 								}
 
 								Rectangle {
@@ -192,7 +190,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Username")
-									color: "#747579"
 								}
 
 								Rectangle {
@@ -252,7 +249,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Email id")
-									color: "#747579"
 								}
 
 								Rectangle {
@@ -289,7 +285,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Phone number")
-									color: "#747579"
 								}
 
 								Rectangle {
@@ -326,7 +321,6 @@ Flickable {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Location")
-									color: "#747579"
 								}
 
 								Rectangle {
