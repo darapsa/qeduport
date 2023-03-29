@@ -86,6 +86,9 @@ QtObject {
 	readonly property color bsBtnSuccessDisabledBorderColor:
 							bsBtnSuccessDisabledBg
 
+	property color bsCardBg: mode ? "#1b1e21" : "#ffffff"
+	property color bsCardTitleColor: mode ? "#f7f5f5" : "#24292d"
+
 	property color bsDropdownColor: "#747579"
 	property color bsDropdownLinkColor: mode ? "#c5c6cc" : "#747579"
 	property color bsDropdownLinkHoverColor: "#066ac9"

@@ -31,6 +31,7 @@ Item {
 	Rectangle {
 		id: rectangle
 		radius: 8
+		color: Eduport.bsCardBg
 		anchors {
 			fill: parent
 			topMargin: 25.6
@@ -59,6 +60,7 @@ Item {
 
 		Rectangle {
 			height: 16
+			color: Eduport.bsCardBg
 			anchors {
 				left: parent.left
 				right: parent.right
@@ -126,7 +128,7 @@ Item {
 			Lbl.H5 {
 				id: title
 				text: titleText
-				color: Qt.rgba(.141, .161, .176, 1.0)
+				color: Eduport.bsCardTitleColor
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 
@@ -138,7 +140,6 @@ Item {
 
 			Lbl.Body {
 				text: truncatedText
-				color: Qt.rgba(.455, .459, .475, 1.0)
 				elide: Text.ElideRight
 				maximumLineCount: 2
 				Layout.fillWidth: true
