@@ -29,7 +29,7 @@ ColumnLayout {
 
 		Rectangle {
 			id: rectangle
-			radius: 10
+			radius: 8
 			anchors {
 				top: parent.top
 				topMargin: 25.6
