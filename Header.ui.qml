@@ -134,7 +134,7 @@ ToolBar {
 				sourceComponent: background
 			}
 			delegate: MenuItem {
-				id: menuItem
+				id: cartMenuItem
 				contentItem: ColumnLayout {
 
 					Loader {
@@ -151,7 +151,7 @@ ToolBar {
 						Loader {
 							property string
 								imageSource:
-								menuItem
+								cartMenuItem
 								.icon.source
 							property int
 								imageWidth: 50
@@ -170,7 +170,7 @@ ToolBar {
 
 								Lbl.H6 {
 									text:
-									menuItem
+									cartMenuItem
 									.text
 									Layout
 									.fillWidth:
@@ -306,7 +306,7 @@ ToolBar {
 				sourceComponent: background
 			}
 			delegate: MenuItem {
-				id: menuItem
+				id: profileMenuItem
 				font: Eduport.bsBtnFont
 				horizontalPadding: 16
 				verticalPadding: 6.4
@@ -314,11 +314,12 @@ ToolBar {
 				contentItem: RowLayout {
 
 					Image {
-						source: menuItem.icon.source
+						source: profileMenuItem
+								.icon.source
 						sourceSize {
-							width: menuItem
+							width: profileMenuItem
 								.icon.width
-							height: menuItem
+							height: profileMenuItem
 								.icon.height
 						}
 
@@ -332,8 +333,8 @@ ToolBar {
 					}
 
 					Text {
-						text: menuItem.text
-						font: menuItem.font
+						text: profileMenuItem.text
+						font: profileMenuItem.font
 						color: highlighted
 							? Eduport.bsDropdownLinkHoverColor
 							: Eduport.bsDropdownLinkColor
