@@ -186,6 +186,9 @@ ToolBar {
 						}
 					}
 				}
+				background: Rectangle {
+					color: "transparent"
+				}
 			}
 
 			Lbl.H5 {
