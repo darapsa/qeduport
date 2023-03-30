@@ -40,12 +40,6 @@ QtObject {
 		weight: Font.Normal
 	})
 
-	readonly property color bsPrimary: "#066ac9"
-	property color bsSecondary: "#9a9ea4"
-	property color bsLight: mode ? "#2a2c31" : "#f5f7f9"
-	property color bsDark: mode ? "#0f0f10" : "#24292d"
-	property color bsTertiaryBg: mode ? "#2b3035" : "#f8f9fa"
-
 	readonly property real bsBadgeFontSize: 13.6
 
 	property color bsBodyColor: mode ? "#a1a1a8" : "#747579"
@@ -66,28 +60,54 @@ QtObject {
 		weight: Font.Medium,
 		pointSize: 15
 	})
+
 	readonly property color bsBtnColor: "#747579"
 	readonly property color bsBtnBg: "transparent"
-	readonly property real bsBtnBorderWidth: 1
 	readonly property color bsBtnBorderColor: bsBtnBg
+	readonly property real bsBtnBorderWidth: 1
 	readonly property real bsBtnBorderRadius: 5.2
 	readonly property real bsBtnLgFontSize: 16
 	readonly property real bsBtnLgBorderRadius: 8
+
+	property color bsPrimary: "#066ac9"
+	property color bsSecondary: "#9a9ea4"
+	property color bsSuccess: "#0cbc87"
+	property color bsDanger: "#d6293e"
+	property color bsLight: mode ? "#2a2c31" : "#f5f7f9"
+	property color bsDark: mode ? "#0f0f10" : "#24292d"
+	property color bsTertiaryBg: mode ? "#2b3035" : "#f8f9fa"
+
 	property color bsBtnPrimaryColor: "#ffffff"
-	readonly property color bsBtnPrimaryBg: bsPrimary
-	readonly property color bsBtnPrimaryBorderColor: bsPrimary
-	readonly property color bsBtnPrimaryActiveBg: "#0555a1"
-	readonly property color bsBtnPrimaryActiveBorderColor: "#055097"
-	readonly property color bsBtnPrimaryDisabledBg: "#a6066ac9"
-	readonly property color bsBtnPrimaryDisabledBorderColor:
-							bsBtnPrimaryDisabledBg
-	readonly property color bsBtnSuccessBg: "#0cbc87"
-	readonly property color bsBtnSuccessBorderColor: bsBtnSuccessBg
-	readonly property color bsBtnSuccessActiveBg: "#0a966c"
-	readonly property color bsBtnSuccessActiveBorderColor: "#098d65"
-	readonly property color bsBtnSuccessDisabledBg: "#a60cbc87"
-	readonly property color bsBtnSuccessDisabledBorderColor:
-							bsBtnSuccessDisabledBg
+	property color bsBtnPrimaryBg: bsPrimary
+	property color bsBtnPrimaryBorderColor: bsPrimary
+	property color bsBtnPrimaryActiveColor: bsBtnPrimaryColor
+	property color bsBtnPrimaryActiveBg: "#0555a1"
+	property color bsBtnPrimaryActiveBorderColor: "#055097"
+	property color bsBtnPrimaryDisabledColor: "#a6ffffff"
+	property color bsBtnPrimaryDisabledBg: "#a6066ac9"
+	property color bsBtnPrimaryDisabledBorderColor: bsBtnPrimaryDisabledBg
+
+	property color bsBtnOutlinePrimaryColor: bsPrimary
+	property color bsBtnOutlinePrimaryBg: bsBtnBg
+	property color bsBtnOutlinePrimaryBorderColor: bsPrimary
+	property color bsBtnOutlinePrimaryActiveColor: bsBtnPrimaryColor
+	property color bsBtnOutlinePrimaryActiveBg: bsPrimary
+	property color bsBtnOutlinePrimaryActiveBorderColor: bsPrimary
+	property color bsBtnOutlinePrimaryDisabledColor:
+						bsBtnPrimaryDisabledColor
+	property color bsBtnOutlinePrimaryDisabledBg: bsBtnBg
+	property color bsBtnOutlinePrimaryDisabledBorderColor:
+						bsBtnPrimaryDisabledColor
+
+	property color bsBtnSuccessColor: bsBtnPrimaryColor
+	property color bsBtnSuccessBg: bsSuccess
+	property color bsBtnSuccessBorderColor: bsSuccess
+	property color bsBtnSuccessActiveColor: bsBtnSuccessColor
+	property color bsBtnSuccessActiveBg: "#0a966c"
+	property color bsBtnSuccessActiveBorderColor: "#098d65"
+	property color bsBtnSuccessDisabledColor: bsBtnPrimaryDisabledColor
+	property color bsBtnSuccessDisabledBg: "#a60cbc87"
+	property color bsBtnSuccessDisabledBorderColor: bsBtnSuccessDisabledBg
 
 	property color bsCardBg: mode ? "#1b1e21" : "#ffffff"
 	property color bsCardTitleColor: mode ? "#f7f5f5" : "#24292d"

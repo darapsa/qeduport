@@ -3,20 +3,13 @@ import QtQuick.Controls 2.15
 import Eduport 1.4
 
 Btn {
-	id: button
-	background: Rectangle {
-		color: button.down ? Eduport.bsBtnPrimaryActiveBg
-			: button.enabled
-			? Eduport.bsBtnPrimaryBg
-			: Eduport.bsBtnPrimaryDisabledBg
-		border {
-			width: Eduport.bsBtnBorderWidth
-			color: button.down
-				? Eduport.bsBtnPrimaryActiveBorderColor
-				: button.enabled
-				? Eduport.bsBtnPrimaryBorderColor
-				: Eduport.bsBtnPrimaryDisabledBorderColor
-		}
-		radius: Eduport.bsBtnBorderRadius
-	}
+	bsBtnColor: Eduport.bsBtnPrimaryColor
+	bsBtnBg: Eduport.bsBtnPrimaryBg
+	bsBtnBorderColor: Eduport.bsBtnPrimaryBorderColor
+	bsBtnActiveColor: Eduport.bsBtnPrimaryActiveColor
+	bsBtnActiveBg: Eduport.bsBtnPrimaryActiveBg
+	bsBtnActiveBorderColor: Eduport.bsBtnPrimaryActiveBorderColor
+	bsBtnDisabledColor: Eduport.bsBtnPrimaryDisabledColor
+	bsBtnDisabledBg: Eduport.bsBtnPrimaryDisabledBg
+	bsBtnDisabledBorderColor: Eduport.bsBtnPrimaryDisabledBorderColor
 }
