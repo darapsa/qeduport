@@ -6,7 +6,7 @@ import Eduport 1.4
 import "../Label" as Lbl
 
 MenuItem {
-	id: cartMenuItem
+	id: menuItem
 	contentItem: ColumnLayout {
 
 		Loader {
@@ -21,7 +21,7 @@ MenuItem {
 			Layout.margins: 16
 
 			Loader {
-				property string imageSource: cartMenuItem
+				property string imageSource: menuItem
 								.icon.source
 				property int imageWidth: 50
 				property int imageHeight: 50
@@ -35,7 +35,7 @@ MenuItem {
 				RowLayout {
 
 					Lbl.H6 {
-						text: cartMenuItem.text
+						text: menuItem.text
 						Layout.fillWidth: true
 					}
 

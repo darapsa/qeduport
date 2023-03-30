@@ -234,7 +234,7 @@ ToolBar {
 				sourceComponent: background
 			}
 			delegate: MenuItem {
-				id: profileMenuItem
+				id: menuItem
 				font: Eduport.bsBtnFont
 				horizontalPadding: 16
 				verticalPadding: 6.4
@@ -242,8 +242,7 @@ ToolBar {
 				contentItem: RowLayout {
 
 					Image {
-						source: profileMenuItem
-								.icon.source
+						source: menuItem.icon.source
 						sourceSize {
 							width: profileMenuItem
 								.icon.width
@@ -261,8 +260,8 @@ ToolBar {
 					}
 
 					Text {
-						text: profileMenuItem.text
-						font: profileMenuItem.font
+						text: menuItem.text
+						font: menuItem.font
 						color: highlighted
 							? Eduport.bsDropdownLinkHoverColor
 							: Eduport.bsDropdownLinkColor
