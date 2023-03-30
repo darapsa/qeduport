@@ -176,6 +176,23 @@ ToolBar {
 									.fillWidth:
 									true
 								}
+
+								Button {
+									Layout.alignment: Qt.AlignTop
+									contentItem: Image {
+										source: "Bootstrap/icons/x.svg"
+
+										ColorOverlay {
+											color: Eduport.bsGray600
+											source: parent
+											anchors.fill: parent
+										}
+									}
+									background: Rectangle {
+										color: "transparent"
+										implicitWidth: 13
+									}
+								}
 							}
 
 							ComboBox {

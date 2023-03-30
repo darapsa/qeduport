@@ -12,6 +12,7 @@
 		<file>Bootstrap/icons/sun.svg</file>
 		<file>Bootstrap/icons/moon-stars.svg</file>
 		<file>Bootstrap/icons/cart3.svg</file>
+		<file>Bootstrap/icons/x.svg</file>
 		<file>Button/Sm.ui.qml</file>
 		<file>Button/Btn.ui.qml</file>
 		<file>Button/Primary.ui.qml</file>
