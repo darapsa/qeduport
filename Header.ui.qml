@@ -109,7 +109,6 @@ ToolBar {
 			Image {
 				anchors.centerIn: parent
 				source: "Bootstrap/icons/cart3.svg"
-				sourceSize.width: 18
 				fillMode: Image.PreserveAspectFit
 
 				ColorOverlay {
@@ -243,12 +242,6 @@ ToolBar {
 
 					Image {
 						source: menuItem.icon.source
-						sourceSize {
-							width: profileMenuItem
-								.icon.width
-							height: profileMenuItem
-								.icon.height
-						}
 
 						ColorOverlay {
 							color: highlighted
@@ -326,45 +319,25 @@ ToolBar {
 
 			Action {
 				id: editProfile
-				icon {
-					source:
-					"Bootstrap/icons/person.svg"
-					width: 19
-					height: 22
-				}
+				icon.source: "Bootstrap/icons/person.svg"
 				text: qsTr("Edit Profile")
 			}
 
 			Action {
 				id: accountSettings
-				icon {
-					source:
-					"Bootstrap/icons/gear.svg"
-					width: 19
-					height: 22
-				}
+				icon.source: "Bootstrap/icons/gear.svg"
 				text: qsTr("Account Settings")
 			}
 
 			Action {
 				id: help
-				icon {
-					source:
-					"Bootstrap/icons/info-circle.svg"
-					width: 19
-					height: 22
-				}
+				icon.source: "Bootstrap/icons/info-circle.svg"
 				text: qsTr("Help")
 			}
 
 			Action {
 				id: log
-				icon {
-					source:
-					"Bootstrap/icons/power.svg"
-					width: 19
-					height: 22
-				}
+				icon.source: "Bootstrap/icons/power.svg"
 				text: qsTr("Sign Out")
 			}
 
