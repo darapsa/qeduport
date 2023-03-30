@@ -36,7 +36,11 @@ Button {
 				: bsBtnDisabledBg
 		border {
 			width: Eduport.bsBtnBorderWidth
-			color: bsBtnBorderColor
+			color: button.down
+				? bsBtnActiveBorderColor
+				: button.enabled
+					? bsBtnBorderColor
+					: bsBtnDisabledBorderColor
 		}
 		radius: bsBtnBorderRadius
 	}
