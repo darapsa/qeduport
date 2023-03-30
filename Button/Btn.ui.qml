@@ -12,6 +12,7 @@ Button {
 	property color bsBtnDisabledColor: Eduport.bsBtnColor
 	property color bsBtnDisabledBg: Eduport.bsBtnBg
 	property color bsBtnDisabledBorderColor: Eduport.bsBtnBorderColor
+	property real bsBtnBorderRadius: Eduport.bsBtnBorderRadius
 	id: button
 	horizontalPadding: Eduport.bsBtnPaddingX
 	verticalPadding: Eduport.bsBtnPaddingY
@@ -37,6 +38,6 @@ Button {
 			width: Eduport.bsBtnBorderWidth
 			color: bsBtnBorderColor
 		}
-		radius: Eduport.bsBtnBorderRadius
+		radius: bsBtnBorderRadius
 	}
 }

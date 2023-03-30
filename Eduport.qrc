@@ -17,6 +17,7 @@
 		<file>Button/Primary.ui.qml</file>
 		<file>Button/Outline/Primary.ui.qml</file>
 		<file>Button/Success.ui.qml</file>
+		<file>Button/Light.ui.qml</file>
 		<file>Button/NavLink.ui.qml</file>
 		<file>Button/NavLink/TabsLine.ui.qml</file>
 		<file>DropShadow/Box.ui.qml</file>

@@ -109,6 +109,16 @@ QtObject {
 	property color bsBtnSuccessDisabledBg: "#a60cbc87"
 	property color bsBtnSuccessDisabledBorderColor: bsBtnSuccessDisabledBg
 
+	property color bsBtnLightColor: "#000000"
+	property color bsBtnLightBg: "#f5f7f9"
+	property color bsBtnLightBorderColor: bsBtnLightBg
+	property color bsBtnLightActiveColor: bsBtnLightColor
+	property color bsBtnLightActiveBg: "#c4c6c7"
+	property color bsBtnLightActiveBorderColor: "#b8b9bb"
+	property color bsBtnLightDisabledColor: "#a6000000"
+	property color bsBtnLightDisabledBg: "#a6f5f7f9"
+	property color bsBtnLightDisabledBorderColor: bsBtnLightDisabledBg
+
 	property color bsCardBg: mode ? "#1b1e21" : "#ffffff"
 	property color bsCardTitleColor: mode ? "#f7f5f5" : "#24292d"
 

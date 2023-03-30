@@ -10,6 +10,8 @@ import "Label" as Lbl
 ToolBar {
 	property alias logo: logo
 	property alias cart: cart
+	property alias cartMenu: cartMenu
+	property alias checkout: checkout
 	property alias profile: profile
 	property string imageSource: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
 	property alias menu: menu
@@ -123,10 +125,47 @@ ToolBar {
 		}
 
 		Menu {
+			id: cartMenu
 			y: parent.height
 			background: Loader {
 				width: 256
 				sourceComponent: background
+			}
+
+			Lbl.H5 {
+				text: qsTr("Cart items")
+				topPadding: 25.6
+				leftPadding: 16
+				rightPadding: 16
+				bottomPadding: 25.6
+			}
+
+			Loader {
+				sourceComponent: menuSeparator
+			}
+
+			RowLayout {
+
+				Btn.Light {
+					id: viewCart
+					text: qsTr("View Cart")
+					horizontalPadding: 12.8
+					verticalPadding: 6.4
+					font.pointSize: 13
+					bsBtnBorderRadius: 3.2
+					Layout.margins: 16
+				}
+
+				Btn.Success {
+					id: checkout
+					text: qsTr("Checkout")
+					horizontalPadding: 12.8
+					verticalPadding: 6.4
+					font.pointSize: 13
+					bsBtnBorderRadius: 3.2
+					Layout.margins: 16
+					Layout.alignment: Qt.AlignRight
+				}
 			}
 		}
 	}
