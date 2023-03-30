@@ -5,68 +5,79 @@ import QtGraphicalEffects 1.15
 import Eduport 1.4
 import "../Label" as Lbl
 
-MenuItem {
-	id: menuItem
-	contentItem: ColumnLayout {
+ColumnLayout {
+	property string imageSource:
+		"https://eduport.webestica.com/assets/images/book/02.jpg"
+	property string titleText: "Angular 4 Tutorial in audio (Compact Disk)"
+	property alias button: button
+	property alias comboBox: comboBox
 
-		Loader {
-			Layout.fillWidth: true
-			Layout.topMargin: -24
-			Layout.leftMargin: -8
-			Layout.rightMargin: -8
-			sourceComponent: menuSeparator
-		}
-
-		RowLayout {
-			Layout.margins: 16
-
-			Loader {
-				property string imageSource: menuItem
-								.icon.source
-				property int imageWidth: 50
-				property int imageHeight: 50
-				property real maskRadius: 5.2
-				sourceComponent: image
-				Layout.alignment: Qt.AlignTop
-			}
-
-			ColumnLayout {
-
-				RowLayout {
-
-					Lbl.H6 {
-						text: menuItem.text
-						Layout.fillWidth: true
-					}
-
-					Button {
-						Layout.alignment: Qt.AlignTop
-						contentItem: Image {
-							source:
-							"../Bootstrap/icons/x.svg"
-
-							ColorOverlay {
-								color: Eduport
-								.bsGray600
-								source: parent
-								anchors.fill:
-									parent
-							}
-						}
-						background: Rectangle {
-							color: "transparent"
-							implicitWidth: 13
-						}
-					}
-				}
-
-				ComboBox {
-					model: [1, 2, 3, 4, 5]
-				}
-			}
+	MenuSeparator {
+		Layout.fillWidth: true
+		contentItem: Rectangle {
+			implicitHeight: 1
+			color: Eduport.mode
+				? Eduport.bsGray300 : Eduport.bsGray500
 		}
 	}
-	background: Rectangle {
-		color: "transparent"
+
+	RowLayout {
+		Layout.margins: 16
+
+		Image {
+			Layout.alignment: Qt.AlignTop
+			source: imageSource
+			sourceSize {
+				width: 50
+				height: 50
+			}
+			layer {
+				enabled: true
+				effect: OpacityMask {
+					maskSource: Rectangle {
+						width: 50
+						height: 50
+						radius: 5.2
+					}
+				}
+			}
+		}
+
+		ColumnLayout {
+
+			RowLayout {
+				spacing: 0
+
+				Lbl.H6 {
+					text: titleText
+					Layout.maximumWidth: 146
+				}
+
+				Button {
+					id: button
+					Layout.alignment: Qt.AlignTop
+								| Qt.AlignRight
+					contentItem: Image {
+						source:
+						"../Bootstrap/icons/x.svg"
+
+						ColorOverlay {
+							color: Eduport.bsGray600
+							source: parent
+							anchors.fill: parent
+						}
+					}
+					background: Rectangle {
+						color: "transparent"
+						implicitWidth: 13
+					}
+				}
+			}
+
+			ComboBox {
+				id: comboBox
+				model: [1, 2, 3, 4, 5]
+			}
+		}
 	}
 }

@@ -134,7 +134,15 @@ ToolBar {
 				width: 256
 				sourceComponent: background
 			}
-			delegate: CartItem {}
+			delegate: MenuItem {
+				contentItem: CartItem {
+					imageSource: icon.source
+					titleText: text
+				}
+				background: Rectangle {
+					color: "transparent"
+				}
+			}
 
 			Lbl.H5 {
 				text: qsTr("Cart items")
