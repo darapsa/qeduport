@@ -18,6 +18,7 @@ ColumnLayout {
 	property alias time: time
 	property alias trial: trial
 	property alias buy: buy
+	spacing: 16
 
 	Image {
 		id: image
@@ -58,15 +59,16 @@ ColumnLayout {
 	}
 
 	ColumnLayout {
+		Layout.topMargin: 0
+		Layout.margins: 16
 
 		RowLayout {
-			Layout.topMargin: 16
-			Layout.bottomMargin: 16
 
 			ColumnLayout {
-				spacing: 8
+				spacing: 0
 
 				RowLayout {
+					spacing: 8
 
 					Lbl.H3 {
 						text: priceText
@@ -109,6 +111,7 @@ ColumnLayout {
 
 				RowLayout {
 					id: time
+					spacing: 8
 
 					Lbl.Body {
 						text: qsTr("5 days left at this price")
@@ -120,8 +123,6 @@ ColumnLayout {
 
 		RowLayout {
 			Layout.topMargin: 16
-			Layout.fillWidth: true
-			spacing: 16
 
 			BtnOutline.Primary {
 				id: trial
