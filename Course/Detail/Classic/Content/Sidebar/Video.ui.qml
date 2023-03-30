@@ -75,10 +75,7 @@ ColumnLayout {
 					Lbl.Body {
 						id: initialPrice
 						text: "$350"
-						color
-						: "#4d000000"
-						font.strikeout
-						: true
+						font.strikeout: true
 					}
 
 					Rectangle {
