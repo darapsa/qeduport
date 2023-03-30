@@ -9,6 +9,7 @@ import "Label" as Lbl
 
 ToolBar {
 	property alias logo: logo
+	property alias cart: cart
 	property alias profile: profile
 	property string imageSource: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
 	property alias menu: menu
@@ -73,6 +74,50 @@ ToolBar {
 				implicitHeight: 1
 				color: Eduport.mode
 					? Eduport.bsGray300 : Eduport.bsGray500
+			}
+		}
+	}
+
+	ToolButton {
+		id: cart
+		padding: 0
+		width: 40
+		height: 40
+		anchors {
+			right: profile.left
+			rightMargin: 12
+			verticalCenter: parent.verticalCenter
+		}
+		layer {
+			enabled: true
+			effect: OpacityMask {
+				maskSource: Rectangle {
+					width: 40
+					height: 40
+					radius: 40
+				}
+			}
+		}
+		contentItem: Item {
+
+			Image {
+				anchors.centerIn: parent
+				source: "Bootstrap/icons/cart3.svg"
+				sourceSize.width: 18
+				fillMode: Image.PreserveAspectFit
+
+				ColorOverlay {
+					color: Eduport.bsGray900
+					source: parent
+					anchors.fill: parent
+				}
+			}
+		}
+		background: Rectangle {
+			color: Eduport.bsLight
+			border {
+				color: Eduport.bsLight
+				width: 1
 			}
 		}
 	}
