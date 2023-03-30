@@ -78,32 +78,31 @@ ColumnLayout {
 						font.strikeout: true
 					}
 
-					Rectangle {
-						id
-						: discountLabel
-						implicitWidth
-						: discount.width
-						implicitHeight
-						: discount
-						.height
-						radius: 6
-						color: "#fd7e14"
-
-						Label {
-							id: discount
-							text: qsTr("60% off")
-							color: "white"
-							font {
-								family: Eduport.bodyFont.family
-								weight: Eduport.bodyFont.weight
-								pointSize: Eduport.bsBadgeFontSize
-							}
-							horizontalAlignment: Text.AlignHCenter
-							verticalAlignment: Text.AlignVCenter
-							topPadding: 4.46
-							leftPadding: 8.29
-							rightPadding: 8.29
-							bottomPadding: 4.46
+					Label {
+						id: discount
+						text: qsTr("60% off")
+						color: "white"
+						font {
+							family: Eduport
+								.bodyFont
+								.family
+							weight: Eduport
+								.bodyFont
+								.weight
+							pointSize: Eduport
+							.bsBadgeFontSize
+						}
+						horizontalAlignment: Text
+								.AlignHCenter
+						verticalAlignment: Text
+								.AlignVCenter
+						topPadding: 4.46
+						leftPadding: 8.29
+						rightPadding: 8.29
+						bottomPadding: 4.46
+						background: Rectangle {
+							radius: 6
+							color: "#fd7e14"
 						}
 					}
 				}
