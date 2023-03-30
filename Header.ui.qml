@@ -41,7 +41,8 @@ ToolBar {
 			verticalCenter: parent.verticalCenter
 		}
 		icon {
-			source: "https://eduport.webestica.com/assets/images/logo.svg"
+			source:
+			"https://eduport.webestica.com/assets/images/logo.svg"
 			width: 115
 		}
 		background: Rectangle {
@@ -144,13 +145,17 @@ ToolBar {
 			}
 
 			Action {
-				icon.source:"https://eduport.webestica.com/assets/images/book/02.jpg"
-				text: "Angular 4 Tutorial in audio (Compact Disk)"
+				icon.source:
+				"https://eduport.webestica.com/assets/images/book/02.jpg"
+				text:
+				"Angular 4 Tutorial in audio (Compact Disk)"
 			}
 
 			Action {
-				icon.source:"https://eduport.webestica.com/assets/images/book/04.jpg"
-				text: "The Principles of Beautiful Graphics Design (Paperback)"
+				icon.source:
+				"https://eduport.webestica.com/assets/images/book/04.jpg"
+				text:
+				"The Principles of Beautiful Graphics Design (Paperback)"
 			}
 
 			Loader {
