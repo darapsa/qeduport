@@ -5,7 +5,7 @@ import Eduport 1.4
 Btn {
 	id: button
 	background: Rectangle {
-		color: button.down ? Eduport.bsBtnSuccessActiveBG
+		color: button.down ? Eduport.bsBtnSuccessActiveBg
 			: button.enabled
 			? Eduport.bsBtnSuccessBg
 			: Eduport.bsBtnSuccessDisabledBg
