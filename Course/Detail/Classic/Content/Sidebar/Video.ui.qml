@@ -6,6 +6,7 @@ import QtMultimedia 5.15
 import Eduport 1.4
 import "../../../../../Label" as Lbl
 import "../../../../../Button" as Btn
+import "../../../../../Button/Outline" as BtnOutline
 
 ColumnLayout {
 	property alias image: image
@@ -126,32 +127,9 @@ ColumnLayout {
 			Layout.fillWidth: true
 			spacing: 16
 
-			Button {
+			BtnOutline.Primary {
 				id: trial
-				horizontalPadding: 16
-				verticalPadding: 8
 				text: qsTr("Free trial")
-				font: Eduport.bsBtnFont
-				contentItem: Text {
-					horizontalAlignment
-					: Text
-					.AlignHCenter
-					text: trial.text
-					font: trial.font
-					color: trial.down
-					? "#ffffff"
-					: "#066ac9"
-				}
-				background: Rectangle {
-					radius: 5.2
-					color: trial.down
-					? "#066ac9"
-					: "#ffffff"
-					border {
-						color: "#066ac9"
-						width: 1
-					}
-				}
 			}
 
 			Btn.Success {
