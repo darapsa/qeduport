@@ -13,8 +13,9 @@ ToolBar {
 	property alias cartMenu: cartMenu
 	property alias checkout: checkout
 	property alias profile: profile
-	property string imageSource: "https://eduport.webestica.com/assets/images/avatar/01.jpg"
-	property alias menu: menu
+	property string profileImageSource:
+		"https://eduport.webestica.com/assets/images/avatar/01.jpg"
+	property alias profileMenu: profileMenu
 	property alias info: info
 	property alias divider: divider
 	property string fullNameText: "Lori Ferguson"
@@ -71,9 +72,10 @@ ToolBar {
 
 	Component {
 		id: menuSeparator
+
 		MenuSeparator {
 			contentItem: Rectangle {
-				implicitWidth: menu.width
+				implicitWidth: width
 				implicitHeight: 1
 				color: Eduport.mode
 					? Eduport.bsGray300 : Eduport.bsGray500
@@ -131,6 +133,60 @@ ToolBar {
 				width: 256
 				sourceComponent: background
 			}
+			delegate: MenuItem {
+				id: menuItem
+				contentItem: ColumnLayout {
+
+					Loader {
+						Layout.fillWidth: true
+						Layout.topMargin: -24
+						Layout.leftMargin: -8
+						Layout.rightMargin: -8
+						sourceComponent: menuSeparator
+					}
+
+					RowLayout {
+						Layout.margins: 16
+
+						Loader {
+							property string
+								imageSource:
+								menuItem
+								.icon.source
+							property int
+								imageWidth: 50
+							property int
+								imageHeight: 50
+							property real
+								maskRadius: 5.2
+							sourceComponent: image
+							Layout.alignment:
+								Qt.AlignTop
+						}
+
+						ColumnLayout {
+
+							RowLayout {
+
+								Lbl.H6 {
+									text:
+									menuItem
+									.text
+									Layout
+									.fillWidth:
+									true
+								}
+							}
+
+							ComboBox {
+								model: [1, 2,
+									3, 4,
+									5]
+							}
+						}
+					}
+				}
+			}
 
 			Lbl.H5 {
 				text: qsTr("Cart items")
@@ -138,6 +194,16 @@ ToolBar {
 				leftPadding: 16
 				rightPadding: 16
 				bottomPadding: 25.6
+			}
+
+			Action {
+				icon.source:"https://eduport.webestica.com/assets/images/book/02.jpg"
+				text: "Angular 4 Tutorial in audio (Compact Disk)"
+			}
+
+			Action {
+				icon.source:"https://eduport.webestica.com/assets/images/book/04.jpg"
+				text: "The Principles of Beautiful Graphics Design (Paperback)"
 			}
 
 			Loader {
@@ -172,19 +238,20 @@ ToolBar {
 
 	Component {
 		id: image
+
 		Image {
 			source: imageSource
 			sourceSize {
-				width: size
-				height: size
+				width: imageWidth
+				height: imageHeight
 			}
 			layer {
 				enabled: true
 				effect: OpacityMask {
 					maskSource: Rectangle {
-						width: size
-						height: size
-						radius: size
+						width: imageWidth
+						height: imageHeight
+						radius: maskRadius
 					}
 				}
 			}
@@ -199,7 +266,10 @@ ToolBar {
 			verticalCenter: parent.verticalCenter
 		}
 		contentItem: Loader {
-			property real size: 40
+			property string imageSource: profileImageSource
+			property int imageWidth: 40
+			property int imageHeight: 40
+			property real maskRadius: 40
 			sourceComponent: image
 		}
 		background: Rectangle {
@@ -207,7 +277,7 @@ ToolBar {
 		}
 
 		Menu {
-			id: menu
+			id: profileMenu
 			y: parent.height
 			horizontalPadding: 10
 			verticalPadding: 16
@@ -226,10 +296,10 @@ ToolBar {
 					Image {
 						source: menuItem.icon.source
 						sourceSize {
-							width: menuItem.icon
-									.width
-							height: menuItem.icon
-									.height
+							width: menuItem
+								.icon.width
+							height: menuItem
+								.icon.height
 						}
 
 						ColorOverlay {
@@ -277,7 +347,10 @@ ToolBar {
 					}
 
 					Loader {
-						property real size: 48
+						property string imageSource: profileImageSource
+						property int imageWidth: 48
+						property int imageHeight: 48
+						property real maskRadius: 48
 						sourceComponent: image
 					}
 
