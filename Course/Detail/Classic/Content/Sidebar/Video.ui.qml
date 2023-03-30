@@ -113,9 +113,24 @@ ColumnLayout {
 					id: time
 					spacing: 8
 
+					Image {
+						source: "../../../../../Font-Awesome/svgs/solid/stopwatch.svg"
+						sourceSize {
+							width: 13
+							height: 15
+						}
+
+						ColorOverlay {
+							anchors.fill: parent
+							source: parent
+							color: Eduport
+								.bsDanger
+						}
+					}
+
 					Lbl.Body {
 						text: qsTr("5 days left at this price")
-						color: "#d6293e"
+						color: Eduport.bsDanger
 					}
 				}
 			}

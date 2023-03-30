@@ -1,9 +1,10 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qeduport">
-		<file>Font-Awesome/svgs/solid/circle-play.svg</file>
 		<file>Course/Detail/Classic/Content/Main/TabContents/Instructor.ui.qml</file>
 		<file>Course/Detail/Classic/Content/Main/TabContents/Instructor/ListInlineItem.ui.qml</file>
 		<file>Course/Detail/Classic/Content/Main.ui.qml</file>
+		<file>Font-Awesome/svgs/solid/circle-play.svg</file>
+		<file>Font-Awesome/svgs/solid/stopwatch.svg</file>
 		<file>Course/Detail/Classic/Content/Sidebar/Video.ui.qml</file>
 		<file>Course/Detail/Classic.ui.qml</file>
 	</qresource>
