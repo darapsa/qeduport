@@ -46,22 +46,23 @@ ToolBar {
 	}
 
 	Component {
-		id: image
-		Image {
-			source: imageSource
-			sourceSize {
-				width: size
-				height: size
+		id: background
+
+		Item {
+			implicitWidth: width
+
+			Rectangle {
+				id: rectangle
+				anchors.fill: parent
+				radius: 5.2
+				color: Eduport.mode
+					? Eduport.bsDark
+					: Eduport.bsBodyBg
 			}
-			layer {
-				enabled: true
-				effect: OpacityMask {
-					maskSource: Rectangle {
-						width: size
-						height: size
-						radius: size
-					}
-				}
+
+			DrpShdw.Box {
+				source: rectangle
+				anchors.fill: rectangle
 			}
 		}
 	}
@@ -120,6 +121,35 @@ ToolBar {
 				width: 1
 			}
 		}
+
+		Menu {
+			y: parent.height
+			background: Loader {
+				width: 256
+				sourceComponent: background
+			}
+		}
+	}
+
+	Component {
+		id: image
+		Image {
+			source: imageSource
+			sourceSize {
+				width: size
+				height: size
+			}
+			layer {
+				enabled: true
+				effect: OpacityMask {
+					maskSource: Rectangle {
+						width: size
+						height: size
+						radius: size
+					}
+				}
+			}
+		}
 	}
 
 	ToolButton {
@@ -142,6 +172,10 @@ ToolBar {
 			y: parent.height
 			horizontalPadding: 10
 			verticalPadding: 16
+			background: Loader {
+				width: 260.734
+				sourceComponent: background
+			}
 			delegate: MenuItem {
 				id: menuItem
 				font: Eduport.bsBtnFont
@@ -184,24 +218,6 @@ ToolBar {
 							? Eduport.bsDark
 							: Eduport.bsBodyBg
 					radius: 5.2
-				}
-			}
-			background: Item {
-				implicitWidth: 260.734
-				implicitHeight: 295.406
-
-				Rectangle {
-					id: rectangle
-					anchors.fill: parent
-					radius: 5.2
-					color: Eduport.mode
-						? Eduport.bsDark
-						: Eduport.bsBodyBg
-				}
-
-				DrpShdw.Box {
-					source: rectangle
-					anchors.fill: rectangle
 				}
 			}
 
