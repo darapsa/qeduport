@@ -32,6 +32,7 @@
 		<file>Label/H1.ui.qml</file>
 		<file>Label/Display6.ui.qml</file>
 		<file>TextField/Input.ui.qml</file>
+		<file>Header/CartItem.ui.qml</file>
 		<file>Header.ui.qml</file>
 	</qresource>
 </RCC>
