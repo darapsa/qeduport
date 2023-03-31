@@ -12,6 +12,7 @@ ToolBar {
 	property alias logo: logo
 	property alias cart: cart
 	property alias cartMenu: cartMenu
+	property alias cartItems: cartItems
 	property alias checkout: checkout
 	property alias profile: profile
 	property string profileImageSource:
@@ -134,15 +135,6 @@ ToolBar {
 				width: 256
 				sourceComponent: background
 			}
-			delegate: MenuItem {
-				contentItem: CartItem {
-					imageSource: icon.source
-					titleText: text
-				}
-				background: Rectangle {
-					color: "transparent"
-				}
-			}
 
 			Lbl.H5 {
 				text: qsTr("Cart items")
@@ -152,18 +144,25 @@ ToolBar {
 				bottomPadding: 25.6
 			}
 
-			Action {
-				icon.source:
-				"https://eduport.webestica.com/assets/images/book/02.jpg"
-				text:
-				"Angular 4 Tutorial in audio (Compact Disk)"
-			}
-
-			Action {
-				icon.source:
-				"https://eduport.webestica.com/assets/images/book/04.jpg"
-				text:
-				"The Principles of Beautiful Graphics Design (Paperback)"
+			ListView {
+				id: cartItems
+				interactive: false
+				implicitHeight: count * 120
+				model: ListModel {
+					ListElement {
+						image: "https://eduport.webestica.com/assets/images/book/02.jpg"
+						title: "Angular 4 Tutorial in audio (Compact Disk)"
+					}
+					ListElement {
+						image: "https://eduport.webestica.com/assets/images/book/04.jpg"
+						title: "The Principles of Beautiful Graphics Design (Paperback)"
+					}
+				}
+				delegate: CartItem {
+					width: cartItems.width
+					imageSource: image
+					titleText: title
+				}
 			}
 
 			Loader {

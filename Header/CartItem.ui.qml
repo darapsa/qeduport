@@ -22,7 +22,8 @@ ColumnLayout {
 	}
 
 	RowLayout {
-		Layout.margins: 16
+		Layout.leftMargin: 16
+		Layout.rightMargin: 16
 
 		Image {
 			Layout.alignment: Qt.AlignTop
