@@ -31,19 +31,20 @@ ColumnLayout {
 			implicitHeight: codeLabel.implicitHeight
 						+ codeValue.implicitHeight
 
-			Label {
+			Body {
 				id: codeLabel
 				text: qsTr("Transaction code")
-				font.pointSize: 14
-				font.family: "roboto"
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
-			Label {
+			H6 {
 				id: codeValue
 				text: "AB12365E"
-				font.pointSize: 14
-				font.family: "roboto"
+				font {
+					family: Eduport.fwLightFont.family
+					weight: Eduport.fwLightFont.weight
+					pointSize: Eduport.h6FontSize
+				}
 				anchors {
 					right: parent.right
 					verticalCenter: parent.verticalCenter
@@ -138,9 +139,9 @@ ColumnLayout {
 		Item {
 			Layout.fillWidth: true
 			implicitHeight: priceLabel.implicitHeight
-			+ priceValue.implicitHeight
+						+ priceValue.implicitHeight
 
-			Label {
+			H6 {
 				id: priceLabel
 				text: qsTr("Original Price")
 				font {
@@ -166,7 +167,7 @@ ColumnLayout {
 			implicitHeight: discountLabel.implicitHeight
 						+ discountValue.implicitHeight
 
-			Label {
+			H6 {
 				id: discountLabel
 				text: qsTr("Coupon Discount")
 				font {

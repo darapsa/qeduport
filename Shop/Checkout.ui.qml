@@ -83,6 +83,7 @@ Flickable {
 					implicitHeight: orderSummary.height
 					Layout.margins: 16
 					radius: 8
+					color: Eduport.bsCardBg
 
 					OrderSummary {
 						id: orderSummary
