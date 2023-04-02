@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import Eduport 1.4
 import "../../TextField"
 import "../../Label"
+import "PersonalInfo/PaymentMethod"
 
 ColumnLayout {
 	property alias name: name
@@ -13,7 +14,7 @@ ColumnLayout {
 	property alias state: province
 	property alias postal: postal
 	property alias address: address
-	property alias banks: banks
+	property alias paymentMethodNetBanking: paymentMethodNetBanking
 
 	H5 {
 		text: qsTr("Personal Details")
@@ -244,7 +245,7 @@ ColumnLayout {
 			}
 
 			Rectangle {
-				implicitHeight: paymentNetBanking.height
+				implicitHeight: paymentMethodNetBanking.height
 				Layout.margins: 16
 				Layout.fillWidth: true
 				border.width: 1
@@ -252,71 +253,11 @@ ColumnLayout {
 				border.color: "#4d000000"
 				color: Eduport.bsAccordionBg
 
-				ColumnLayout {
-					id: paymentNetBanking
+				NetBanking {
+					id: paymentMethodNetBanking
 					anchors {
 						left: parent.left
 						right: parent.right
-					}
-
-					Body {
-						text:
-						qsTr("Pay with Net Banking")
-						Layout.fillWidth: true
-						Layout.rightMargin: 16
-						Layout.leftMargin: 16
-						Layout.topMargin: 16
-					}
-
-					ColumnLayout {
-						Layout.margins: 16
-						Body {
-							text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
-							Layout.fillWidth: true
-						}
-
-						Body {
-							text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
-							Layout.fillWidth: true
-						}
-
-						ComboBox {
-							id: banks
-							Layout.fillWidth: true
-							font.pointSize: 14
-							font.family: "roboto"
-							Layout.topMargin: 24
-							model: ListModel {
-								ListElement {
-									label: "Please choose one"
-								}
-								ListElement {
-									label: "Bank of America"
-								}
-								ListElement {
-									label: "Bank of India"
-								}
-								ListElement {
-									label: "Bank of London"
-								}
-							}
-							delegate: ItemDelegate {
-								contentItem: Text {
-									text: label
-									font {
-										family: Eduport.bodyFont.family
-										weight: Eduport.bodyFont.weight
-										pointSize: Eduport.bodyFont.pointSize
-									}
-								}
-							}
-							background: Rectangle {
-								radius: 8
-								implicitHeight: 36
-								implicitWidth: 200
-								color: "#f5f7f9"
-							}
-						}
 					}
 				}
 			}
