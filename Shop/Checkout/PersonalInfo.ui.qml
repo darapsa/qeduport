@@ -226,6 +226,7 @@ ColumnLayout {
 				border.width: 1
 				radius: 8
 				border.color: "#4d000000"
+				color: Eduport.bsAccordionBg
 
 				ColumnLayout {
 					id: paymentCard
@@ -249,6 +250,7 @@ ColumnLayout {
 				border.width: 1
 				radius: 8
 				border.color: "#4d000000"
+				color: Eduport.bsAccordionBg
 
 				ColumnLayout {
 					id: paymentNetBanking
