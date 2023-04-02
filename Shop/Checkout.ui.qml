@@ -60,9 +60,10 @@ Flickable {
 
 				Rectangle {
 					Layout.fillWidth: true
-					implicitHeight: personalInfo.height
 					Layout.margins: 16
+					implicitHeight: personalInfo.height
 					radius: 8
+					color: Eduport.bsCardBg
 
 					PersonalInfo {
 						id: personalInfo
