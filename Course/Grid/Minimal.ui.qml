@@ -6,6 +6,7 @@ import "Minimal"
 import "../../Home/Default"
 
 Flickable {
+	property alias courseGrid: courseGrid
 	contentHeight: main.height
 
 	Rectangle {
