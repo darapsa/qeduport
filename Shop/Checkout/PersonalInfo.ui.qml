@@ -15,11 +15,6 @@ ColumnLayout {
 	property alias address: address
 	property alias banks: banks
 
-	anchors {
-		left: parent.left
-		right: parent.right
-	}
-
 	H5 {
 		text: qsTr("Personal Details")
 		Layout.fillWidth: true

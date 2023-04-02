@@ -67,6 +67,10 @@ Flickable {
 
 					PersonalInfo {
 						id: personalInfo
+						anchors {
+							left: parent.left
+							right: parent.right
+						}
 					}
 				}
 			}
