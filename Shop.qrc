@@ -1,6 +1,7 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qeduport">
 		<file>Shop/Course.ui.qml</file>
+		<file>Shop/Checkout/PersonalInfo.ui.qml</file>
 		<file>Shop/Checkout.ui.qml</file>
 	</qresource>
 </RCC>
