@@ -21,6 +21,7 @@ Item {
 	property string titleText: "Build Responsive Websites with HTML"
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
+	property bool truncatedVisible: true
 	property real rating: 4.0
 
 	DrpShdw.Box {
@@ -142,6 +143,7 @@ Item {
 				text: truncatedText
 				elide: Text.ElideRight
 				maximumLineCount: 2
+				visible: truncatedVisible
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 			}

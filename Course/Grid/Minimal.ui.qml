@@ -42,7 +42,7 @@ Flickable {
 				: main.width < 992
 				? width / 3
 				: width / 4
-			cellHeight: cellWidth * 400 / 533 + 273.35
+			cellHeight: cellWidth * 400 / 533 + 220.35
 			model: ListModel {
 				ListElement {
 					image: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
@@ -162,7 +162,7 @@ Flickable {
 				badgeBackgroundColor: levelBackgroundColor
 				favorite.checked: liked
 				titleText: title
-				truncatedText: ""
+				truncatedVisible: false
 				rating: rate
 			}
 		}
