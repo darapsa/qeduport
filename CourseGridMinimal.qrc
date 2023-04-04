@@ -1,0 +1,8 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="qeduport">
+		<file>Font-Awesome/svgs/solid/magnifying-glass.svg</file>
+		<file>Course/Grid/Minimal/FilterBar.ui.qml</file>
+		<file>Course/Grid/Card.ui.qml</file>
+		<file>Course/Grid/Minimal.ui.qml</file>
+	</qresource>
+</RCC>

@@ -40,6 +40,8 @@ QtObject {
 		weight: Font.Normal
 	})
 
+	property color bsAccordionBg: bsBodyBg
+
 	readonly property real bsBadgeFontSize: 13.6
 
 	property color bsBodyColor: mode ? "#a1a1a8" : "#747579"

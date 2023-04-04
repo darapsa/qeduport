@@ -69,7 +69,6 @@ ColumnLayout {
 						bottom: parent.bottom
 					}
 					text: priceText
-					color: "#0cbc87"
 				}
 		       }
 	       }

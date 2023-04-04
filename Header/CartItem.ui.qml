@@ -51,7 +51,7 @@ ColumnLayout {
 
 				Lbl.H6 {
 					text: titleText
-					Layout.maximumWidth: 146
+					Layout.fillWidth: true
 				}
 
 				Button {

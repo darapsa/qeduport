@@ -63,7 +63,7 @@ Rectangle {
 			id: searchButton
 			Layout.fillWidth: true
 			icon.color: "#ffffff"
-			icon.source: "Material/svg/filled/search.svg"
+			icon.source: "../../../Font-Awesome/svgs/solid/magnifying-glass.svg"
 			Layout.rightMargin: 24
 			display: AbstractButton.IconOnly
 		}
