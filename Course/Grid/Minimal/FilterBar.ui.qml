@@ -16,8 +16,7 @@ Rectangle {
 			left: parent.left
 			right: parent.right
 		}
-		rows: 6
-		columns: 6
+		columns: parent.width < 1200 ? 1 : 6
 		rowSpacing: 16
 		columnSpacing: 16
 		flow: GridLayout.LeftToRight
