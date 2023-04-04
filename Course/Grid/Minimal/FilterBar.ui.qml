@@ -15,7 +15,7 @@ Rectangle {
 			left: parent.left
 			right: parent.right
 		}
-		columns: parent.width < 1200 ? 1 : 6
+		columns: parent.width < 720 ? 1 : 6
 		rowSpacing: 0
 		columnSpacing: 0
 		flow: GridLayout.LeftToRight
@@ -23,10 +23,10 @@ Rectangle {
 			id: keywordInput
 			font.family: "Roboto"
 			font.pointSize: 16
-			Layout.bottomMargin: 16
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.topMargin: 16
 			Layout.leftMargin: 16
-			Layout.rightMargin: 8
+			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
 			placeholderText: "Enter keyword"
 			Layout.fillWidth: true
 		}
@@ -37,10 +37,10 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Categories"
 			Layout.fillWidth: true
-			Layout.bottomMargin: 16
-			Layout.topMargin: 16
-			Layout.leftMargin: 8
-			Layout.rightMargin: 8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
+			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
 		}
 		ComboBox {
 			id: priceLevel
@@ -48,10 +48,10 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Price level"
 			Layout.fillWidth: true
-			Layout.bottomMargin: 16
-			Layout.topMargin: 16
-			Layout.leftMargin: 8
-			Layout.rightMargin: 8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
+			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
 		}
 		ComboBox {
 			id: skillLevel
@@ -59,10 +59,10 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Skill level"
 			Layout.fillWidth: true
-			Layout.bottomMargin: 16
-			Layout.topMargin: 16
-			Layout.leftMargin: 8
-			Layout.rightMargin: 8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
+			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
 		}
 		ComboBox {
 			id: language
@@ -70,10 +70,10 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Languange"
 			Layout.fillWidth: true
-			Layout.bottomMargin: 16
-			Layout.topMargin: 16
-			Layout.leftMargin: 8
-			Layout.rightMargin: 8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
+			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
 		}
 
 		Button {
@@ -82,9 +82,9 @@ Rectangle {
 			icon.source: "../../../Font-Awesome/svgs/solid/magnifying-glass.svg"
 			display: AbstractButton.IconOnly
 			Layout.fillWidth: true
-			Layout.bottomMargin: 16
-			Layout.topMargin: 16
-			Layout.leftMargin: 8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
+			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: 16
 		}
 	}
