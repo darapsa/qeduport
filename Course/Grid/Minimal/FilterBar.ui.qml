@@ -12,7 +12,10 @@ Rectangle {
 	border.color: "#33000000"
 	GridLayout {
 		id: filterBarControl
-		anchors.fill: parent
+		anchors {
+			left: parent.left
+			right: parent.right
+		}
 		rows: 6
 		columns: 6
 		rowSpacing: 16
@@ -32,28 +35,24 @@ Rectangle {
 
 		ComboBox {
 			id: categories
-			Layout.fillWidth: true
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Categories"
 		}
 		ComboBox {
 			id: priceLevel
-			Layout.fillWidth: true
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Price level"
 		}
 		ComboBox {
 			id: skillLevel
-			Layout.fillWidth: true
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Skill level"
 		}
 		ComboBox {
 			id: language
-			Layout.fillWidth: true
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Languange"
@@ -61,7 +60,6 @@ Rectangle {
 
 		Button {
 			id: searchButton
-			Layout.fillWidth: true
 			icon.color: "#ffffff"
 			icon.source: "../../../Font-Awesome/svgs/solid/magnifying-glass.svg"
 			Layout.rightMargin: 24
