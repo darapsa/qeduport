@@ -6,7 +6,6 @@ Rectangle {
 	id: bgLightBorder
 	color: "#f5f7f9"
 	height: filterBarControl.height
-	width: filterBarControl.width
 	Layout.maximumHeight: filterBarControl.height
 	radius: 8
 	border.color: "#33000000"
@@ -17,19 +16,19 @@ Rectangle {
 			right: parent.right
 		}
 		columns: parent.width < 1200 ? 1 : 6
-		rowSpacing: 16
-		columnSpacing: 16
+		rowSpacing: 0
+		columnSpacing: 0
 		flow: GridLayout.LeftToRight
-		Layout.fillWidth: true
 		TextField {
 			id: keywordInput
-			Layout.fillWidth: true
 			font.family: "Roboto"
 			font.pointSize: 16
-			Layout.bottomMargin: 24
-			Layout.topMargin: 24
-			Layout.leftMargin: 24
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 16
+			Layout.rightMargin: 8
 			placeholderText: "Enter keyword"
+			Layout.fillWidth: true
 		}
 
 		ComboBox {
@@ -37,32 +36,56 @@ Rectangle {
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Categories"
+			Layout.fillWidth: true
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 8
+			Layout.rightMargin: 8
 		}
 		ComboBox {
 			id: priceLevel
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Price level"
+			Layout.fillWidth: true
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 8
+			Layout.rightMargin: 8
 		}
 		ComboBox {
 			id: skillLevel
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Skill level"
+			Layout.fillWidth: true
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 8
+			Layout.rightMargin: 8
 		}
 		ComboBox {
 			id: language
 			font.pointSize: 16
 			font.family: "Roboto"
 			displayText: "Languange"
+			Layout.fillWidth: true
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 8
+			Layout.rightMargin: 8
 		}
 
 		Button {
 			id: searchButton
 			icon.color: "#ffffff"
 			icon.source: "../../../Font-Awesome/svgs/solid/magnifying-glass.svg"
-			Layout.rightMargin: 24
 			display: AbstractButton.IconOnly
+			Layout.fillWidth: true
+			Layout.bottomMargin: 16
+			Layout.topMargin: 16
+			Layout.leftMargin: 8
+			Layout.rightMargin: 16
 		}
 	}
 }
