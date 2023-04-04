@@ -1,9 +1,50 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import QtGraphicalEffects 1.15
 import Eduport 1.4
-import "../../TextField" as TxtFld
-import "../../Label" as Lbl
-import "../../Button" as Btn
+import "../../../TextField"
+import "../../../Label"
+import "../../../Button"
 
-Item {}
+GridLayout {
+    rows: width < 990 ? 2 : 1
+    columns: width < 990 ? 1 : 2
+    rowSpacing: 8
+    columnSpacing: 8
+    Rectangle {
+        id: courseItemImage
+        width: 100
+        height: 75
+        Layout.maximumWidth: width
+        Layout.maximumHeight: height
+        radius: 8
+        Layout.rightMargin: 8
+        Layout.bottomMargin: 16
+        Layout.topMargin: 16
+        Layout.leftMargin: 8
+        Layout.alignment: Qt.AlignLeft | Qt.AlignTop
+        Image {
+            id: courseItemImageSource
+            anchors.fill: parent
+            visible: false
+            source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+        }
+        OpacityMask {
+            id: coursetemImageMask
+            anchors.fill: courseItemImage
+            source: courseItemImageSource
+            maskSource: courseItemImage
+        }
+    }
+
+    H6 {
+        id: courseItemTitle
+        text: "Course Item Title"
+        Layout.maximumHeight: courseItemImage.height
+        Layout.alignment: parent.width < 990 ? Qt.AlignTop | Qt.AlignHCenter : Qt.AlignLeft
+                                               | Qt.AlignVCenter
+        Layout.fillWidth: true
+        Layout.fillHeight: parent.width < 990 ? true : false
+    }
+}
