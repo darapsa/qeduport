@@ -37,7 +37,7 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Categories"
 			Layout.fillWidth: true
-			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
@@ -48,7 +48,7 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Price level"
 			Layout.fillWidth: true
-			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
@@ -59,7 +59,7 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Skill level"
 			Layout.fillWidth: true
-			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
@@ -70,7 +70,7 @@ Rectangle {
 			font.family: "Roboto"
 			displayText: "Languange"
 			Layout.fillWidth: true
-			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.bottomMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: bgLightBorder.width < 720 ? 16:8
@@ -82,7 +82,7 @@ Rectangle {
 			icon.source: "../../../Font-Awesome/svgs/solid/magnifying-glass.svg"
 			display: AbstractButton.IconOnly
 			Layout.fillWidth: true
-			Layout.bottomMargin: bgLightBorder.width < 720 ? 16:8
+			Layout.bottomMargin: 16
 			Layout.topMargin: bgLightBorder.width < 720 ? 8:16
 			Layout.leftMargin: bgLightBorder.width < 720 ? 16:8
 			Layout.rightMargin: 16
