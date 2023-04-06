@@ -130,7 +130,96 @@ Flickable {
 							}
 						}
 					}
+/*
+					Item {
+						Layout.fillWidth: true
+						implicitHeight: info.height
+
+						DrpShdw.Box {
+							source: infoRectangle
+							anchors.fill:
+								infoRectangle
+						}
+
+						Rectangle {
+							id: infoRectangle
+							color: Eduport.bsCardBg
+							radius: 8
+							anchors.fill: info
+						}
+
+						ContentSidebar.Info {
+							id: info
+							anchors {
+								left: parent
+									.left
+								right: parent
+									.right
+							}
+						}
+					}
+*/
 				}
+/*
+				ColumnLayout {
+
+					Item {
+						Layout.fillWidth: true
+						implicitHeight: recent.height
+
+						DrpShdw.Box {
+							source: recentRectangle
+							anchors.fill:
+								recentRectangle
+						}
+
+						Rectangle {
+							id: recentRectangle
+							color: Eduport.bsCardBg
+							radius: 8
+							anchors.fill: recent
+						}
+
+						ContentSidebar.Recent {
+							id: recent
+							anchors {
+								left: parent
+									.left
+								right: parent
+									.right
+							}
+						}
+					}
+
+					Item {
+						Layout.fillWidth: true
+						implicitHeight: tags.height
+
+						DrpShdw.Box {
+							source: tagsRectangle
+							anchors.fill:
+								tagsRectangle
+						}
+
+						Rectangle {
+							id: tagsRectangle
+							color: Eduport.bsCardBg
+							radius: 8
+							anchors.fill: tags
+						}
+
+						ContentSidebar.Tags {
+							id: tags
+							anchors {
+								left: parent
+									.left
+								right: parent
+									.right
+							}
+						}
+					}
+				}
+*/
 			}
 		}
 	}
