@@ -3,7 +3,7 @@ import QtQuick 2.15
 
 QtObject {
 	enum Mode {
-		Light = 0,
+		Light,
 		Dark
 	}
 	property int mode: Eduport.Mode.Light
