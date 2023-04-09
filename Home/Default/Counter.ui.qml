@@ -50,7 +50,7 @@ Item {
 									.family
 						weight: Eduport.fwNormalFont
 									.weight
-						pointSize: h6FontSize
+						pointSize: Eduport.h6FontSize
 					}
 					Layout.fillWidth: true
 				}
