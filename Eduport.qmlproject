@@ -16,7 +16,17 @@ Project {
 	}
 
 	Files {
+		filter: "*.conf"
+		files: ["qtquickcontrols2.conf"]
+	}
+
+	Files {
 		filter: "*.ttf"
+	}
+
+	Environment {
+		QT_QUICK_CONTROLS_CONF: "qtquickcontrols2.conf"
+		QMLSCENE_CORE_PROFILE: "true"
 	}
 
 	importPaths: [ "imports" ]
