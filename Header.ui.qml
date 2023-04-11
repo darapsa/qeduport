@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "DropShadow" as DrpShdw
 import "Button" as Btn
@@ -300,7 +301,8 @@ ToolBar {
 					}
 
 					Loader {
-						property string imageSource: profileImageSource
+						property string imageSource:
+							profileImageSource
 						property int imageWidth: 48
 						property int imageHeight: 48
 						property real maskRadius: 48
@@ -391,7 +393,8 @@ ToolBar {
 							}
 							text: qsTr("Light")
 							checked: Eduport.mode
-								== Eduport.Mode
+								== Bootstrap
+									.Mode
 									.Light
 							enabled: !checked
 							Layout.fillWidth: true
@@ -406,7 +409,8 @@ ToolBar {
 							}
 							text: qsTr("Dark")
 							checked: Eduport.mode
-								== Eduport.Mode
+								== Bootstrap
+									.Mode
 									.Dark
 							enabled: !checked
 							Layout.fillWidth: true

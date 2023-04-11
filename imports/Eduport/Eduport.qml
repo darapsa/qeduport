@@ -1,12 +1,10 @@
 pragma Singleton
 import QtQuick 2.15
+import Bootstrap 5.3
 
 QtObject {
-	enum Mode {
-		Light,
-		Dark
-	}
-	property int mode: Eduport.Mode.Light
+	property int mode: Bootstrap.mode
+	onModeChanged: Bootstrap.mode = mode
 
 	readonly property real leadFontSize: 18.75
 	readonly property real formControlFontSize: 16
@@ -44,10 +42,9 @@ QtObject {
 
 	readonly property real bsBadgeFontSize: 13.6
 
-	property color bsBodyColor: mode ? "#a1a1a8" : "#747579"
-	property color bsBodyBg: mode ? "#222529" : "#ffffff"
-
-	property color bsBorderColor: mode ? "#12ffffff" : bsGray200
+	property color bsBodyColor: Bootstrap.bodyColor
+	property color bsBodyBg: Bootstrap.bodyBg
+	property color bsBorderColor: Bootstrap.borderColor
 	property real bsBorderRadius: 5.2
 
 	property real bsBoxShadowOffsetX: 0
@@ -145,21 +142,21 @@ QtObject {
 					|| Qt.platform.os === "unix"
 					|| Qt.platform.os === "windows"
 	readonly property FontLoader robotoBold: FontLoader {
-		source: haveRoboto ? "" : "../../Roboto/Roboto-Bold.ttf"
+		source: haveRoboto ? "" : "Roboto-Bold.ttf"
 	}
 	readonly property FontLoader robotoMedium: FontLoader {
-		source: haveRoboto ? "" : "../../Roboto/Roboto-Medium.ttf"
+		source: haveRoboto ? "" : "Roboto-Medium.ttf"
 	}
 	readonly property FontLoader robotoRegular: FontLoader {
-		source: haveRoboto ? "" : "../../Roboto/Roboto-Regular.ttf"
+		source: haveRoboto ? "" : "Roboto-Regular.ttf"
 	}
 	readonly property FontLoader heeboBold: FontLoader {
-		source: "../../Heebo/Heebo-Bold.ttf"
+		source: "Heebo-Bold.ttf"
 	}
 	readonly property FontLoader heeboMedium: FontLoader {
-		source: "../../Heebo/Heebo-Medium.ttf"
+		source: "Heebo-Medium.ttf"
 	}
 	readonly property FontLoader heeboRegular: FontLoader {
-		source: "../../Heebo/Heebo-Regular.ttf"
+		source: "Heebo-Regular.ttf"
 	}
 }

@@ -1,10 +1,5 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qeduport">
-		<file>Heebo/Heebo-Bold.ttf</file>
-		<file>Heebo/Heebo-Medium.ttf</file>
-		<file>Heebo/Heebo-Regular.ttf</file>
-		<file>imports/Eduport/Eduport.qml</file>
-		<file>imports/Eduport/qmldir</file>
 		<file>Bootstrap/icons/person.svg</file>
 		<file>Bootstrap/icons/gear.svg</file>
 		<file>Bootstrap/icons/info-circle.svg</file>

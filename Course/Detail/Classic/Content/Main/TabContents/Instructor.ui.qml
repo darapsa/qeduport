@@ -6,11 +6,6 @@ import "Instructor"
 
 ColumnLayout {
 
-	FontLoader {
-		id: heebo
-		source: "../../../../../../Heebo/Heebo-Bold.ttf"
-	}
-
 	GridLayout {
 		rows: width < 671.612 ? 2 : 1
 		columns: width < 671.612 ? 1 : 2
