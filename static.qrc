@@ -1,0 +1,12 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="qeduport">
+		<file>imports/Eduport/Eduport.qml</file>
+		<file>imports/Eduport/qmldir</file>
+		<file>imports/Eduport/Heebo-Regular.ttf</file>
+		<file>imports/Eduport/Heebo-Medium.ttf</file>
+		<file>imports/Eduport/Heebo-Bold.ttf</file>
+		<file>imports/Eduport/Roboto-Regular.ttf</file>
+		<file>imports/Eduport/Roboto-Medium.ttf</file>
+		<file>imports/Eduport/Roboto-Bold.ttf</file>
+	</qresource>
+</RCC>
