@@ -6,6 +6,17 @@ QtObject {
 	property int mode: Bootstrap.mode
 	onModeChanged: Bootstrap.mode = mode
 
+	property font bodyFont: Qt.font({
+		family: Bootstrap.bodyFont.family === "Roboto"
+			? (haveRoboto ? "Roboto" : robotoRegular.name)
+			: Bootstrap.bodyFont.family,
+		pointSize: Bootstrap.bodyFont.pointSize,
+		weight: Bootstrap.bodyFont.weight
+	})
+	property color bsBodyColor: Bootstrap.bodyColor
+	property color bsBodyBg: Bootstrap.bodyBg
+	property color bsBorderColor: Bootstrap.borderColor
+
 	readonly property real leadFontSize: 18.75
 	readonly property real formControlFontSize: 16
 	readonly property real h6FontSize: 15
@@ -18,11 +29,6 @@ QtObject {
 	readonly property font baseFont: Qt.font({
 		family: haveRoboto ? "Roboto" : robotoBold.name,
 		weight: Font.Bold
-	})
-	readonly property font bodyFont: Qt.font({
-		family: haveRoboto ? "Roboto" : robotoRegular.name,
-		weight: Font.Normal,
-		pointSize: 15
 	})
 	readonly property font hxFont: Qt.font({
 		family: heeboBold.name,
@@ -42,9 +48,6 @@ QtObject {
 
 	readonly property real bsBadgeFontSize: 13.6
 
-	property color bsBodyColor: Bootstrap.bodyColor
-	property color bsBodyBg: Bootstrap.bodyBg
-	property color bsBorderColor: Bootstrap.borderColor
 	property real bsBorderRadius: 5.2
 
 	property real bsBoxShadowOffsetX: 0
