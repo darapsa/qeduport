@@ -8,6 +8,5 @@ Label {
 		weight: Eduport.bodyFont.weight
 		pointSize: Eduport.bodyFont.pointSize
 	}
-	color: Eduport.bsBodyColor
 	wrapMode: Label.Wrap
 }
