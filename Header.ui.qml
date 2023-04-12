@@ -316,9 +316,10 @@ ToolBar {
 							text: fullNameText
 						}
 
-						Lbl.Body {
+						Label {
 							text: emailText
 							font.pointSize: 14
+							wrapMode: Label.Wrap
 							color: Eduport
 								.bsDropdownColor
 						}

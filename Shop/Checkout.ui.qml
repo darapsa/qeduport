@@ -38,8 +38,9 @@ Flickable {
 					id: alert
 					Layout.alignment: Qt.AlignHCenter
 
-					Lbl.Body {
+					Label {
 						text: qsTr("Already have an account?")
+						wrapMode: Label.Wrap
 					}
 
 					Text {
@@ -119,9 +120,10 @@ Flickable {
 							Layout.topMargin: 16
 						}
 
-						Lbl.Body {
+						Label {
 							text: qsTr("Here is the description of premium features which will allow users to get benefits and save a lot of money")
 							color: "#ffffff"
+							wrapMode: Label.Wrap
 							Layout.fillWidth: true
 							Layout.margins: 16
 						}

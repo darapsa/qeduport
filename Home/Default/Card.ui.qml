@@ -86,7 +86,7 @@ Item {
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 
-				Lbl.Body {
+				Label {
 					id: badge
 					anchors.left: parent.left
 					topPadding: 4.463
@@ -94,6 +94,7 @@ Item {
 					rightPadding: 8.287
 					bottomPadding: 4.463
 					text: badgeText
+					wrapMode: Label.Wrap
 					color: badgeColor
 					font.pointSize: Eduport.bsBadgeFontSize
 					background: Rectangle {
@@ -139,11 +140,12 @@ Item {
 				}
 			}
 
-			Lbl.Body {
+			Label {
 				text: truncatedText
 				elide: Text.ElideRight
 				maximumLineCount: 2
 				visible: truncatedVisible
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
 			}

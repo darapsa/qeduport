@@ -74,9 +74,10 @@ ColumnLayout {
 						text: priceText
 					}
 
-					Lbl.Body {
+					Label {
 						id: initialPrice
 						text: "$350"
+						wrapMode: Label.Wrap
 						font.strikeout: true
 					}
 
@@ -128,9 +129,10 @@ ColumnLayout {
 						}
 					}
 
-					Lbl.Body {
+					Label {
 						text: qsTr("5 days left at this price")
 						color: Eduport.bsDanger
+						wrapMode: Label.Wrap
 					}
 				}
 			}

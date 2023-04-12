@@ -103,9 +103,10 @@ ColumnLayout {
 							Layout.bottomMargin: 16
 						}
 
-						Lbl.Body {
+						Label {
 							id: courseDescription
 							text: qsTr("Welcome to the Digital Marketing Ultimate Course Bundle - 12 Courses in 1 (Over 36 hours of content)")
+							wrapMode: Label.Wrap
 							Layout.fillWidth: true
 						}
 					}

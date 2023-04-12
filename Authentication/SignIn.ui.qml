@@ -40,19 +40,21 @@ Flickable {
 						text: titleHeader
 					}
 
-					Lbl.Body {
+					Label {
 						id: titleParagraph
 						text: qsTr("Nice to see you! Please log in with your account.")
 						color: "#6c757d"
 						Layout.fillWidth: true
+						wrapMode: Label.Wrap
 						font.pointSize: Eduport
 								.leadFontSize
 					}
 				}
 
 				ColumnLayout {
-					Lbl.Body {
+					Label {
 						text: emailLabel
+						wrapMode: Label.Wrap
 					}
 
 					Rectangle {
@@ -120,8 +122,9 @@ Flickable {
 
 				ColumnLayout {
 
-					Lbl.Body {
+					Label {
 						text: qsTr("Password *")
+						wrapMode: Label.Wrap
 					}
 
 					Rectangle {
@@ -189,9 +192,10 @@ Flickable {
 					}
 				}
 
-				Lbl.Body {
+				Label {
 					id: passwordHelper
 					text: qsTr("Your password must be 8 characters at least")
+					wrapMode: Label.Wrap
 					font.pointSize: Eduport
 							.formTextFontSize
 					color: "#6c757d"
@@ -248,8 +252,9 @@ Flickable {
 			RowLayout {
 				Layout.alignment: Qt.AlignHCenter
 
-				Lbl.Body {
+				Label {
 					text: qsTr("Don't have an account?")
+					wrapMode: Label.Wrap
 				}
 
 				Text {

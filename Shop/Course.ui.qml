@@ -62,13 +62,14 @@ ColumnLayout {
 			Item {
 				Layout.fillWidth: true
 				Layout.topMargin: 16
-				Lbl.Body {
+				Label {
 					anchors {
 						top: parent.top
 						left: parent.left
 						bottom: parent.bottom
 					}
 					text: priceText
+					wrapMode: Label.Wrap
 				}
 		       }
 	       }

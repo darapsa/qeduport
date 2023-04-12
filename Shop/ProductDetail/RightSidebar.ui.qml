@@ -33,8 +33,9 @@ ColumnLayout {
                 fillMode: Image.PreserveAspectFit
             }
 
-            Body {
+            Label {
                 text: "Reviews from our buyers"
+		wrapMode: Label.Wrap
             }
         }
     }
@@ -46,9 +47,9 @@ ColumnLayout {
     H4 {
         text: "Description"
     }
-    Body {
+    Label {
         text: "Satisfied conveying a dependent contented he gentleman agreeable do be. Warrant private blushes removed an in equally totally if. Delivered dejection necessary objection do Mr prevailed. Mr feeling does chiefly cordial in do. <br><br>We focus a great deal on the understanding of behavioral psychology and influence triggers which are crucial for becoming a well-rounded Digital Marketer. We understand that theory is important to build a solid foundation, we understand that theory alone isn't going to get the job done so that's why this course is packed with practical hands-on examples that you can follow step by step."
-        wrapMode: Text.Wrap
+        wrapMode: Label.Wrap
         Layout.maximumWidth: parent.width
     }
     RowLayout {
@@ -56,9 +57,9 @@ ColumnLayout {
             text: "Additional info with list group will be here"
         }
     }
-    Body {
+    Label {
         text: "Crucial for becoming a well-rounded Digital Marketer. We understand that theory is important to build a solid foundation, we understand that theory alone isn't going to get the job done so that's why this course is packed with practical hands-on examples that you can follow step by step."
-        wrapMode: Text.Wrap
+        wrapMode: Label.Wrap
         Layout.maximumWidth: parent.width
     }
 }

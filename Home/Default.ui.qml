@@ -53,11 +53,12 @@ Flickable {
 					Layout.fillWidth: true
 				}
 
-				Lbl.Body {
+				Label {
 					text: bannerContentText
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
 					font.pointSize: Eduport.leadFontSize
+					wrapMode: Label.Wrap
 				}
 
 				Button {
@@ -199,10 +200,11 @@ Flickable {
 					Layout.bottomMargin: 8
 				}
 
-				Lbl.Body {
+				Label {
 					text: qsTr("Choose from hundreds of courses from specialist organizations")
 					horizontalAlignment: Text.AlignHCenter
 					Layout.fillWidth: true
+					wrapMode: Label.Wrap
 				}
 			}
 

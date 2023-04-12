@@ -79,10 +79,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Profile picture")
+									wrapMode: Label.Wrap
 								}
 
 								RowLayout {
@@ -135,10 +136,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Full name")
+									wrapMode: Label.Wrap
 								}
 
 								Rectangle {
@@ -189,10 +191,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Username")
+									wrapMode: Label.Wrap
 								}
 
 								Rectangle {
@@ -205,7 +208,7 @@ Flickable {
 										color: Eduport.bsGray300
 									}
 
-									Lbl.Body {
+									Label {
 										id: domainName
 										text: "Eduport.com"
 										height: userName.height
@@ -217,6 +220,7 @@ Flickable {
 										rightPadding: 12
 										bottomPadding: 6
 										color: Eduport.bsBodyColor
+										wrapMode: Label.Wrap
 										background: Rectangle {
 											color: Eduport.bsTertiaryBg
 										}
@@ -248,10 +252,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Email id")
+									wrapMode: Label.Wrap
 								}
 
 								TxtFld.Input {
@@ -267,10 +272,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Phone number")
+									wrapMode: Label.Wrap
 								}
 
 								TxtFld.Input {
@@ -286,10 +292,11 @@ Flickable {
 								Layout.leftMargin: 12.8
 								Layout.rightMargin: 12.8
 
-								Lbl.Body {
+								Label {
 									Layout.fillWidth: true
 									Layout.bottomMargin: 8
 									text: qsTr("Location")
+									wrapMode: Label.Wrap
 								}
 
 								TxtFld.Input {

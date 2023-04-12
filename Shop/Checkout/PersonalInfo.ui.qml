@@ -33,8 +33,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Your name *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -58,8 +59,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Email address *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -83,8 +85,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Mobile number *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -109,8 +112,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Select country *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 			Rectangle {
@@ -134,8 +138,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Select state *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -160,8 +165,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Postal code *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -186,8 +192,9 @@ ColumnLayout {
 
 		ColumnLayout {
 
-			Body {
+			Label {
 				text: qsTr("Address *")
+				wrapMode: Label.Wrap
 				Layout.fillWidth: true
 			}
 
@@ -235,9 +242,10 @@ ColumnLayout {
 						left: parent.left
 						right: parent.right
 					}
-					Body {
+					Label {
 						text:
 						qsTr("Credit or Debit Card")
+						wrapMode: Label.Wrap
 						Layout.fillWidth: true
 						padding: 16
 					}

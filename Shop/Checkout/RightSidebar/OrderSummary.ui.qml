@@ -31,9 +31,10 @@ ColumnLayout {
 			implicitHeight: codeLabel.implicitHeight
 						+ codeValue.implicitHeight
 
-			Body {
+			Label {
 				id: codeLabel
 				text: qsTr("Transaction code")
+				wrapMode: Label.Wrap
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
@@ -178,9 +179,10 @@ ColumnLayout {
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
-			Body {
+			Label {
 				id: discountValue
 				text: "-$20"
+				wrapMode: Label.Wrap
 				anchors {
 					right: parent.right
 					verticalCenter: parent.verticalCenter

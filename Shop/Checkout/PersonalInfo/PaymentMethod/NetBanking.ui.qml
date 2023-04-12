@@ -2,14 +2,13 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import Eduport 1.4
-import "../../../../Label"
 
 ColumnLayout {
 	property alias banks: banks
 
-	Body {
-		text:
-		qsTr("Pay with Net Banking")
+	Label {
+		text: qsTr("Pay with Net Banking")
+		wrapMode: Label.Wrap
 		Layout.fillWidth: true
 		Layout.rightMargin: 16
 		Layout.leftMargin: 16
@@ -19,13 +18,15 @@ ColumnLayout {
 	ColumnLayout {
 		Layout.margins: 16
 
-		Body {
+		Label {
 			text: qsTr("In order to complete your transaction, we will transfer you over to Eduport secure servers.")
+			wrapMode: Label.Wrap
 			Layout.fillWidth: true
 		}
 
-		Body {
+		Label {
 			text: qsTr("Select your bank from the drop-down list and click proceed to continue with your payment.")
+			wrapMode: Label.Wrap
 			Layout.fillWidth: true
 		}
 
