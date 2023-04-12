@@ -15,6 +15,7 @@ QtObject {
 	})
 	property color bsBodyColor: Bootstrap.bodyColor
 	property color bsBodyBg: Bootstrap.bodyBg
+	property color bsHeadingColor: Bootstrap.headingColor
 	property color bsBorderColor: Bootstrap.borderColor
 
 	readonly property real leadFontSize: 18.75
@@ -128,8 +129,6 @@ QtObject {
 	property color bsDropdownLinkColor: mode ? "#c5c6cc" : "#747579"
 	property color bsDropdownLinkHoverColor: "#066ac9"
 	property color bsDropdownLinkHoverBg: "#1a066ac9"
-
-	property color bsHeadingColor: mode ? "#ffffff" : "#24292d"
 
 	property color bsGray200: mode ? "#464950" : "#eff1f2"
 	property color bsGray300: mode ? "#3e3e40" : "#dde0e3"
