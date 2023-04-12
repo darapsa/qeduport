@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "../../DropShadow" as DrpShdw
 import "../../Label" as Lbl
@@ -127,9 +128,11 @@ Item {
 				}
 			}
 
-			Lbl.H5 {
+			Label {
 				id: title
 				text: titleText
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 5
 				color: Eduport.bsCardTitleColor
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8

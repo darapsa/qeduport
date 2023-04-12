@@ -1,7 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
-import "../../../../../../Label" as Lbl
+import Bootstrap 5.3
 import "Instructor"
 
 ColumnLayout {
@@ -26,8 +26,10 @@ ColumnLayout {
 			Layout.bottomMargin: 16
 			spacing: 0
 
-			Lbl.H3 {
+			Label {
 				text: qsTr("Louis Ferguson")
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 3
 			}
 
 			Label {
@@ -55,9 +57,11 @@ ColumnLayout {
 		}
 	}
 
-	Lbl.H5 {
+	Label {
 		Layout.bottomMargin: 16
 		text: qsTr("About Instructor")
+		wrapMode: Label.Wrap
+		Bootstrap.heading: 5
 	}
 
 	Label {

@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
-import "../Label" as Lbl
+import Bootstrap 5.3
 
 ColumnLayout {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
@@ -54,9 +54,11 @@ ColumnLayout {
 	       ColumnLayout {
 			Layout.topMargin: 16
 
-			Lbl.H6 {
+			Label {
 				Layout.fillWidth: true
 				text: titleText
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 6
 			}
 
 			Item {

@@ -1,9 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "../../../TextField"
-import "../../../Label"
 import "../../../Button"
 import "../.."
 
@@ -14,8 +14,10 @@ ColumnLayout {
 	property alias totalValue: totalValue
 	property alias placeOrder: placeOrder
 
-	H4 {
+	Label {
 		text: qsTr("Order Summary")
+		wrapMode: Label.Wrap
+		Bootstrap.heading: 4
 		Layout.fillWidth: true
 		Layout.rightMargin: 16
 		Layout.leftMargin: 16
@@ -38,9 +40,11 @@ ColumnLayout {
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
-			H6 {
+			Label {
 				id: codeValue
 				text: "AB12365E"
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 6
 				font {
 					family: Eduport.fwLightFont.family
 					weight: Eduport.fwLightFont.weight
@@ -142,9 +146,11 @@ ColumnLayout {
 			implicitHeight: priceLabel.implicitHeight
 						+ priceValue.implicitHeight
 
-			H6 {
+			Label {
 				id: priceLabel
 				text: qsTr("Original Price")
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 6
 				font {
 					family: Eduport.fwLightFont.family
 					weight: Eduport.fwLightFont.weight
@@ -153,9 +159,11 @@ ColumnLayout {
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
-			H6 {
+			Label {
 				id: priceValue
 				text: "$500"
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 6
 				anchors {
 					right: parent.right
 					verticalCenter: parent.verticalCenter
@@ -168,9 +176,11 @@ ColumnLayout {
 			implicitHeight: discountLabel.implicitHeight
 						+ discountValue.implicitHeight
 
-			H6 {
+			Label {
 				id: discountLabel
 				text: qsTr("Coupon Discount")
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 6
 				font {
 					family: Eduport.fwLightFont.family
 					weight: Eduport.fwLightFont.weight
@@ -195,15 +205,19 @@ ColumnLayout {
 			implicitHeight: totalLabel.implicitHeight
 						+ totalValue.implicitHeight
 
-			H5 {
+			Label {
 				id: totalLabel
 				text: qsTr("Total")
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 5
 				anchors.verticalCenter: parent.verticalCenter
 			}
 
-			H5 {
+			Label {
 				id: totalValue
 				text: "$480"
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 5
 				anchors {
 					right: parent.right
 					verticalCenter: parent.verticalCenter

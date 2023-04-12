@@ -19,11 +19,6 @@
 		<file>DropShadow/Box.ui.qml</file>
 		<file>Label/FwLight.ui.qml</file>
 		<file>Label/H6.ui.qml</file>
-		<file>Label/H5.ui.qml</file>
-		<file>Label/H4.ui.qml</file>
-		<file>Label/H3.ui.qml</file>
-		<file>Label/H2.ui.qml</file>
-		<file>Label/H1.ui.qml</file>
 		<file>Label/Display6.ui.qml</file>
 		<file>TextField/Input.ui.qml</file>
 		<file>Header/CartItem.ui.qml</file>

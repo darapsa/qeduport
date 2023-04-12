@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../Label" as Lbl
 
 ColumnLayout {
 	property string imageSource:
@@ -49,8 +49,10 @@ ColumnLayout {
 			RowLayout {
 				spacing: 0
 
-				Lbl.H6 {
+				Label {
 					text: titleText
+					wrapMode: Label.Wrap
+					Bootstrap.heading: 6
 					Layout.fillWidth: true
 				}
 

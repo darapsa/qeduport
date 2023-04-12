@@ -1,9 +1,9 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "../../TextField"
-import "../../Label"
 import "PersonalInfo/PaymentMethod"
 
 ColumnLayout {
@@ -16,8 +16,10 @@ ColumnLayout {
 	property alias address: address
 	property alias paymentMethodNetBanking: paymentMethodNetBanking
 
-	H5 {
+	Label {
 		text: qsTr("Personal Details")
+		wrapMode: Label.Wrap
+		Bootstrap.heading: 5
 		Layout.fillWidth: true
 		Layout.rightMargin: 16
 		Layout.leftMargin: 16
@@ -219,8 +221,10 @@ ColumnLayout {
 
 	ColumnLayout {
 
-		H5 {
+		Label {
 			text: qsTr("Payment method")
+			wrapMode: Label.Wrap
+			Bootstrap.heading: 5
 			Layout.fillWidth: true
 			Layout.margins: 16
 		}

@@ -1,8 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../../Label" as Lbl
 
 Item {
 	Rectangle {
@@ -38,8 +38,10 @@ Item {
 					leftMargin: 25.6
 				}
 
-				Lbl.H5 {
+				Label {
 					text: count
+					wrapMode: Label.Wrap
+					Bootstrap.heading: 5
 					Layout.fillWidth: true
 				}
 

@@ -2,9 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "../../../TextField"
-import "../../../Label"
 import "../../../Button"
 
 GridLayout {
@@ -38,10 +38,12 @@ GridLayout {
         }
     }
 
-    H6 {
+    Label {
         id: courseItemTitle
         text: "Course Item Title"
-        Layout.maximumHeight: courseItemImage.height
+	wrapMode: Label.Wrap
+	Bootstrap.heading: 6
+    Layout.maximumHeight: courseItemImage.height
         Layout.alignment: parent.width < 990 ? Qt.AlignTop | Qt.AlignHCenter : Qt.AlignLeft
                                                | Qt.AlignVCenter
         Layout.fillWidth: true

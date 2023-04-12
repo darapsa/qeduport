@@ -1,8 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../Label" as Lbl
 import "../Button" as Btn
 import "Checkout"
 import "Checkout/RightSidebar"
@@ -111,8 +111,10 @@ Flickable {
 						}
 						Layout.margins: 16
 
-						Lbl.H5 {
+						Label {
 							text: qsTr("Access 25K Online courses from 120 institutions, Start today!")
+							wrapMode: Label.Wrap
+							Bootstrap.heading: 5
 							color: "#ffffff"
 							Layout.fillWidth: true
 							Layout.rightMargin: 16

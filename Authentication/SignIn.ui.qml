@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../Label" as Lbl
 import "../TextField" as TxtFld
 import "../Button" as Btn
 
@@ -35,9 +35,11 @@ Flickable {
 				ColumnLayout {
 					id: columnLayout
 
-					Lbl.H2 {
+					Label {
 						Layout.fillWidth: true
 						text: titleHeader
+						wrapMode: Label.Wrap
+						Bootstrap.heading: 2
 					}
 
 					Label {

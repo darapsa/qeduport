@@ -2,9 +2,9 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
 import "../../DropShadow" as DrpShdw
-import "../../Label" as Lbl
 import "Classic/Content" as Content
 import "Classic/Content/Sidebar" as ContentSidebar
 
@@ -45,9 +45,11 @@ Flickable {
 					implicitHeight: introBadge.height
 					radius: 5.2
 					color: Qt.rgba( .0235, .416, .788, 1.0)
-					Lbl.H6 {
+					Label {
 						id: introBadge
 						text: qsTr("Digital Marketing")
+						Bootstrap.heading: 6
+						wrapMode: Label.Wrap
 						color: "white"
 						font.family: Eduport.baseFont
 									.family
@@ -62,9 +64,11 @@ Flickable {
 					}
 				}
 
-				Lbl.H1 {
+				Label {
 					id: introTitleHeader
 					text: qsTr("The Complete Digital Marketing Course - 12 Courses in 1")
+					wrapMode: Label.Wrap
+					Bootstrap.heading: 1
 					Layout.fillWidth: true
 				}
 

@@ -2,8 +2,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../Label" as Lbl
 import "../TextField" as TxtFld
 import "../Button" as Btn
 
@@ -48,11 +48,13 @@ Flickable {
 							right: parent.right
 						}
 
-						Lbl.H3 {
+						Label {
 							id: cardHeader
 							Layout.fillWidth: true
 							text:
 							qsTr("Edit Profile")
+							wrapMode: Label.Wrap
+							Bootstrap.heading: 3
 							padding: 16
 						}
 

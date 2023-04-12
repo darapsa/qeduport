@@ -3,8 +3,8 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import QtMultimedia 5.15
+import Bootstrap 5.3
 import Eduport 1.4
-import "../../../../../Label" as Lbl
 import "../../../../../Button" as Btn
 import "../../../../../Button/Outline" as BtnOutline
 
@@ -70,8 +70,10 @@ ColumnLayout {
 				RowLayout {
 					spacing: 8
 
-					Lbl.H3 {
+					Label {
 						text: priceText
+						wrapMode: Label.Wrap
+						Bootstrap.heading: 3
 					}
 
 					Label {

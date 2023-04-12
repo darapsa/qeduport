@@ -6,7 +6,6 @@ import Bootstrap 5.3
 import Eduport 1.4
 import "DropShadow" as DrpShdw
 import "Button" as Btn
-import "Label" as Lbl
 import "Header"
 
 ToolBar {
@@ -137,8 +136,10 @@ ToolBar {
 				sourceComponent: background
 			}
 
-			Lbl.H5 {
+			Label {
 				text: qsTr("Cart items")
+				wrapMode: Label.Wrap
+				Bootstrap.heading: 5
 				topPadding: 25.6
 				leftPadding: 16
 				rightPadding: 16
@@ -312,8 +313,10 @@ ToolBar {
 					ColumnLayout {
 						spacing: 0
 
-						Lbl.H6 {
+						Label {
 							text: fullNameText
+							wrapMode: Label.Wrap
+							Bootstrap.heading: 6
 						}
 
 						Label {
