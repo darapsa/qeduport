@@ -6,9 +6,9 @@ QtObject {
 		Light,
 		Dark
 	}
-	property int mode: Bootstrap.Mode.Light
+	readonly property int mode: Bootstrap.Mode.Light
 
-	property font bodyFont: Qt.font({
+	readonly property font bodyFont: Qt.font({
 		family: "Roboto",
 		pointSize: 15.0,
 		weight: Font.Normal
