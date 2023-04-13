@@ -32,7 +32,7 @@ ToolBar {
 	horizontalPadding: 15
 	background: Rectangle {
 		implicitHeight: 70
-		color: Eduport.bsBodyBg
+		color: window.Bootstrap.bodyBg
 	}
 
 	ToolButton {
@@ -61,9 +61,9 @@ ToolBar {
 				id: rectangle
 				anchors.fill: parent
 				radius: 5.2
-				color: Eduport.mode
+				color: window.Bootstrap.mode
 					? Eduport.bsDark
-					: Eduport.bsBodyBg
+					: Bootstrap.bodyBg
 			}
 
 			DrpShdw.Box {
@@ -80,8 +80,9 @@ ToolBar {
 			contentItem: Rectangle {
 				implicitWidth: width
 				implicitHeight: 1
-				color: Eduport.mode
-					? Eduport.bsGray300 : Eduport.bsGray500
+				color: window.Bootstrap.mode
+					? Eduport.bsGray300
+					: Eduport.bsGray500
 			}
 		}
 	}
@@ -280,7 +281,8 @@ ToolBar {
 						? Eduport.bsDropdownLinkHoverBg
 						: Eduport.mode
 							? Eduport.bsDark
-							: Eduport.bsBodyBg
+							: window
+							.Bootstrap.bodyBg
 					radius: 5.2
 				}
 			}
@@ -396,7 +398,7 @@ ToolBar {
 								height: 16
 							}
 							text: qsTr("Light")
-							checked: Eduport.mode
+							checked: Bootstrap.mode
 								== Bootstrap
 									.Mode
 									.Light
@@ -412,7 +414,7 @@ ToolBar {
 								height: 16
 							}
 							text: qsTr("Dark")
-							checked: Eduport.mode
+							checked: Bootstrap.mode
 								== Bootstrap
 									.Mode
 									.Dark

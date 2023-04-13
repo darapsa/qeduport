@@ -21,7 +21,7 @@ Flickable {
 
 	Rectangle {
 		anchors.fill: parent
-		color: Eduport.bsBodyBg
+		color: window.Bootstrap.bodyBg
 	}
 
 	ColumnLayout {
