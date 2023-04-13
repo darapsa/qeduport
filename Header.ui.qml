@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Bootstrap 5.3
@@ -32,7 +33,7 @@ ToolBar {
 	horizontalPadding: 15
 	background: Rectangle {
 		implicitHeight: 70
-		color: window.Bootstrap.bodyBg
+		color: Window.window.Bootstrap.bodyBg
 	}
 
 	ToolButton {
@@ -61,9 +62,9 @@ ToolBar {
 				id: rectangle
 				anchors.fill: parent
 				radius: 5.2
-				color: window.Bootstrap.mode
+				color: Window.window.Bootstrap.mode
 					? Eduport.bsDark
-					: window.Bootstrap.bodyBg
+					: Window.window.Bootstrap.bodyBg
 			}
 
 			DrpShdw.Box {
@@ -80,7 +81,7 @@ ToolBar {
 			contentItem: Rectangle {
 				implicitWidth: width
 				implicitHeight: 1
-				color: window.Bootstrap.mode
+				color: Window.window.Bootstrap.mode
 					? Eduport.bsGray300
 					: Eduport.bsGray500
 			}
@@ -281,7 +282,7 @@ ToolBar {
 						? Eduport.bsDropdownLinkHoverBg
 						: Eduport.mode
 							? Eduport.bsDark
-							: window
+							: Window.window
 							.Bootstrap.bodyBg
 					radius: 5.2
 				}
