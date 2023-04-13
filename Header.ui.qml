@@ -63,7 +63,7 @@ ToolBar {
 				radius: 5.2
 				color: window.Bootstrap.mode
 					? Eduport.bsDark
-					: Bootstrap.bodyBg
+					: window.Bootstrap.bodyBg
 			}
 
 			DrpShdw.Box {
