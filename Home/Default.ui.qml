@@ -1,6 +1,5 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtQuick.Window 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
 import Bootstrap 5.3
@@ -22,7 +21,7 @@ Flickable {
 
 	Rectangle {
 		anchors.fill: parent
-		color: Window.window.Bootstrap.bodyBg
+		color: ApplicationWindow.window.Bootstrap.bodyBg
 	}
 
 	ColumnLayout {
