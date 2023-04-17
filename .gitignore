@@ -1,4 +1,5 @@
 *.qtds
 *.swp
+*.user
 .DS_Store
 build
