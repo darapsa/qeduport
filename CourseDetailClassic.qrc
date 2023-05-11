@@ -5,6 +5,7 @@
 		<file>Course/Detail/Classic/Content/Main.ui.qml</file>
 		<file>Font-Awesome/svgs/solid/circle-play.svg</file>
 		<file>Font-Awesome/svgs/solid/stopwatch.svg</file>
+		<file>Font-Awesome/svgs/solid/share-nodes.svg</file>
 		<file>Course/Detail/Classic/Content/Sidebar/Video.ui.qml</file>
 		<file>Course/Detail/Classic.ui.qml</file>
 	</qresource>

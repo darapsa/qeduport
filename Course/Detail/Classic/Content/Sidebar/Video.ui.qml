@@ -16,6 +16,9 @@ ColumnLayout {
 	property string priceText: "$150"
 	property alias discount: discount
 	property alias time: time
+	property alias share: share
+	property alias shareMenu: shareMenu
+	property alias shareList: shareList
 	property alias trial: trial
 	property alias buy: buy
 	spacing: 16
@@ -135,6 +138,39 @@ ColumnLayout {
 						text: qsTr("5 days left at this price")
 						color: Eduport.bsDanger
 						wrapMode: Label.Wrap
+					}
+				}
+			}
+
+			Button {
+				id: share
+				Layout.fillWidth: true
+				display: AbstractButton.IconOnly
+				icon.source: "../../../../../Font-Awesome/svgs/solid/share-nodes.svg"
+
+				Menu {
+					id: shareMenu
+					ListView {
+						id: shareList
+						interactive: false
+						implicitHeight: count * 40
+						model: ListModel {
+							ListElement {
+								label: "Twitter"
+							}
+							ListElement {
+								label: "Facebook"
+							}
+							ListElement {
+								label: "LinkedIn"
+							}
+							ListElement {
+								label: qsTr("Copy link")
+							}
+						}
+						delegate: Button {
+							text: label
+						}
 					}
 				}
 			}
