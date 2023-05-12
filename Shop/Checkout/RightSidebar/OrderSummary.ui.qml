@@ -8,6 +8,7 @@ import "../../../Button"
 import "../.."
 
 ColumnLayout {
+	property alias coupon: coupon
 	property alias courseItems: courseItems
 	property alias priceValue: priceValue
 	property alias discountValue: discountValue
@@ -24,77 +25,92 @@ ColumnLayout {
 		Layout.topMargin: 16
 	}
 
-	ColumnLayout {
+	ListView {
+		id: coupon
+		Layout.fillWidth: true
 		Layout.margins: 16
-		spacing: 16
+		interactive: false
+		implicitHeight: 87
+		model: 1
+		delegate: ColumnLayout {
+			Bootstrap.mode: coupon.Bootstrap.mode
+			width: coupon.width
+			spacing: 16
 
-		Item {
-			Layout.fillWidth: true
-			implicitHeight: codeLabel.implicitHeight
+			Item {
+				Layout.fillWidth: true
+				implicitHeight: codeLabel.implicitHeight
 						+ codeValue.implicitHeight
 
-			Label {
-				id: codeLabel
-				text: qsTr("Transaction code")
-				wrapMode: Label.Wrap
-				anchors.verticalCenter: parent.verticalCenter
-			}
-
-			Label {
-				id: codeValue
-				text: "AB12365E"
-				wrapMode: Label.Wrap
-				Bootstrap.heading: 6
-				font {
-					family: Eduport.fwLightFont.family
-					weight: Eduport.fwLightFont.weight
-					pointSize: Eduport.h6FontSize
+				Label {
+					id: codeLabel
+					text: qsTr("Transaction code")
+					wrapMode: Label.Wrap
+					anchors.verticalCenter: parent
+								.verticalCenter
 				}
-				anchors {
-					right: parent.right
-					verticalCenter: parent.verticalCenter
-				}
-			}
-		}
 
-		RowLayout {
-
-			Rectangle {
-				implicitHeight: 56
-				color: "#f5f7f9"
-				radius: 8
-				border.width: 0
-				Layout.fillWidth: true
-				RowLayout {
-					anchors.fill: parent
-					Input {
-						placeholderText:
-							qsTr("COUPON CODE")
-						Layout.fillWidth: true
-						Layout.fillHeight: true
+				Label {
+					id: codeValue
+					text: "AB12365E"
+					wrapMode: Label.Wrap
+					Bootstrap.heading: 6
+					font {
+						family: Eduport
+							.fwLightFont.family
+						weight: Eduport
+							.fwLightFont.weight
+						pointSize: Eduport.h6FontSize
+					}
+					anchors {
+						right: parent.right
+						verticalCenter: parent
+								.verticalCenter
 					}
 				}
 			}
 
-			Button {
-				text: qsTr("Apply")
-				font.pointSize: 14
-				font.family: "roboto"
-				implicitHeight: 56
-				contentItem: Text {
-					color: "#ffffff"
-					text: "Apply"
-					padding: 12
-					horizontalAlignment: Text.AlignHCenter
-					verticalAlignment: Text.AlignVCenter
-					font.weight: Font.Medium
-					font.family: "Roboto"
-					font.pointSize: 14
+			RowLayout {
+
+				Rectangle {
+					implicitHeight: 56
+					color: "#f5f7f9"
+					radius: 8
+					border.width: 0
+					Layout.fillWidth: true
+					RowLayout {
+						anchors.fill: parent
+						Input {
+							placeholderText:
+							qsTr("COUPON CODE")
+							Layout.fillWidth: true
+							Layout.fillHeight: true
+						}
+					}
 				}
 
-				background: Rectangle {
-					color: "#066ac9"
-					radius: 8
+				Button {
+					text: qsTr("Apply")
+					font.pointSize: 14
+					font.family: "roboto"
+					implicitHeight: 56
+					contentItem: Text {
+						color: "#ffffff"
+						text: "Apply"
+						padding: 12
+						horizontalAlignment: Text
+								.AlignHCenter
+						verticalAlignment: Text
+								.AlignVCenter
+						font.weight: Font.Medium
+						font.family: "Roboto"
+						font.pointSize: 14
+					}
+
+					background: Rectangle {
+						color: "#066ac9"
+						radius: 8
+					}
 				}
 			}
 		}
