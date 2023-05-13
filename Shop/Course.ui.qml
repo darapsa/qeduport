@@ -8,6 +8,7 @@ ColumnLayout {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
 	property string titleText: "Sketch from A to Z: for app designer"
 	property string priceText: "$150"
+	property alias buttons: buttons
 
 	Rectangle {
 		Layout.fillWidth: true
@@ -64,14 +65,31 @@ ColumnLayout {
 			Item {
 				Layout.fillWidth: true
 				Layout.topMargin: 16
+				implicitHeight: buttons.height
+
 				Label {
+					id: price
 					anchors {
 						top: parent.top
 						left: parent.left
-						bottom: parent.bottom
 					}
 					text: priceText
 					wrapMode: Label.Wrap
+				}
+
+				GridView {
+					id: buttons
+					interactive: false
+					anchors {
+						top: parent.top
+						right: parent.right
+					}
+					width: 137.016
+					model: ["Remove", "Edit"]
+					delegate: Button {
+						flat: true
+						text: modelData
+					}
 				}
 		       }
 	       }
