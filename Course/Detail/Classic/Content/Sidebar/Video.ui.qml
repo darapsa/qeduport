@@ -19,8 +19,7 @@ ColumnLayout {
 	property alias share: share
 	property alias shareMenu: shareMenu
 	property alias shareList: shareList
-	property alias trial: trial
-	property alias buy: buy
+	property alias buttons: buttons
 	spacing: 16
 
 	Image {
@@ -176,17 +175,23 @@ ColumnLayout {
 			}
 		}
 
-		RowLayout {
+		GridView {
+			id: buttons
+			interactive: false
 			Layout.topMargin: 16
+			Layout.fillWidth: true
+			model: 1
+			delegate: RowLayout {
+				Component.onCompleted: buttons.height = height
+				width: buttons.width
 
-			BtnOutline.Primary {
-				id: trial
-				text: qsTr("Free trial")
-			}
+				BtnOutline.Primary {
+					text: qsTr("Free trial")
+				}
 
-			Btn.Success {
-				id: buy
-				text: qsTr("Buy course")
+				Btn.Success {
+					text: qsTr("Buy course")
+				}
 			}
 		}
 	}
