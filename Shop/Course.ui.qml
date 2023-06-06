@@ -8,7 +8,7 @@ ColumnLayout {
 	property string imageSource: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
 	property string titleText: "Sketch from A to Z: for app designer"
 	property string priceText: "$150"
-	property alias buttons: buttons
+	property alias info: info
 
 	Rectangle {
 		Layout.fillWidth: true
@@ -62,33 +62,42 @@ ColumnLayout {
 				Bootstrap.heading: 6
 			}
 
-			Item {
+			GridView {
+				id: info
 				Layout.fillWidth: true
 				Layout.topMargin: 16
-				implicitHeight: buttons.height
+				interactive: false
+				model: 1
+				delegate: Item {
+					width: info.width
+					height: buttons.height
 
-				Label {
-					id: price
-					anchors {
-						top: parent.top
-						left: parent.left
+					Label {
+						id: price
+						anchors {
+							top: parent.top
+							left: parent.left
+						}
+						text: priceText
+						wrapMode: Label.Wrap
 					}
-					text: priceText
-					wrapMode: Label.Wrap
-				}
 
-				GridView {
-					id: buttons
-					interactive: false
-					anchors {
-						top: parent.top
-						right: parent.right
-					}
-					width: 137.016
-					model: ["Remove", "Edit"]
-					delegate: Button {
-						flat: true
-						text: modelData
+					RowLayout {
+						id: buttons
+						anchors {
+							top: parent.top
+							right: parent.right
+						}
+
+						Button {
+							flat: true
+							text: "Remove"
+						}
+
+						Button {
+							flat: true
+							text: "Edit"
+						}
 					}
 				}
 		       }
