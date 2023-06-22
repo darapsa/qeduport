@@ -10,6 +10,7 @@ import "../Button" as Btn
 import "Default" as Default
 
 Flickable {
+	property alias banner: banner
 	property string bannerTitleText: qsTr("Limitless learning at your fingertips")
 	property string bannerContentText: qsTr("Online learning and teaching marketplace with 5K+ courses & 10M students. Taught by experts to help you acquire new skills.")
 	property string imageSource: "https://eduport.webestica.com/assets/images/element/07.png"
