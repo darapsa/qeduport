@@ -23,6 +23,7 @@ Item {
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
 	property bool truncatedVisible: true
+	property alias ratingStar: ratingStar
 	property real rating: 4.0
 
 	DrpShdw.Box {
@@ -154,6 +155,7 @@ Item {
 			}
 
 			RowLayout {
+				id: ratingStar
 
 				Repeater {
 					model: 5
