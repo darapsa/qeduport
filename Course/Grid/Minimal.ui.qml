@@ -6,6 +6,7 @@ import "Minimal"
 import "../../Home/Default"
 
 Flickable {
+	property alias filterBar: filterBar
 	property alias courseGrid: courseGrid
 	contentHeight: main.height
 
@@ -23,6 +24,7 @@ Flickable {
 		}
 
 		FilterBar {
+			id: filterBar
 			Layout.topMargin: 16
 			Layout.rightMargin: 16
 			Layout.leftMargin: 16
