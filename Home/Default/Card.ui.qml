@@ -25,6 +25,7 @@ Item {
 	property bool truncatedVisible: true
 	property alias ratingStar: ratingStar
 	property real rating: 4.0
+	property alias footer: footer
 
 	DrpShdw.Box {
 		source: rectangle
