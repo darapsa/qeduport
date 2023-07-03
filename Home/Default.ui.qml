@@ -371,8 +371,6 @@ Flickable {
 						delegate: Default.Card {
 							width: tabPane
 								.cellWidth
-							height: tabPane
-								.cellHeight
 							imageSource: image
 							badgeText: level
 							badgeColor: levelColor

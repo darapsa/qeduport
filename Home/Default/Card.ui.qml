@@ -27,6 +27,8 @@ Item {
 	property real rating: 4.0
 	property alias footer: footer
 
+	height: rectangle.height + 25.6
+
 	DrpShdw.Box {
 		source: rectangle
 		anchors.fill: rectangle
@@ -36,10 +38,13 @@ Item {
 		id: rectangle
 		radius: 8
 		color: Eduport.bsCardBg
+		height: image.height + body.height
 		anchors {
-			fill: parent
+			top: parent.top
 			topMargin: 25.6
+			left: parent.left
 			leftMargin: 12.8
+			right: parent.right
 			rightMargin: 12.8
 		}
 
@@ -74,13 +79,15 @@ Item {
 
 		ColumnLayout {
 			id: body
+			height: badgeAndFavorite.height
+				+ title.height
+				+ truncatedText.height
 			anchors {
 				top: image.bottom
 				left: parent.left
 				leftMargin: 20
 				right: parent.right
 				rightMargin: 20
-				bottom: footer.top
 			}
 
 			Item {
