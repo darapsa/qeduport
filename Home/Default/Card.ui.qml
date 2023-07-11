@@ -20,6 +20,7 @@ Item {
 	property color badgeBackgroundColor: "#1a6f42c1"
 	property alias favorite: favorite
 	property string titleText: "Build Responsive Websites with HTML"
+	property int titleHeading: 5
 	property alias titleArea: titleArea
 	property string truncatedText: "Far advanced settling say finished raillery. Offered chiefly farther"
 	property bool truncatedVisible: true
@@ -141,7 +142,7 @@ Item {
 				id: title
 				text: titleText
 				wrapMode: Label.Wrap
-				Bootstrap.heading: 5
+				Bootstrap.heading: titleHeading
 				color: Eduport.bsCardTitleColor
 				Layout.fillWidth: true
 				Layout.bottomMargin: 8
