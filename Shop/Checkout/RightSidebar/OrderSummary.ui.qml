@@ -20,22 +20,22 @@ ColumnLayout {
 		wrapMode: Label.Wrap
 		Bootstrap.heading: 4
 		Layout.fillWidth: true
-		Layout.rightMargin: 16
-		Layout.leftMargin: 16
-		Layout.topMargin: 16
+		Layout.margins: 25.6
 	}
 
 	ListView {
 		id: coupon
 		Layout.fillWidth: true
-		Layout.margins: 16
+		Layout.leftMargin: 25.6
+		Layout.rightMargin: 25.6
+		Layout.bottomMargin: 16
 		interactive: false
 		implicitHeight: 87
 		model: 1
 		delegate: ColumnLayout {
 			Bootstrap.mode: coupon.Bootstrap.mode
 			width: coupon.width
-			spacing: 16
+			spacing: 8
 
 			Item {
 				Layout.fillWidth: true
@@ -120,6 +120,8 @@ ColumnLayout {
 		id: courseItems
 		interactive: false
 		Layout.fillWidth: true
+		Layout.leftMargin: 25.6
+		Layout.rightMargin: 25.6
 		implicitHeight: count
 				* (width * 400 / 533
 					+ (width < 362 ? 37.5 : 18.75)
@@ -147,6 +149,8 @@ ColumnLayout {
 	Rectangle {
 		Layout.fillWidth: true
 		Layout.topMargin: 16
+		Layout.leftMargin: 25.6
+		Layout.rightMargin: 25.6
 		Layout.bottomMargin: 16
 		height: 1
 		border {
@@ -156,6 +160,8 @@ ColumnLayout {
 	}
 
 	ColumnLayout {
+		Layout.leftMargin: 25.6
+		Layout.rightMargin: 25.6
 
 		Item {
 			Layout.fillWidth: true
@@ -244,7 +250,9 @@ ColumnLayout {
 
 	Success {
 		id: placeOrder
-		Layout.margins: 16
+		Layout.leftMargin: 25.6
+		Layout.rightMargin: 25.6
+		Layout.bottomMargin: 25.6
 		Layout.fillWidth: true
 		text: qsTr("Place Order")
 		implicitHeight: 36
