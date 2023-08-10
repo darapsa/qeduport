@@ -147,10 +147,15 @@ ToolBar {
 				bottomPadding: 25.6
 			}
 
+			Loader {
+				sourceComponent: menuSeparator
+			}
+
 			ListView {
 				id: cartItems
-				interactive: false
-				implicitHeight: count * 120
+				interactive: true
+				clip: true
+				implicitHeight: 236.5
 				model: ListModel {
 					ListElement {
 						image: "https://eduport.webestica.com/assets/images/book/02.jpg"
