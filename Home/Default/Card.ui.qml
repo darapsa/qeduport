@@ -40,6 +40,7 @@ Item {
 		radius: 8
 		color: Eduport.bsCardBg
 		height: image.height + body.height
+			+ footer.height * footer.visible
 		anchors {
 			top: parent.top
 			topMargin: 25.6
@@ -80,9 +81,6 @@ Item {
 
 		ColumnLayout {
 			id: body
-			height: badgeAndFavorite.height
-				+ title.height
-				+ truncatedText.height
 			anchors {
 				top: image.bottom
 				left: parent.left
@@ -217,8 +215,10 @@ Item {
 
 			Item {
 				Layout.fillWidth: true
+				height: clock.height + table.height
 
 				RowLayout {
+					id: clock
 					anchors {
 						left: parent.left
 						verticalCenter: parent
@@ -245,6 +245,7 @@ Item {
 				}
 
 				RowLayout {
+					id: table
 					anchors {
 						right: parent.right
 						verticalCenter: parent
