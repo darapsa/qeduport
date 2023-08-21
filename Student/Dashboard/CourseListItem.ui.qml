@@ -22,11 +22,11 @@ Item {
 				sourceSize: Qt.size(parent.width, parent.height)
 				visible: false
 			}
-		}
-		OpacityMask{
-			anchors.fill: courseThumbnail
-			source: courseThumb
-			maskSource: courseThumbnail
+			OpacityMask{
+				anchors.fill: courseThumbnail
+				source: courseThumb
+				maskSource: courseThumbnail
+			}
 		}
 		ColumnLayout{
 			id: courseProgressInfo
