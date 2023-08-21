@@ -4,6 +4,12 @@ import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.12
 
 Item {
+	property alias courseTitle: courseTitle
+	property alias courseThumb: courseThumb
+	property alias courseProgressPercentage: courseProgressPercentage
+	property alias courseProgressBar: courseProgressBar
+	property alias courseListActionButton: courseListActionButton
+
 	width:courseData.width
 	height: courseData.height
 	RowLayout {
