@@ -30,6 +30,7 @@ Flickable {
 			id: tableBody
 			Layout.fillWidth: true
 			height: 100 * count
+			interactive: false
 			model: ListModel {
 				ListElement {
 					title: qsTr("Building Scalable APIs with GraphQL")
