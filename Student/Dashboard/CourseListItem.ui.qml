@@ -10,11 +10,13 @@ Item {
 	property alias courseProgressBar: courseProgressBar
 	property alias courseListActionButton: courseListActionButton
 
-	width:courseData.width
 	height: courseData.height
+
 	RowLayout {
 		id: courseData
 		spacing: 16
+		width: parent.width
+
 		Rectangle {
 			id: courseThumbnail
 			radius: 8
