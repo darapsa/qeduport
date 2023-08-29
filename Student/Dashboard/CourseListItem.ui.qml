@@ -39,6 +39,8 @@ Item {
 		ColumnLayout{
 			id: courseProgressInfo
 			spacing: 0
+			width: parent.width - image.width - spacing
+
 			Label{
 				id: courseTitle
 				color: "#000000"
@@ -48,19 +50,30 @@ Item {
 				font.styleName: "Medium"
 				Layout.fillWidth: true
 			}
-			Label{
-				id: courseProgressPercentage
-				color: "#000000"
-				text: "80%"
-				font.pointSize: 16
-				font.family: "roboto"
-				font.styleName: "Medium"
-				horizontalAlignment: Text.AlignRight
-				Layout.fillWidth: true
-			}
-			ProgressBar {
-				id: courseProgressBar
-				value: 0.8
+
+			RowLayout { // So the Bar and % of value side by side
+				ProgressBar {
+					id: courseProgressBar
+					value: completedLectures / totalLectures * 100
+					to: 100
+					width: parent.width * 0.7
+					height: 10
+					background: Rectangle {
+						color: "#666666" // Background color of the ProgressBar
+					}
+				}
+				Label{
+					id: courseProgressPercentage
+	//				color: "#000000"
+					text:  Math.round(completedLectures / totalLectures * 100) + "%"
+					color: "#666666"
+	//				font.pixelSize: 14
+					font.pointSize: 14
+					font.family: "roboto"
+					font.styleName: "Medium"
+	//				horizontalAlignment: Text.AlignRight
+	//				Layout.fillWidth: true
+				}
 			}
 		}
 		Button {
@@ -70,6 +83,9 @@ Item {
 			font.weight: Font.Medium
 			font.family: "Roboto"
 			font.pointSize: 14
+			onClicked: {
+				// Implement resuming logic
+			}
 		}
 	}
 }
