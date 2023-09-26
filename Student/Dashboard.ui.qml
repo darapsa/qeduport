@@ -4,6 +4,7 @@ import "Dashboard"
 import QtQuick.Layouts 1.15
 
 Flickable {
+	property alias tableBody: tableBody
 	contentWidth: table.width
 
 	ColumnLayout{
