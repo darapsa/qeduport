@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 import QtGraphicalEffects 1.15
+import Bootstrap 5.3
 
 RowLayout {
 	property alias courseTitle: courseTitle
@@ -39,6 +40,7 @@ RowLayout {
 			id: courseTitle
 			text: "Building Scalable APIs with GraphQL"
 			Layout.fillWidth: true
+			Bootstrap.heading: 6
 		}
 
 		RowLayout { // So the Bar and % of value side by side
@@ -55,6 +57,7 @@ RowLayout {
 			Label{
 				id: courseProgressPercentage
 				text:  Math.round(completedLectures / totalLectures * 100) + "%"
+				Bootstrap.heading: 6
 //				horizontalAlignment: Text.AlignRight
 //				Layout.fillWidth: true
 			}
