@@ -1,6 +1,6 @@
-import QtQuick 2.15
-import QtGraphicalEffects 1.15
-import Eduport 1.4
+import QtQuick
+import Qt5Compat.GraphicalEffects
+import Eduport
 
 DropShadow {
 	horizontalOffset: Eduport.bsBoxShadowOffsetX
