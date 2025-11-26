@@ -397,7 +397,7 @@ ToolBar {
 						Btn.Sm {
 							id: light
 							icon {
-								source: "Bootstrap/icons/sun.svg"
+								source: "../Bootstrap/icons/sun.svg"
 								width: 16
 								height: 16
 							}
@@ -413,7 +413,7 @@ ToolBar {
 						Btn.Sm {
 							id: dark
 							icon {
-								source: "Bootstrap/icons/moon-stars.svg"
+								source: "../Bootstrap/icons/moon-stars.svg"
 								width: 16
 								height: 16
 							}
