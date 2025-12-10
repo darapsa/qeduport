@@ -3,3 +3,4 @@
 *.user
 .DS_Store
 build
+translations.db*

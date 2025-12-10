@@ -1,6 +1,6 @@
 pragma Singleton
-import QtQuick 2.15
-import Bootstrap 5.3
+import QtQuick
+import Bootstrap
 
 QtObject {
 	property int mode: Bootstrap.mode

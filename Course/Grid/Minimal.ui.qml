@@ -1,7 +1,7 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
-import Eduport 1.4
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import Eduport
 import "Minimal"
 import "../../Home/Default"
 

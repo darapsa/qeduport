@@ -1,4 +1,4 @@
-import QmlProject 1.1
+import QmlProject
 
 Project {
 	mainUiFile: "Home/Default.ui.qml"
@@ -26,13 +26,9 @@ Project {
 
 	Environment {
 		QT_QUICK_CONTROLS_CONF: "qtquickcontrols2.conf"
-		QMLSCENE_CORE_PROFILE: "true"
 	}
 
+	qt6Project: true
+
 	importPaths: [ "imports" ]
-	qdsVersion: "3.9"
-	quickVersion: "2.15"
-	multilanguageSupport: true
-	supportedLanguages: ["en", "id"]
-	primaryLanguage: "en"
 }

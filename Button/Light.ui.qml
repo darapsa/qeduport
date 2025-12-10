@@ -1,6 +1,6 @@
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import Eduport 1.4
+import QtQuick
+import QtQuick.Controls
+import Eduport
 
 Btn {
 	bsBtnColor: Eduport.bsGray900
