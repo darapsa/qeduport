@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 
 ColumnLayout {
@@ -41,13 +41,20 @@ ColumnLayout {
 				}
 				source: imageSource
 				fillMode: Image.PreserveAspectFit
-				layer.enabled: true
-				layer.effect: OpacityMask {
-					maskSource: Rectangle {
-						width: courseItemImage.width
-						height: courseItemImage.height
-						radius: 5.2
+				layer {
+					enabled: true
+					effect: MultiEffect {
+						maskEnabled: true
+						maskSource: maskRectangle
 					}
+				}
+				Rectangle {
+					id: maskRectangle
+					width: courseItemImage.width
+					height: courseItemImage.height
+					radius: 5.2
+					layer.enabled: true
+					visible: false
 				}
 			}
 		}

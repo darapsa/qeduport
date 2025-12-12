@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 
@@ -34,13 +35,18 @@ ColumnLayout {
 			}
 			layer {
 				enabled: true
-				effect: OpacityMask {
-					maskSource: Rectangle {
-						width: 50
-						height: 50
-						radius: 5.2
-					}
+				effect: MultiEffect {
+					maskEnabled: true
+					maskSource: maskRectangle
 				}
+			}
+			Rectangle {
+				id: maskRectangle
+				width: 50
+				height: 50
+				radius: 5.2
+				layer.enabled: true
+				visible: false
 			}
 		}
 

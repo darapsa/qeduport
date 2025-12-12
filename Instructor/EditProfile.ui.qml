@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 import "../TextField" as TxtFld
@@ -98,14 +98,22 @@ Flickable {
 											width: 82
 											height: 82
 										}
-										layer.enabled: true
-										layer.effect: OpacityMask {
-											maskSource: Rectangle {
-												width: 82
-												height: 82
-												radius: 82
+										layer {
+											enabled: true
+											effect: MultiEffect {
+												maskEnabled: true
+												maskSource: maskRectangle
 											}
 										}
+										Rectangle {
+											id: maskRectangle
+											width: 82
+											height: 82
+											radius: 82
+											layer.enabled: true
+											visible: false
+										}
+
 									}
 
 									Button {

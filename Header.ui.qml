@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 import "DropShadow" as DrpShdw
@@ -99,13 +100,18 @@ ToolBar {
 		}
 		layer {
 			enabled: true
-			effect: OpacityMask {
-				maskSource: Rectangle {
-					width: 40
-					height: 40
-					radius: 40
-				}
+			effect: MultiEffect {
+				maskEnabled: true
+				maskSource: maskRectangle
 			}
+		}
+		Rectangle {
+			id: maskRectangle
+			width: 40
+			height: 40
+			radius: 40
+			layer.enabled: true
+			visible: false
 		}
 		contentItem: Item {
 
@@ -214,13 +220,18 @@ ToolBar {
 			}
 			layer {
 				enabled: true
-				effect: OpacityMask {
-					maskSource: Rectangle {
-						width: imageWidth
-						height: imageHeight
-						radius: maskRadius
-					}
+				effect: MultiEffect {
+					maskEnabled: true
+					maskSource: maskRectangle
 				}
+			}
+			Rectangle {
+				id: maskRectangle
+				width: imageWidth
+				height: imageHeight
+				radius: maskRadius
+				layer.enabled: true
+				visible: false
 			}
 		}
 	}
