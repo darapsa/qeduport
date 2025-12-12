@@ -2,18 +2,16 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Effects
-import Qt5Compat.GraphicalEffects
 
 Item {
 	width: 350
 	height: 450
-	DropShadow {
-		color: "#4d000000"
+	MultiEffect {
 		source: courseVideoCard
-		verticalOffset: 4
-		radius: 12
-		samples: 12
 		anchors.fill: courseVideoCard
+		shadowEnabled: true
+		shadowColor: "#4d0000"
+		shadowVerticalOffset: 4
 	}
 	Rectangle {
 		id: courseVideoCard

@@ -10,7 +10,6 @@ Item {
 		anchors.fill: cardItem
 		shadowEnabled: true
 		shadowColor: "#4d0000"
-		shadowOpacity: .0
 		shadowVerticalOffset: 4
 	}
 	Rectangle {

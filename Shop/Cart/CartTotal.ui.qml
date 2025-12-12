@@ -1,17 +1,16 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 Item {
 	id: cartTotal
-	DropShadow {
-		color: "#4d000000"
+	MultiEffect {
 		source: cartTotalCard
-		verticalOffset: 4
-		radius: 40
-		samples: 81
 		anchors.fill: cartTotalCard
+		shadowEnabled: true
+		shadowColor: "#4d0000"
+		shadowVerticalOffset: 4
 	}
 	Rectangle {
 		id: cartTotalCard
