@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 
 RowLayout {
@@ -12,29 +12,33 @@ RowLayout {
 	property alias courseListActionButton: courseListActionButton
 	spacing: 16
 
-	Rectangle {
-		id: courseThumbnail
-		radius: 8
-		Layout.preferredHeight: 72
-		Layout.preferredWidth: 100
-		Layout.minimumHeight: 72
-		Layout.minimumWidth: 100
-		Image {
-			id: courseThumb
-			source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
-			sourceSize: Qt.size(parent.width, parent.height)
-			visible: false
+	Image {
+		id: courseThumb
+		source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+		sourceSize {
+			width: 100
+			height: 75
 		}
-		OpacityMask{
-			anchors.fill: courseThumbnail
-			source: courseThumb
-			maskSource: courseThumbnail
+		layer {
+			enabled: true
+			effect: MultiEffect {
+				maskEnabled: true
+				maskSource: maskRectangle
+			}
+		}
+		Rectangle {
+			id: maskRectangle
+			width: courseThumb.sourceSize.width
+			height: courseThumb.sourceSize.height
+			radius: 8
+			layer.enabled: true
+			visible: false
 		}
 	}
 	ColumnLayout{
 		id: courseProgressInfo
 		spacing: 0
-		width: parent.width - image.width - spacing
+		width: parent.width - courseThumb.width - spacing
 
 		Label{
 			id: courseTitle

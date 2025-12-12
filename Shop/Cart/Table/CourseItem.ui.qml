@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 import "../../../TextField"
@@ -12,29 +12,33 @@ GridLayout {
 	columns: width < 990 ? 1 : 2
 	rowSpacing: 8
 	columnSpacing: 8
-	Rectangle {
+
+	Image {
 		id: courseItemImage
-		width: 100
-		height: 75
-		Layout.maximumWidth: width
-		Layout.maximumHeight: height
-		radius: 8
 		Layout.rightMargin: 8
 		Layout.bottomMargin: 16
 		Layout.topMargin: 16
 		Layout.leftMargin: 8
 		Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-		Image {
-			id: courseItemImageSource
-			anchors.fill: parent
-			visible: false
-			source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+		source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+		sourceSize {
+			width: 100
+			height: 75
 		}
-		OpacityMask {
-			id: coursetemImageMask
-			anchors.fill: courseItemImage
-			source: courseItemImageSource
-			maskSource: courseItemImage
+		layer {
+			enabled: true
+			effect: MultiEffect {
+				maskEnabled: true
+				maskSource: maskRectangle
+			}
+		}
+		Rectangle {
+			id: maskRectangle
+			width: courseItemImage.sourceSize.width
+			height: courseItemImage.sourceSize.height
+			radius: 8
+			layer.enabled: true
+			visible: false
 		}
 	}
 

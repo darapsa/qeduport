@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 Item {
 	width: reviewItem.width
@@ -10,26 +10,29 @@ Item {
 		id:reviewItem
 		spacing: 16
 		RowLayout {
-			id: reviewAvatar
 			Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-			Rectangle {
-				id: avatarMask
-				radius: 100
-				Layout.preferredHeight: 82
-				Layout.preferredWidth: 82
-				Layout.minimumHeight: 82
-				Layout.minimumWidth: 82
-				Image{
-					id: avatarImage
-					source: "https://eduport.webestica.com/assets/images/avatar/09.jpg"
-					sourceSize: Qt.size(parent.width, parent.height)
-					visible: false
+			Image {
+				id: avatarImage
+				source: "https://eduport.webestica.com/assets/images/avatar/09.jpg"
+				sourceSize {
+					width: 82
+					height: 82
 				}
 			}
-			OpacityMask {
-				anchors.fill: avatarMask
-				source: avatarImage
-				maskSource: avatarMask
+			layer {
+				enabled: true
+				effect: MultiEffect {
+					maskEnabled: true
+					maskSource: maskRectangle
+				}
+			}
+			Rectangle {
+				id: maskRectangle
+				width: avatarImage.sourceSize.width
+				height: avatarImage.sourceSize.height
+				radius: avatarImage.sourceSize.width
+				layer.enabled: true
+				visible: false
 			}
 		}
 		ColumnLayout {

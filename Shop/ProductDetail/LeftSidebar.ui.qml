@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Eduport
 import "../../Button"
 import "../../DropShadow"
@@ -11,29 +11,34 @@ Rectangle {
 	id: sidebarCard
 	height: sidebarCardImage.height + cardBody.height
 
-	Rectangle {
+	Image {
 		id: sidebarCardImage
-		width: parent.width
-		height: sidebarCardImage.width
-		radius: 8
 		anchors.left: parent.left
 		anchors.right: parent.right
 		anchors.top: parent.top
 		anchors.rightMargin: 0
 		anchors.leftMargin: 0
 		anchors.topMargin: 0
-		Image {
-			id: sidebarCardImageSource
-			anchors.fill: parent
-			visible: false
-			source: "https://eduport.webestica.com/assets/images/book/01.jpg"
-			fillMode: Image.PreserveAspectCrop
+		source: "https://eduport.webestica.com/assets/images/book/01.jpg"
+		sourceSize {
+			width: parent.width
+			height: sidebarCardImage.width
 		}
-		OpacityMask {
-			id: sidebarCardImageMask
-			anchors.fill: sidebarCardImage
-			source: sidebarCardImageSource
-			maskSource: sidebarCardImage
+		fillMode: Image.PreserveAspectCrop
+		layer {
+			enabled: true
+			effect: MultiEffect {
+				maskEnabled: true
+				maskSource: maskRectangle
+			}
+		}
+		Rectangle {
+			id: maskRectangle
+			width: sidebarCardImage.sourceSize.width
+			height: sidebarCardImage.sourceSize.height
+			radius: 8
+			layer.enabled: true
+			visible: false
 		}
 	}
 	RowLayout {

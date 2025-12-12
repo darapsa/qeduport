@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Effects
 import Qt5Compat.GraphicalEffects
 
 Item {
@@ -38,20 +39,25 @@ Item {
 					id: courseVideoImage
 					source: "https://eduport.webestica.com/assets/images/courses/4by3/01.jpg"
 					fillMode: Image.PreserveAspectCrop
-					width: parent.width
-					height: parent.height
-					visible: false
-				}
-				OpacityMask {
-					id: courseVideoMask
-					anchors.fill: courseVideoThumbnail
-					source: courseVideoImage
-					maskSource: courseVideoThumbnail
-				}
-				ColorOverlay {
-					anchors.fill: courseVideoMask
-					source: courseVideoMask
-					color: "#80000000"
+					sourceSize {
+						width: parent.width
+						height: parent.height
+					}
+					layer {
+						enabled: true
+						effect: MultiEffect {
+							maskEnabled: true
+							maskSource: maskRectangle
+						}
+					}
+					Rectangle {
+						id: maskRectangle
+						width: courseVideoImage.sourceSize.width
+						height: courseVideoImage.sourceSize.height
+						radius: 8
+						layer.enabled: true
+						visible: false
+					}
 				}
 				Button {
 					id: playVideoButton

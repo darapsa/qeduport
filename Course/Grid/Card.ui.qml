@@ -2,7 +2,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Effects
-import Qt5Compat.GraphicalEffects
 
 Item {
 	id: item1
@@ -24,35 +23,30 @@ Item {
 			id: columnLayout
 			anchors.fill: parent
 			spacing: 0
-			Rectangle {
+			Image {
 				id: cardItemImage
-				radius: 8
 				Layout.fillHeight: true
-				Layout.preferredHeight: 255
 				Layout.fillWidth: true
-				Layout.preferredWidth: 300
-				Image {
-					id: cardItemImageSource
-					source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
-					fillMode: Image.PreserveAspectCrop
-					width: parent.width
-					height: parent.height
-					visible: false
+				source: "https://eduport.webestica.com/assets/images/courses/4by3/08.jpg"
+				sourceSize {
+					width: 300
+					height: 255
 				}
-				OpacityMask {
-					id: cardItemImageMask
-					anchors.fill: cardItemImage
-					source: cardItemImageSource
-					maskSource: cardItemImage
+				fillMode: Image.PreserveAspectCrop
+				layer {
+					enabled: true
+					effect: MultiEffect {
+						maskEnabled: true
+						maskSource: maskRectangle
+					}
 				}
-
 				Rectangle {
-					id: rectangle
-					width: cardItemImageMask.width
-					height: 5
-					color: "#ffffff"
-					anchors.bottom: cardItemImageMask.bottom
-					anchors.bottomMargin: 0
+					id: maskRectangle
+					width: cardItemImage.sourceSize.width
+					height: cardItemImage.sourceSize.height
+					radius: 8
+					layer.enabled: true
+					visible: false
 				}
 			}
 			ColumnLayout {
