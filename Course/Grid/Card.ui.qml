@@ -92,7 +92,7 @@ Item {
 						leftPadding: 0
 						bottomPadding: 0
 						topPadding: 0
-						icon.source: "Material/svg/outlined/heart.svg"
+						icon.source: "../../Material/svg/outlined/heart.svg"
 						display: AbstractButton.IconOnly
 						flat: true
 
@@ -136,7 +136,7 @@ Item {
 					topPadding: 0
 					icon.color: "#80000000"
 					flat: true
-					icon.source: "Material/svg/outlined/star.svg"
+					icon.source: "../../Material/svg/outlined/star.svg"
 					autoRepeat: false
 					checkable: true
 					display: AbstractButton.IconOnly
@@ -191,7 +191,7 @@ Item {
 						spacing: 8
 						Image {
 							id: timerIcon
-							source: "Material/svg/outlined/schedule.svg"
+							source: "../../Material/svg/outlined/schedule.svg"
 							sourceSize.height: 16
 							sourceSize.width: 16
 							layer {
@@ -219,7 +219,7 @@ Item {
 						spacing: 8
 						Image {
 							id: lecturersIcon
-							source: "Material/svg/outlined/table.svg"
+							source: "../../Material/svg/outlined/table.svg"
 							sourceSize.height: 16
 							sourceSize.width: 16
 							layer {
@@ -252,7 +252,7 @@ Item {
 			PropertyChanges {
 				target: favorite
 				icon.color: "#d6293e"
-				icon.source: "Material/svg/filled/heart.svg"
+				icon.source: "../../Material/svg/filled/heart.svg"
 			}
 		},
 		State {
@@ -262,7 +262,7 @@ Item {
 			PropertyChanges {
 				target: star
 				icon.color: "#f7c32e"
-				icon.source: "Material/svg/filled/star.svg"
+				icon.source: "../../Material/svg/filled/star.svg"
 			}
 		}
 	]

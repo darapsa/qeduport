@@ -69,7 +69,7 @@ RowLayout {
 	}
 	Button {
 		id: courseListActionButton
-		icon.source: "Material/svg/filled/play_circle_outline.svg"
+		icon.source: "../../Material/svg/filled/play_circle_outline.svg"
 		text: "Continue"
 		font.weight: Font.Medium
 		font.family: "Roboto"
