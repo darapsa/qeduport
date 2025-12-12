@@ -68,9 +68,16 @@ Item {
 					icon.width: 44
 					icon.color: "#ffffff"
 					flat: true
-					icon.source: "Font-Awesome/svgs/solid/circle-play.svg"
+					icon.source: "../../../../../Font-Awesome/svgs/solid/circle-play.svg"
 					display: AbstractButton.IconOnly
 					anchors.horizontalCenter: parent.horizontalCenter
+				}
+				MultiEffect {
+					source: playVideoButton
+					anchors.fill: playVideoButton
+					brightness: 1.0
+					colorization: 1.0
+					colorizationColor: "#800000"
 				}
 			}
 			RowLayout {
@@ -128,13 +135,16 @@ Item {
 				spacing: 8
 				Image {
 					id: timerIcon
-					source: "Material/svg/filled/timer.svg"
+					source: "../../../../../Material/svg/filled/timer.svg"
 					sourceSize.height: 24
 					sourceSize.width: 24
-					ColorOverlay {
-						anchors.fill: timerIcon
-						source: timerIcon
-						color: "#d6293e"
+					layer {
+						enabled: true
+						effect: MultiEffect {
+							brightness: 1.0
+							colorization: 1.0
+							colorizationColor: "#d6293e"
+						}
 					}
 				}
 
