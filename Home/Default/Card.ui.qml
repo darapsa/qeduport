@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
 import QtQuick.Effects
 import Bootstrap
 import Eduport
@@ -184,10 +183,13 @@ Item {
 							width: 15
 							height: 13
 						}
-						ColorOverlay {
-							anchors.fill: parent
-							source: parent
-							color: "#f7c32e"
+						layer {
+							enabled:true
+							effect: MultiEffect {
+								brightness: 1.0
+								colorization: 1.0
+								colorizationColor: "#f7c32e"
+							}
 						}
 					}
 				}
@@ -239,10 +241,13 @@ Item {
 							width: 15
 							height: 15
 						}
-						ColorOverlay {
-							anchors.fill: parent
-							source: parent
-							color: "#d6293e"
+						layer {
+							enabled:true
+							effect: MultiEffect {
+								brightness: 1.0
+								colorization: 1.0
+								colorizationColor: "#d6293e"
+							}
 						}
 						Layout.rightMargin: 8
 					}
@@ -266,10 +271,13 @@ Item {
 							width: 15
 							height: 15
 						}
-						ColorOverlay {
-							anchors.fill: parent
-							source: parent
-							color: "#fd7e14"
+						layer {
+							enabled:true
+							effect: MultiEffect {
+								brightness: 1.0
+								colorization: 1.0
+								colorizationColor: "#fd7e14"
+							}
 						}
 						Layout.rightMargin: 8
 					}

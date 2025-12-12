@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
 import QtQuick.Effects
 import Bootstrap
 import Eduport
@@ -116,14 +115,17 @@ ToolBar {
 		contentItem: Item {
 
 			Image {
+				id: cartImage
 				anchors.centerIn: parent
-				source: "Bootstrap/icons/cart3.svg"
 				fillMode: Image.PreserveAspectFit
-
-				ColorOverlay {
-					color: Eduport.bsGray900
-					source: parent
-					anchors.fill: parent
+				source: "Bootstrap/icons/cart3.svg"
+				layer {
+					enabled: true
+					effect: MultiEffect {
+						brightness: 1.0
+						colorization: 1.0
+						colorizationColor: Eduport.bsGray900
+					}
 				}
 			}
 		}
@@ -273,13 +275,15 @@ ToolBar {
 
 					Image {
 						source: menuItem.icon.source
-
-						ColorOverlay {
-							color: highlighted
-								? Eduport.bsDropdownLinkHoverColor
-								: Eduport.bsDropdownLinkColor
-							source: parent
-							anchors.fill: parent
+						layer {
+							enabled:true
+							effect: MultiEffect {
+								brightness: 1.0
+								colorization: 1.0
+								colorizationColor: highlighted
+											? Eduport.bsDropdownLinkHoverColor
+											: Eduport.bsDropdownLinkColor
+							}
 						}
 					}
 

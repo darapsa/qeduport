@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Effects
 import Qt5Compat.GraphicalEffects
 
 Item {
@@ -200,10 +201,13 @@ Item {
 							source: "Material/svg/outlined/schedule.svg"
 							sourceSize.height: 16
 							sourceSize.width: 16
-							ColorOverlay {
-								anchors.fill: timerIcon
-								source: timerIcon
-								color: "#d6293e"
+							layer {
+								enabled: true
+								effect: MultiEffect {
+									brightness: 1.0
+									colorization: 1.0
+									colorizationColor: "#d6293e"
+								}
 							}
 						}
 
@@ -225,10 +229,13 @@ Item {
 							source: "Material/svg/outlined/table.svg"
 							sourceSize.height: 16
 							sourceSize.width: 16
-							ColorOverlay {
-								anchors.fill: lecturersIcon
-								source: lecturersIcon
-								color: "#fd7e14"
+							layer {
+								enabled: true
+								effect: MultiEffect {
+									brightness: 1.0
+									colorization: 1.0
+									colorizationColor: "#fd7e14"
+								}
 							}
 						}
 

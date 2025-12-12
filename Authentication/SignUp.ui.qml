@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 import "../TextField" as TxtFld
@@ -89,15 +89,13 @@ Flickable {
 									20
 								}
 
-								ColorOverlay {
-									color:
-									Eduport
-									.bsSecondary
-									source:
-									parent
-									anchors
-									.fill:
-									parent
+								layer {
+									enabled: true
+									effect: MultiEffect {
+										brightness: 1.0
+										colorization: 1.0
+										colorizationColor: Eduport.bsSecondary
+									}
 								}
 							}
 
@@ -158,15 +156,13 @@ Flickable {
 									20
 								}
 
-								ColorOverlay {
-									color:
-									Eduport
-									.bsSecondary
-									source:
-									parent
-									anchors
-									.fill:
-									parent
+								layer {
+									enabled: true
+									effect: MultiEffect {
+										brightness: 1.0
+										colorization: 1.0
+										colorizationColor: Eduport.bsSecondary
+									}
 								}
 							}
 
@@ -231,15 +227,13 @@ Flickable {
 									20
 								}
 
-								ColorOverlay {
-									color:
-									Eduport
-									.bsSecondary
-									source:
-									parent
-									anchors
-									.fill:
-									parent
+								layer {
+									enabled: true
+									effect: MultiEffect {
+										brightness: 1.0
+										colorization: 1.0
+										colorizationColor: Eduport.bsSecondary
+									}
 								}
 							}
 

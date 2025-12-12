@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
 import QtQuick.Effects
 import QtMultimedia
 import Bootstrap
@@ -134,11 +133,13 @@ ColumnLayout {
 							height: 15
 						}
 
-						ColorOverlay {
-							anchors.fill: parent
-							source: parent
-							color: Eduport
-								.bsDanger
+						layer {
+							enabled: true
+							effect: MultiEffect {
+								brightness: 1.0
+								colorization: 1.0
+								colorizationColor: Eduport.bsDanger
+							}
 						}
 					}
 

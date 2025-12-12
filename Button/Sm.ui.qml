@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Eduport
 
 Button {
@@ -22,12 +22,13 @@ Button {
 				width: button.icon.width
 				height: button.icon.height
 			}
-
-			ColorOverlay {
-				color: checked
-					? Eduport.bsGray800 : Eduport.bsBtnColor
-				source: parent
-				anchors.fill: parent
+			layer {
+				enabled:true
+				effect: MultiEffect {
+					brightness: 1.0
+					colorization: 1.0
+					colorizationColor: checked ? Eduport.bsGray800 : Eduport.bsBtnColor
+				}
 			}
 		}
 

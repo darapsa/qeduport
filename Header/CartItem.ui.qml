@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
 import QtQuick.Effects
 import Bootstrap
 import Eduport
@@ -64,16 +63,20 @@ ColumnLayout {
 
 				Button {
 					id: button
-					Layout.alignment: Qt.AlignTop
-								| Qt.AlignRight
-					contentItem: Image {
-						source:
-						"../Bootstrap/icons/x.svg"
-
-						ColorOverlay {
-							color: Eduport.bsGray600
-							source: parent
-							anchors.fill: parent
+					Layout.alignment: Qt.AlignTop | Qt.AlignRight
+					contentItem: Item {
+						Image {
+							id: xImage
+							anchors.centerIn: parent
+							fillMode: Image.PreserveAspectFit
+							source: "../Bootstrap/icons/x.svg"
+						}
+						MultiEffect {
+							source: xImage
+							anchors.fill: xImage
+							brightness: 1.0
+							colorization: 1.0
+							colorizationColor: Eduport.bsGray600
 						}
 					}
 					background: Rectangle {

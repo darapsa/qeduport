@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 RowLayout {
 
@@ -25,10 +25,13 @@ RowLayout {
 			Layout.minimumHeight: 12
 			Layout.minimumWidth: 12
 
-			ColorOverlay {
-				anchors.fill: inlineItemIcon
-				source: inlineItemIcon
-				color: "#fd7e14"
+			layer {
+				enabled:true
+				effect: MultiEffect {
+					brightness: 1.0
+					colorization: 1.0
+					colorizationColor: "#fd7e14"
+				}
 			}
 		}
 	}
