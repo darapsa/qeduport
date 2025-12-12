@@ -47,11 +47,12 @@ ColumnLayout {
 
 		MediaPlayer {
 			id: mediaPlayer
+			videoOutput: videoOutput
 		}
 
 		VideoOutput {
+			id: videoOutput
 			anchors.fill: parent
-			source: mediaPlayer
 		}
 
 		Button {
