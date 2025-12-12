@@ -6,13 +6,13 @@ import Qt5Compat.GraphicalEffects
 
 Item {
 	id: item1
-	DropShadow {
-		color: "#4d000000"
+	MultiEffect {
 		source: cardItem
-		verticalOffset: 4
-		radius: 40
-		samples: 81
 		anchors.fill: cardItem
+		shadowEnabled: true
+		shadowColor: "#4d0000"
+		shadowOpacity: .0
+		shadowVerticalOffset: 4
 	}
 	Rectangle {
 		id: cardItem

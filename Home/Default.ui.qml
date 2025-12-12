@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 import Eduport
 import ".."
@@ -107,10 +107,12 @@ Flickable {
 				Layout.fillWidth: true
 				implicitHeight: image.height
 
-				DropShadow {
+				MultiEffect {
 					source: angularRectangle
 					anchors.fill: angularRectangle
-					color: Qt.rgba(.113, .227, .325, .15)
+					shadowEnabled: true
+					shadowColor: Qt.rgba(.113, .227, .325, 1.0)
+					shadowOpacity: .15
 				}
 
 				Rectangle {

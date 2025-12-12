@@ -54,7 +54,8 @@ QtObject {
 	property real bsBoxShadowOffsetX: 0
 	property real bsBoxShadowOffsetY: 0
 	property int bsBoxShadowBlurRadius: 40
-	property color bsBoxShadowColor: "#261d3a53"
+	property color bsBoxShadowColor: "#261d3a"
+	property real bsBoxShadowOpacity: .33
 
 	readonly property real bsBtnPaddingX: 16
 	readonly property real bsBtnPaddingY: 8
